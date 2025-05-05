@@ -1,0 +1,700 @@
+<!--
+SEO AI Agents Archive Widget for YourPalZack.com
+Drop this file into a WordPress HTML block or widget. All CSS/JS is inline.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO AI Agents Archive | YourPalZack.com</title>
+  <meta name="description" content="Discover top SEO-focused AI agents to boost your digital presence. Explore, filter, and search AI tools for analytics, content, marketing, and more.">
+  <style>
+    :root {
+      --ypz-accent: #008348;
+      --ypz-accent-light: #e3f7ef;
+      --ypz-accent-dark: #006b39;
+    }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      background: #f6f7fb;
+      color: #222;
+    }
+    .ypz-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #fff;
+      border-bottom: 2px solid var(--ypz-accent);
+      padding: 16px 32px 10px 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .ypz-logo {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+    .ypz-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--ypz-accent);
+      letter-spacing: -1px;
+    }
+    .archive-container {
+      display: flex;
+      min-height: 100vh;
+      max-width: 1300px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .sidebar {
+      width: 220px;
+      background: #f2f3f7;
+      padding: 24px 0;
+      border-right: 1px solid #e0e3ea;
+    }
+    .sidebar h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 18px 32px;
+      color: #222;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar li {
+      padding: 10px 32px;
+      cursor: pointer;
+      border-radius: 6px;
+      color: #444;
+      transition: background 0.13s;
+    }
+    .sidebar li.active, .sidebar li:hover {
+      background: var(--ypz-accent-light);
+      color: var(--ypz-accent);
+      font-weight: 600;
+    }
+    .main-content {
+      flex: 1;
+      padding: 36px 36px 24px 36px;
+      display: flex;
+      flex-direction: column;
+    }
+    .main-content h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.13s;
+    }
+    .search-bar input:focus {
+      border-color: var(--ypz-accent);
+      box-shadow: 0 0 0 2px var(--ypz-accent-light);
+    }
+    .agents-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .agent-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(30,40,80,0.05);
+      padding: 24px 20px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 220px;
+      position: relative;
+      transition: box-shadow 0.13s;
+    }
+    .agent-card:hover {
+      box-shadow: 0 6px 24px rgba(30,40,80,0.09);
+    }
+    .agent-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #f2f3f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .agent-title {
+      font-weight: 700;
+      font-size: 1.13rem;
+      margin-bottom: 8px;
+      color: var(--ypz-accent);
+    }
+    .agent-desc {
+      font-size: 0.98rem;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    .agent-tags {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .agent-tag {
+      background: var(--ypz-accent-light);
+      color: var(--ypz-accent);
+      font-size: 0.82rem;
+      border-radius: 5px;
+      padding: 2px 10px;
+      font-weight: 500;
+    }
+    @media (max-width: 900px) {
+      .ypz-header {
+        padding: 14px 10px 8px 10px;
+      }
+      .archive-container {
+        flex-direction: column;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e3ea;
+        padding: 16px 0;
+      }
+      .main-content {
+        padding: 24px 10px 16px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="archive-container">
+  <nav class="sidebar" aria-label="Agent Categories">
+    <h2>Categories</h2>
+    <ul id="categoryList">
+      <li class="active" data-category="All">All</li>
+      <li data-category="Analytics">Analytics</li>
+      <li data-category="Content">Content</li>
+      <li data-category="Marketing">Marketing</li>
+      <li data-category="Local SEO">Local SEO</li>
+      <li data-category="Technical SEO">Technical SEO</li>
+      <li data-category="Link Building">Link Building</li>
+      <li data-category="E-commerce">E-commerce</li>
+      <li data-category="Social Media">Social Media</li>
+      <li data-category="Other">Other</li>
+    </ul>
+  </nav>
+  <main class="main-content">
+    <h1>SEO AI Agents Archive</h1>
+    <!-- Intro Section -->
+    <section class="intro-section">
+      <p><strong>Welcome to the SEO AI Agents Archive!</strong> Here you’ll find a curated collection of cutting-edge <a href="https://yourpalzack.com/ai-seo/ai-agents/" target="_blank" rel="noopener" title="AI SEO Agents">AI-powered SEO agents</a> designed specifically to help business owners, marketers, and website managers supercharge their SEO efforts. Whether you’re looking to analyze your rankings, optimize your content, build high-quality backlinks, or automate technical audits, you’ll discover the perfect AI agent for your needs. For more on our AI SEO philosophy, visit <a href="https://yourpalzack.com/ai-seo/" target="_blank" rel="noopener" title="AI SEO">AI SEO</a> or explore <a href="https://yourpalzack.com/seo-services/ai-seo/" target="_blank" rel="noopener" title="AI SEO Services">AI SEO Services</a>.</p>
+      <p>SEO-focused AI agents leverage advanced algorithms and data-driven insights to streamline complex tasks, save time, and deliver better results. By integrating these tools into your workflow, you can stay ahead of the competition, make smarter decisions, and achieve measurable growth in your online presence. Learn more about <a href="https://yourpalzack.com/seo-services/ai-seo/llm-optimization-llmo/" target="_blank" rel="noopener" title="LLM Optimization">LLM Optimization</a> or get tips on <a href="https://yourpalzack.com/ai-seo/prompting/" target="_blank" rel="noopener" title="AI SEO Prompting">AI SEO Prompting</a>.</p>
+    </section>
+    <!-- FAQ Accordion -->
+    <section class="faq-section" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions about SEO AI Agents</h2>
+      <div class="faq-accordion" id="faqAccordion">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1-label">What is an SEO AI agent?</button>
+          <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1-label">
+            <p>An SEO AI agent is an artificial intelligence-powered tool designed to automate, analyze, or enhance various aspects of search engine optimization. These agents can handle tasks such as keyword research, content optimization, technical audits, link building, and more—helping businesses improve their online visibility efficiently. See examples in our <a href="https://yourpalzack.com/ai-seo/ai-agents/" target="_blank" rel="noopener" title="AI SEO Agents">AI SEO Agents Archive</a>.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2-label">How can AI agents help my business grow?</button>
+          <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2-label">
+            <p>AI agents save you time by automating repetitive SEO tasks, provide data-driven insights for smarter decision-making, and help uncover new growth opportunities. This means you can focus more on strategy and less on manual work—resulting in faster, more sustainable business growth. Learn more about our <a href="https://yourpalzack.com/ai-seo/" target="_blank" rel="noopener" title="AI SEO">AI SEO</a> approach and <a href="https://yourpalzack.com/seo-services/ai-seo/" target="_blank" rel="noopener" title="AI SEO Services">AI SEO services</a>.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3-label">Are SEO AI agents suitable for small businesses?</button>
+          <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq3-label">
+            <p>Absolutely! Many SEO AI agents are designed with small businesses in mind, offering user-friendly interfaces, affordable pricing, and actionable recommendations that don’t require deep technical expertise. For tailored solutions, check out <a href="https://yourpalzack.com/seo-services/ai-seo/" target="_blank" rel="noopener" title="AI SEO Services">AI SEO Services</a>.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq4" id="faq4-label">Will AI replace human SEO experts?</button>
+          <div class="faq-answer" id="faq4" role="region" aria-labelledby="faq4-label">
+            <p>AI is a powerful assistant, but it works best when combined with human creativity and strategic thinking. While AI agents automate and enhance many SEO tasks, human oversight is still essential for setting goals, interpreting results, and making nuanced decisions. Explore advanced techniques like <a href="https://yourpalzack.com/seo-services/ai-seo/llm-optimization-llmo/" target="_blank" rel="noopener" title="LLM Optimization">LLM Optimization</a> for the best results.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq5" id="faq5-label">How do I choose the right SEO AI agent?</button>
+          <div class="faq-answer" id="faq5" role="region" aria-labelledby="faq5-label">
+            <p>Consider your business goals, budget, and the specific SEO challenges you face. Explore the archive, read tool descriptions, and try out a few agents to see which ones fit your workflow and deliver the best results. For tips on making the most of AI, visit our <a href="https://yourpalzack.com/ai-seo/prompting/" target="_blank" rel="noopener" title="AI SEO Prompting">AI SEO Prompting</a> guide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search AI agents..." aria-label="Search agents">
+    </div>
+    <section class="agents-grid" id="agentsGrid" aria-live="polite">
+      <!-- Agent cards will be injected here -->
+    </section>
+    <!-- Featured AI Services Section -->
+    <section class="ai-services-nav" aria-labelledby="ai-services-heading">
+      <h2 id="ai-services-heading">Explore More AI SEO Resources</h2>
+      <nav class="ai-services-links" aria-label="Featured AI SEO Resources">
+        <a href="https://yourpalzack.com/ai-seo/ai-agents/" title="AI SEO Agents">AI SEO Agents</a>
+        <a href="https://yourpalzack.com/ai-seo/" title="AI SEO">AI SEO</a>
+        <a href="https://yourpalzack.com/seo-services/ai-seo/" title="AI SEO Services">AI SEO Services</a>
+        <a href="https://yourpalzack.com/seo-services/ai-seo/llm-optimization-llmo/" title="LLM Optimization">LLM Optimization</a>
+        <a href="https://yourpalzack.com/ai-seo/prompting/" title="AI SEO Prompting">AI SEO Prompting</a>
+      </nav>
+    </section>
+  </main>
+</div>
+<style>
+  .intro-section {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,131,72,0.03);
+    padding: 22px 28px 18px 28px;
+    margin-bottom: 30px;
+    font-size: 1.08rem;
+    color: #234;
+    line-height: 1.6;
+  }
+  .intro-section strong {
+    color: var(--ypz-accent);
+  }
+  .faq-section {
+    background: var(--ypz-accent-light);
+    border-radius: 10px;
+    padding: 22px 18px 12px 18px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(0,131,72,0.04);
+  }
+  .faq-section h2 {
+    color: var(--ypz-accent);
+    font-size: 1.15rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .faq-accordion {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .faq-item + .faq-item {
+    margin-top: 10px;
+  }
+  .faq-question {
+    width: 100%;
+    background: #fff;
+    color: var(--ypz-accent);
+    border: 1.5px solid var(--ypz-accent);
+    border-radius: 6px;
+    padding: 13px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.13s, color 0.13s;
+    outline: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .faq-question[aria-expanded="true"] {
+    background: var(--ypz-accent);
+    color: #fff;
+  }
+  .faq-question:after {
+    content: '\25BC';
+    position: absolute;
+    right: 18px;
+    font-size: 1.1em;
+    transition: transform 0.2s;
+  }
+  .faq-question[aria-expanded="true"]:after {
+    transform: rotate(-180deg);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9fdfb;
+    border-radius: 0 0 6px 6px;
+    margin: 0;
+    padding: 0 16px;
+    color: #234;
+    transition: max-height 0.3s ease;
+  }
+  .faq-question[aria-expanded="true"] + .faq-answer {
+    max-height: 300px;
+    padding: 12px 16px 16px 16px;
+    border-top: 1px solid #e0ede7;
+  }
+  @media (max-width: 700px) {
+    .intro-section { padding: 14px 8px; }
+    .faq-section { padding: 14px 4px; }
+    .faq-accordion { padding: 0 2px; }
+  }
+  .ai-services-nav {
+    margin-top: 44px;
+    padding: 32px 0 12px 0;
+    background: var(--ypz-accent-light);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,131,72,0.05);
+    text-align: center;
+  }
+  .ai-services-nav h2 {
+    color: var(--ypz-accent);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+  }
+  .ai-services-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+  .ai-services-links a {
+    display: inline-block;
+    background: #fff;
+    color: var(--ypz-accent);
+    border: 1.5px solid var(--ypz-accent);
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    box-shadow: 0 1px 4px rgba(0,131,72,0.04);
+  }
+  .ai-services-links a:hover, .ai-services-links a:focus {
+    background: var(--ypz-accent);
+    color: #fff;
+    outline: none;
+    box-shadow: 0 2px 10px rgba(0,131,72,0.10);
+  }
+  @media (max-width: 600px) {
+    .ai-services-links {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ai-services-nav {
+      padding: 20px 0 6px 0;
+    }
+  }
+</style>
+<script>
+// FAQ Accordion logic
+(function() {
+  const faqs = document.querySelectorAll('.faq-question');
+  faqs.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      // Collapse all
+      faqs.forEach(b => b.setAttribute('aria-expanded', 'false'));
+      // Expand this one if not already
+      if (!expanded) this.setAttribute('aria-expanded', 'true');
+    });
+    // Keyboard accessibility
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+})();
+// Substantial SEO AI agents archive (24+ tools)
+const agents = [
+  {
+    title: "SERP Analyzer Bot",
+    desc: "Analyzes Google SERPs for your keywords, providing actionable insights for ranking improvements.",
+    icon: "🔍",
+    tags: ["Analytics", "SERP", "Technical SEO"],
+    category: "Analytics"
+  },
+  {
+    title: "Content Optimizer AI",
+    desc: "Suggests keyword placements and content improvements for on-page SEO.",
+    icon: "📝",
+    tags: ["Content", "On-Page SEO"],
+    category: "Content"
+  },
+  {
+    title: "Local Listings Manager",
+    desc: "Automates local citation building and NAP consistency checks for local businesses.",
+    icon: "📍",
+    tags: ["Local SEO", "Citations"],
+    category: "Local SEO"
+  },
+  {
+    title: "Backlink Scout",
+    desc: "Discovers and evaluates backlink opportunities based on your niche and competitors.",
+    icon: "🔗",
+    tags: ["Link Building", "Analytics"],
+    category: "Link Building"
+  },
+  {
+    title: "Schema Markup Generator",
+    desc: "Creates structured data snippets for rich results and enhanced SERP appearance.",
+    icon: "📄",
+    tags: ["Technical SEO", "Schema"],
+    category: "Technical SEO"
+  },
+  {
+    title: "Ecom SEO Booster",
+    desc: "Optimizes e-commerce product pages for better visibility and conversions.",
+    icon: "🛒",
+    tags: ["E-commerce", "Product SEO"],
+    category: "E-commerce"
+  },
+  {
+    title: "Social Signal Analyzer",
+    desc: "Monitors and analyzes social media signals that impact SEO rankings.",
+    icon: "📣",
+    tags: ["Social Media", "Analytics"],
+    category: "Social Media"
+  },
+  {
+    title: "Technical Audit Bot",
+    desc: "Performs comprehensive technical SEO audits, highlighting crawl errors and site speed issues.",
+    icon: "🛠️",
+    tags: ["Technical SEO", "Audit"],
+    category: "Technical SEO"
+  },
+  {
+    title: "AI Meta Tag Writer",
+    desc: "Generates optimized meta titles and descriptions for every page.",
+    icon: "🏷️",
+    tags: ["Content", "Meta Tags"],
+    category: "Content"
+  },
+  {
+    title: "Competitor Insights AI",
+    desc: "Analyzes competitors’ SEO strategies and provides actionable recommendations.",
+    icon: "📊",
+    tags: ["Analytics", "Competitor Analysis"],
+    category: "Analytics"
+  },
+  {
+    title: "SEO Health Monitor",
+    desc: "Tracks site health, uptime, and SEO-critical errors in real time.",
+    icon: "❤️",
+    tags: ["Analytics", "Monitoring"],
+    category: "Analytics"
+  },
+  {
+    title: "Keyword Discovery Genie",
+    desc: "Discovers high-value keyword opportunities and long-tail variations.",
+    icon: "🔑",
+    tags: ["Analytics", "Keyword Research"],
+    category: "Analytics"
+  },
+  {
+    title: "AI FAQ Builder",
+    desc: "Creates SEO-friendly FAQ sections and generates schema markup.",
+    icon: "❓",
+    tags: ["Content", "Schema"],
+    category: "Content"
+  },
+  {
+    title: "Review Booster Bot",
+    desc: "Automates review collection and response for local SEO improvement.",
+    icon: "⭐",
+    tags: ["Local SEO", "Reputation"],
+    category: "Local SEO"
+  },
+  {
+    title: "Broken Link Fixer",
+    desc: "Finds and suggests fixes for broken internal and external links.",
+    icon: "🔧",
+    tags: ["Technical SEO", "Audit"],
+    category: "Technical SEO"
+  },
+  {
+    title: "AI Outreach Assistant",
+    desc: "Drafts personalized outreach emails for link building campaigns.",
+    icon: "✉️",
+    tags: ["Link Building", "Marketing"],
+    category: "Link Building"
+  },
+  {
+    title: "Alt Text Generator",
+    desc: "Automatically generates descriptive alt text for all images.",
+    icon: "🖼️",
+    tags: ["Content", "Accessibility"],
+    category: "Content"
+  },
+  {
+    title: "Mobile SEO Checker",
+    desc: "Audits and suggests improvements for mobile friendliness and speed.",
+    icon: "📱",
+    tags: ["Technical SEO", "Audit"],
+    category: "Technical SEO"
+  },
+  {
+    title: "Product Review Aggregator",
+    desc: "Collects and displays product reviews for e-commerce SEO.",
+    icon: "🛍️",
+    tags: ["E-commerce", "Content"],
+    category: "E-commerce"
+  },
+  {
+    title: "AI Silo Builder",
+    desc: "Suggests and helps build SEO-friendly site structure and silos.",
+    icon: "🏗️",
+    tags: ["Technical SEO", "Content"],
+    category: "Technical SEO"
+  },
+  {
+    title: "GMB Optimizer",
+    desc: "Optimizes Google My Business listings for maximum local visibility.",
+    icon: "🌐",
+    tags: ["Local SEO", "GMB"],
+    category: "Local SEO"
+  },
+  {
+    title: "AI Press Release Writer",
+    desc: "Creates optimized press releases for SEO and brand awareness.",
+    icon: "📰",
+    tags: ["Marketing", "Content"],
+    category: "Marketing"
+  },
+  {
+    title: "Featured Snippet Hunter",
+    desc: "Identifies and helps target featured snippet opportunities.",
+    icon: "🏆",
+    tags: ["Analytics", "Content"],
+    category: "Analytics"
+  },
+  {
+    title: "Competitor Backlink Analyzer",
+    desc: "Analyzes competitors’ backlinks and finds gaps for your site.",
+    icon: "🔬",
+    tags: ["Link Building", "Analytics"],
+    category: "Link Building"
+  },
+  {
+    title: "AI Blog Topic Generator",
+    desc: "Suggests trending, SEO-friendly blog topics for your niche.",
+    icon: "📰",
+    tags: ["Content", "Blogging"],
+    category: "Content"
+  },
+  {
+    title: "Ecom Schema Wizard",
+    desc: "Generates product, review, and offer schema for e-commerce sites.",
+    icon: "🧙",
+    tags: ["E-commerce", "Schema"],
+    category: "E-commerce"
+  },
+  {
+    title: "AI Social Post Scheduler",
+    desc: "Schedules and optimizes social posts for maximum SEO impact.",
+    icon: "📅",
+    tags: ["Social Media", "Marketing"],
+    category: "Social Media"
+  },
+  {
+    title: "Page Speed Booster",
+    desc: "Analyzes and recommends improvements for site speed and Core Web Vitals.",
+    icon: "⚡",
+    tags: ["Technical SEO", "Analytics"],
+    category: "Technical SEO"
+  },
+  {
+    title: "AI Internal Linker",
+    desc: "Suggests optimal internal linking opportunities for SEO.",
+    icon: "🔗",
+    tags: ["Technical SEO", "Content"],
+    category: "Technical SEO"
+  },
+  {
+    title: "Voice Search Optimizer",
+    desc: "Optimizes content for voice search queries and featured snippets.",
+    icon: "🎤",
+    tags: ["Technical SEO", "Content"],
+    category: "Technical SEO"
+  },
+  {
+    title: "AI PPC Landing Page Analyzer",
+    desc: "Reviews landing pages for SEO and PPC best practices.",
+    icon: "💸",
+    tags: ["Marketing", "Analytics"],
+    category: "Marketing"
+  },
+  {
+    title: "Social Mention Tracker",
+    desc: "Tracks and analyzes brand mentions across social platforms for SEO signals.",
+    icon: "🔔",
+    tags: ["Social Media", "Analytics"],
+    category: "Social Media"
+  }
+];
+
+const agentsGrid = document.getElementById('agentsGrid');
+const categoryList = document.getElementById('categoryList');
+const searchInput = document.getElementById('searchInput');
+
+function renderAgents(filterCategory = 'All', searchTerm = '') {
+  let filtered = agents.filter(agent =>
+    (filterCategory === 'All' || agent.category === filterCategory) &&
+    (agent.title.toLowerCase().includes(searchTerm) || agent.desc.toLowerCase().includes(searchTerm) || agent.tags.join(' ').toLowerCase().includes(searchTerm))
+  );
+  if (filtered.length === 0) {
+    agentsGrid.innerHTML = '<div style="grid-column: 1/-1; text-align:center; color:#999; font-size:1.1rem;">No agents found.</div>';
+    return;
+  }
+  agentsGrid.innerHTML = filtered.map(agent => `
+    <article class="agent-card" tabindex="0" aria-label="${agent.title}">
+      <div class="agent-icon" aria-hidden="true">${agent.icon}</div>
+      <div class="agent-title">${agent.title}</div>
+      <div class="agent-desc">${agent.desc}</div>
+      <div class="agent-tags">
+        ${agent.tags.map(tag => `<span class="agent-tag">${tag}</span>`).join(' ')}
+      </div>
+    </article>
+  `).join('');
+}
+
+// Sidebar category click
+categoryList.addEventListener('click', e => {
+  if (e.target.tagName === 'LI') {
+    document.querySelectorAll('#categoryList li').forEach(li => li.classList.remove('active'));
+    e.target.classList.add('active');
+    renderAgents(e.target.dataset.category, searchInput.value.trim().toLowerCase());
+  }
+});
+
+// Search input
+searchInput.addEventListener('input', () => {
+  const activeCat = document.querySelector('#categoryList li.active').dataset.category;
+  renderAgents(activeCat, searchInput.value.trim().toLowerCase());
+});
+
+// Initial render
+renderAgents();
+</script>
+</body>
+</html>

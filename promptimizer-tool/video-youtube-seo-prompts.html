@@ -1,0 +1,832 @@
+<!-- Video & YouTube SEO Prompts HTML -->
+<div class="seo-prompt-generator">
+  <h1>Video & YouTube SEO Prompts</h1>
+  <p class="intro-text">Generate powerful AI prompts to create optimized video titles, descriptions, tags, and scripts that boost your YouTube visibility and engagement.</p>
+  
+  <div class="prompt-controls">
+    <div class="input-group">
+      <label for="channel-type">Channel Type:</label>
+      <select id="channel-type">
+        <option value="business">Business/Brand Channel</option>
+        <option value="educational">Educational/Tutorial</option>
+        <option value="entertainment">Entertainment/Vlog</option>
+        <option value="product-review">Product Review</option>
+        <option value="gaming">Gaming</option>
+        <option value="news">News/Commentary</option>
+        <option value="how-to">How-To/DIY</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="channel-name">Channel Name:</label>
+      <input type="text" id="channel-name" placeholder="e.g., Tech Insights, Cooking With Sarah">
+    </div>
+    
+    <div class="input-group">
+      <label for="video-topic">Video Topic/Subject:</label>
+      <input type="text" id="video-topic" placeholder="e.g., smartphone review, beginner yoga tutorial">
+    </div>
+    
+    <div class="input-group">
+      <label for="content-type">Content Type:</label>
+      <select id="content-type">
+        <option value="video-title">Video Title & Thumbnail Text</option>
+        <option value="video-description">Video Description</option>
+        <option value="video-tags">Video Tags</option>
+        <option value="video-script">Video Script</option>
+        <option value="video-chapters">Video Chapters/Timestamps</option>
+        <option value="end-screen">End Screen & Cards</option>
+        <option value="youtube-audit">YouTube Channel Audit</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="target-keywords">Target Keywords (comma separated):</label>
+      <input type="text" id="target-keywords" placeholder="e.g., best smartphone 2025, budget phone review">
+    </div>
+    
+    <button id="generate-prompt" class="generate-button">Generate Video SEO Prompt</button>
+  </div>
+  
+  <div class="result-container">
+    <h3>Your Video SEO Prompt:</h3>
+    <div id="prompt-result" class="prompt-box"></div>
+    <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+  </div>
+  
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li>Select your channel type from the dropdown menu</li>
+      <li>Enter your channel name to personalize the content</li>
+      <li>Specify the video topic or subject you're creating content for</li>
+      <li>Choose the type of video content you want to create</li>
+      <li>Enter target keywords to focus the content (comma separated)</li>
+      <li>Click "Generate Video SEO Prompt" to create your AI prompt</li>
+      <li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+      <li>Use the resulting content to enhance your video's search visibility</li>
+    </ol>
+  </div>
+</div>
+  
+  <div class="examples-container">
+    <h3>Example Video SEO Prompts</h3>
+    <div class="example-tabs">
+      <button class="example-tab active" data-example="video-title">Video Title</button>
+      <button class="example-tab" data-example="video-description">Description</button>
+      <button class="example-tab" data-example="video-script">Script</button>
+      <button class="example-tab" data-example="video-chapters">Chapters</button>
+      <button class="example-tab" data-example="youtube-audit">Channel Audit</button>
+    </div>
+    <div class="example-content" id="example-content">
+      <div class="example-item active" id="video-title-example">
+        <h4>Video Title & Thumbnail Text Example</h4>
+        <div class="example-box">
+          <p>Create 10 high-performing YouTube video title options for a smartphone review video on the "Tech Insights" channel. The video reviews the new Galaxy S25 Ultra. For each title option:</p>
+          <ul>
+            <li>Create a compelling, clickable title (60-70 characters maximum) that balances SEO optimization with click-through rate</li>
+            <li>Include a suggested thumbnail text overlay (3-5 words) that complements the title</li>
+            <li>Provide a brief explanation of why this title would perform well</li>
+          </ul>
+          <p>The titles should:</p>
+          <ul>
+            <li>Naturally incorporate these target keywords: "Galaxy S25 Ultra review," "S25 Ultra camera test," "best smartphone 2025"</li>
+            <li>Use proven YouTube title formulas that drive clicks (questions, numbers, emotional triggers, etc.)</li>
+            <li>Avoid clickbait while still creating curiosity</li>
+            <li>Consider search intent for people looking for detailed smartphone reviews</li>
+            <li>Match the Tech Insights channel's professional but accessible style</li>
+          </ul>
+          <p>Also provide recommendations for:</p>
+          <ul>
+            <li>A/B testing strategy for these titles</li>
+            <li>How to analyze which title performs best</li>
+            <li>Best practices for thumbnail design that would complement these titles</li>
+            <li>How to update titles after publishing if needed for better performance</li>
+          </ul>
+          <p>Include a brief explanation of how YouTube's algorithm evaluates and ranks video titles in 2025.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="video-description-example">
+        <h4>Video Description Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive YouTube video description for a 20-minute tutorial video titled "Complete Beginner's Guide to Yoga: 10 Essential Poses" on the "Mindful Movement" channel. The description should include:</p>
+          <ul>
+            <li>An engaging first 2-3 sentences (approximately 300 characters) that will be visible before viewers click "show more" and that encourage viewers to watch the full video</li>
+            <li>A detailed breakdown of what viewers will learn in the video (150-200 words)</li>
+            <li>Timestamps for each of the 10 yoga poses covered, with the exact time markers left as [00:00] for me to fill in later</li>
+            <li>A brief instructor bio highlighting qualifications (50-75 words)</li>
+            <li>Call-to-action sections for:
+              <ul>
+                <li>Channel subscription</li>
+                <li>Related videos on the channel</li>
+                <li>Social media follows</li>
+                <li>Website/mailing list signup</li>
+              </ul>
+            </li>
+            <li>Relevant hashtags (8-10) to include at the end of the description</li>
+          </ul>
+          <p>The description should:</p>
+          <ul>
+            <li>Naturally incorporate these target keywords: "yoga for beginners," "yoga tutorial," "how to do yoga poses," "yoga basics," "yoga at home"</li>
+            <li>Include one relevant affiliate disclaimer for yoga mat recommendations</li>
+            <li>Be formatted for easy readability with appropriate spacing and organization</li>
+            <li>Follow YouTube best practices for description SEO in 2025</li>
+            <li>Include one relevant question to encourage comments</li>
+          </ul>
+          <p>Also provide guidance on how to update this description template for future yoga tutorial videos while maintaining SEO benefits.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="video-script-example">
+        <h4>Video Script Example</h4>
+        <div class="example-box">
+          <p>Create a complete YouTube video script for a 10-12 minute product review of a high-end blender for the "Kitchen Gadget Guru" cooking channel. The script should include:</p>
+          <ul>
+            <li>A hook/intro section (30-45 seconds) that immediately grabs viewer attention and previews the value they'll get from watching</li>
+            <li>A brief channel-branded intro segment (10-15 seconds)</li>
+            <li>Main content sections covering:
+              <ul>
+                <li>Unboxing and first impressions (1-2 minutes)</li>
+                <li>Key features and specifications (2-3 minutes)</li>
+                <li>Performance tests with 3 different recipes (3-4 minutes)</li>
+                <li>Pros and cons analysis (1-2 minutes)</li>
+                <li>Price comparison with alternatives (1 minute)</li>
+                <li>Final verdict and recommendations (1 minute)</li>
+              </ul>
+            </li>
+            <li>A strong call-to-action closing (30 seconds)</li>
+          </ul>
+          <p>For each section, include:</p>
+          <ul>
+            <li>Exact dialogue/narration text</li>
+            <li>Brief notes on suggested visuals/B-roll/demonstrations</li>
+            <li>Approximate timing</li>
+            <li>Places to naturally incorporate target keywords: "best blender 2025," "high-end blender review," "blender comparison," "is [specific blender model] worth it"</li>
+          </ul>
+          <p>The script should:</p>
+          <ul>
+            <li>Be conversational yet professional in tone</li>
+            <li>Include 2-3 moments of genuine personality/humor</li>
+            <li>Incorporate YouTube SEO best practices for viewer retention</li>
+            <li>Include 3 strategic places to remind viewers to like/subscribe</li>
+            <li>Feature one natural segue to mention a related video on the channel</li>
+            <li>Include one audience question prompt to encourage comments</li>
+          </ul>
+          <p>Also provide brief guidance on how to adapt this script template for future product review videos.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="video-chapters-example">
+        <h4>Video Chapters/Timestamps Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive chapter/timestamp framework for a 25-30 minute YouTube tutorial video titled "Complete Guide to Adobe Premiere Pro for Beginners" on the "Edit Master" channel. The chapter structure should include:</p>
+          <ul>
+            <li>10-12 logical chapters that break down the tutorial into viewer-friendly segments</li>
+            <li>For each chapter/timestamp:
+              <ul>
+                <li>An SEO-optimized, descriptive title (maximum 40 characters)</li>
+                <li>A brief description of what content should be included in that section (30-50 words)</li>
+                <li>Approximate duration for each section</li>
+                <li>Any keywords that should be emphasized in that section</li>
+              </ul>
+            </li>
+          </ul>
+          <p>The chapter structure should include:</p>
+          <ul>
+            <li>An engaging introduction (not labeled as "introduction" but with a more compelling title)</li>
+            <li>Logical progression from basic to more advanced concepts</li>
+            <li>At least one chapter focused on common beginner mistakes/troubleshooting</li>
+            <li>A brief but effective conclusion/next steps chapter</li>
+          </ul>
+          <p>The chapters should:</p>
+          <ul>
+            <li>Naturally incorporate target keywords: "Premiere Pro tutorial," "video editing for beginners," "learn Premiere Pro," "Premiere Pro basics"</li>
+            <li>Be formatted correctly for YouTube's chapter feature (00:00 format)</li>
+            <li>Follow optimal pacing for viewer retention (no section too long or too short)</li>
+            <li>Include at least one chapter title framed as a question viewers commonly search for</li>
+            <li>Balance comprehensive coverage with maintaining viewer interest</li>
+          </ul>
+          <p>Also provide recommendations for:</p>
+          <ul>
+            <li>How to reference these chapters in the video introduction</li>
+            <li>How to use these chapters in video SEO strategy</li>
+            <li>How to analyze which chapters get the most viewer engagement</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="example-item" id="youtube-audit-example">
+        <h4>YouTube Channel Audit Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive YouTube channel audit framework for "Outdoor Adventures," a channel focused on hiking, camping, and outdoor gear reviews. The audit should include:</p>
+          <ul>
+            <li>Channel optimization assessment:
+              <ul>
+                <li>Channel name, icon, and banner evaluation</li>
+                <li>About section and channel description analysis</li>
+                <li>Channel trailer and featured content review</li>
+                <li>Channel organization (playlists, sections, featured channels)</li>
+                <li>Community engagement settings</li>
+              </ul>
+            </li>
+            <li>Content strategy evaluation:
+              <ul>
+                <li>Video topic selection and keyword targeting</li>
+                <li>Content gaps and opportunities based on audience interest</li>
+                <li>Video length, frequency, and publishing schedule</li>
+                <li>Seasonal content planning</li>
+                <li>Trending topics incorporation</li>
+                <li>Evergreen vs. timely content balance</li>
+              </ul>
+            </li>
+            <li>Video optimization analysis:
+              <ul>
+                <li>Title and thumbnail effectiveness</li>
+                <li>Description optimization and structure</li>
+                <li>Tag usage and relevance</li>
+                <li>End screen and card implementation</li>
+                <li>Chapters and timestamp usage</li>
+                <li>Hashtag strategy</li>
+              </ul>
+            </li>
+            <li>Audience engagement assessment:
+              <ul>
+                <li>Call-to-action effectiveness</li>
+                <li>Comment response strategy</li>
+                <li>Community post utilization</li>
+                <li>Cross-platform promotion</li>
+                <li>Collaboration opportunities</li>
+              </ul>
+            </li>
+            <li>Performance metrics analysis:
+              <ul>
+                <li>View duration and retention patterns</li>
+                <li>Click-through rate optimization</li>
+                <li>Subscriber growth strategy</li>
+                <li>Traffic source optimization</li>
+                <li>Conversion tracking (if applicable)</li>
+              </ul>
+            </li>
+          </ul>
+          <p>For each section, include:</p>
+          <ul>
+            <li>Specific metrics to measure</li>
+            <li>Industry benchmarks for outdoor/adventure channels</li>
+            <li>Actionable recommendations prioritized by impact</li>
+            <li>Step-by-step implementation guidance</li>
+            <li>Tools or resources to assist with improvements</li>
+          </ul>
+          <p>The audit should focus on YouTube-specific SEO strategies for 2025, with particular attention to algorithm preferences for outdoor content and adventure channels.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- CSS Styles -->
+<style>
+  .seo-prompt-generator {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .seo-prompt-generator h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    color: #5a6a7a;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .prompt-controls {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #445566;
+    font-size: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #008348;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+  }
+  
+  .generate-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #008348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .generate-button:hover {
+    background-color: #006738;
+  }
+  
+  .result-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .prompt-box {
+    min-height: 150px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .copy-button {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .copy-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .how-to-use {
+    background-color: #f0f7f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #008348;
+  }
+  
+  .how-to-use h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .how-to-use ol {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  
+  .how-to-use li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .seo-prompt-generator {
+      padding: 20px;
+    }
+    
+    .example-tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .example-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  .examples-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .examples-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .example-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .example-tab {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .example-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-tab.active {
+    background-color: #008348;
+    color: white;
+    border-color: #008348;
+  }
+  
+  .example-item {
+    display: none;
+  }
+  
+  .example-item.active {
+    display: block;
+  }
+  
+  .example-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .example-box {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .example-box p {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .example-box ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .example-box li {
+    margin-bottom: 8px;
+  }
+  
+  /* Ensure all child elements respect container width */
+  .seo-prompt-generator * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure content doesn't overflow its container */
+  .prompt-box, .example-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate-prompt');
+    const copyButton = document.getElementById('copy-prompt');
+    const promptResult = document.getElementById('prompt-result');
+    const exampleTabs = document.querySelectorAll('.example-tab');
+    const exampleItems = document.querySelectorAll('.example-item');
+    
+    // Tab switching functionality
+    exampleTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs and examples
+        exampleTabs.forEach(t => t.classList.remove('active'));
+        exampleItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current tab
+        this.classList.add('active');
+        
+        // Show corresponding example
+        const exampleId = this.getAttribute('data-example') + '-example';
+        document.getElementById(exampleId).classList.add('active');
+      });
+    });
+    
+    // Generate prompt when button is clicked
+    generateButton.addEventListener('click', function() {
+      const channelType = document.getElementById('channel-type').value;
+      const channelName = document.getElementById('channel-name').value || '[CHANNEL NAME]';
+      const videoTopic = document.getElementById('video-topic').value || '[VIDEO TOPIC]';
+      const contentType = document.getElementById('content-type').value;
+      const targetKeywords = document.getElementById('target-keywords').value || '[TARGET KEYWORDS]';
+      
+      let promptText = '';
+      
+      // Generate different prompts based on the selected content type
+      switch(contentType) {
+        case 'video-title':
+          promptText = `Create 10 high-performing YouTube video title options for a ${videoTopic} video on the "${channelName}" channel. For each title option:
+
+1. Create a compelling, clickable title (60-70 characters maximum) that balances SEO optimization with click-through rate
+2. Include a suggested thumbnail text overlay (3-5 words) that complements the title
+3. Provide a brief explanation of why this title would perform well
+
+The titles should:
+- Naturally incorporate these target keywords: ${targetKeywords}
+- Use proven YouTube title formulas that drive clicks (questions, numbers, emotional triggers, etc.)
+- Avoid clickbait while still creating curiosity
+- Consider search intent for people looking for ${channelType} content about ${videoTopic}
+- Match the ${channelName} channel's style and audience expectations
+
+Also provide recommendations for:
+- A/B testing strategy for these titles
+- How to analyze which title performs best
+- Best practices for thumbnail design that would complement these titles
+- How to update titles after publishing if needed for better performance
+
+Include a brief explanation of how YouTube's algorithm evaluates and ranks video titles in 2025.`;
+          break;
+          
+        case 'video-description':
+          promptText = `Create a comprehensive YouTube video description for a video about ${videoTopic} on the "${channelName}" channel. The description should include:
+
+1. An engaging first 2-3 sentences (approximately 300 characters) that will be visible before viewers click "show more" and that encourage viewers to watch the full video
+2. A detailed breakdown of what viewers will learn in the video (150-200 words)
+3. Timestamps for key sections of the video, with the exact time markers left as [00:00] for me to fill in later
+4. A brief creator/channel bio highlighting expertise in ${videoTopic} (50-75 words)
+5. Call-to-action sections for:
+   - Channel subscription
+   - Related videos on the channel
+   - Social media follows
+   - Website/mailing list signup
+6. Relevant hashtags (8-10) to include at the end of the description
+
+The description should:
+- Naturally incorporate these target keywords: ${targetKeywords}
+- Include one relevant affiliate disclaimer if needed
+- Be formatted for easy readability with appropriate spacing and organization
+- Follow YouTube best practices for description SEO in 2025
+- Include one relevant question to encourage comments
+
+Also provide guidance on how to update this description template for future ${channelType} videos while maintaining SEO benefits.`;
+          break;
+          
+        case 'video-tags':
+          promptText = `Create a comprehensive YouTube tag strategy for a ${videoTopic} video on the "${channelName}" channel. Include:
+
+1. A prioritized list of 15-20 tags in order of importance, including:
+   - Primary keyword tags (3-5)
+   - Secondary keyword variations (5-7)
+   - Broad category tags (2-3)
+   - Channel-specific tags (2-3)
+   - Trending/timely tags related to ${videoTopic} (if applicable)
+
+2. For each tag, provide:
+   - The exact tag text to use
+   - Search volume estimate (high, medium, low)
+   - Competition level (high, medium, low)
+   - Rationale for including this tag
+
+3. Tag strategy recommendations:
+   - How to research the most effective tags for ${channelType} content
+   - Tools to use for tag research and analysis
+   - How to update tags over time for better performance
+   - How tags interact with titles and descriptions for SEO
+
+The tags should:
+- Target these primary keywords: ${targetKeywords}
+- Include a mix of high-volume and low-competition terms
+- Be relevant to both the specific video content and broader channel theme
+- Follow current YouTube best practices for tag usage in 2025
+- Avoid tag stuffing while maximizing discoverability
+
+Also include guidance on how to track which tags are driving the most traffic to your videos.`;
+          break;
+          
+        case 'video-script':
+          promptText = `Create a complete YouTube video script for a 10-15 minute video about ${videoTopic} for the "${channelName}" ${channelType} channel. The script should include:
+
+1. A hook/intro section (30-45 seconds) that immediately grabs viewer attention and previews the value they'll get from watching
+2. A brief channel-branded intro segment (10-15 seconds)
+3. Main content sections covering the key aspects of ${videoTopic}
+4. A strong call-to-action closing (30 seconds)
+
+For each section, include:
+- Exact dialogue/narration text
+- Brief notes on suggested visuals/B-roll/demonstrations
+- Approximate timing
+- Places to naturally incorporate target keywords: ${targetKeywords}
+
+The script should:
+- Be conversational yet professional in tone
+- Include 2-3 moments of genuine personality/humor
+- Incorporate YouTube SEO best practices for viewer retention
+- Include 3 strategic places to remind viewers to like/subscribe
+- Feature one natural segue to mention a related video on the channel
+- Include one audience question prompt to encourage comments
+
+Also provide brief guidance on how to adapt this script template for future ${channelType} videos on the ${channelName} channel.`;
+          break;
+          
+        case 'video-chapters':
+          promptText = `Create a comprehensive chapter/timestamp framework for a YouTube video about ${videoTopic} on the "${channelName}" channel. The chapter structure should include:
+
+1. 8-12 logical chapters that break down the ${videoTopic} content into viewer-friendly segments
+2. For each chapter/timestamp:
+   - An SEO-optimized, descriptive title (maximum 40 characters)
+   - A brief description of what content should be included in that section (30-50 words)
+   - Approximate duration for each section
+   - Any keywords that should be emphasized in that section
+
+The chapter structure should include:
+- An engaging introduction (not labeled as "introduction" but with a more compelling title)
+- Logical progression through the ${videoTopic} subject matter
+- At least one chapter focused on common questions or challenges
+- A brief but effective conclusion/next steps chapter
+
+The chapters should:
+- Naturally incorporate target keywords: ${targetKeywords}
+- Be formatted correctly for YouTube's chapter feature (00:00 format)
+- Follow optimal pacing for viewer retention (no section too long or too short)
+- Include at least one chapter title framed as a question viewers commonly search for
+- Balance comprehensive coverage with maintaining viewer interest
+
+Also provide recommendations for:
+- How to reference these chapters in the video introduction
+- How to use these chapters in video SEO strategy
+- How to analyze which chapters get the most viewer engagement`;
+          break;
+          
+        case 'end-screen':
+          promptText = `Create a strategic end screen and cards implementation plan for a YouTube video about ${videoTopic} on the "${channelName}" channel. The plan should include:
+
+1. End Screen Strategy (final 20 seconds of video):
+   - Exact script for what the host should say during the end screen period
+   - Visual layout recommendations for end screen elements
+   - Specific recommendations for which 4 elements to include:
+     * Which video to feature as the "watch next" recommendation
+     * What type of playlist to feature
+     * Subscribe button placement and design
+     * Whether to include a channel or external link
+   - Timing recommendations for each element
+
+2. YouTube Cards Strategy:
+   - Recommendations for 5 strategic card placements throughout the video
+   - For each card:
+     * Exact timestamp for when it should appear
+     * What type of card to use (video, playlist, channel, link)
+     * What content to link to
+     * Brief text to include with the card
+     * How it relates to what's being discussed at that moment
+
+3. Content Recommendations:
+   - How to identify the best videos/playlists to feature
+   - How to create a content ecosystem that keeps viewers on your channel
+   - Analysis of which videos from the ${channelName} channel would pair well with ${videoTopic} content
+
+The strategy should:
+- Optimize for maximum click-through rate
+- Naturally incorporate moments that lead viewers to related content
+- Create a strategic viewer journey through your channel content
+- Follow current YouTube best practices for end screens and cards in 2025
+- Include performance tracking recommendations
+
+Also provide guidance on how to analyze which end screen elements and cards perform best for ${channelType} content.`;
+          break;
+          
+        case 'youtube-audit':
+          promptText = `Create a comprehensive YouTube channel audit framework for "${channelName}", a ${channelType} channel focusing on ${videoTopic} content. The audit should include:
+
+1. Channel optimization assessment:
+   - Channel name, icon, and banner evaluation
+   - About section and channel description analysis
+   - Channel trailer and featured content review
+   - Channel organization (playlists, sections, featured channels)
+   - Community engagement settings
+
+2. Content strategy evaluation:
+   - Video topic selection and keyword targeting
+   - Content gaps and opportunities based on audience interest
+   - Video length, frequency, and publishing schedule
+   - Seasonal content planning
+   - Trending topics incorporation
+   - Evergreen vs. timely content balance
+
+3. Video optimization analysis:
+   - Title and thumbnail effectiveness
+   - Description optimization and structure
+   - Tag usage and relevance
+   - End screen and card implementation
+   - Chapters and timestamp usage
+   - Hashtag strategy
+
+4. Audience engagement assessment:
+   - Call-to-action effectiveness
+   - Comment response strategy
+   - Community post utilization
+   - Cross-platform promotion
+   - Collaboration opportunities
+
+5. Performance metrics analysis:
+   - View duration and retention patterns
+   - Click-through rate optimization
+   - Subscriber growth strategy
+   - Traffic source optimization
+   - Conversion tracking (if applicable)
+
+6. Keyword optimization focusing on:
+   - ${targetKeywords}
+   - Long-tail variations and related terms
+   - Search intent alignment
+
+For each section, include:
+- Specific metrics to measure
+- Industry benchmarks for ${channelType} channels
+- Actionable recommendations prioritized by impact
+- Step-by-step implementation guidance
+- Tools or resources to assist with improvements
+
+The audit should focus on YouTube-specific SEO strategies for 2025, with particular attention to algorithm preferences for ${channelType} content.`;
+          break;
+      }
+      
+      promptResult.textContent = promptText;
+    });
+    
+    // Copy prompt to clipboard
+    copyButton.addEventListener('click', function() {
+      const textToCopy = promptResult.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard. Please try again or copy manually.');
+      });
+    });
+  });
+</script>

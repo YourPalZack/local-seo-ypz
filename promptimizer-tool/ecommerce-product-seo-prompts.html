@@ -1,0 +1,833 @@
+<!-- E-commerce & Product SEO Prompts HTML -->
+<div class="seo-prompt-generator">
+  <h1>E-commerce & Product SEO Prompts</h1>
+  <p class="intro-text">Generate powerful AI prompts to create SEO-optimized product descriptions, category pages, schema markup, and more to boost your e-commerce store's search visibility and conversions.</p>
+  
+  <div class="prompt-controls">
+    <div class="input-group">
+      <label for="store-type">Store Type:</label>
+      <select id="store-type">
+        <option value="general">General E-commerce</option>
+        <option value="fashion">Fashion/Apparel</option>
+        <option value="electronics">Electronics</option>
+        <option value="home-garden">Home & Garden</option>
+        <option value="beauty">Beauty & Cosmetics</option>
+        <option value="food-beverage">Food & Beverage</option>
+        <option value="specialty">Specialty/Niche</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="store-name">Store Name:</label>
+      <input type="text" id="store-name" placeholder="e.g., Stellar Electronics, Urban Threads">
+    </div>
+    
+    <div class="input-group">
+      <label for="product-type">Product Type:</label>
+      <input type="text" id="product-type" placeholder="e.g., wireless headphones, organic skincare">
+    </div>
+    
+    <div class="input-group">
+      <label for="content-type">Content Type:</label>
+      <select id="content-type">
+        <option value="product-description">Product Description</option>
+        <option value="category-page">Category Page Content</option>
+        <option value="product-schema">Product Schema Markup</option>
+        <option value="product-faq">Product FAQ Content</option>
+        <option value="product-comparison">Product Comparison Content</option>
+        <option value="product-review">Product Review Template</option>
+        <option value="ecommerce-audit">E-commerce SEO Audit</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="target-keywords">Target Keywords (comma separated):</label>
+      <input type="text" id="target-keywords" placeholder="e.g., best wireless headphones, noise-cancelling earbuds">
+    </div>
+    
+    <button id="generate-prompt" class="generate-button">Generate E-commerce SEO Prompt</button>
+  </div>
+  
+  <div class="result-container">
+    <h3>Your E-commerce SEO Prompt:</h3>
+    <div id="prompt-result" class="prompt-box"></div>
+    <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+  </div>
+  
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li>Select your store type from the dropdown menu</li>
+      <li>Enter your store name to personalize the content</li>
+      <li>Specify the product type you're creating content for</li>
+      <li>Choose the type of e-commerce content you want to create</li>
+      <li>Enter target keywords to focus the content (comma separated)</li>
+      <li>Click "Generate E-commerce SEO Prompt" to create your AI prompt</li>
+      <li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+      <li>Use the resulting content to enhance your e-commerce store's SEO</li>
+    </ol>
+  </div>
+</div>
+  
+  <div class="examples-container">
+    <h3>Example E-commerce SEO Prompts</h3>
+    <div class="example-tabs">
+      <button class="example-tab active" data-example="product-desc">Product Desc</button>
+      <button class="example-tab" data-example="category-page">Category Page</button>
+      <button class="example-tab" data-example="product-schema">Schema Markup</button>
+      <button class="example-tab" data-example="product-faq">Product FAQ</button>
+      <button class="example-tab" data-example="ecommerce-audit">SEO Audit</button>
+    </div>
+    <div class="example-content" id="example-content">
+      <div class="example-item active" id="product-desc-example">
+        <h4>Product Description Example</h4>
+        <div class="example-box">
+          <p>Create 5 SEO-optimized product descriptions for a collection of wireless noise-cancelling headphones for "SoundWave Audio," an electronics e-commerce store. Each description should include:</p>
+          <ul>
+            <li>An attention-grabbing product title (60-70 characters) that includes primary keywords</li>
+            <li>A compelling opening paragraph (50-60 words) highlighting the main value proposition</li>
+            <li>3-4 bullet points (15-20 words each) focusing on key features and benefits</li>
+            <li>A technical specifications section with the most important product details</li>
+            <li>A closing paragraph (40-50 words) with a call-to-action</li>
+          </ul>
+          <p>Target the following keywords naturally throughout each description: "wireless headphones," "noise-cancelling," "Bluetooth headphones," "premium audio," and "long battery life."</p>
+          <p>Each description should:</p>
+          <ul>
+            <li>Be unique and avoid templated language</li>
+            <li>Address specific customer pain points</li>
+            <li>Use sensory language to describe the audio experience</li>
+            <li>Include relevant technical terminology that shoppers would search for</li>
+            <li>Maintain a premium, tech-savvy brand voice</li>
+            <li>Be optimized for both conversion and search visibility</li>
+          </ul>
+          <p>Total length for each product description should be approximately 250-300 words.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="category-page-example">
+        <h4>Category Page Content Example</h4>
+        <div class="example-box">
+          <p>Create comprehensive category page content for "Organic Skincare" for "Pure Glow Beauty," an e-commerce store specializing in natural beauty products. The content should include:</p>
+          <ul>
+            <li>An SEO-optimized H1 heading for the category page</li>
+            <li>An informative introduction (150-200 words) that:
+              <ul>
+                <li>Explains what organic skincare is and its benefits</li>
+                <li>Positions the store as an authority in this category</li>
+                <li>Includes primary keywords naturally</li>
+                <li>Addresses common customer questions about organic skincare</li>
+              </ul>
+            </li>
+            <li>3-4 subcategory sections (100 words each) for:
+              <ul>
+                <li>Organic facial cleansers</li>
+                <li>Natural moisturizers</li>
+                <li>Organic serums and treatments</li>
+                <li>Natural skincare gift sets</li>
+              </ul>
+            </li>
+            <li>A "How to Choose" section (150 words) helping customers select the right organic skincare products</li>
+            <li>A "Why Choose Pure Glow Beauty" section (100 words) highlighting unique selling points</li>
+            <li>An FAQ section with 5 common questions about organic skincare products</li>
+          </ul>
+          <p>The content should:</p>
+          <ul>
+            <li>Naturally incorporate target keywords: "organic skincare," "natural beauty products," "chemical-free skincare," "cruelty-free beauty," and "vegan skincare"</li>
+            <li>Be educational and helpful rather than overly promotional</li>
+            <li>Include recommendations for internal linking to specific product pages</li>
+            <li>Maintain a warm, knowledgeable brand voice that builds trust</li>
+          </ul>
+          <p>Total length should be approximately 800-1000 words, designed to appear above the product grid on the category page.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="product-schema-example">
+        <h4>Product Schema Markup Example</h4>
+        <div class="example-box">
+          <p>Create comprehensive Product Schema Markup (JSON-LD) for "Mountain Trail Hiking Boots" sold on "Adventure Gear Outfitters," an outdoor equipment e-commerce store. The schema should include:</p>
+          <ul>
+            <li>Complete Product schema with all required and recommended properties</li>
+            <li>Proper implementation of:
+              <ul>
+                <li>Product name, description, and SKU</li>
+                <li>Brand information</li>
+                <li>Multiple product images (main and alternate views)</li>
+                <li>Price and availability information</li>
+                <li>Offer details including price currency and validity period</li>
+                <li>Aggregate rating and review schema</li>
+                <li>Product color and size variations</li>
+                <li>Product condition (new)</li>
+              </ul>
+            </li>
+            <li>Additional helpful properties:
+              <ul>
+                <li>Material composition</li>
+                <li>Weight</li>
+                <li>Waterproof rating</li>
+                <li>Manufacturer warranty</li>
+                <li>Audience (gender, activity type)</li>
+              </ul>
+            </li>
+          </ul>
+          <p>Provide the complete JSON-LD code ready to be implemented in the product page's header, along with:</p>
+          <ul>
+            <li>Explanations for each major section</li>
+            <li>Guidance on how to dynamically populate fields that change (price, availability, reviews)</li>
+            <li>Instructions for implementing the schema across product variations</li>
+            <li>Recommendations for testing the schema in Google's Rich Results Test</li>
+            <li>Best practices for updating the schema when product details change</li>
+          </ul>
+          <p>The schema should be optimized to maximize the chances of triggering rich results in search engines, particularly product rich snippets with ratings, price, and availability information.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="product-faq-example">
+        <h4>Product FAQ Content Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive Product FAQ section for "Ultra Slim Laptop Stand" sold on "ErgoWorks Office," an ergonomic office equipment e-commerce store. The FAQ content should include:</p>
+          <ul>
+            <li>15 frequently asked questions organized into categories:
+              <ul>
+                <li>Product specifications (5 questions)</li>
+                <li>Usage and compatibility (5 questions)</li>
+                <li>Shipping and warranty (3 questions)</li>
+                <li>Comparison with other models (2 questions)</li>
+              </ul>
+            </li>
+            <li>For each question:
+              <ul>
+                <li>Clear, concise question phrasing that matches how customers would ask</li>
+                <li>Comprehensive answer (50-75 words) that fully addresses the question</li>
+                <li>Natural inclusion of relevant keywords</li>
+                <li>Helpful links to related products or information where appropriate</li>
+              </ul>
+            </li>
+          </ul>
+          <p>The FAQ content should:</p>
+          <ul>
+            <li>Be structured for implementation with FAQ Schema markup</li>
+            <li>Address common objections that might prevent purchase</li>
+            <li>Include questions based on keyword research (what people are searching for)</li>
+            <li>Provide genuinely helpful information rather than just promotional content</li>
+            <li>Use a consistent, friendly tone that matches the brand voice</li>
+            <li>Include specific measurement details, compatibility information, and care instructions</li>
+          </ul>
+          <p>Also provide recommendations for:
+            <ul>
+              <li>How to format the FAQ section for maximum readability</li>
+              <li>Whether to use an accordion-style interface</li>
+              <li>How to implement FAQ Schema to increase chances of featured snippets</li>
+              <li>A process for identifying and adding new FAQs based on customer questions</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="ecommerce-audit-example">
+        <h4>E-commerce SEO Audit Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive e-commerce SEO audit framework for "Vintage Vinyl," an online record store selling vinyl records and music memorabilia. The audit should include:</p>
+          <ul>
+            <li>Technical SEO assessment:
+              <ul>
+                <li>Site architecture evaluation for e-commerce best practices</li>
+                <li>URL structure analysis for product and category pages</li>
+                <li>Pagination and filtering implementation review</li>
+                <li>Mobile usability for shopping experience</li>
+                <li>Page speed analysis with e-commerce-specific recommendations</li>
+                <li>Crawl budget optimization for large product catalogs</li>
+                <li>JavaScript rendering issues affecting product display</li>
+              </ul>
+            </li>
+            <li>On-page SEO evaluation:
+              <ul>
+                <li>Product title and description optimization</li>
+                <li>Category page content assessment</li>
+                <li>Internal linking structure between related products</li>
+                <li>Image optimization for product photos</li>
+                <li>Schema markup implementation</li>
+                <li>Breadcrumb navigation effectiveness</li>
+              </ul>
+            </li>
+            <li>User experience and conversion factors:
+              <ul>
+                <li>Search functionality effectiveness</li>
+                <li>Filter and sort options optimization</li>
+                <li>Product review implementation</li>
+                <li>Cross-selling and upselling opportunities</li>
+                <li>Shopping cart and checkout optimization</li>
+                <li>Mobile conversion path analysis</li>
+              </ul>
+            </li>
+            <li>Content gap analysis:
+              <ul>
+                <li>Informational content supporting product pages</li>
+                <li>Buying guides and educational resources</li>
+                <li>Blog content strategy for driving product page traffic</li>
+                <li>Competitor content comparison</li>
+              </ul>
+            </li>
+          </ul>
+          <p>For each section, include:</p>
+          <ul>
+            <li>Specific metrics to measure</li>
+            <li>Tools to use for assessment</li>
+            <li>Industry benchmarks for an e-commerce music store</li>
+            <li>Prioritized recommendations based on impact and implementation difficulty</li>
+            <li>Specific examples of good and bad practices</li>
+          </ul>
+          <p>The audit framework should be thorough enough to identify all major SEO issues while being practical enough to implement for a mid-sized e-commerce business.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- CSS Styles -->
+<style>
+  .seo-prompt-generator {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .seo-prompt-generator h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    color: #5a6a7a;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .prompt-controls {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #445566;
+    font-size: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #008348;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+  }
+  
+  .generate-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #008348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .generate-button:hover {
+    background-color: #006738;
+  }
+  
+  .result-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .prompt-box {
+    min-height: 150px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .copy-button {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .copy-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .how-to-use {
+    background-color: #f0f7f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #008348;
+  }
+  
+  .how-to-use h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .how-to-use ol {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  
+  .how-to-use li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .seo-prompt-generator {
+      padding: 20px;
+    }
+    
+    .example-tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .example-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  .examples-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .examples-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .example-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .example-tab {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .example-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-tab.active {
+    background-color: #008348;
+    color: white;
+    border-color: #008348;
+  }
+  
+  .example-item {
+    display: none;
+  }
+  
+  .example-item.active {
+    display: block;
+  }
+  
+  .example-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .example-box {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .example-box p {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .example-box ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .example-box li {
+    margin-bottom: 8px;
+  }
+  
+  /* Ensure all child elements respect container width */
+  .seo-prompt-generator * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure content doesn't overflow its container */
+  .prompt-box, .example-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate-prompt');
+    const copyButton = document.getElementById('copy-prompt');
+    const promptResult = document.getElementById('prompt-result');
+    const exampleTabs = document.querySelectorAll('.example-tab');
+    const exampleItems = document.querySelectorAll('.example-item');
+    
+    // Tab switching functionality
+    exampleTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs and examples
+        exampleTabs.forEach(t => t.classList.remove('active'));
+        exampleItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current tab
+        this.classList.add('active');
+        
+        // Show corresponding example
+        const exampleId = this.getAttribute('data-example') + '-example';
+        document.getElementById(exampleId).classList.add('active');
+      });
+    });
+    
+    // Generate prompt when button is clicked
+    generateButton.addEventListener('click', function() {
+      const storeType = document.getElementById('store-type').value;
+      const storeName = document.getElementById('store-name').value || '[STORE NAME]';
+      const productType = document.getElementById('product-type').value || '[PRODUCT TYPE]';
+      const contentType = document.getElementById('content-type').value;
+      const targetKeywords = document.getElementById('target-keywords').value || '[TARGET KEYWORDS]';
+      
+      let promptText = '';
+      
+      // Generate different prompts based on the selected content type
+      switch(contentType) {
+        case 'product-description':
+          promptText = `Create 5 SEO-optimized product descriptions for ${productType} products for "${storeName}", a ${storeType} e-commerce store. Each description should include:
+
+1. An attention-grabbing product title (60-70 characters) that includes primary keywords
+2. A compelling opening paragraph (50-60 words) highlighting the main value proposition
+3. 3-4 bullet points (15-20 words each) focusing on key features and benefits
+4. A technical specifications section with the most important product details
+5. A closing paragraph (40-50 words) with a call-to-action
+
+Target the following keywords naturally throughout each description: ${targetKeywords}.
+
+Each description should:
+- Be unique and avoid templated language
+- Address specific customer pain points
+- Use sensory language to describe the product experience
+- Include relevant technical terminology that shoppers would search for
+- Maintain a brand voice appropriate for ${storeType} products
+- Be optimized for both conversion and search visibility
+
+Total length for each product description should be approximately 250-300 words.`;
+          break;
+          
+        case 'category-page':
+          promptText = `Create comprehensive category page content for "${productType}" for "${storeName}", a ${storeType} e-commerce store. The content should include:
+
+1. An SEO-optimized H1 heading for the category page
+2. An informative introduction (150-200 words) that:
+   - Explains what ${productType} is and its benefits
+   - Positions the store as an authority in this category
+   - Includes primary keywords naturally
+   - Addresses common customer questions about ${productType}
+
+3. 3-4 subcategory sections (100 words each) for different types of ${productType}
+4. A "How to Choose" section (150 words) helping customers select the right ${productType}
+5. A "Why Choose ${storeName}" section (100 words) highlighting unique selling points
+6. An FAQ section with 5 common questions about ${productType}
+
+The content should:
+- Naturally incorporate target keywords: ${targetKeywords}
+- Be educational and helpful rather than overly promotional
+- Include recommendations for internal linking to specific product pages
+- Maintain a brand voice that builds trust and expertise
+
+Total length should be approximately 800-1000 words, designed to appear above the product grid on the category page.`;
+          break;
+          
+        case 'product-schema':
+          promptText = `Create comprehensive Product Schema Markup (JSON-LD) for ${productType} sold on "${storeName}", a ${storeType} e-commerce store. The schema should include:
+
+1. Complete Product schema with all required and recommended properties
+2. Proper implementation of:
+   - Product name, description, and SKU
+   - Brand information
+   - Multiple product images (main and alternate views)
+   - Price and availability information
+   - Offer details including price currency and validity period
+   - Aggregate rating and review schema
+   - Product variations (colors, sizes, etc. as applicable)
+   - Product condition
+
+3. Additional helpful properties specific to ${productType}
+
+Provide the complete JSON-LD code ready to be implemented in the product page's header, along with:
+- Explanations for each major section
+- Guidance on how to dynamically populate fields that change (price, availability, reviews)
+- Instructions for implementing the schema across product variations
+- Recommendations for testing the schema in Google's Rich Results Test
+- Best practices for updating the schema when product details change
+
+The schema should be optimized to maximize the chances of triggering rich results in search engines, particularly product rich snippets with ratings, price, and availability information. Include any specific schema properties that are especially relevant for ${productType} products.`;
+          break;
+          
+        case 'product-faq':
+          promptText = `Create a comprehensive Product FAQ section for ${productType} sold on "${storeName}", a ${storeType} e-commerce store. The FAQ content should include:
+
+1. 15 frequently asked questions organized into categories:
+   - Product specifications (5 questions)
+   - Usage and compatibility (5 questions)
+   - Shipping and warranty (3 questions)
+   - Comparison with other products (2 questions)
+
+2. For each question:
+   - Clear, concise question phrasing that matches how customers would ask
+   - Comprehensive answer (50-75 words) that fully addresses the question
+   - Natural inclusion of relevant keywords: ${targetKeywords}
+   - Helpful links to related products or information where appropriate
+
+The FAQ content should:
+- Be structured for implementation with FAQ Schema markup
+- Address common objections that might prevent purchase
+- Include questions based on keyword research (what people are searching for)
+- Provide genuinely helpful information rather than just promotional content
+- Use a consistent, friendly tone that matches the brand voice
+- Include specific details relevant to ${productType}
+
+Also provide recommendations for:
+- How to format the FAQ section for maximum readability
+- Whether to use an accordion-style interface
+- How to implement FAQ Schema to increase chances of featured snippets
+- A process for identifying and adding new FAQs based on customer questions`;
+          break;
+          
+        case 'product-comparison':
+          promptText = `Create a comprehensive product comparison content framework for ${productType} on "${storeName}", a ${storeType} e-commerce store. The comparison should:
+
+1. Compare 3-5 different ${productType} products from the store's inventory
+2. Include a structured comparison table with:
+   - Key specifications for each product
+   - Price points
+   - Best use cases
+   - Pros and cons
+   - Ratings or review summaries
+
+3. Provide a detailed analysis (100-150 words per product) that:
+   - Highlights unique selling points
+   - Explains ideal customer profiles for each option
+   - Discusses value proposition relative to price
+   - Addresses common customer questions
+
+4. Include a "How to Choose" section (200 words) that:
+   - Outlines the most important factors to consider
+   - Provides guidance based on different customer needs
+   - Explains technical specifications in consumer-friendly terms
+
+5. End with personalized recommendations for:
+   - Budget-conscious shoppers
+   - Premium/feature-focused customers
+   - Specific use cases relevant to ${productType}
+
+The content should:
+- Naturally incorporate target keywords: ${targetKeywords}
+- Be objective and helpful rather than pushing the most expensive option
+- Use a consistent methodology for comparing products
+- Include clear CTAs for each product
+- Be structured for strong internal linking
+- Be optimized for both search visibility and conversion
+
+Total length should be approximately 1200-1500 words, formatted for easy scanning and comparison.`;
+          break;
+          
+        case 'product-review':
+          promptText = `Create a template for comprehensive product review content for ${productType} on "${storeName}", a ${storeType} e-commerce store. The review template should include:
+
+1. Review structure with:
+   - Attention-grabbing headline formula incorporating product name and key benefit
+   - Executive summary/quick verdict (100 words)
+   - Standardized rating system (overall and category-specific scores)
+   - Pros and cons section
+   - Specifications table with key product details
+   - In-depth analysis sections (see below)
+   - Comparison with alternatives
+   - Conclusion and recommendations
+   - Call-to-action
+
+2. In-depth analysis sections customized for ${productType}:
+   - 5-7 key evaluation categories specific to this product type
+   - Suggested word count for each section
+   - Key points to cover in each section
+   - How to incorporate first-hand testing/experience
+   - How to include customer feedback
+
+3. Guidelines for:
+   - Voice and tone appropriate for ${storeType} products
+   - Balancing objectivity with conversion optimization
+   - Incorporating target keywords: ${targetKeywords}
+   - Using images and visual elements effectively
+   - Implementing schema markup for review content
+   - Ethical considerations and disclosure requirements
+
+4. Formatting recommendations:
+   - Header structure (H1, H2, H3)
+   - Optimal content length
+   - Use of bullets, tables, and other formatting elements
+   - Mobile optimization considerations
+
+The template should be flexible enough to use across different ${productType} products while ensuring consistency in review quality and SEO approach.`;
+          break;
+          
+        case 'ecommerce-audit':
+          promptText = `Create a comprehensive e-commerce SEO audit framework for "${storeName}", a ${storeType} store selling ${productType}. The audit should include:
+
+1. Technical SEO assessment:
+   - Site architecture evaluation for e-commerce best practices
+   - URL structure analysis for product and category pages
+   - Pagination and filtering implementation review
+   - Mobile usability for shopping experience
+   - Page speed analysis with e-commerce-specific recommendations
+   - Crawl budget optimization for product catalogs
+   - JavaScript rendering issues affecting product display
+
+2. On-page SEO evaluation:
+   - Product title and description optimization
+   - Category page content assessment
+   - Internal linking structure between related products
+   - Image optimization for product photos
+   - Schema markup implementation
+   - Breadcrumb navigation effectiveness
+
+3. User experience and conversion factors:
+   - Search functionality effectiveness
+   - Filter and sort options optimization
+   - Product review implementation
+   - Cross-selling and upselling opportunities
+   - Shopping cart and checkout optimization
+   - Mobile conversion path analysis
+
+4. Content gap analysis:
+   - Informational content supporting product pages
+   - Buying guides and educational resources
+   - Blog content strategy for driving product page traffic
+   - Competitor content comparison
+
+5. Keyword optimization focusing on:
+   - ${targetKeywords}
+   - Long-tail variations and related terms
+   - Search intent alignment
+
+For each section, include:
+- Specific metrics to measure
+- Tools to use for assessment
+- Industry benchmarks for ${storeType} stores
+- Prioritized recommendations based on impact and implementation difficulty
+- Specific examples of good and bad practices
+
+The audit framework should be thorough enough to identify all major SEO issues while being practical enough to implement for a mid-sized e-commerce business.`;
+          break;
+      }
+      
+      promptResult.textContent = promptText;
+    });
+    
+    // Copy prompt to clipboard
+    copyButton.addEventListener('click', function() {
+      const textToCopy = promptResult.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard. Please try again or copy manually.');
+      });
+    });
+  });
+</script>

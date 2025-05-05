@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Zack Hayes",
+  "jobTitle": "Full Stack SEO Specialist",
+  "description": "14+ Years of Full Stack SEO, Website Optimizations, & Paid Advertising. Expert in AI-driven SEO strategies, technical optimizations, and scalable growth solutions.",
+  "url": "https://yourwebsite.com",
+  "email": "yourpalzack@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Aspen",
+    "addressRegion": "Colorado",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/iamzackhayes/",
+    "https://github.com/YourPalZack/seo-portfolio/",
+    "https://www.youtube.com/@ItsYourPalZack"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Independent SEO Consultant"
+  },
+  "knowsAbout": [
+    "Technical SEO",
+    "AI-Driven SEO Strategies",
+    "Full Stack Development",
+    "Local SEO Optimization",
+    "SaaS & B2B SEO",
+    "Conversion Rate Optimization",
+    "Programmatic SEO",
+    "Search Generative Experience (SGE)"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "SEO Specialist",
+    "yearsOfExperience": "14"
+  },
+  "award": [
+    "Google Analytics Certification",
+    "Google Ads Certification",
+    "SEMrush SEO Certification",
+    "HubSpot Inbound Marketing",
+    "AWS Cloud Practitioner",
+    "Google Digital Marketing",
+    "Yoast SEO Professional",
+    "Schema Markup Expert"
+  ]
+}
+</script>
+<style>
+:root {
+    --primary-bg: #e3e3e3;
+    --card-bg: #fff;
+    --text-primary: #222;
+    --text-secondary: #3a3a3a;
+    --border-light: #f8f8f8;
+    --border-dark: #808080;
+    --border-darker: #000;
+    --border-highlight: #b5b5b5;
+    --accent-color: #008080;
+    --accent-hover: #3399ff;
+    --hover-bg: #f0faff;
+    --font-win98: 'Tahoma', 'MS Sans Serif', Arial, sans-serif;
+    --titlebar-gradient: linear-gradient(90deg, #008080 0%, #3a6ea5 100%);
+    --window-shadow: 4px 4px 12px 0 rgba(60,60,60,0.12);
+    --scrollbar-bg: #e9e9e9;
+    --scrollbar-thumb: #d1d1d1;
+    --scrollbar-thumb-hover: #bababa;
+    --icon-size: 18px;
+} 
+
+body {
+    font-family: var(--font-win98);
+    background: linear-gradient(135deg, #008080 0%, #3a6ea5 100%) fixed;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    opacity: 0.16;
+    z-index: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" fill="%23fff"/><rect x="15" y="15" width="1" height="1" fill="%23008080"/></svg>');
+    background-repeat: repeat;
+}
+
+#desktop-icons {
+    position: fixed;
+    top: 24px;
+    left: 22px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    user-select: none;
+}
+
+.desktop-icon {
+    width: 64px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    font-family: var(--font-win98);
+    font-size: 0.95em;
+    text-shadow: 1px 1px 2px #000, 0 0 3px #008080;
+    transition: filter 0.1s;
+}
+.desktop-icon:active {
+    filter: brightness(0.85);
+}
+.desktop-icon.selected {
+    background: rgba(255,255,255,0.18);
+    border-radius: 7px;
+    outline: 2px solid #3399ff;
+}
+.desktop-icon svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 2px auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: 80px auto 32px 160px;
+    padding: 18px 26px 26px 26px;
+    background: var(--card-bg);
+    border: 2.5px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    border-radius: 8px;
+    box-shadow: 0 12px 32px 0 rgba(60,60,60,0.22), var(--window-shadow);
+    position: relative;
+    font-family: var(--font-win98);
+    min-height: 600px;
+    background-image: repeating-linear-gradient(135deg, #e3e3e3 0px, #e3e3e3 7px, #f5f5f5 7px, #f5f5f5 14px);
+    z-index: 20;
+    cursor: default;
+    resize: both;
+    overflow: auto;
+}
+
+@media (max-width: 900px) {
+  .container { margin-left: 24px; margin-right: 24px; }
+  #desktop-icons { left: 6px; }
+}
+
+#win98-taskbar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  height: 38px;
+  background: linear-gradient(90deg,#3a6ea5 0%,#008080 100%);
+  box-shadow: 0 -2px 6px #b5b5b5;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 0;
+}
+#start-btn {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #e3e3e3;
+  border: 2px outset #fff;
+  border-radius: 6px;
+  padding: 6px 18px 6px 10px;
+  font-family: 'Tahoma','MS Sans Serif',Arial,sans-serif;
+  font-size: 1em;
+  box-shadow: 1px 1px 0 #b5b5b5;
+  cursor: pointer;
+  min-width: 90px;
+  outline: none;
+}
+#start-btn:active, #start-btn[aria-expanded="true"] {
+  background: #b5b5b5;
+  border: 2px inset #3399ff;
+}
+#taskbar-windows {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 16px;
+}
+.taskbar-window-btn {
+  background: #e3e3e3;
+  border: 2px outset #fff;
+  border-radius: 6px;
+  padding: 5px 18px 5px 8px;
+  font-family: 'Tahoma','MS Sans Serif',Arial,sans-serif;
+  font-size: 1em;
+  color: #222;
+  box-shadow: 1px 1px 0 #b5b5b5;
+  cursor: pointer;
+  margin-right: 3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 90px;
+  outline: none;
+}
+.taskbar-window-btn.selected, .taskbar-window-btn:active {
+  background: #b5b5b5;
+  border: 2px inset #3399ff;
+}
+#taskbar-clock {
+  margin-right: 18px;
+  padding: 5px 18px 5px 18px;
+  background: #e3e3e3;
+  border: 2px inset #b5b5b5;
+  border-radius: 6px;
+  font-family: 'Tahoma','MS Sans Serif',Arial,sans-serif;
+  font-size: 1.05em;
+  color: #222;
+  box-shadow: 1px 1px 0 #b5b5b5;
+  letter-spacing: 1px;
+  min-width: 64px;
+  text-align: center;
+}
+
+#start-menu {
+  position: fixed;
+  left: 10px;
+  bottom: 46px;
+  width: 230px;
+  background: #e3e3e3;
+  border: 2.5px outset #fff;
+  border-radius: 9px 9px 9px 0;
+  box-shadow: 0 8px 32px 0 rgba(60,60,60,0.22), 0 2px 0 #b5b5b5;
+  z-index: 200;
+  padding: 8px 0 8px 0;
+  font-family: 'Tahoma','MS Sans Serif',Arial,sans-serif;
+  font-size: 1em;
+  outline: none;
+}
+#start-menu[hidden] { display: none !important; }
+#start-menu ul { list-style: none; padding: 0; margin: 0; }
+#start-menu li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #222;
+  font-size: 1em;
+  outline: none;
+}
+#start-menu li:focus, #start-menu li:hover {
+  background: #3399ff;
+  color: #fff;
+}
+#start-menu .separator {
+  height: 1px;
+  background: #b5b5b5;
+  margin: 6px 0;
+  padding: 0;
+  border: none;
+}
+
+#context-menu {
+  position: fixed;
+  background: #e3e3e3;
+  border: 2.5px outset #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px 0 rgba(60,60,60,0.22), 0 2px 0 #b5b5b5;
+  z-index: 300;
+  padding: 4px 0 4px 0;
+  font-family: 'Tahoma','MS Sans Serif',Arial,sans-serif;
+  font-size: 1em;
+  min-width: 160px;
+  outline: none;
+}
+#context-menu[hidden] { display: none !important; }
+#context-menu ul { list-style: none; padding: 0; margin: 0; }
+#context-menu li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #222;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+}
+#context-menu li:focus, #context-menu li:hover {
+  background: #3399ff;
+  color: #fff;
+}
+#context-menu .separator {
+  height: 1px;
+  background: #b5b5b5;
+  margin: 6px 0;
+  padding: 0;
+  border: none;
+}
+#context-menu .submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #e3e3e3;
+  border: 2px outset #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px 0 rgba(60,60,60,0.22), 0 2px 0 #b5b5b5;
+  min-width: 120px;
+  z-index: 301;
+}
+#context-menu li:hover > .submenu,
+#context-menu li:focus-within > .submenu {
+  display: block;
+}
+
+/* Win98 window states */
+#resume-window[data-state="minimized"] {
+  display: none !important;
+}
+#resume-window[data-state="maximized"] {
+  left: 0 !important;
+  top: 0 !important;
+  width: 100vw !important;
+  height: calc(100vh - 40px) !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  resize: none !important;
+}
+#resume-window {
+  transition: box-shadow 0.15s, border-radius 0.15s, left 0.2s, top 0.2s, width 0.2s, height 0.2s;
+}
+
+/* Win98 resize handle */
+#resume-window::after {
+  content: '';
+  position: absolute;
+  right: 2px; bottom: 2px;
+  width: 18px; height: 18px;
+  background: url('data:image/svg+xml;utf8,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="14" width="4" height="2" fill="%23008080"/><rect x="14" y="12" width="2" height="4" fill="%23008080"/></svg>') no-repeat right bottom;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Desktop icon drag/selection states */
+.desktop-icon.selected {
+  background: rgba(51,153,255,0.22);
+  border-radius: 7px;
+  outline: 2px solid #3399ff;
+}
+.desktop-icon.dragging {
+  opacity: 0.7;
+  box-shadow: 0 4px 16px #3399ff;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 40px auto 32px auto;
+    padding: 18px 26px 26px 26px;
+    background: var(--card-bg);
+    border: 2.5px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    border-radius: 8px;
+    box-shadow: var(--window-shadow);
+    position: relative;
+    font-family: var(--font-win98);
+    min-height: 600px;
+    background-image: repeating-linear-gradient(135deg, #e3e3e3 0px, #e3e3e3 7px, #f5f5f5 7px, #f5f5f5 14px);
+} 
+
+/* Win95 window chrome bar */
+.container::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 32px;
+    background: var(--titlebar-gradient);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    box-shadow: 0 2px 0 #b5b5b5;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+} 
+.container-titlebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    overflow: hidden;
+}
+.container-title {
+    color: #fff;
+    font-family: var(--font-win98);
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 0 14px 0 8px;
+    flex: 1;
+    user-select: none;
+    text-shadow: 1px 1px 0 #1b3f5f, 0 2px 2px #b5b5b5;
+    display: flex;
+    align-items: center;
+}
+.container-title .win98-logo {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    display: inline-block;
+}
+.window-controls {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-right: 8px;
+}
+.window-btn {
+    width: 20px;
+    height: 20px;
+    background: #e3e3e3;
+    border: 2px outset #fff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 0 #b5b5b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 3px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.window-btn svg {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+.window-btn:active {
+    border: 2px inset #b5b5b5;
+    background: #bababa;
+}
+
+
+.header {
+    margin-bottom: 28px;
+    padding: 12px 12px 8px 12px;
+    background: var(--primary-bg);
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    border-radius: 0;
+    box-shadow: 2px 2px 0 var(--border-darker);
+}
+
+.header h1 {
+    font-size: 2.2em;
+    margin: 0 0 6px 0;
+    color: var(--accent-color);
+    font-family: var(--font-pixel);
+    font-weight: bold;
+    letter-spacing: 0px;
+    text-shadow: 1px 1px 0 var(--border-light), 2px 2px 0 var(--border-dark);
+    background: none;
+    display: inline-block;
+    border: none;
+    padding: 0;
+}
+
+.header h1::after {
+    display: none;
+}
+
+.header p {
+    color: var(--text-primary);
+    font-size: 1em;
+    margin: 0;
+}
+
+.section {
+    background: var(--card-bg);
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    border-radius: 0;
+    padding: 14px 10px 14px 10px;
+    margin-bottom: 14px;
+    box-shadow: 2px 2px 0 var(--border-darker);
+    font-family: var(--font-pixel);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.button, .cta-button, .social-icon, .card {
+    font-family: var(--font-pixel);
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.button, .cta-button {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 4px 18px;
+    border: 2px outset var(--border-light);
+    border-radius: 0;
+    font-family: var(--font-pixel);
+    font-size: 1em;
+    box-shadow: none;
+    cursor: pointer;
+    margin: 0 4px;
+    text-align: center;
+    outline: none;
+    appearance: none;
+    font-weight: normal;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: 2px outset var(--border-light);
+    border-radius: 0;
+    background: #e0e0e0;
+    color: var(--accent-color);
+    margin: 0 2px;
+    box-shadow: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    border-radius: 0;
+    padding: 16px;
+    box-shadow: 2px 2px 0 var(--border-darker);
+    position: relative;
+    overflow: visible;
+    font-family: var(--font-pixel);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        0 8px 16px -4px rgba(0, 0, 0, 0.2);
+}
+
+.card:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.button:hover, .cta-button:hover, .social-icon:hover, .card:hover {
+    --y: var(--move-hover);
+    --shadow: var(--shadow-hover);
+}
+
+.button:active, .cta-button:active, .social-icon:active, .card:active {
+    transform: translateY(0);
+    box-shadow: inset 0.5px 0.5px 1px rgba(255,255,255,.4),
+                inset -0.5px -0.5px 1px rgba(0,0,0,.25);
+}
+
+.social-icon {
+    --background: var(--card-bg);
+    --text: var(--accent-color);
+    --shadow: 0 2px 8px -1px rgba(0, 0, 0, .1);
+    --shadow-hover: 0 4px 20px -2px rgba(0, 0, 0, .2);
+}
+
+.social-icon:hover {
+    --background: var(--accent-color);
+    --text: #fff;
+}
+
+.card {
+    --background: var(--card-bg);
+    --text: var(--text-primary);
+    --shadow: 0 2px 8px -1px rgba(0, 0, 0, .1);
+    --shadow-hover: 0 4px 20px -2px rgba(0, 0, 0, .2);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--text-primary);
+}
+
+.card p {
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+.tag {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 2px 6px;
+    border: 2px outset var(--border-light);
+    border-radius: 0;
+    font-size: 0.9em;
+    margin: 2px;
+    color: var(--text-primary);
+    box-shadow: none;
+    font-family: var(--font-pixel);
+}
+
+.button:hover, .cta-button:hover {
+    background: var(--accent-hover);
+    border: 2px inset var(--border-dark);
+    color: #fff;
+}
+
+.button:active, .cta-button:active {
+    border: 2px inset var(--border-dark);
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.stats {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 8px 10px;
+    border: 2px solid #000;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    border-radius: 0;
+    text-align: center;
+    font-family: var(--font-pixel);
+    box-shadow: 1px 1px 0 #000;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        0 6px 12px -3px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px rgba(255,255,255,.5);
+}
+
+.stat-label {
+    color: var(--text-secondary);
+}
+
+.category-section {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    box-shadow: inset 1px 1px 1px #fff,
+                inset -1px -1px 1px rgba(0,0,0,.1);
+}
+
+.category-section h3 {
+    margin: 0;
+    color: var(--accent-color);
+    font-family: var(--font-pixel);
+    font-size: 1.1em;
+    font-weight: bold;
+    background: #c0c0c0;
+    padding: 2px 6px;
+    border: 2px solid var(--border-dark);
+    border-right-color: var(--border-light);
+    border-bottom-color: var(--border-light);
+    border-radius: 0;
+    box-shadow: 1px 1px 0 var(--border-darker);
+    display: inline-block;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+} 
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 6px;
+        border-radius: 0;
+    }
+    
+    .section {
+        padding: 10px;
+        border-radius: 0;
+    }
+    .card {
+        padding: 8px;
+        border-radius: 0;
+    }
+    .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 10px;
+    }
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--accent-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    box-shadow: inset 1px 1px 1px rgba(255,255,255,.83),
+                inset -1px -1px 1px rgba(0,0,0,.2),
+                0.444584px 0.444584px 0.628737px -0.75px rgba(0,0,0,.26),
+                1.21072px 1.21072px 1.71222px -1.5px rgba(0,0,0,.247);
+    white-space: nowrap;
+    width: auto;
+    margin: 0;
+}
+
+.cta-button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+    box-shadow: inset 0.5px 0.5px 1px rgba(255,255,255,.4),
+                inset -0.5px -0.5px 1px rgba(0,0,0,.25);
+}
+
+.cta-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width: 768px) {
+    .social-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .social-links {
+        order: 2;
+    }
+    
+    .cta-button {
+        order: 1;
+    }
+}
+
+.specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.specialty-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    font-size: 0.95em;
+    color: var(--text-primary);
+    box-shadow: 
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.specialty-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        0 4px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+.specialty-tag:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.specialty-tag svg {
+    width: 16px;
+    height: 16px;
+    color: var(--accent-color);
+}
+
+.project-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.section-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    color: var(--accent-color);
+}
+
+.journey-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.journey-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    box-shadow: 
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.journey-item:hover {
+    transform: translateX(5px);
+    box-shadow: 
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        0 4px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+.journey-item:active {
+    transform: translateX(0);
+    box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.journey-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.journey-item span {
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.project-details {
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-metrics,
+.project-challenges,
+.project-results {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: var(--radius-md);
+    box-shadow: 
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-metrics:hover,
+.project-challenges:hover,
+.project-results:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        0 4px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+.project-metrics:active,
+.project-challenges:active,
+.project-results:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.project-details h4 {
+    color: var(--accent-color);
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+}
+
+.project-details ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.project-details li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.project-details li:before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .project-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact Form Styles */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0 15px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    box-shadow: 
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-method:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        inset 1px 1px 1px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 1px rgba(0, 0, 0, 0.1),
+        0 4px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+.contact-method:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--accent-color);
+}
+
+.contact-form {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    width: 100%;
+    padding: 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: var(--radius-md);
+    padding: 16px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.15), 
+                inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.15), 
+                inset -1px -1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    font-weight: 600;
+    background: var(--accent-color);
+    padding: 16px 32px;
+    border-radius: var(--radius-md);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 
+        -5px -5px 20px rgba(255, 255, 255, 0.8),  
+        5px 5px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        -2px -2px 5px rgba(255, 255, 255, 0.8), 
+        2px 2px 5px rgba(0, 0, 0, 0.2),
+        0 4px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.2), 
+        inset -2px -2px 4px rgba(255, 255, 255, 0.7);
+}
+
+.button-icon {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 0 15px;
+    }
+    
+    .contact-info,
+    .contact-methods,
+    .contact-form {
+        padding: 0 10px;
+    }
+    
+    .input-group label {
+        padding: 0;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+    }
+}
+
+h2 {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    text-shadow: 
+        1px 1px 1px rgba(255, 255, 255, 0.8),
+        -1px -1px 1px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.02em;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.1),
+        0 -1px 1px rgba(255, 255, 255, 0.5);
+}
+/* Win95 Scrollbar styling */
+::-webkit-scrollbar {
+    width: 16px;
+    background: #c0c0c0;
+}
+::-webkit-scrollbar-thumb {
+    background: #dfdfdf;
+    border: 2px outset #fff;
+    box-shadow: 1px 1px 0 #808080;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #a0a0a0;
+    border: 2px inset #808080;
+}
+::-webkit-scrollbar-corner {
+    background: #c0c0c0;
+}
+</style>
+<!-- Win95 Titlebar Controls and Startup Sound -->
+<div class="container-titlebar">
+  <span class="container-title">
+    <span class="win98-logo" title="Windows 98">
+      <svg viewBox="0 0 24 24" width="22" height="22" style="display:inline-block;vertical-align:middle">
+        <rect x="2" y="2" width="20" height="20" rx="3" fill="#fff" stroke="#008080" stroke-width="2"/>
+        <rect x="5" y="5" width="4" height="4" fill="#008080"/>
+        <rect x="10" y="5" width="4" height="4" fill="#3399ff"/>
+        <rect x="15" y="5" width="4" height="4" fill="#f6c700"/>
+        <rect x="5" y="10" width="4" height="4" fill="#3399ff"/>
+        <rect x="10" y="10" width="4" height="4" fill="#f6c700"/>
+        <rect x="15" y="10" width="4" height="4" fill="#008080"/>
+        <rect x="5" y="15" width="4" height="4" fill="#f6c700"/>
+        <rect x="10" y="15" width="4" height="4" fill="#008080"/>
+        <rect x="15" y="15" width="4" height="4" fill="#3399ff"/>
+      </svg>
+    </span>
+    Resume - Microsoft Windows
+  </span>
+  <span class="window-controls">
+    <span class="window-btn" title="Minimize">
+      <svg viewBox="0 0 16 16"><rect x="3" y="12" width="10" height="2" fill="#222"/></svg>
+    </span>
+    <span class="window-btn" title="Maximize">
+      <svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" fill="none" stroke="#008080" stroke-width="2"/><rect x="3" y="3" width="10" height="10" fill="#e3e3e3"/></svg>
+    </span>
+    <span class="window-btn" title="Close">
+      <svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="3" fill="#f6c700" stroke="#b22222" stroke-width="1.5"/><line x1="5" y1="5" x2="11" y2="11" stroke="#b22222" stroke-width="2"/><line x1="11" y1="5" x2="5" y2="11" stroke="#b22222" stroke-width="2"/></svg>
+    </span>
+  </span>
+</div>
+<!-- Section icons and Win98 enhancements will be added in the HTML body as needed -->
+
+</head>
+<body>
+    <div id="desktop-icons">
+      <div class="desktop-icon" id="icon-mycomputer" tabindex="0">
+        <svg viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="16" rx="4" fill="#b5b5b5" stroke="#008080" stroke-width="2"/><rect x="8" y="12" width="16" height="8" fill="#fff"/><rect x="12" y="22" width="8" height="2" fill="#008080"/></svg>
+        <span>My Computer</span>
+      </div>
+      <div class="desktop-icon" id="icon-network" tabindex="0">
+        <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="#3399ff"/><rect x="8" y="20" width="16" height="4" rx="2" fill="#fff"/><circle cx="12" cy="16" r="2" fill="#008080"/><circle cx="20" cy="16" r="2" fill="#008080"/></svg>
+        <span>Network</span>
+      </div>
+      <div class="desktop-icon" id="icon-recyclebin" tabindex="0">
+        <svg viewBox="0 0 32 32"><rect x="10" y="8" width="12" height="16" rx="3" fill="#fff" stroke="#008080" stroke-width="2"/><rect x="13" y="6" width="6" height="4" rx="1" fill="#b5b5b5"/><rect x="12" y="20" width="8" height="2" fill="#3399ff"/></svg>
+        <span>Recycle Bin</span>
+      </div>
+      <div class="desktop-icon" id="icon-resume" tabindex="0">
+        <svg viewBox="0 0 32 32"><rect x="6" y="6" width="20" height="24" rx="3" fill="#f6c700" stroke="#008080" stroke-width="2"/><rect x="10" y="10" width="12" height="2" fill="#008080"/><rect x="10" y="15" width="12" height="2" fill="#008080"/><rect x="10" y="20" width="8" height="2" fill="#008080"/></svg>
+        <span>Resume</span>
+      </div>
+      <div class="desktop-icon" id="icon-aim" tabindex="0">
+        <svg viewBox="0 0 32 32"><circle cx="16" cy="10" r="6" fill="#ffcc00" stroke="#b5b5b5" stroke-width="2"/><rect x="12" y="18" width="8" height="10" rx="4" fill="#ffcc00" stroke="#b5b5b5" stroke-width="2"/></svg>
+        <span>AIM Chat</span>
+      </div>
+      <div class="desktop-icon" id="icon-paint" tabindex="0">
+        <svg viewBox="0 0 32 32"><rect x="6" y="6" width="20" height="16" rx="3" fill="#fff" stroke="#008080" stroke-width="2"/><rect x="10" y="10" width="12" height="8" fill="#b5b5b5"/><rect x="22" y="22" width="6" height="6" rx="2" fill="#3399ff"/></svg>
+        <span>Paint</span>
+      </div>
+      <div class="desktop-icon" id="icon-notepad" tabindex="0">
+        <svg viewBox="0 0 32 32"><rect x="7" y="6" width="18" height="20" rx="3" fill="#fff" stroke="#008080" stroke-width="2"/><rect x="10" y="10" width="12" height="2" fill="#b5b5b5"/><rect x="10" y="14" width="12" height="2" fill="#b5b5b5"/><rect x="10" y="18" width="8" height="2" fill="#b5b5b5"/></svg>
+        <span>Notepad</span>
+      </div>
+    </div>
+    <div class="container" id="resume-window">
+        <div class="header">
+            <h1>Zack Hayes</h1>
+            <p>14+ Years of Full Stack SEO, Website Optimizations, & Paid Advertising</p>
+            <div class="header-content">
+                <div class="header-text">
+                    <p>Expert in AI-driven SEO strategies, technical optimizations, and scalable growth solutions. Proven track record of building and selling successful websites, managing enterprise-level SEO campaigns, and driving measurable results across diverse industries.</p>
+                    <div class="specialties">
+                        <div class="specialty-tag">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                            </svg>
+                            AI & Automation Expert
+                        </div>
+                        <div class="specialty-tag">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            Technical SEO Specialist
+                        </div>
+                        <div class="specialty-tag">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z"/>
+                            </svg>
+                            Full Stack Developer
+                        </div>
+                    </div>
+                </div>
+                <div class="social-container">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/iamzackhayes/" class="social-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/YourPalZack/seo-portfolio/" class="social-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.239 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@ItsYourPalZack" class="social-icon" target="_blank" rel="noopener noreferrer" title="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="mailto:yourpalzack@gmail.com" class="cta-button">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <span class="section-icon" title="User" style="vertical-align:middle;display:inline-block;margin-right:8px;">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="#3399ff"><circle cx="12" cy="8" r="5" fill="#008080"/><ellipse cx="12" cy="19" rx="9" ry="5" fill="#b5b5b5"/></svg>
+            </span>
+            <h2 style="display:inline;vertical-align:middle;">Professional Summary</h2>
+            <p>SEO specialist with 14+ years of experience and multiple Google certifications. Expert in detailed SEO audits, technical optimizations, and strategic planning that drive measurable organic growth across diverse industries. Successfully built, ranked, and sold multiple websites using proven SEO strategies, consistently delivering exceptional results for clients ranging from startups to enterprise-level organizations.</p>
+            
+            <div class="specialties">
+                <div class="specialty-tag">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    AI Search Optimization
+                </div>
+                <div class="specialty-tag">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    Local SEO
+                </div>
+                <div class="specialty-tag">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z"/>
+                    </svg>
+                    Website & Server Optimization
+                </div>
+                <div class="specialty-tag">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
+                    </svg>
+                    SEO Audits
+                </div>
+                <div class="specialty-tag">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+                    </svg>
+                    Web Strategy
+                </div>
+                <div class="specialty-tag">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                    Lead Generation
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">14+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20M+</div>
+                    <div class="stat-label">Monthly Visitors Generated</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <span class="section-icon" title="Rocket" style="vertical-align:middle;display:inline-block;margin-right:8px;">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M2 22l6-6m0 0l7-7a4 4 0 115.66 5.66l-7 7m-5.66-5.66l7-7" fill="#008080" stroke="#3399ff" stroke-width="2"/><circle cx="17" cy="7" r="1.5" fill="#f6c700"/></svg>
+            </span>
+            <h2 style="display:inline;vertical-align:middle;">How I Started in SEO & Web Optimization</h2>
+            <p>My passion for SEO started with building and ranking my own websites. Over the years, I've helped startups, agencies, and Fortune 500 companies maximize their search visibility. My experience includes:</p>
+            
+            <div class="journey-list">
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span>Conducting large-scale SEO audits & technical optimizations</span>
+                </div>
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span>Developing AI-driven SEO automation strategies</span>
+                </div>
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span>Scaling websites with programmatic SEO</span>
+                </div>
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span>Managing local & enterprise SEO campaigns</span>
+                </div>
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span>Driving traffic growth through Google AI Overview Optimization</span>
+                </div>
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span>Improving conversion rates with CRO & A/B testing</span>
+                </div>
+            </div>
+            
+            <p style="margin-top: 20px;">From running my own sites to leading SEO efforts at major companies, I've developed a deep understanding of what works (and what doesn't) in the ever-changing world of search.</p>
+        </div>
+
+        <div class="section">
+            <span class="section-icon" title="Building" style="vertical-align:middle;display:inline-block;margin-right:8px;">
+              <svg viewBox="0 0 24 24" width="28" height="28"><rect x="3" y="7" width="18" height="14" rx="2" fill="#3399ff"/><rect x="7" y="11" width="2" height="2" fill="#fff"/><rect x="11" y="11" width="2" height="2" fill="#fff"/><rect x="15" y="11" width="2" height="2" fill="#fff"/></svg>
+            </span>
+            <h2 style="display:inline;vertical-align:middle;">Agency Experience</h2>
+            <p>During my tenure at a leading digital marketing agency, I managed and optimized SEO campaigns for over 50 clients across diverse industries. This experience provided me with unique insights into scaling SEO strategies and delivering consistent results across multiple business models.</p>
+            
+            <div class="journey-list">
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span>Managed SEO campaigns for 50+ clients simultaneously, maintaining consistent growth across all accounts</span>
+                </div>
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span>Developed standardized processes for technical audits, content optimization, and performance tracking</span>
+                </div>
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span>Created custom reporting dashboards to track KPIs and demonstrate ROI to stakeholders</span>
+                </div>
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span>Led weekly strategy sessions with account managers to align SEO efforts with client goals</span>
+                </div>
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span>Implemented automated workflows for content publishing, link building, and performance monitoring</span>
+                </div>
+                <div class="journey-item">
+                    <svg class="journey-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span>Mentored junior SEO specialists and developed training programs for the agency team</span>
+                </div>
+            </div>
+            
+            <p style="margin-top: 20px;">This agency experience honed my ability to manage multiple projects efficiently while maintaining high standards of quality and delivering measurable results. I learned to adapt strategies to different industries, business models, and client needs, making me a versatile SEO professional who can handle any challenge.</p>
+        </div>
+
+        <div class="section">
+            <span class="section-icon" title="Folder" style="vertical-align:middle;display:inline-block;margin-right:8px;">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M3 6a2 2 0 012-2h5l2 3h7a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V6z" fill="#f6c700" stroke="#b5b5b5" stroke-width="1.5"/></svg>
+            </span>
+            <h2 style="display:inline;vertical-align:middle;">Notable Projects</h2>
+            <div class="grid" id="projects">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="section">
+            <span class="section-icon" title="Briefcase" style="vertical-align:middle;display:inline-block;margin-right:8px;">
+              <svg viewBox="0 0 24 24" width="28" height="28"><rect x="3" y="7" width="18" height="12" rx="2" fill="#008080"/><rect x="8" y="3" width="8" height="4" rx="1" fill="#b5b5b5"/><rect x="3" y="13" width="18" height="2" fill="#3399ff"/></svg>
+            </span>
+            <h2 style="display:inline;vertical-align:middle;">Industry Experience & Expertise In SEO & Optimizations</h2>
+            <p>With over 14 years of experience across diverse industries and business models, I've developed a flexible, results-driven approach to SEO and website optimization. Whether working with startups, agencies, or enterprise-level organizations, I adapt my strategies to meet unique business needs while maintaining a focus on measurable growth and sustainable results.</p>
+            
+            <div class="category-section">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+                <div>
+                    <h3>SEO Optimization Skills</h3>
+                    <div id="skills">
+                        <!-- Skills will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <div>
+                    <h3>Industry Experience</h3>
+                    <div id="industries">
+                        <!-- Industries will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z"/>
+                </svg>
+                <div>
+                    <h3>Tech Stack & Tools</h3>
+                    <div id="tools">
+                        <!-- Tools will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
+                </svg>
+                <div>
+                    <h3>Professional Certifications</h3>
+                    <div id="certifications">
+                        <!-- Certifications will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <span class="section-icon" title="Mail" style="vertical-align:middle;display:inline-block;margin-right:8px;">
+              <svg viewBox="0 0 24 24" width="28" height="28"><rect x="3" y="7" width="18" height="10" rx="2" fill="#3399ff"/><polyline points="3,7 12,14 21,7" fill="none" stroke="#fff" stroke-width="2"/></svg>
+            </span>
+            <h2 style="display:inline;vertical-align:middle;">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Ready to improve your online visibility? Send me a message to discuss how I can help with your SEO needs.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <span>yourpalzack@gmail.com</span>
+                        </div>
+                        <div class="contact-method">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Aspen, Colorado</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="input-group">
+                        <label for="name">
+                            <input type="text" id="name" placeholder="Your Name" required />
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">
+                            <input type="email" id="email" placeholder="Your Email" required />
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label for="subject">
+                            <input type="text" id="subject" placeholder="Subject" required />
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script>
+const projects = [
+    {
+        title: "CreedeFlyFishing.com",
+        description: "Designed & optimized a fly fishing retail shop's website. Completed a Local SEO campaign optimizing the visibility of Google My Business profile and generating a 5000% increase in local search traffic.",
+        tags: ["Local SEO", "Google My Business", "E-commerce", "Retail"],
+        metrics: [
+            "5000% increase in local search traffic",
+            "Top 3 rankings for local fly fishing keywords",
+            "95% improvement in Google My Business visibility"
+        ],
+        challenges: [
+            "Competitive local market with established competitors",
+            "Limited initial online presence",
+            "Seasonal business requiring year-round optimization"
+        ],
+        results: [
+            "Significant increase in foot traffic to physical store",
+            "Enhanced online booking and reservation system",
+            "Improved local community engagement"
+        ]
+    },
+    {
+        title: "AllCydia.com",
+        description: "Built and scaled to 300,000 monthly unique visitors. Sold for six figures in 2014.",
+        tags: ["WordPress", "SEO", "Content Strategy"],
+        metrics: [
+            "300,000+ monthly unique visitors",
+            "6-figure acquisition",
+            "Top 3 rankings for key iOS jailbreak terms"
+        ],
+        challenges: [
+            "Competitive niche with rapidly changing content needs",
+            "Technical SEO optimization for dynamic content",
+            "Maintaining authority during iOS updates"
+        ],
+        results: [
+            "Established as authoritative source in iOS jailbreak community",
+            "Consistent top rankings for high-value keywords",
+            "Successful exit strategy with profitable sale"
+        ]
+    },
+    {
+        title: "Stake.com",
+        description: "SEO consultation resulting in 20M+ monthly organic visitors.",
+        tags: ["Technical SEO", "Analytics", "JavaScript Optimization"],
+        metrics: [
+            "20M+ monthly organic visitors",
+            "300% increase in organic traffic",
+            "50% improvement in page load speed"
+        ],
+        challenges: [
+            "JavaScript rendering issues affecting indexing",
+            "International SEO for multiple markets",
+            "Technical debt in existing infrastructure"
+        ],
+        results: [
+            "Resolved critical indexing issues",
+            "Implemented scalable technical SEO framework",
+            "Established data-driven optimization process"
+        ]
+    },
+    {
+        title: "Offerpad.com",
+        description: "450% increase in organic impressions within 8 months for 850,000+ page site.",
+        tags: ["Sitecore", "React", "Local SEO"],
+        metrics: [
+            "450% increase in organic impressions",
+            "850,000+ pages optimized",
+            "90+ local office locations"
+        ],
+        challenges: [
+            "Managing large-scale technical SEO",
+            "Coordinating with multiple development teams",
+            "Local SEO for nationwide presence"
+        ],
+        results: [
+            "Streamlined technical SEO processes",
+            "Improved local search visibility",
+            "Enhanced site architecture for better crawling"
+        ]
+    },
+    {
+        title: "SkillSmartAI.com",
+        description: "AI-based website with 7,500+ visitors in first month.",
+        tags: ["AI Integration", "Custom Development", "SEO"],
+        metrics: [
+            "7,500+ visitors in first month",
+            "80% organic traffic growth",
+            "3x increase in conversion rate"
+        ],
+        challenges: [
+            "Integrating AI with traditional SEO",
+            "Creating unique, valuable content at scale",
+            "Technical implementation of AI features"
+        ],
+        results: [
+            "Successful AI-driven content strategy",
+            "High engagement rates with target audience",
+            "Strong foundation for future growth"
+        ]
+    },
+    {
+        title: "FindRentals.com",
+        description: "Recovered ~600,000 visitors after technical SEO audit and optimization.",
+        tags: ["Technical SEO", "Content Strategy", "URL Structure"],
+        metrics: [
+            "600,000+ visitors recovered",
+            "4M+ pages analyzed",
+            "700,000 dead pages removed"
+        ],
+        challenges: [
+            "Massive site with complex architecture",
+            "Broken internal linking structure",
+            "Duplicate content issues"
+        ],
+        results: [
+            "Comprehensive site restructure",
+            "Improved crawl efficiency",
+            "Enhanced user experience"
+        ]
+    },
+    {
+        title: "NewYorkHelicopter.com",
+        description: "Generated $2.25M in online transactions in first 16 months post-relaunch.",
+        tags: ["WordPress", "Local SEO", "E-commerce"],
+        metrics: [
+            "$2.25M in online transactions",
+            "40% increase in booking rate",
+            "Top rankings for NYC helicopter tours"
+        ],
+        challenges: [
+            "Competitive NYC market",
+            "High-value transaction optimization",
+            "Local SEO for specific locations"
+        ],
+        results: [
+            "Improved booking conversion rate",
+            "Enhanced local search presence",
+            "Expanded service offerings"
+        ]
+    },
+    {
+        title: "VacationCompany.com",
+        description: "Achieved +7% CTR improvement through structured data implementation.",
+        tags: ["Schema Markup", "Local SEO", "Review Management"],
+        metrics: [
+            "7% CTR improvement",
+            "15% increase in direct bookings",
+            "Improved review visibility"
+        ],
+        challenges: [
+            "Managing multiple property listings",
+            "Implementing complex schema markup",
+            "Maintaining review consistency"
+        ],
+        results: [
+            "Enhanced SERP appearance",
+            "Improved booking conversion",
+            "Better review management system"
+        ]
+    },
+    {
+        title: "Incredijet.com",
+        description: "Lead generation site generating 15-20 qualified leads per week.",
+        tags: ["Lead Generation", "Local SEO", "Content Marketing"],
+        metrics: [
+            "15-20 qualified leads weekly",
+            "40,000 monthly visitors",
+            "High conversion rate for luxury service"
+        ],
+        challenges: [
+            "Targeting high-value customers",
+            "Local SEO for multiple airports",
+            "Building trust in luxury market"
+        ],
+        results: [
+            "Consistent lead generation",
+            "Strong local search presence",
+            "Successful business acquisition"
+        ]
+    }
+];
+
+const skills = [
+    "Technical SEO & Auditing",
+    "AI-Driven SEO Strategies",
+    "Full Stack Development",
+    "Local SEO Optimization",
+    "SaaS & B2B SEO",
+    "Conversion Rate Optimization",
+    "Programmatic SEO",
+    "Search Generative Experience (SGE)",
+    "Content Strategy & Creation",
+    "Link Building & Outreach",
+    "Mobile Optimization",
+    "International SEO",
+    "E-commerce SEO",
+    "Technical Problem Solving",
+    "Data Analysis & Reporting"
+];
+
+const industries = [
+    "E-commerce & Retail",
+    "SaaS & Technology",
+    "Real Estate",
+    "Travel & Tourism",
+    "Finance & Cryptocurrency",
+    "Healthcare & Medical",
+    "Education & E-learning",
+    "Automotive",
+    "Legal Services",
+    "Hospitality"
+];
+
+const tools = [
+    "Google Analytics 4",
+    "Google Search Console",
+    "Ahrefs",
+    "SEMrush",
+    "Screaming Frog",
+    "WordPress",
+    "React & Next.js",
+    "Python",
+    "Node.js",
+    "GitHub",
+    "Google Tag Manager",
+    "Schema Markup Generator",
+    "Cloudflare",
+    "AWS",
+    "Docker"
+];
+
+const certifications = [
+    "Google Analytics Certification",
+    "Google Ads Certification",
+    "SEMrush SEO Certification",
+    "HubSpot Inbound Marketing",
+    "AWS Cloud Practitioner",
+    "Google Digital Marketing",
+    "Yoast SEO Professional",
+    "Schema Markup Expert"
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Populate projects
+    const projectsContainer = document.getElementById('projects');
+    projects.forEach(project => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        
+        // Determine which icon to use based on project
+        let icon = '';
+        if (project.title.includes('Google') || project.tags.includes('Google')) {
+            icon = `<svg class="project-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+            </svg>`;
+        } else if (project.title.includes('AI') || project.tags.includes('AI')) {
+            icon = `<svg class="project-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+            </svg>`;
+        } else if (project.title.includes('Local') || project.tags.includes('Local SEO')) {
+            icon = `<svg class="project-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>`;
+        }
+
+        card.innerHTML = `
+            <div class="card-header">
+                ${icon}
+                <h3>${project.title}</h3>
+            </div>
+            <p>${project.description}</p>
+            <div class="project-details">
+                <div class="project-metrics">
+                    <h4>Key Metrics</h4>
+                    <ul>
+                        ${project.metrics.map(metric => `<li>${metric}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="project-challenges">
+                    <h4>Challenges Overcome</h4>
+                    <ul>
+                        ${project.challenges.map(challenge => `<li>${challenge}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="project-results">
+                    <h4>Results Achieved</h4>
+                    <ul>
+                        ${project.results.map(result => `<li>${result}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: 10px">
+                ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            </div>
+        `;
+        projectsContainer.appendChild(card);
+    });
+
+    // Helper function to populate tags
+    const populateTags = (items, containerId) => {
+        const container = document.getElementById(containerId);
+        items.forEach(item => {
+            const tag = document.createElement('span');
+            tag.className = 'tag';
+            tag.textContent = item;
+            container.appendChild(tag);
+        });
+    };
+
+    // Populate all sections
+    populateTags(skills, 'skills');
+    populateTags(industries, 'industries');
+    populateTags(tools, 'tools');
+    populateTags(certifications, 'certifications');
+});
+</script>
+  <!-- Win98-style Taskbar -->
+  <div id="win98-taskbar">
+    <button id="start-btn" aria-haspopup="true" aria-controls="start-menu" tabindex="0">
+      <svg width="22" height="22" viewBox="0 0 24 24" style="vertical-align:middle"><rect x="2" y="2" width="20" height="20" rx="3" fill="#fff" stroke="#008080" stroke-width="2"/><rect x="5" y="5" width="4" height="4" fill="#008080"/><rect x="10" y="5" width="4" height="4" fill="#3399ff"/><rect x="15" y="5" width="4" height="4" fill="#f6c700"/><rect x="5" y="10" width="4" height="4" fill="#3399ff"/><rect x="10" y="10" width="4" height="4" fill="#f6c700"/><rect x="15" y="10" width="4" height="4" fill="#008080"/><rect x="5" y="15" width="4" height="4" fill="#f6c700"/><rect x="10" y="15" width="4" height="4" fill="#008080"/><rect x="15" y="15" width="4" height="4" fill="#3399ff"/></svg>
+      <span style="font-weight:bold;color:#222;">Start</span>
+    </button>
+    <div id="taskbar-windows">
+      <button class="taskbar-window-btn selected" id="taskbar-resume" aria-label="Resume window" tabindex="0" data-window="#resume-window">
+        <svg width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="#f6c700" stroke="#008080" stroke-width="2"/></svg>
+        Resume
+      </button>
+    </div>
+    <div style="flex:1"></div>
+    <span id="taskbar-clock"></span>
+  </div>
+
+  <!-- Start Menu -->
+  <nav id="start-menu" aria-label="Start menu" tabindex="-1" hidden>
+    <ul>
+      <li tabindex="0"><svg width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="#f6c700" stroke="#008080" stroke-width="2"/></svg> Resume</li>
+      <li tabindex="0"><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="16" cy="10" r="6" fill="#ffcc00" stroke="#b5b5b5" stroke-width="2"/><rect x="12" y="18" width="8" height="10" rx="4" fill="#ffcc00" stroke="#b5b5b5" stroke-width="2"/></svg> AIM Chat</li>
+      <li tabindex="0"><svg width="18" height="18" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="8" rx="2" fill="#fff" stroke="#008080" stroke-width="2"/><rect x="10" y="10" width="8" height="4" fill="#b5b5b5"/></svg> Paint</li>
+      <li tabindex="0"><svg width="18" height="18" viewBox="0 0 24 24"><rect x="7" y="6" width="10" height="12" rx="2" fill="#fff" stroke="#008080" stroke-width="2"/><rect x="10" y="10" width="6" height="2" fill="#b5b5b5"/></svg> Notepad</li>
+      <li tabindex="0"><svg width="18" height="18" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="8" rx="2" fill="#b5b5b5"/></svg> My Computer</li>
+      <li tabindex="0"><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="#3399ff"/></svg> Network</li>
+      <li tabindex="0"><svg width="18" height="18" viewBox="0 0 24 24"><rect x="6" y="7" width="12" height="10" rx="2" fill="#fff"/></svg> Recycle Bin</li>
+      <li class="separator"></li>
+      <li tabindex="0"><svg width="18" height="18" viewBox="0 0 24 24"><rect x="6" y="14" width="12" height="3" fill="#b22222"/></svg> Shut Down...</li>
+    </ul>
+  </nav>
+
+  <!-- App Windows -->
+  <div class="container win98-window" id="aim-window" style="display:none; left:320px; top:80px; min-width:320px; width:340px; position:fixed; z-index:40;">
+    <div class="container-titlebar" style="display:flex;align-items:center;justify-content:space-between;">
+      <span style="display:flex;align-items:center;gap:8px;">
+        <svg width="20" height="20" viewBox="0 0 32 32"><circle cx="16" cy="10" r="6" fill="#ffcc00" stroke="#b5b5b5" stroke-width="2"/><rect x="12" y="18" width="8" height="10" rx="4" fill="#ffcc00" stroke="#b5b5b5" stroke-width="2"/></svg>
+        AIM Instant Messenger
+      </span>
+      <span class="window-controls">
+        <span class="window-btn" title="Minimize"><svg viewBox="0 0 16 16"><rect x="3" y="12" width="10" height="2" fill="#222"/></svg></span>
+        <span class="window-btn" title="Maximize"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" fill="none" stroke="#008080" stroke-width="2"/><rect x="3" y="3" width="10" height="10" fill="#e3e3e3"/></svg></span>
+        <span class="window-btn" title="Close"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="3" fill="#f6c700" stroke="#b22222" stroke-width="1.5"/><line x1="5" y1="5" x2="11" y2="11" stroke="#b22222" stroke-width="2"/><line x1="11" y1="5" x2="5" y2="11" stroke="#b22222" stroke-width="2"/></svg></span>
+      </span>
+    </div>
+    <div style="display:flex; height:300px; background:#fff; border:2px inset #b5b5b5; margin-top:8px;">
+      <div style="width:110px; background:#e3e3e3; border-right:2px outset #fff; padding:8px; font-size:0.95em;">
+        <b>Buddies</b><br><ul style="margin:6px 0 0 0; padding:0; list-style:none;"><li style="margin-bottom:4px;">Zack (You)</li><li style="margin-bottom:4px;">SEO Bot</li><li>Win98 User</li></ul>
+      </div>
+      <div style="flex:1; display:flex; flex-direction:column;">
+        <div style="flex:1; padding:8px; font-size:0.97em; overflow:auto;">[SEO Bot]: Welcome to AIM!<br>[You]: Thanks! This is so retro.</div>
+        <form style="display:flex; border-top:2px inset #b5b5b5;">
+          <input type="text" placeholder="Type a message..." style="flex:1; border:none; padding:5px; font-size:1em; font-family:'Tahoma','MS Sans Serif',Arial,sans-serif;">
+          <button type="submit" style="background:#e3e3e3; border:2px outset #fff; border-radius:6px; margin-left:4px; padding:3px 12px; font-family:'Tahoma','MS Sans Serif',Arial,sans-serif;">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container win98-window" id="paint-window" style="display:none; left:420px; top:160px; min-width:320px; width:400px; position:fixed; z-index:40;">
+    <div class="container-titlebar" style="display:flex;align-items:center;justify-content:space-between;">
+      <span style="display:flex;align-items:center;gap:8px;">
+        <svg width="20" height="20" viewBox="0 0 32 32"><rect x="6" y="6" width="20" height="16" rx="3" fill="#fff" stroke="#008080" stroke-width="2"/><rect x="10" y="10" width="12" height="8" fill="#b5b5b5"/><rect x="22" y="22" width="6" height="6" rx="2" fill="#3399ff"/></svg>
+        Microsoft Paint
+      </span>
+      <span class="window-controls">
+        <span class="window-btn" title="Minimize"><svg viewBox="0 0 16 16"><rect x="3" y="12" width="10" height="2" fill="#222"/></svg></span>
+        <span class="window-btn" title="Maximize"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" fill="none" stroke="#008080" stroke-width="2"/><rect x="3" y="3" width="10" height="10" fill="#e3e3e3"/></svg></span>
+        <span class="window-btn" title="Close"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="3" fill="#f6c700" stroke="#b22222" stroke-width="1.5"/><line x1="5" y1="5" x2="11" y2="11" stroke="#b22222" stroke-width="2"/><line x1="11" y1="5" x2="5" y2="11" stroke="#b22222" stroke-width="2"/></svg></span>
+      </span>
+    </div>
+    <div style="background:#fff; border:2px inset #b5b5b5; margin-top:8px; padding:0; height:300px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+      <canvas id="paint-canvas" width="340" height="220" style="border:1.5px solid #008080; background:#fff; cursor:crosshair;"></canvas>
+      <div style="margin-top:8px; font-size:0.95em;">(Simple Paint Demo)</div>
+    </div>
+  </div>
+  <div class="container win98-window" id="notepad-window" style="display:none; left:520px; top:240px; min-width:260px; width:320px; position:fixed; z-index:40;">
+    <div class="container-titlebar" style="display:flex;align-items:center;justify-content:space-between;">
+      <span style="display:flex;align-items:center;gap:8px;">
+        <svg width="20" height="20" viewBox="0 0 32 32"><rect x="7" y="6" width="18" height="20" rx="3" fill="#fff" stroke="#008080" stroke-width="2"/><rect x="10" y="10" width="12" height="2" fill="#b5b5b5"/><rect x="10" y="14" width="12" height="2" fill="#b5b5b5"/><rect x="10" y="18" width="8" height="2" fill="#b5b5b5"/></svg>
+        Notepad
+      </span>
+      <span class="window-controls">
+        <span class="window-btn" title="Minimize"><svg viewBox="0 0 16 16"><rect x="3" y="12" width="10" height="2" fill="#222"/></svg></span>
+        <span class="window-btn" title="Maximize"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" fill="none" stroke="#008080" stroke-width="2"/><rect x="3" y="3" width="10" height="10" fill="#e3e3e3"/></svg></span>
+        <span class="window-btn" title="Close"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="3" fill="#f6c700" stroke="#b22222" stroke-width="1.5"/><line x1="5" y1="5" x2="11" y2="11" stroke="#b22222" stroke-width="2"/><line x1="11" y1="5" x2="5" y2="11" stroke="#b22222" stroke-width="2"/></svg></span>
+      </span>
+    </div>
+    <div style="background:#fff; border:2px inset #b5b5b5; margin-top:8px; padding:0; height:260px; display:flex; flex-direction:column;">
+      <textarea style="flex:1; width:100%; border:none; resize:none; font-family:'Tahoma','MS Sans Serif',Arial,sans-serif; font-size:1em; padding:8px; background:#fff; color:#222;">Welcome to Notepad!
+
+Type your notes here...</textarea>
+    </div>
+  </div>
+
+  <!-- Context Menu -->
+  <menu id="context-menu" tabindex="-1" hidden>
+    <ul>
+      <li tabindex="0">Open</li>
+      <li tabindex="0">Properties</li>
+      <li class="separator"></li>
+      <li tabindex="0">New
+        <ul class="submenu">
+          <li tabindex="0">Folder</li>
+          <li tabindex="0">Shortcut</li>
+        </ul>
+      </li>
+      <li tabindex="0">Refresh</li>
+      <li tabindex="0">Paste</li>
+    </ul>
+  </menu>
+
+  <!-- Placeholder for Win98 Sounds -->
+  <audio id="win98-sound" src="" preload="auto" style="display:none"></audio>
+
+  <script>
+    // --- Taskbar Clock ---
+    function updateTaskbarClock() {
+      var el = document.getElementById('taskbar-clock');
+      if (!el) return;
+      var now = new Date();
+      var h = now.getHours();
+      var m = now.getMinutes();
+      if (h < 10) h = '0' + h;
+      if (m < 10) m = '0' + m;
+      el.textContent = h + ':' + m;
+    }
+    setInterval(updateTaskbarClock, 1000);
+    updateTaskbarClock();
+
+    // --- Win98 Sounds (placeholder, add .wav files for real sounds) ---
+    function playSound(name) {
+      // Example: playSound('start'), playSound('error'), playSound('minimize')
+      // For now, just a placeholder
+      // document.getElementById('win98-sound').src = `sounds/${name}.wav`;
+      // document.getElementById('win98-sound').play();
+    }
+
+    // --- Start Menu ---
+    const startBtn = document.getElementById('start-btn');
+    const startMenu = document.getElementById('start-menu');
+    let startMenuOpen = false;
+    function openStartMenu() {
+      startMenu.hidden = false;
+      startBtn.setAttribute('aria-expanded','true');
+      startMenu.focus();
+      startMenuOpen = true;
+      playSound('start');
+    }
+    function closeStartMenu() {
+      startMenu.hidden = true;
+      startBtn.setAttribute('aria-expanded','false');
+      startMenuOpen = false;
+    }
+    startBtn.onclick = (e) => {
+      if (startMenuOpen) { closeStartMenu(); } else { openStartMenu(); }
+    };
+    startBtn.onkeydown = (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { openStartMenu(); }
+    };
+    startMenu.onkeydown = function(e) {
+      const items = Array.from(startMenu.querySelectorAll('li[tabindex]'));
+      let idx = items.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        items[(idx+1)%items.length].focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        items[(idx-1+items.length)%items.length].focus();
+      } else if (e.key === 'Escape') {
+        closeStartMenu();
+        startBtn.focus();
+      } else if (e.key === 'Enter') {
+        document.activeElement.click();
+      }
+    };
+    document.addEventListener('mousedown', (e) => {
+      if (startMenuOpen && !startMenu.contains(e.target) && !startBtn.contains(e.target)) {
+        closeStartMenu();
+      }
+    });
+    // Start menu actions
+    startMenu.querySelectorAll('li').forEach((li,i) => {
+      li.onclick = () => {
+        closeStartMenu();
+        if(i===0) showResumeWindow();
+        else if(i===1) desktopAlert('My Computer opens.');
+        else if(i===2) desktopAlert('Network Neighborhood opens.');
+        else if(i===3) desktopAlert('Recycle Bin opens.');
+        else if(i===5) desktopAlert('Shutting down...');
+      };
+    });
+
+    // --- Context Menu ---
+    const contextMenu = document.getElementById('context-menu');
+    let contextTarget = null;
+    document.addEventListener('contextmenu', function(e){
+      if (e.target.closest('.desktop-icon')) {
+        contextTarget = e.target.closest('.desktop-icon');
+      } else if (e.target.id === 'desktop-icons' || e.target === document.body) {
+        contextTarget = null;
+      } else {
+        contextMenu.hidden = true;
+        return;
+      }
+      e.preventDefault();
+      contextMenu.hidden = false;
+      contextMenu.style.left = e.clientX + 'px';
+      contextMenu.style.top = e.clientY + 'px';
+      contextMenu.focus();
+    });
+    document.addEventListener('mousedown', function(e){
+      if (!contextMenu.hidden && !contextMenu.contains(e.target)) {
+        contextMenu.hidden = true;
+      }
+    });
+    contextMenu.onkeydown = function(e) {
+      const items = Array.from(contextMenu.querySelectorAll('li[tabindex]'));
+      let idx = items.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        items[(idx+1)%items.length].focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        items[(idx-1+items.length)%items.length].focus();
+      } else if (e.key === 'Escape') {
+        contextMenu.hidden = true;
+      } else if (e.key === 'Enter') {
+        document.activeElement.click();
+      }
+    };
+    contextMenu.querySelectorAll('li[tabindex]').forEach((li,i) => {
+      li.onclick = () => {
+        contextMenu.hidden = true;
+        if(i===0 && contextTarget) contextTarget.dispatchEvent(new Event('dblclick'));
+        else if(i===1 && contextTarget) desktopAlert('Properties for ' + contextTarget.querySelector('span').textContent);
+        else if(i===4) location.reload();
+      };
+    });
+
+    // --- Desktop Icon Selection & Keyboard Navigation ---
+    const icons = Array.from(document.querySelectorAll('.desktop-icon'));
+    let selectedIcon = null;
+    function selectIcon(icon) {
+      icons.forEach(ic=>ic.classList.remove('selected'));
+      if(icon) { icon.classList.add('selected'); icon.focus(); selectedIcon=icon; }
+      else selectedIcon=null;
+    }
+    icons.forEach(icon => {
+      icon.onclick = (e) => { selectIcon(icon); };
+      icon.onkeydown = (e) => {
+        if(e.key==='Enter') icon.dispatchEvent(new Event('dblclick'));
+        else if(e.key==='ArrowDown') selectIcon(icons[(icons.indexOf(icon)+1)%icons.length]);
+        else if(e.key==='ArrowUp') selectIcon(icons[(icons.indexOf(icon)-1+icons.length)%icons.length]);
+        else if(e.key==='Tab') {
+          e.preventDefault();
+          selectIcon(icons[(icons.indexOf(icon)+1)%icons.length]);
+        }
+      };
+    });
+    document.body.addEventListener('click', function(e){
+      if(!e.target.closest('.desktop-icon')) selectIcon(null);
+    });
+
+    // --- Icon Drag & Drop ---
+    let dragIcon = null, dragOffset = [0,0];
+    icons.forEach(icon => {
+      icon.draggable = false;
+      icon.onmousedown = function(e) {
+        if(e.button!==0) return;
+        dragIcon = icon;
+        dragOffset = [e.offsetX, e.offsetY];
+        icon.classList.add('dragging');
+        document.body.style.userSelect = 'none';
+      };
+    });
+    document.onmousemove = function(e) {
+      if(!dragIcon) return;
+      dragIcon.style.position = 'fixed';
+      dragIcon.style.left = (e.clientX - dragOffset[0]) + 'px';
+      dragIcon.style.top = (e.clientY - dragOffset[1]) + 'px';
+    };
+    document.onmouseup = function(e) {
+      if(dragIcon) {
+        dragIcon.classList.remove('dragging');
+        dragIcon = null;
+        document.body.style.userSelect = '';
+      }
+    };
+
+    // --- Multi-Window Management (Resume, AIM, Paint, Notepad) ---
+    const windows = {
+      resume: {
+        win: document.getElementById('resume-window'),
+        taskbarBtn: document.getElementById('taskbar-resume'),
+        icon: document.getElementById('icon-resume'),
+        startIdx: 0
+      },
+      aim: {
+        win: document.getElementById('aim-window'),
+        taskbarBtn: null,
+        icon: document.getElementById('icon-aim'),
+        startIdx: 1
+      },
+      paint: {
+        win: document.getElementById('paint-window'),
+        taskbarBtn: null,
+        icon: document.getElementById('icon-paint'),
+        startIdx: 2
+      },
+      notepad: {
+        win: document.getElementById('notepad-window'),
+        taskbarBtn: null,
+        icon: document.getElementById('icon-notepad'),
+        startIdx: 3
+      }
+    };
+    // Create taskbar buttons for new windows
+    const taskbar = document.getElementById('taskbar-windows');
+    ['aim','paint','notepad'].forEach(app => {
+      const btn = document.createElement('button');
+      btn.className = 'taskbar-window-btn';
+      btn.setAttribute('aria-label', app.charAt(0).toUpperCase()+app.slice(1)+' window');
+      btn.tabIndex = 0;
+      btn.dataset.window = `#${app}-window`;
+      btn.style.display = 'none';
+      btn.innerHTML =
+        (app==='aim'?'<svg width="18" height="18" viewBox="0 0 32 32"><circle cx="16" cy="10" r="6" fill="#ffcc00" stroke="#b5b5b5" stroke-width="2"/><rect x="12" y="18" width="8" height="10" rx="4" fill="#ffcc00" stroke="#b5b5b5" stroke-width="2"/></svg> AIM'
+        :app==='paint'?'<svg width="18" height="18" viewBox="0 0 32 32"><rect x="6" y="6" width="20" height="16" rx="3" fill="#fff" stroke="#008080" stroke-width="2"/><rect x="10" y="10" width="12" height="8" fill="#b5b5b5"/><rect x="22" y="22" width="6" height="6" rx="2" fill="#3399ff"/></svg> Paint'
+        :'<svg width="18" height="18" viewBox="0 0 32 32"><rect x="7" y="6" width="18" height="20" rx="3" fill="#fff" stroke="#008080" stroke-width="2"/><rect x="10" y="10" width="12" height="2" fill="#b5b5b5"/><rect x="10" y="14" width="12" height="2" fill="#b5b5b5"/><rect x="10" y="18" width="8" height="2" fill="#b5b5b5"/></svg> Notepad');
+      taskbar.appendChild(btn);
+      windows[app].taskbarBtn = btn;
+    });
+    // Window Z-index management
+    let winZ = 51;
+    function bringToFront(win) {
+      winZ++;
+      win.style.zIndex = winZ;
+      Object.values(windows).forEach(w=>w.taskbarBtn&&w.taskbarBtn.classList.remove('selected'));
+      Object.values(windows).forEach(w=>w.win.classList.remove('active'));
+      win.classList.add('active');
+      // Find which app
+      for(const k in windows) if(windows[k].win===win) windows[k].taskbarBtn&&windows[k].taskbarBtn.classList.add('selected');
+    }
+    // Show/Hide/Minimize/Maximize/Close logic
+    function showWindow(app) {
+      const w = windows[app];
+      w.win.style.display = 'block';
+      w.win.setAttribute('data-state','');
+      w.taskbarBtn.style.display = '';
+      bringToFront(w.win);
+      playSound('open');
+    }
+    function hideWindow(app) {
+      const w = windows[app];
+      w.win.style.display = 'none';
+      w.taskbarBtn.classList.remove('selected');
+    }
+    function minimizeWindow(app) {
+      const w = windows[app];
+      w.win.setAttribute('data-state','minimized');
+      w.taskbarBtn.classList.remove('selected');
+      playSound('minimize');
+    }
+    function maximizeWindow(app) {
+      const w = windows[app];
+      if(w.win.getAttribute('data-state')==='maximized') {
+        w.win.setAttribute('data-state','');
+        playSound('restore');
+      } else {
+        w.win.setAttribute('data-state','maximized');
+        playSound('maximize');
+      }
+    }
+    // Desktop icon and Start menu launch
+    Object.entries(windows).forEach(([app,w])=>{
+      if(w.icon) {
+        w.icon.ondblclick = ()=>showWindow(app);
+        w.icon.onkeydown = e=>{if(e.key==='Enter')showWindow(app);};
+      }
+    });
+    // Start menu items
+    startMenu.querySelectorAll('li').forEach((li,i) => {
+      li.onclick = () => {
+        closeStartMenu();
+        if(i===0) showWindow('resume');
+        else if(i===1) showWindow('aim');
+        else if(i===2) showWindow('paint');
+        else if(i===3) showWindow('notepad');
+        else if(i===4) desktopAlert('My Computer opens.');
+        else if(i===5) desktopAlert('Network Neighborhood opens.');
+        else if(i===6) desktopAlert('Recycle Bin opens.');
+        else if(i===8) desktopAlert('Shutting down...');
+      };
+    });
+    // Taskbar button logic
+    Object.entries(windows).forEach(([app,w])=>{
+      w.taskbarBtn.onclick = function(){
+        if(w.win.getAttribute('data-state')==='minimized' || w.win.style.display==='none') {
+          showWindow(app);
+        } else {
+          minimizeWindow(app);
+        }
+      }
+    });
+    // Window control buttons
+    function addWinControls(win, app) {
+      const bar = win.querySelector('.container-titlebar');
+      const [minBtn,maxBtn,closeBtn] = bar.querySelectorAll('.window-btn');
+      minBtn.onclick = ()=>minimizeWindow(app);
+      maxBtn.onclick = ()=>maximizeWindow(app);
+      closeBtn.onclick = ()=>hideWindow(app);
+      bar.onmousedown = function(e) {
+        if(e.button!==0) return;
+        dragStart(win,e);
+      };
+      win.onclick = ()=>bringToFront(win);
+    }
+    Object.entries(windows).forEach(([app,w])=>{
+      addWinControls(w.win, app);
+    });
+    // Drag logic
+    let dragWin = null, dragWinOffset = [0,0];
+    function dragStart(win,e) {
+      bringToFront(win);
+      dragWin = win;
+      dragWinOffset = [e.clientX - win.offsetLeft, e.clientY - win.offsetTop];
+      document.body.style.userSelect = 'none';
+    }
+    document.onmousemove = function(e) {
+      if(dragIcon) {
+        dragIcon.style.position = 'fixed';
+        dragIcon.style.left = (e.clientX - dragOffset[0]) + 'px';
+        dragIcon.style.top = (e.clientY - dragOffset[1]) + 'px';
+      }
+      if(dragWin) {
+        dragWin.style.left = (e.clientX - dragWinOffset[0]) + 'px';
+        dragWin.style.top = (e.clientY - dragWinOffset[1]) + 'px';
+        dragWin.style.position = 'fixed';
+      }
+    };
+    document.onmouseup = function(e) {
+      if(dragIcon) {
+        dragIcon.classList.remove('dragging');
+        dragIcon = null;
+        document.body.style.userSelect = '';
+      }
+      if(dragWin) {
+        dragWin = null;
+        document.body.style.userSelect = '';
+      }
+    };
+    // Bring window to front on click
+    Object.values(windows).forEach(w=>{
+      w.win.onclick = ()=>bringToFront(w.win);
+    });
+    // Start with resume window visible
+    showWindow('resume');
+    // --- Paint: Simple Drawing ---
+    const paintCanvas = document.getElementById('paint-canvas');
+    if(paintCanvas) {
+      let painting = false;
+      let ctx = paintCanvas.getContext('2d');
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#008080';
+      paintCanvas.onmousedown = e=>{painting=true;ctx.beginPath();ctx.moveTo(e.offsetX,e.offsetY);};
+      paintCanvas.onmousemove = e=>{if(painting){ctx.lineTo(e.offsetX,e.offsetY);ctx.stroke();}};
+      paintCanvas.onmouseup = e=>{painting=false;};
+      paintCanvas.onmouseleave = e=>{painting=false;};
+    }
+    // --- AIM: Send Message ---
+    const aimWin = document.getElementById('aim-window');
+    if(aimWin) {
+      const chatArea = aimWin.querySelector('div[style*="overflow:auto"]');
+      const form = aimWin.querySelector('form');
+      const input = form.querySelector('input');
+      form.onsubmit = function(e){
+        e.preventDefault();
+        if(input.value.trim()) {
+          chatArea.innerHTML += `<br>[You]: ${input.value.replace(/</g,'&lt;')}`;
+          chatArea.scrollTop = chatArea.scrollHeight;
+          input.value = '';
+        }
+      }
+    }
+
+  </script>
+</body>
+</html> 

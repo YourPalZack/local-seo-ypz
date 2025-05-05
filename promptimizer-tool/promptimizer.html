@@ -1,0 +1,667 @@
+<!-- SEO AI Prompt Generator HTML -->
+<div class="seo-prompt-generator">
+    <h1>SEO AI Prompt Generator - Promptimizer</h1>
+    <p class="intro-text">Promptimizer empowers you to harness the full potential of AI for SEO by generating highly targeted, search‑optimized prompts that guide content creation, competitor intelligence, and ranking performance.</p>
+    
+    <div class="prompt-controls">
+      <div class="input-group">
+        <label for="primary-keyword">Primary Keyword or Topic:</label>
+        <input type="text" id="primary-keyword" placeholder="e.g., organic gardening, digital marketing strategy, best running shoes">
+      </div>
+      
+      <div class="input-group">
+        <label for="secondary-keywords">Secondary Keywords (optional):</label>
+        <input type="text" id="secondary-keywords" placeholder="e.g., beginner tips, affordable, sustainable">
+      </div>
+      
+      <div class="input-group">
+        <label for="content-type">Content Type:</label>
+        <select id="content-type">
+          <option value="blog-post">Blog Post</option>
+          <option value="product-description">Product Description</option>
+          <option value="landing-page">Landing Page</option>
+          <option value="meta-description">Meta Description</option>
+          <option value="competitor-analysis">Competitor Analysis</option>
+          <option value="keyword-research">Keyword Research</option>
+          <option value="content-audit">Content Audit</option>
+        </select>
+      </div>
+      
+      <div class="input-group">
+        <label for="search-intent">Search Intent:</label>
+        <select id="search-intent">
+          <option value="informational">Informational</option>
+          <option value="commercial">Commercial</option>
+          <option value="navigational">Navigational</option>
+          <option value="transactional">Transactional</option>
+        </select>
+      </div>
+      
+      <div class="input-group">
+        <label for="target-audience">Target Audience:</label>
+        <input type="text" id="target-audience" placeholder="e.g., beginners, experts, small business owners">
+      </div>
+      
+      <div class="input-group">
+        <label for="content-format">Content Format:</label>
+        <select id="content-format">
+          <option value="how-to">How-to Guide</option>
+          <option value="listicle">Listicle</option>
+          <option value="case-study">Case Study</option>
+          <option value="comparison">Comparison</option>
+          <option value="ultimate-guide">Ultimate Guide</option>
+          <option value="faq">FAQ</option>
+        </select>
+      </div>
+      
+      <button id="generate-prompt" class="generate-button">Generate SEO Prompt</button>
+    </div>
+    
+    <div class="result-container">
+      <h3>Your SEO Prompt:</h3>
+      <div id="prompt-result" class="prompt-box"></div>
+      <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+    </div>
+    
+    <div class="examples-container">
+      <h3>Example SEO Prompts</h3>
+      <div class="example-tabs">
+        <button class="example-tab active" data-example="blog-post">Blog Post</button>
+        <button class="example-tab" data-example="product-page">Product Page</button>
+        <button class="example-tab" data-example="keyword-research">Keyword Research</button>
+        <button class="example-tab" data-example="competitor-analysis">Competitor Analysis</button>
+        <button class="example-tab" data-example="content-audit">Content Audit</button>
+      </div>
+      <div class="example-content" id="example-content">
+        <div class="example-item active" id="blog-post-example">
+          <h4>Blog Post SEO Prompt Example</h4>
+          <div class="example-box">
+            <p>Write a comprehensive, SEO-optimized blog post about "beginner yoga poses" targeting people new to yoga practice. The primary keyword is "beginner yoga poses" and secondary keywords include "yoga for beginners," "easy yoga poses," "morning yoga routine," and "yoga benefits."</p>
+            <p>The blog post should:</p>
+            <ul>
+              <li>Include an engaging H1 title that incorporates the primary keyword</li>
+              <li>Have a clear structure with H2 and H3 headings that use secondary keywords naturally</li>
+              <li>Begin with an introduction that addresses the reader's pain points and establishes relevance</li>
+              <li>Include 7-10 beginner yoga poses with step-by-step instructions and benefits</li>
+              <li>Incorporate relevant internal linking opportunities</li>
+              <li>Include a FAQ section that addresses common questions about beginner yoga</li>
+              <li>End with a clear call-to-action</li>
+              <li>Be approximately 1,500 words to thoroughly cover the topic</li>
+              <li>Use a friendly, encouraging tone that's accessible to beginners</li>
+            </ul>
+            <p>The content should satisfy informational search intent while providing practical value to readers who are looking to start a yoga practice at home.</p>
+          </div>
+        </div>
+        
+        <div class="example-item" id="product-page-example">
+          <h4>Product Page SEO Prompt Example</h4>
+          <div class="example-box">
+            <p>Create SEO-optimized product description content for our "Ultra Lightweight Hiking Boots" product page. The primary keyword is "lightweight hiking boots" with secondary keywords including "waterproof hiking boots," "comfortable hiking footwear," "trail walking shoes," and "all-terrain boots."</p>
+            <p>The product page content should include:</p>
+            <ul>
+              <li>An attention-grabbing H1 title that includes the primary keyword</li>
+              <li>A compelling meta description (150-160 characters) that encourages clicks from search results</li>
+              <li>5-7 bullet points highlighting key product features and benefits</li>
+              <li>3-4 paragraphs of descriptive content that naturally incorporates secondary keywords</li>
+              <li>Technical specifications section with material, weight, sizes, and other relevant details</li>
+              <li>Product usage scenarios that address different user needs (day hiking, backpacking, trail running)</li>
+              <li>Customer testimonial section that builds trust and incorporates natural keyword usage</li>
+              <li>Relevant product schema markup suggestions for enhanced SERP features</li>
+            </ul>
+            <p>The content should satisfy transactional search intent while providing enough information to help customers make an informed purchase decision.</p>
+          </div>
+        </div>
+        
+        <div class="example-item" id="keyword-research-example">
+          <h4>Keyword Research Prompt Example</h4>
+          <div class="example-box">
+            <p>Conduct comprehensive keyword research for a new website in the "home office furniture" niche. I need to understand the search landscape for creating SEO-optimized content.</p>
+            <p>Please provide:</p>
+            <ul>
+              <li>10-15 high-volume primary keywords related to home office furniture</li>
+              <li>20-30 long-tail keyword opportunities with lower competition</li>
+              <li>5-7 question-based keywords that we could target with FAQ content</li>
+              <li>Analysis of search intent for each main keyword category (informational, commercial, transactional)</li>
+              <li>Keyword grouping suggestions for potential website structure and content silos</li>
+              <li>Identification of seasonal trends or patterns in this niche</li>
+              <li>Competitor keyword gap analysis – what keywords are competitors ranking for that we should target?</li>
+              <li>Suggestions for keyword-focused content types (buying guides, product comparisons, how-to content)</li>
+            </ul>
+            <p>For each keyword suggestion, include estimated search volume and competition level if possible. Focus on keywords with commercial intent that would help drive conversions for an e-commerce site selling home office furniture.</p>
+          </div>
+        </div>
+        
+        <div class="example-item" id="competitor-analysis-example">
+          <h4>Competitor Analysis Prompt Example</h4>
+          <div class="example-box">
+            <p>Perform a detailed SEO competitor analysis for our skincare e-commerce website. Our top three competitors are [Competitor 1], [Competitor 2], and [Competitor 3]. We need insights to improve our SEO strategy and content approach.</p>
+            <p>Please provide:</p>
+            <ul>
+              <li>Analysis of their top-performing organic content (topics, formats, length, structure)</li>
+              <li>Evaluation of their on-page SEO elements (title tags, meta descriptions, heading structure, image optimization)</li>
+              <li>Content gap analysis – what valuable topics are they covering that we're missing?</li>
+              <li>Identification of their primary and secondary keywords for main product categories</li>
+              <li>Assessment of their site structure, navigation, and internal linking strategies</li>
+              <li>Analysis of their backlink profile – what types of sites are linking to them and why?</li>
+              <li>Evaluation of their rich snippet and schema implementation</li>
+              <li>Recommendations for how we can differentiate our content and SEO approach</li>
+            </ul>
+            <p>Focus on actionable insights we can implement to compete more effectively in organic search results for skincare products and educational content.</p>
+          </div>
+        </div>
+        
+        <div class="example-item" id="content-audit-example">
+          <h4>Content Audit Prompt Example</h4>
+          <div class="example-box">
+            <p>Conduct a comprehensive SEO content audit for our fitness blog. We've been publishing content for 3 years but have seen declining organic traffic over the past 6 months. We need a framework to evaluate our existing content and develop an improvement strategy.</p>
+            <p>Please provide:</p>
+            <ul>
+              <li>A step-by-step process for auditing our existing blog content (approximately 200 articles)</li>
+              <li>Key metrics we should analyze for each piece of content</li>
+              <li>Criteria for categorizing content as: keep as is, update/optimize, consolidate, or remove</li>
+              <li>Framework for prioritizing content updates based on potential SEO impact</li>
+              <li>Guidelines for optimizing underperforming but high-potential content</li>
+              <li>Recommendations for content consolidation to address keyword cannibalization</li>
+              <li>Process for implementing redirects for removed or consolidated content</li>
+              <li>Content refresh schedule recommendations for maintaining relevance</li>
+              <li>Methods for identifying content gaps and new topic opportunities</li>
+            </ul>
+            <p>Include suggested tools and resources for conducting this audit efficiently, and a template or framework we can reuse for quarterly content reviews moving forward.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- CSS Styles -->
+  <style>
+    .seo-prompt-generator {
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      color: #333;
+      box-sizing: border-box;
+    }
+    
+    .seo-prompt-generator h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+    
+    .intro-text {
+      text-align: center;
+      color: #5a6a7a;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    
+    .prompt-controls {
+      margin-bottom: 30px;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .input-group {
+      margin-bottom: 18px;
+    }
+    
+    .input-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #445566;
+      font-size: 15px;
+    }
+    
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: border 0.3s;
+    }
+    
+    .input-group input:focus,
+    .input-group select:focus {
+      border-color: #008348;
+      outline: none;
+      box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+    }
+    
+    .generate-button {
+      width: 100%;
+      padding: 14px;
+      background-color: #008348;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+    }
+    
+    .generate-button:hover {
+      background-color: #006738;
+    }
+    
+    .result-container {
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 30px;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .result-container h3 {
+      margin-top: 0;
+      color: #2c3e50;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .prompt-box {
+      min-height: 150px;
+      padding: 20px;
+      background-color: #f8fafc;
+      border: 1px solid #e1e8ed;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      white-space: pre-wrap;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+    }
+    
+    .copy-button {
+      padding: 10px 18px;
+      background-color: #f0f0f0;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+    
+    .copy-button:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .examples-container {
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .examples-container h3 {
+      margin-top: 0;
+      color: #2c3e50;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .example-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    
+    .example-tab {
+      padding: 10px 15px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    
+    .example-tab:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .example-tab.active {
+      background-color: #008348;
+      color: white;
+      border-color: #008348;
+    }
+    
+    .example-item {
+      display: none;
+    }
+    
+    .example-item.active {
+      display: block;
+    }
+    
+    .example-item h4 {
+      color: #2c3e50;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    
+    .example-box {
+      background-color: #f8fafc;
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid #e1e8ed;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    .example-box p {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    
+    .example-box ul {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .example-box li {
+      margin-bottom: 8px;
+    }
+    
+    @media (max-width: 768px) {
+      .seo-prompt-generator {
+        padding: 20px;
+      }
+      
+      .example-tabs {
+        flex-direction: column;
+        gap: 5px;
+      }
+      
+      .example-tab {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    
+    /* Ensure all child elements respect container width */
+    .seo-prompt-generator * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    
+    /* Make sure content doesn't overflow its container */
+    .prompt-box, .example-box {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+  </style>
+  
+  <!-- JavaScript Code -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const generateButton = document.getElementById('generate-prompt');
+      const copyButton = document.getElementById('copy-prompt');
+      const promptResult = document.getElementById('prompt-result');
+      const exampleTabs = document.querySelectorAll('.example-tab');
+      const exampleItems = document.querySelectorAll('.example-item');
+      
+      // Tab switching functionality
+      exampleTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          // Remove active class from all tabs and examples
+          exampleTabs.forEach(t => t.classList.remove('active'));
+          exampleItems.forEach(item => item.classList.remove('active'));
+          
+          // Add active class to current tab
+          this.classList.add('active');
+          
+          // Show corresponding example
+          const exampleId = this.getAttribute('data-example') + '-example';
+          document.getElementById(exampleId).classList.add('active');
+        });
+      });
+      
+      // Generate prompt when button is clicked
+      generateButton.addEventListener('click', function() {
+        const primaryKeyword = document.getElementById('primary-keyword').value || '[PRIMARY KEYWORD]';
+        const secondaryKeywords = document.getElementById('secondary-keywords').value || '[SECONDARY KEYWORDS]';
+        const contentType = document.getElementById('content-type').value;
+        const searchIntent = document.getElementById('search-intent').value;
+        const targetAudience = document.getElementById('target-audience').value || 'target audience';
+        const contentFormat = document.getElementById('content-format').value;
+        
+        // Content type templates
+        const templates = {
+          'blog-post': getBlogPostTemplate(primaryKeyword, secondaryKeywords, searchIntent, targetAudience, contentFormat),
+          'product-description': getProductDescriptionTemplate(primaryKeyword, secondaryKeywords, targetAudience),
+          'landing-page': getLandingPageTemplate(primaryKeyword, secondaryKeywords, searchIntent, targetAudience),
+          'meta-description': getMetaDescriptionTemplate(primaryKeyword, secondaryKeywords, searchIntent),
+          'competitor-analysis': getCompetitorAnalysisTemplate(primaryKeyword),
+          'keyword-research': getKeywordResearchTemplate(primaryKeyword),
+          'content-audit': getContentAuditTemplate(primaryKeyword)
+        };
+        
+        // Get the template for the selected content type
+        promptResult.textContent = templates[contentType];
+      });
+      
+      // Blog post template
+      function getBlogPostTemplate(primaryKeyword, secondaryKeywords, searchIntent, targetAudience, contentFormat) {
+        let formatSpecific = '';
+        
+        // Add format-specific instructions
+        switch(contentFormat) {
+          case 'how-to':
+            formatSpecific = `
+  - Structure this as a step-by-step how-to guide with clear, numbered instructions
+  - Include a materials/requirements section at the beginning
+  - Add tips, warnings, or notes throughout the steps where relevant
+  - Conclude with a troubleshooting section addressing common challenges`;
+            break;
+          case 'listicle':
+            formatSpecific = `
+  - Format this as a numbered list article with at least 10-15 items
+  - Each list item should have its own subheading and 100-200 words of supporting content
+  - Include a brief introduction explaining the list's value and how it was compiled
+  - Conclude with a summary of key takeaways`;
+            break;
+          case 'case-study':
+            formatSpecific = `
+  - Structure this as a detailed case study with background, challenge, solution, and results sections
+  - Include specific data points, metrics, and outcomes
+  - Add quotes or testimonials where appropriate
+  - Conclude with lessons learned and actionable takeaways`;
+            break;
+          case 'comparison':
+            formatSpecific = `
+  - Create a comprehensive comparison with clear categories for evaluation
+  - Include a comparison table with key features/benefits
+  - Highlight pros and cons for each option being compared
+  - Provide specific recommendations for different use cases or user needs`;
+            break;
+          case 'ultimate-guide':
+            formatSpecific = `
+  - Create a comprehensive guide divided into clear sections with their own H2 headings
+  - Include a table of contents at the beginning
+  - Add expert insights, statistics, and visual element suggestions
+  - Cover both basic and advanced aspects of the topic`;
+            break;
+          case 'faq':
+            formatSpecific = `
+  - Structure this as a comprehensive FAQ with at least 15-20 questions and answers
+  - Group related questions into logical sections with their own H2 headings
+  - Each answer should be detailed and 100-200 words in length
+  - Use proper schema markup suggestions for FAQ content`;
+            break;
+        }
+        
+        return `Write a comprehensive, SEO-optimized blog post about "${primaryKeyword}" targeting ${targetAudience}. The primary keyword is "${primaryKeyword}" and secondary keywords include ${secondaryKeywords}.
+  
+  The blog post should:
+  - Include an engaging H1 title that incorporates the primary keyword
+  - Have a clear structure with H2 and H3 headings that use secondary keywords naturally
+  - Begin with an introduction that addresses the reader's pain points and establishes relevance
+  - Include relevant statistics, examples, and actionable advice
+  - Incorporate relevant internal linking opportunities
+  - Include a FAQ section that addresses common questions about ${primaryKeyword}
+  - End with a clear call-to-action${formatSpecific}
+  - Be approximately 1,500-2,000 words to thoroughly cover the topic
+  - Use a tone that's appropriate for ${targetAudience}
+  
+  The content should satisfy ${searchIntent} search intent while providing practical value to readers who are looking for information about ${primaryKeyword}.
+  
+  Please include schema markup suggestions that would be appropriate for this content.`;
+      }
+      
+      // Product description template
+      function getProductDescriptionTemplate(primaryKeyword, secondaryKeywords, targetAudience) {
+        return `Create an SEO-optimized product description for "${primaryKeyword}" targeting ${targetAudience}. The primary keyword is "${primaryKeyword}" with secondary keywords including ${secondaryKeywords}.
+  
+  The product description should include:
+  - An attention-grabbing H1 title that includes the primary keyword
+  - A compelling meta description (150-160 characters) that encourages clicks from search results
+  - 5-7 bullet points highlighting key product features and benefits
+  - 3-4 paragraphs of descriptive content that naturally incorporates secondary keywords
+  - Technical specifications section with relevant details
+  - Product usage scenarios that address different user needs
+  - Answer common pre-purchase questions customers might have
+  - Include a clear call-to-action
+  - Use persuasive language that highlights unique selling points
+  
+  The content should satisfy transactional search intent while providing enough information to help customers make an informed purchase decision.
+  
+  Please include schema markup suggestions for this product page that would enhance SERP features.`;
+      }
+      
+      // Landing page template
+      function getLandingPageTemplate(primaryKeyword, secondaryKeywords, searchIntent, targetAudience) {
+        return `Create SEO-optimized landing page content for "${primaryKeyword}" targeting ${targetAudience}. The primary keyword is "${primaryKeyword}" with secondary keywords including ${secondaryKeywords}.
+  
+  The landing page content should include:
+  - An attention-grabbing H1 headline that includes the primary keyword
+  - A compelling meta description (150-160 characters) that drives click-through
+  - A strong above-the-fold section with unique value proposition and primary CTA
+  - 3-5 key benefit sections with H2 headings incorporating secondary keywords
+  - Persuasive copy that addresses pain points and solutions
+  - Trust indicators (testimonials, case studies, statistics)
+  - FAQ section addressing common objections and questions
+  - Multiple strategically placed call-to-action elements
+  - Suggestions for visual elements that would enhance the page
+  - Mobile optimization considerations
+  
+  The content should satisfy ${searchIntent} search intent while effectively converting visitors. Focus on creating a clear path to conversion while naturally incorporating keywords.
+  
+  Please include schema markup suggestions that would be appropriate for this landing page.`;
+      }
+      
+      // Meta description template
+      function getMetaDescriptionTemplate(primaryKeyword, secondaryKeywords, searchIntent) {
+        return `Create 10 SEO-optimized meta descriptions for content about "${primaryKeyword}". The meta descriptions should:
+  
+  - Be between 150-160 characters in length
+  - Include the primary keyword "${primaryKeyword}" naturally
+  - Incorporate secondary keywords where possible: ${secondaryKeywords}
+  - Match ${searchIntent} search intent
+  - Include a compelling call-to-action
+  - Avoid keyword stuffing while remaining optimized
+  - Be unique and descriptive of the content
+  - Contain a value proposition that encourages clicks
+  - Use active voice and action-oriented language
+  - Be properly formatted with no truncation in search results
+  
+  For each meta description, provide:
+  1. The complete meta description text
+  2. Character count
+  3. Primary and secondary keywords used
+  4. Brief explanation of why it would be effective for CTR`;
+      }
+      
+      // Competitor analysis template
+      function getCompetitorAnalysisTemplate(primaryKeyword) {
+        return `Perform a detailed SEO competitor analysis for a website in the "${primaryKeyword}" niche. We need insights to improve our SEO strategy and content approach.
+  
+  Please provide:
+  - A framework for identifying our top 3-5 SEO competitors (not just direct business competitors)
+  - Analysis of their top-performing organic content (topics, formats, length, structure)
+  - Evaluation of their on-page SEO elements (title tags, meta descriptions, heading structure, image optimization)
+  - Content gap analysis – what valuable topics are they covering that we should target?
+  - Identification of their primary and secondary keywords for main product/service categories
+  - Assessment of their site structure, navigation, and internal linking strategies
+  - Analysis of what types of backlinks would be valuable in this niche and how to acquire them
+  - Evaluation of their rich snippet and schema implementation
+  - Recommendations for how we can differentiate our content and SEO approach
+  
+  Focus on actionable insights we can implement to compete more effectively in organic search results for "${primaryKeyword}" related terms. Include a prioritized list of tasks based on potential impact and implementation difficulty.`;
+      }
+      
+      // Keyword research template
+      function getKeywordResearchTemplate(primaryKeyword) {
+        return `Conduct comprehensive keyword research for a website in the "${primaryKeyword}" niche. I need to understand the search landscape for creating SEO-optimized content.
+  
+  Please provide:
+  - A methodology for identifying high-value keyword opportunities in this niche
+  - 10-15 high-volume primary keywords related to ${primaryKeyword}
+  - 20-30 long-tail keyword opportunities with lower competition
+  - 5-7 question-based keywords that we could target with FAQ content
+  - Analysis of search intent for each main keyword category (informational, commercial, transactional)
+  - Keyword grouping suggestions for potential website structure and content silos
+  - Identification of seasonal trends or patterns in this niche
+  - Suggestions for keyword-focused content types (buying guides, product comparisons, how-to content)
+  - A content calendar framework based on keyword opportunities
+  - Metrics to track for keyword performance
+  
+  For each keyword category, include recommendations on content formats and structures that typically perform well for those search intents.`;
+      }
+      
+      // Content audit template
+      function getContentAuditTemplate(primaryKeyword) {
+        return `Conduct a comprehensive SEO content audit framework for a website in the "${primaryKeyword}" niche. We need a systematic approach to evaluate our existing content and develop an improvement strategy.
+  
+  Please provide:
+  - A step-by-step process for auditing existing content with SEO best practices
+  - Key metrics we should analyze for each piece of content
+  - Criteria for categorizing content as: keep as is, update/optimize, consolidate, or remove
+  - Framework for prioritizing content updates based on potential SEO impact
+  - Guidelines for optimizing underperforming but high-potential content
+  - Recommendations for content consolidation to address keyword cannibalization
+  - Process for implementing redirects for removed or consolidated content
+  - Content refresh schedule recommendations for maintaining relevance
+  - Methods for identifying content gaps and new topic opportunities
+  - KPIs to track before and after content optimization
+  
+  Include suggested tools and resources for conducting this audit efficiently, and a template or framework we can reuse for quarterly content reviews moving forward.`;
+      }
+      
+      // Copy prompt to clipboard
+      copyButton.addEventListener('click', function() {
+        const textToCopy = promptResult.textContent;
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          const originalText = copyButton.textContent;
+          copyButton.textContent = 'Copied!';
+          setTimeout(function() {
+            copyButton.textContent = originalText;
+          }, 2000);
+        }).catch(function(err) {
+          console.error('Could not copy text: ', err);
+          alert('Failed to copy to clipboard. Please try again or copy manually.');
+        });
+      });
+    });
+  </script>

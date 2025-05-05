@@ -1,0 +1,750 @@
+<!-- Voice Search & Featured Snippet Prompts HTML -->
+<div class="seo-prompt-generator">
+  <h1>Voice Search & Featured Snippet Prompts</h1>
+  <p class="intro-text">Generate powerful AI prompts to create content optimized for voice search queries and featured snippets that boost your visibility in search results.</p>
+  
+  <div class="prompt-controls">
+    <div class="input-group">
+      <label for="query-type">Query Type:</label>
+      <select id="query-type">
+        <option value="informational">Informational (What, How, Why)</option>
+        <option value="navigational">Navigational (Where, Find)</option>
+        <option value="transactional">Transactional (Buy, Get, Order)</option>
+        <option value="local">Local Intent (Near me, In [location])</option>
+        <option value="comparison">Comparison (vs, or, better)</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="content-type">Content Type:</label>
+      <select id="content-type">
+        <option value="paragraph-snippet">Paragraph Featured Snippet</option>
+        <option value="list-snippet">List Featured Snippet</option>
+        <option value="table-snippet">Table Featured Snippet</option>
+        <option value="qa-snippet">Q&A Featured Snippet</option>
+        <option value="voice-search">Voice Search Optimization</option>
+        <option value="faq-schema">FAQ Schema Markup</option>
+        <option value="howto-schema">HowTo Schema Markup</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="target-keyword">Target Keyword/Question:</label>
+      <input type="text" id="target-keyword" placeholder="e.g., how to make sourdough bread, best running shoes">
+    </div>
+    
+    <div class="input-group">
+      <label for="target-audience">Target Audience:</label>
+      <select id="target-audience">
+        <option value="general">General Audience</option>
+        <option value="beginners">Beginners/Novices</option>
+        <option value="intermediate">Intermediate Users</option>
+        <option value="advanced">Advanced/Expert Users</option>
+        <option value="seniors">Seniors/Older Adults</option>
+        <option value="parents">Parents</option>
+        <option value="professionals">Professionals</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="industry">Industry/Niche:</label>
+      <input type="text" id="industry" placeholder="e.g., healthcare, finance, cooking, fitness">
+    </div>
+    
+    <button id="generate-prompt" class="generate-button">Generate Voice/Snippet Prompt</button>
+  </div>
+  
+  <div class="result-container">
+    <h3>Your Voice Search & Featured Snippet Prompt:</h3>
+    <div id="prompt-result" class="prompt-box"></div>
+    <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+  </div>
+  
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li>Select the query type that matches your target search intent</li>
+      <li>Choose the content type you want to optimize for</li>
+      <li>Enter your target keyword or question</li>
+      <li>Specify your target audience</li>
+      <li>Enter your industry or niche</li>
+      <li>Click "Generate Voice/Snippet Prompt" to create your AI prompt</li>
+      <li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+      <li>Use the resulting content to enhance your visibility in featured snippets and voice search results</li>
+    </ol>
+  </div>
+</div>
+  
+  <div class="examples-container">
+    <h3>Example Voice Search & Featured Snippet Prompts</h3>
+    <div class="example-tabs">
+      <button class="example-tab active" data-example="paragraph">Paragraph</button>
+      <button class="example-tab" data-example="list">List</button>
+      <button class="example-tab" data-example="table">Table</button>
+      <button class="example-tab" data-example="voice">Voice Search</button>
+      <button class="example-tab" data-example="schema">Schema</button>
+    </div>
+    <div class="example-content" id="example-content">
+      <div class="example-item active" id="paragraph-example">
+        <h4>Paragraph Featured Snippet Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive paragraph-style featured snippet answer for the question "What is intermittent fasting?" that is optimized for both Google's featured snippet box and voice search. The content should:</p>
+          <ul>
+            <li>Begin with a clear, direct answer to the question in the first sentence (approximately 40-50 words)</li>
+            <li>Follow with 2-3 additional sentences that expand on the core answer with essential details</li>
+            <li>Include one key statistic or research finding that adds credibility</li>
+            <li>End with a brief sentence that transitions to what would be the rest of the article</li>
+            <li>Total length should be approximately 100-120 words (optimal for paragraph featured snippets)</li>
+          </ul>
+          <p>The content should:</p>
+          <ul>
+            <li>Use natural language patterns that match how people ask questions verbally</li>
+            <li>Include these target keywords naturally: "intermittent fasting," "time-restricted eating," "fasting benefits," "fasting methods"</li>
+            <li>Avoid jargon and use clear, accessible language suitable for a general audience</li>
+            <li>Be factually accurate and current with the latest understanding of intermittent fasting</li>
+            <li>Format the paragraph with appropriate spacing for optimal featured snippet display</li>
+          </ul>
+          <p>Also provide:</p>
+          <ul>
+            <li>A suggested H1 heading that would contain the target question</li>
+            <li>A recommendation for an H2 subheading that would follow this paragraph</li>
+            <li>Brief guidance on how to format the rest of the page to support this featured snippet</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="example-item" id="list-example">
+        <h4>List Featured Snippet Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive list-style featured snippet answer for the query "how to grow tomatoes from seeds" that is optimized for both Google's featured snippet box and voice search. The content should include:</p>
+          <ul>
+            <li>A brief introductory paragraph (40-60 words) that directly addresses the query and provides context</li>
+            <li>A properly formatted ordered list with 7-10 clear, concise steps</li>
+            <li>Each step should:
+              <ul>
+                <li>Begin with an action verb</li>
+                <li>Be approximately 15-25 words</li>
+                <li>Provide specific, actionable guidance</li>
+                <li>Include one key detail that makes the instruction more valuable</li>
+              </ul>
+            </li>
+            <li>A brief concluding sentence that encourages success or mentions timing expectations</li>
+          </ul>
+          <p>The content should:</p>
+          <ul>
+            <li>Use natural language patterns that match how people verbally ask for instructions</li>
+            <li>Include these target keywords naturally: "grow tomatoes," "tomato seeds," "seed starting," "seedling care," "transplanting tomatoes"</li>
+            <li>Be organized in chronological order from seed preparation to transplanting</li>
+            <li>Use beginner-friendly terminology while still being comprehensive</li>
+            <li>Format the list with proper HTML ordered list tags for optimal featured snippet display</li>
+          </ul>
+          <p>Also provide:</p>
+          <ul>
+            <li>A suggested H1 heading that would contain the target query</li>
+            <li>Recommendations for 2-3 related H2 subheadings that would support this content</li>
+            <li>Brief guidance on how this list could be expanded into a more comprehensive guide</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="example-item" id="table-example">
+        <h4>Table Featured Snippet Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive table-style featured snippet answer for the query "coffee brewing methods comparison" that is optimized for Google's featured snippet box. The content should include:</p>
+          <ul>
+            <li>A brief introductory paragraph (50-70 words) that explains the purpose of the comparison</li>
+            <li>A properly formatted HTML table that compares 5-7 popular coffee brewing methods with the following columns:
+              <ul>
+                <li>Brewing Method (e.g., French Press, Pour Over, Espresso)</li>
+                <li>Brew Time</li>
+                <li>Flavor Profile</li>
+                <li>Difficulty Level</li>
+                <li>Equipment Cost</li>
+                <li>Best For (type of coffee drinker)</li>
+              </ul>
+            </li>
+            <li>Each row should contain concise, specific information (3-7 words per cell)</li>
+            <li>A brief concluding sentence that helps the reader choose based on their preferences</li>
+          </ul>
+          <p>The content should:</p>
+          <ul>
+            <li>Use proper HTML table markup with appropriate headers and cell formatting</li>
+            <li>Include these target keywords naturally: "coffee brewing methods," "coffee brewing comparison," "best coffee brewing," "coffee extraction techniques"</li>
+            <li>Present information in a balanced way that doesn't overly favor one method</li>
+            <li>Use consistent rating systems for subjective measures (e.g., 1-5 scale for difficulty)</li>
+            <li>Be organized logically, perhaps from quickest to longest brew time</li>
+          </ul>
+          <p>Also provide:</p>
+          <ul>
+            <li>A suggested H1 heading that would contain the target query</li>
+            <li>The exact HTML table markup that would be used</li>
+            <li>Brief guidance on how to format the rest of the page to support this featured snippet</li>
+            <li>Recommendations for making the table mobile-friendly</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="example-item" id="voice-example">
+        <h4>Voice Search Optimization Example</h4>
+        <div class="example-box">
+          <p>Create voice search-optimized content for the query "best restaurants near me open now" that would work well for both voice assistants and local search. The content should include:</p>
+          <ul>
+            <li>A conversational introduction (60-80 words) that directly addresses how the content will help users find restaurants that are currently open</li>
+            <li>3-4 sections that cover different aspects of finding open restaurants:
+              <ul>
+                <li>How to use voice search effectively to find open restaurants</li>
+                <li>What information voice assistants typically provide about restaurants</li>
+                <li>How to refine voice searches for better restaurant recommendations</li>
+                <li>Alternative ways to find open restaurants if voice search isn't helpful</li>
+              </ul>
+            </li>
+            <li>Each section should be 100-150 words and use a conversational, natural language style</li>
+            <li>Include 5-7 example voice search queries that users could try, formatted as questions or commands</li>
+          </ul>
+          <p>The content should:</p>
+          <ul>
+            <li>Use natural speech patterns with contractions, questions, and conversational transitions</li>
+            <li>Include long-tail, conversational keywords like "restaurants open right now near me," "where can I eat dinner tonight," "find me a restaurant that's still open"</li>
+            <li>Address common voice search modifiers like "best," "nearest," "open now," "highly rated"</li>
+            <li>Include location-based language that could be adapted to different areas</li>
+            <li>Incorporate question words (who, what, where, when, why, how) throughout the content</li>
+            <li>Use schema-friendly language that would work well with structured data</li>
+          </ul>
+          <p>Also provide:</p>
+          <ul>
+            <li>Recommendations for FAQ schema markup that would support this content</li>
+            <li>Guidance on how local businesses could optimize their own content for similar voice queries</li>
+            <li>Suggestions for related voice search queries to target in supporting content</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="example-item" id="schema-example">
+        <h4>Schema Markup Example</h4>
+        <div class="example-box">
+          <p>Create comprehensive FAQ schema markup content for a page about "how to treat seasonal allergies naturally" that is optimized for both featured snippets and voice search. The content should include:</p>
+          <ul>
+            <li>10 question-and-answer pairs that address common queries about natural allergy treatments</li>
+            <li>For each Q&A pair:
+              <ul>
+                <li>A question formatted as a complete, natural-language query (how people actually ask it)</li>
+                <li>A clear, concise answer (50-75 words) that directly addresses the question</li>
+                <li>The answer should be self-contained and make sense when read aloud by a voice assistant</li>
+              </ul>
+            </li>
+            <li>Questions should cover a range of topics including:
+              <ul>
+                <li>Specific natural remedies (e.g., honey, herbs, essential oils)</li>
+                <li>Preventative measures</li>
+                <li>When to see a doctor instead of self-treating</li>
+                <li>Effectiveness compared to medication</li>
+                <li>Scientific evidence supporting natural treatments</li>
+              </ul>
+            </li>
+          </ul>
+          <p>The content should:</p>
+          <ul>
+            <li>Use natural language patterns that match how people verbally ask questions</li>
+            <li>Include these target keywords naturally: "natural allergy remedies," "allergy relief without medication," "home remedies for allergies," "herbal allergy treatment"</li>
+            <li>Be factually accurate and responsible about medical information</li>
+            <li>Acknowledge limitations of natural treatments where appropriate</li>
+            <li>Be formatted for proper FAQ schema implementation</li>
+          </ul>
+          <p>Also provide:</p>
+          <ul>
+            <li>The complete JSON-LD FAQ schema markup ready to be implemented</li>
+            <li>A suggested H1 heading for the page</li>
+            <li>Brief guidance on how to organize the full page content around these FAQs</li>
+            <li>Recommendations for additional schema types that might be relevant for this content</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- CSS Styles -->
+<style>
+  .seo-prompt-generator {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .seo-prompt-generator h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    color: #5a6a7a;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .prompt-controls {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #445566;
+    font-size: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #008348;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+  }
+  
+  .generate-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #008348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .generate-button:hover {
+    background-color: #006738;
+  }
+  
+  .result-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .prompt-box {
+    min-height: 150px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .copy-button {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .copy-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .how-to-use {
+    background-color: #f0f7f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #008348;
+  }
+  
+  .how-to-use h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .how-to-use ol {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  
+  .how-to-use li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .seo-prompt-generator {
+      padding: 20px;
+    }
+    
+    .example-tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .example-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  .examples-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .examples-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .example-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .example-tab {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .example-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-tab.active {
+    background-color: #008348;
+    color: white;
+    border-color: #008348;
+  }
+  
+  .example-item {
+    display: none;
+  }
+  
+  .example-item.active {
+    display: block;
+  }
+  
+  .example-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .example-box {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .example-box p {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .example-box ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .example-box li {
+    margin-bottom: 8px;
+  }
+  
+  /* Ensure all child elements respect container width */
+  .seo-prompt-generator * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure content doesn't overflow its container */
+  .prompt-box, .example-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate-prompt');
+    const copyButton = document.getElementById('copy-prompt');
+    const promptResult = document.getElementById('prompt-result');
+    const exampleTabs = document.querySelectorAll('.example-tab');
+    const exampleItems = document.querySelectorAll('.example-item');
+    
+    // Tab switching functionality
+    exampleTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs and examples
+        exampleTabs.forEach(t => t.classList.remove('active'));
+        exampleItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current tab
+        this.classList.add('active');
+        
+        // Show corresponding example
+        const exampleId = this.getAttribute('data-example') + '-example';
+        document.getElementById(exampleId).classList.add('active');
+      });
+    });
+    
+    // Generate prompt when button is clicked
+    generateButton.addEventListener('click', function() {
+      const queryType = document.getElementById('query-type').value;
+      const contentType = document.getElementById('content-type').value;
+      const targetKeyword = document.getElementById('target-keyword').value || '[TARGET KEYWORD/QUESTION]';
+      const targetAudience = document.getElementById('target-audience').value;
+      const industry = document.getElementById('industry').value || '[INDUSTRY/NICHE]';
+      
+      let promptText = '';
+      
+      // Generate different prompts based on the selected content type
+      switch(contentType) {
+        case 'paragraph-snippet':
+          promptText = `Create a comprehensive paragraph-style featured snippet answer for the ${queryType} query "${targetKeyword}" that is optimized for both Google's featured snippet box and voice search. The content should:
+
+1. Begin with a clear, direct answer to the question in the first sentence (approximately 40-50 words)
+2. Follow with 2-3 additional sentences that expand on the core answer with essential details
+3. Include one key statistic or research finding that adds credibility
+4. End with a brief sentence that transitions to what would be the rest of the article
+5. Total length should be approximately 100-120 words (optimal for paragraph featured snippets)
+
+The content should:
+- Use natural language patterns that match how people ask questions verbally
+- Be targeted toward a ${targetAudience} audience in the ${industry} industry
+- Avoid jargon and use clear, accessible language
+- Be factually accurate and current with the latest understanding of the topic
+- Format the paragraph with appropriate spacing for optimal featured snippet display
+
+Also provide:
+- A suggested H1 heading that would contain the target question
+- A recommendation for an H2 subheading that would follow this paragraph
+- Brief guidance on how to format the rest of the page to support this featured snippet`;
+          break;
+          
+        case 'list-snippet':
+          promptText = `Create a comprehensive list-style featured snippet answer for the ${queryType} query "${targetKeyword}" that is optimized for both Google's featured snippet box and voice search. The content should include:
+
+1. A brief introductory paragraph (40-60 words) that directly addresses the query and provides context
+2. A properly formatted ordered list with 7-10 clear, concise steps or items
+3. Each list item should:
+   - Begin with an action verb or clear descriptor
+   - Be approximately 15-25 words
+   - Provide specific, actionable guidance
+   - Include one key detail that makes the information more valuable
+4. A brief concluding sentence that summarizes or provides next steps
+
+The content should:
+- Use natural language patterns that match how people verbally ask for this information
+- Be targeted toward a ${targetAudience} audience in the ${industry} industry
+- Be organized in a logical sequence that makes sense for the topic
+- Use terminology appropriate for the target audience while still being comprehensive
+- Format the list with proper HTML ordered list tags for optimal featured snippet display
+
+Also provide:
+- A suggested H1 heading that would contain the target query
+- Recommendations for 2-3 related H2 subheadings that would support this content
+- Brief guidance on how this list could be expanded into a more comprehensive guide`;
+          break;
+          
+        case 'table-snippet':
+          promptText = `Create a comprehensive table-style featured snippet answer for the ${queryType} query "${targetKeyword}" that is optimized for Google's featured snippet box. The content should include:
+
+1. A brief introductory paragraph (50-70 words) that explains the purpose of the comparison or data presentation
+2. A properly formatted HTML table that presents the information with appropriate columns and rows
+3. The table should include 5-7 rows of data with clear, descriptive headers
+4. Each cell should contain concise, specific information (3-7 words per cell when possible)
+5. A brief concluding sentence that helps the reader understand the key takeaway from the table
+
+The content should:
+- Use proper HTML table markup with appropriate headers and cell formatting
+- Be targeted toward a ${targetAudience} audience in the ${industry} industry
+- Present information in a balanced, objective way
+- Use consistent formatting and measurement units throughout the table
+- Be organized logically (chronologically, by importance, alphabetically, etc. as appropriate)
+
+Also provide:
+- A suggested H1 heading that would contain the target query
+- The exact HTML table markup that would be used
+- Brief guidance on how to format the rest of the page to support this featured snippet
+- Recommendations for making the table mobile-friendly`;
+          break;
+          
+        case 'qa-snippet':
+          promptText = `Create a comprehensive Q&A-style featured snippet answer for the ${queryType} query "${targetKeyword}" that is optimized for both Google's featured snippet box and voice search. The content should include:
+
+1. The question formatted exactly as it would be searched (natural language format)
+2. A direct answer paragraph (80-100 words) that completely addresses the question
+3. 2-3 supporting bullet points or a short list that provides additional context or examples
+4. A brief concluding sentence that summarizes the key takeaway
+
+The content should:
+- Use natural language patterns that match how people verbally ask questions
+- Be targeted toward a ${targetAudience} audience in the ${industry} industry
+- Include clear, direct language that works well for voice search responses
+- Format the answer with appropriate HTML structure for optimal featured snippet display
+- Provide factually accurate and current information
+
+Also provide:
+- A suggested H1 heading that would contain the target question
+- 3-5 related questions that could be included in an FAQ section to support this content
+- Brief guidance on how to implement FAQ schema markup for this Q&A content`;
+          break;
+          
+        case 'voice-search':
+          promptText = `Create voice search-optimized content for the ${queryType} query "${targetKeyword}" that would work well for both voice assistants and search engines. The content should include:
+
+1. A conversational introduction (60-80 words) that directly addresses how the content will help users
+2. 3-4 sections that cover different aspects of the topic, each using natural, conversational language
+3. Each section should be 100-150 words and use a conversational, natural language style
+4. Include 5-7 example voice search queries that users might use, formatted as questions or commands
+
+The content should:
+- Use natural speech patterns with contractions, questions, and conversational transitions
+- Include long-tail, conversational keywords related to "${targetKeyword}"
+- Be targeted toward a ${targetAudience} audience in the ${industry} industry
+- Address common voice search modifiers (best, nearest, how to, what is, etc.)
+- Incorporate question words (who, what, where, when, why, how) throughout the content
+- Use schema-friendly language that would work well with structured data
+
+Also provide:
+- Recommendations for FAQ schema markup that would support this content
+- Guidance on how to optimize the page structure for voice search
+- Suggestions for related voice search queries to target in supporting content`;
+          break;
+          
+        case 'faq-schema':
+          promptText = `Create comprehensive FAQ schema markup content for a page about "${targetKeyword}" that is optimized for both featured snippets and voice search. The content should include:
+
+1. 10 question-and-answer pairs that address common queries about this topic
+2. For each Q&A pair:
+   - A question formatted as a complete, natural-language query (how people actually ask it)
+   - A clear, concise answer (50-75 words) that directly addresses the question
+   - The answer should be self-contained and make sense when read aloud by a voice assistant
+3. Questions should cover a range of aspects related to "${targetKeyword}" relevant to the ${industry} industry
+
+The content should:
+- Use natural language patterns that match how people verbally ask questions
+- Be targeted toward a ${targetAudience} audience
+- Be factually accurate and provide valuable information
+- Address common misconceptions where appropriate
+- Be formatted for proper FAQ schema implementation
+
+Also provide:
+- The complete JSON-LD FAQ schema markup ready to be implemented
+- A suggested H1 heading for the page
+- Brief guidance on how to organize the full page content around these FAQs
+- Recommendations for additional schema types that might be relevant for this content`;
+          break;
+          
+        case 'howto-schema':
+          promptText = `Create comprehensive HowTo schema markup content for a page about "${targetKeyword}" that is optimized for both featured snippets and voice search. The content should include:
+
+1. A clear, descriptive title for the how-to process
+2. A brief introduction (60-80 words) explaining what the process accomplishes and why it's valuable
+3. A list of materials/tools needed (if applicable)
+4. 8-12 step-by-step instructions that:
+   - Begin with action verbs
+   - Are concise yet complete (20-30 words each)
+   - Include any warnings or tips as separate notes
+   - Follow a logical sequence
+5. A conclusion paragraph (50-70 words) that summarizes the process and expected results
+
+The content should:
+- Use natural language patterns that match how people verbally ask for instructions
+- Be targeted toward a ${targetAudience} audience in the ${industry} industry
+- Include clear time estimates for completion (total and per step if relevant)
+- Use terminology appropriate for the target audience
+- Be formatted for proper HowTo schema implementation
+
+Also provide:
+- The complete JSON-LD HowTo schema markup ready to be implemented
+- A suggested H1 heading for the page
+- Recommendations for supporting images that should be included with each step
+- Brief guidance on how to optimize this content for both search engines and voice assistants`;
+          break;
+      }
+      
+      promptResult.textContent = promptText;
+    });
+    
+    // Copy prompt to clipboard
+    copyButton.addEventListener('click', function() {
+      const textToCopy = promptResult.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard. Please try again or copy manually.');
+      });
+    });
+  });
+</script>

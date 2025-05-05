@@ -1,0 +1,701 @@
+<!-- Content Ideation & Topic Clustering HTML -->
+<div class="seo-prompt-generator">
+  <h1>Content Ideation & Topic Clustering Prompts</h1>
+  <p class="intro-text">Generate powerful AI prompts to brainstorm blog series, develop pillar-cluster topics, create comprehensive FAQs, and build semantic groupings for richer content silos that boost your SEO performance.</p>
+  
+  <div class="prompt-controls">
+    <div class="input-group">
+      <label for="primary-topic">Primary Topic/Industry:</label>
+      <input type="text" id="primary-topic" placeholder="e.g., sustainable fashion, cloud computing, home renovation">
+    </div>
+    
+    <div class="input-group">
+      <label for="target-audience">Target Audience:</label>
+      <input type="text" id="target-audience" placeholder="e.g., beginners, small business owners, parents">
+    </div>
+    
+    <div class="input-group">
+      <label for="content-goal">Content Goal:</label>
+      <select id="content-goal">
+        <option value="blog-series">Blog Series Planning</option>
+        <option value="pillar-cluster">Pillar-Cluster Structure</option>
+        <option value="faq-generation">FAQ Generation</option>
+        <option value="content-calendar">Content Calendar</option>
+        <option value="semantic-grouping">Semantic Topic Grouping</option>
+        <option value="content-gaps">Content Gap Analysis</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="content-depth">Content Depth:</label>
+      <select id="content-depth">
+        <option value="comprehensive">Comprehensive (In-depth)</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="beginner">Beginner-Friendly</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="existing-content">Existing Content (optional):</label>
+      <input type="text" id="existing-content" placeholder="e.g., URLs or topics of content you already have">
+    </div>
+    
+    <button id="generate-prompt" class="generate-button">Generate Content Ideation Prompt</button>
+  </div>
+  
+  <div class="result-container">
+    <h3>Your Content Ideation Prompt:</h3>
+    <div id="prompt-result" class="prompt-box"></div>
+    <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+  </div>
+  
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li>Enter your primary topic or industry to focus your content ideation</li>
+      <li>Specify your target audience to ensure content ideas will resonate with them</li>
+      <li>Select your primary content goal from the dropdown menu</li>
+      <li>Choose the appropriate content depth for your audience and goals</li>
+      <li>Optionally enter existing content to avoid duplication</li>
+      <li>Click "Generate Content Ideation Prompt" to create your AI prompt</li>
+      <li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+      <li>Use the resulting content ideas to build your content strategy and SEO architecture</li>
+    </ol>
+  </div>
+  
+  <div class="examples-container">
+    <h3>Example Content Ideation Prompts</h3>
+    <div class="example-tabs">
+      <button class="example-tab active" data-example="blog-series">Blog Series</button>
+      <button class="example-tab" data-example="pillar-cluster">Pillar-Cluster</button>
+      <button class="example-tab" data-example="faq-generation">FAQ Generation</button>
+      <button class="example-tab" data-example="content-calendar">Content Calendar</button>
+      <button class="example-tab" data-example="semantic-grouping">Semantic Grouping</button>
+    </div>
+    <div class="example-content" id="example-content">
+      <div class="example-item active" id="blog-series-example">
+        <h4>Blog Series Planning Prompt Example</h4>
+        <div class="example-box">
+          <p>Develop a comprehensive 12-part blog series plan on "sustainable home renovation" targeting homeowners interested in eco-friendly remodeling. For this series:</p>
+          <ul>
+            <li>Create an overarching theme that ties all 12 posts together</li>
+            <li>Provide specific titles for each post that incorporate relevant keywords</li>
+            <li>Include a brief outline of key points to cover in each post (5-7 bullet points)</li>
+            <li>Suggest internal linking opportunities between posts</li>
+            <li>Recommend a logical publishing order that builds reader knowledge progressively</li>
+            <li>Include ideas for multimedia elements that would enhance each post</li>
+            <li>Suggest call-to-action ideas appropriate for each post topic</li>
+          </ul>
+          <p>The series should cover both beginner concepts and more advanced techniques, with a focus on practical, actionable advice. Each post should be optimized for both search engines and reader engagement.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="pillar-cluster-example">
+        <h4>Pillar-Cluster Structure Prompt Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive pillar-cluster content strategy for a website focused on "digital marketing for small businesses." Develop:</p>
+          <ul>
+            <li>5 main pillar page topics with compelling title suggestions and primary keywords</li>
+            <li>For each pillar, suggest 8-10 cluster content topics with their own keywords</li>
+            <li>Provide a brief content outline for each pillar page (1500-2000 words)</li>
+            <li>Suggest internal linking strategies between pillars and clusters</li>
+            <li>Recommend content formats for different cluster topics (guides, case studies, templates, etc.)</li>
+            <li>Include suggestions for featured snippet optimization</li>
+            <li>Propose a content development sequence based on search volume and competition</li>
+          </ul>
+          <p>The pillar-cluster model should create a comprehensive resource hub that establishes topical authority while addressing the full spectrum of small business digital marketing needs, from beginner concepts to advanced strategies.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="faq-generation-example">
+        <h4>FAQ Generation Prompt Example</h4>
+        <div class="example-box">
+          <p>Generate a comprehensive FAQ section for a website about "personal finance and investing for young professionals." Create:</p>
+          <ul>
+            <li>40-50 highly relevant questions organized into logical categories</li>
+            <li>For each question, provide a concise yet thorough answer (100-150 words)</li>
+            <li>Ensure questions reflect actual search queries people use (question-based keywords)</li>
+            <li>Include a mix of basic and advanced questions to serve different knowledge levels</li>
+            <li>Suggest 5-7 main FAQ categories for organizational structure</li>
+            <li>Identify questions with featured snippet potential</li>
+            <li>Include proper FAQ schema markup recommendations</li>
+          </ul>
+          <p>The FAQs should address common concerns, misconceptions, and information needs of young professionals looking to improve their financial literacy and begin investing. Focus on questions that demonstrate genuine information needs and search intent.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="content-calendar-example">
+        <h4>Content Calendar Prompt Example</h4>
+        <div class="example-box">
+          <p>Create a 6-month strategic content calendar for a "health and wellness coaching" business targeting busy professionals. Include:</p>
+          <ul>
+            <li>4-5 content pieces per month with specific topic suggestions and titles</li>
+            <li>Primary and secondary keywords for each content piece</li>
+            <li>Content types/formats for each piece (blog post, video script, infographic, etc.)</li>
+            <li>Word count recommendations based on topic and competition</li>
+            <li>Publication timing considerations (seasonal relevance, trending topics)</li>
+            <li>Content clusters and internal linking opportunities</li>
+            <li>Repurposing suggestions for each major content piece</li>
+          </ul>
+          <p>The calendar should follow a strategic progression that builds audience knowledge while addressing seasonal trends and timely topics. Include a mix of evergreen content and timely pieces, with recommendations for updating existing content when appropriate.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="semantic-grouping-example">
+        <h4>Semantic Topic Grouping Prompt Example</h4>
+        <div class="example-box">
+          <p>Develop a comprehensive semantic topic grouping strategy for a "pet care and nutrition" website. Create:</p>
+          <ul>
+            <li>10-12 main semantic topic groups based on related search concepts</li>
+            <li>For each semantic group, identify 15-20 related subtopics and keywords</li>
+            <li>Map the user journey through these semantic groups</li>
+            <li>Suggest content types that would best serve each semantic group</li>
+            <li>Provide internal linking recommendations between semantically related content</li>
+            <li>Identify entity relationships that should be emphasized for semantic SEO</li>
+            <li>Suggest taxonomy and URL structure that reinforces semantic relationships</li>
+          </ul>
+          <p>The semantic grouping should create a comprehensive content architecture that helps search engines understand the relationships between topics while providing users with intuitive navigation between related concepts. Focus on creating true topical depth rather than just keyword variations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+  .seo-prompt-generator {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .seo-prompt-generator h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    color: #5a6a7a;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .prompt-controls {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #445566;
+    font-size: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #008348;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+  }
+  
+  .generate-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #008348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .generate-button:hover {
+    background-color: #006738;
+  }
+  
+  .result-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .prompt-box {
+    min-height: 150px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .copy-button {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .copy-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .examples-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .examples-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .example-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .example-tab {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .example-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-tab.active {
+    background-color: #008348;
+    color: white;
+    border-color: #008348;
+  }
+  
+  .example-item {
+    display: none;
+  }
+  
+  .example-item.active {
+    display: block;
+  }
+  
+  .example-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .example-box {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .example-box p {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .example-box ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .example-box li {
+    margin-bottom: 8px;
+  }
+  
+  .how-to-use {
+    background-color: #f0f7f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #008348;
+  }
+  
+  .how-to-use h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .how-to-use ol {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  
+  .how-to-use li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .seo-prompt-generator {
+      padding: 20px;
+    }
+    
+    .example-tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .example-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Ensure all child elements respect container width */
+  .seo-prompt-generator * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure content doesn't overflow its container */
+  .prompt-box, .example-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate-prompt');
+    const copyButton = document.getElementById('copy-prompt');
+    const promptResult = document.getElementById('prompt-result');
+    const exampleTabs = document.querySelectorAll('.example-tab');
+    const exampleItems = document.querySelectorAll('.example-item');
+    
+    // Tab switching functionality
+    exampleTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs and examples
+        exampleTabs.forEach(t => t.classList.remove('active'));
+        exampleItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current tab
+        this.classList.add('active');
+        
+        // Show corresponding example
+        const exampleId = this.getAttribute('data-example') + '-example';
+        document.getElementById(exampleId).classList.add('active');
+      });
+    });
+    
+    // Generate prompt when button is clicked
+    generateButton.addEventListener('click', function() {
+      const primaryTopic = document.getElementById('primary-topic').value || '[PRIMARY TOPIC]';
+      const targetAudience = document.getElementById('target-audience').value || '[TARGET AUDIENCE]';
+      const contentGoal = document.getElementById('content-goal').value;
+      const contentDepth = document.getElementById('content-depth').value;
+      const existingContent = document.getElementById('existing-content').value || '';
+      
+      // Content goal templates
+      const templates = {
+        'blog-series': getBlogSeriesTemplate(primaryTopic, targetAudience, contentDepth),
+        'pillar-cluster': getPillarClusterTemplate(primaryTopic, targetAudience, contentDepth),
+        'faq-generation': getFaqGenerationTemplate(primaryTopic, targetAudience),
+        'content-calendar': getContentCalendarTemplate(primaryTopic, targetAudience),
+        'semantic-grouping': getSemanticGroupingTemplate(primaryTopic, targetAudience),
+        'content-gaps': getContentGapsTemplate(primaryTopic, existingContent)
+      };
+      
+      // Get the template for the selected content goal
+      promptResult.textContent = templates[contentGoal];
+    });
+    
+    // Blog series template
+    function getBlogSeriesTemplate(primaryTopic, targetAudience, contentDepth) {
+      let depthSpecific = '';
+      
+      switch(contentDepth) {
+        case 'comprehensive':
+          depthSpecific = `\n- Each post should be in-depth (1500-2000 words) and cover all aspects of its subtopic\n- Include advanced concepts and strategies while still maintaining accessibility\n- Incorporate case studies, expert quotes, and data where relevant`;
+          break;
+        case 'intermediate':
+          depthSpecific = `\n- Each post should be moderate length (1000-1500 words) with a balance of basic and advanced information\n- Assume some background knowledge but explain industry-specific concepts\n- Include practical examples and actionable advice`;
+          break;
+        case 'beginner':
+          depthSpecific = `\n- Each post should be approachable (800-1200 words) and avoid overwhelming new readers\n- Define all industry terms and concepts clearly\n- Use simple examples and step-by-step instructions where appropriate`;
+          break;
+      }
+      
+      return `Develop a comprehensive 12-part blog series plan on "${primaryTopic}" targeting ${targetAudience}. For this series:
+
+1. Create an overarching theme that ties all 12 posts together
+2. Provide specific titles for each post that incorporate relevant keywords
+3. Include a brief outline of key points to cover in each post (5-7 bullet points)
+4. Suggest internal linking opportunities between posts
+5. Recommend a logical publishing order that builds reader knowledge progressively
+6. Include ideas for multimedia elements that would enhance each post
+7. Suggest call-to-action ideas appropriate for each post topic${depthSpecific}
+
+The series should provide a comprehensive resource on ${primaryTopic} while maintaining reader engagement throughout. Each post should be optimized for both search engines and reader value, with a focus on establishing topical authority in this space.`;
+    }
+    
+    // Pillar-cluster template
+    function getPillarClusterTemplate(primaryTopic, targetAudience, contentDepth) {
+      let depthSpecific = '';
+      
+      switch(contentDepth) {
+        case 'comprehensive':
+          depthSpecific = `\n\nThe pillar pages should be comprehensive (2000-3000 words) with cluster content ranging from 1200-1800 words. Focus on creating definitive resources that thoroughly cover each aspect of ${primaryTopic} for ${targetAudience}, including advanced concepts and strategies.`;
+          break;
+        case 'intermediate':
+          depthSpecific = `\n\nThe pillar pages should be substantial (1500-2500 words) with cluster content ranging from 1000-1500 words. Balance fundamental concepts with more advanced information to serve ${targetAudience} at various stages of their journey with ${primaryTopic}.`;
+          break;
+        case 'beginner':
+          depthSpecific = `\n\nThe pillar pages should be accessible (1200-2000 words) with cluster content ranging from 800-1200 words. Focus on clear explanations of fundamental concepts related to ${primaryTopic} that would be valuable to ${targetAudience} who are new to this topic.`;
+          break;
+      }
+      
+      return `Create a comprehensive pillar-cluster content strategy for a website focused on "${primaryTopic}" targeting ${targetAudience}. Develop:
+
+1. 5 main pillar page topics with:
+   - Compelling title suggestions that incorporate primary keywords
+   - Brief description of pillar page scope and purpose
+   - Primary and secondary keywords to target
+   - Outline of main sections to include
+
+2. For each pillar, suggest 8-10 cluster content topics with:
+   - Specific title suggestions
+   - Primary keyword for each cluster
+   - Brief content description
+   - Search intent classification
+
+3. Provide internal linking strategies:
+   - How pillars should link to clusters
+   - How clusters should link to each other
+   - Anchor text recommendations
+   - Navigational element suggestions
+
+4. Recommend content formats for different topics:
+   - Which topics work best as how-to guides
+   - Which topics work best as listicles
+   - Which topics work best as comparison posts
+   - Which topics work best as case studies
+
+5. Suggest a content development sequence based on:
+   - Search volume and competition
+   - Buyer's journey stage
+   - Content creation complexity
+   - Strategic importance${depthSpecific}`;
+    }
+    
+    // FAQ generation template
+    function getFaqGenerationTemplate(primaryTopic, targetAudience) {
+      return `Generate a comprehensive FAQ section for a website about "${primaryTopic}" targeting ${targetAudience}. Create:
+
+1. 40-50 highly relevant questions organized into 5-7 logical categories
+   - Ensure questions reflect actual search queries (question-based keywords)
+   - Include a mix of basic and advanced questions
+   - Cover the full spectrum of information needs related to ${primaryTopic}
+
+2. For each question, provide:
+   - A concise yet thorough answer (100-150 words)
+   - Primary keyword(s) incorporated naturally
+   - Any relevant statistics or data points to include
+   - Links to suggest for further reading
+
+3. For organizational structure:
+   - Name and describe 5-7 main FAQ categories
+   - Suggest how to order questions within categories (by complexity, popularity, etc.)
+   - Recommend UI/UX elements (accordion, tabs, etc.)
+
+4. For SEO optimization:
+   - Identify questions with featured snippet potential
+   - Provide FAQ schema markup recommendations
+   - Suggest internal linking opportunities
+   - Recommend questions to highlight in other content
+
+The FAQs should address common concerns, misconceptions, and information needs of ${targetAudience} interested in ${primaryTopic}. Focus on questions that demonstrate genuine information needs and search intent, while providing clear, authoritative answers.`;
+    }
+    
+    // Content calendar template
+    function getContentCalendarTemplate(primaryTopic, targetAudience) {
+      return `Create a 6-month strategic content calendar for a "${primaryTopic}" business targeting ${targetAudience}. Include:
+
+1. 4-5 content pieces per month with:
+   - Specific topic suggestions and compelling titles
+   - Primary and secondary keywords for each piece
+   - Brief content description (2-3 sentences)
+   - Word count recommendations
+
+2. For each content piece, specify:
+   - Content type/format (blog post, video script, infographic, etc.)
+   - Ideal publication timing and rationale
+   - Promotion channels and strategies
+   - Call-to-action recommendations
+
+3. Strategic content planning elements:
+   - Content clusters and topic progressions
+   - Internal linking opportunities between pieces
+   - Content repurposing suggestions
+   - Evergreen vs. timely content balance
+
+4. Content organization by:
+   - Buyer's journey stage (awareness, consideration, decision)
+   - Search intent (informational, commercial, transactional)
+   - Business goals (lead generation, conversion, retention)
+   - Seasonal relevance and trending topics
+
+The calendar should follow a strategic progression that builds audience knowledge while addressing seasonal trends and timely topics related to ${primaryTopic}. Include a mix of content types to engage ${targetAudience} through different formats and channels.`;
+    }
+    
+    // Semantic grouping template
+    function getSemanticGroupingTemplate(primaryTopic, targetAudience) {
+      return `Develop a comprehensive semantic topic grouping strategy for a "${primaryTopic}" website targeting ${targetAudience}. Create:
+
+1. 10-12 main semantic topic groups based on:
+   - Related search concepts and entities
+   - User intent patterns
+   - Natural topic relationships
+   - Information hierarchy
+
+2. For each semantic group, identify:
+   - 15-20 related subtopics and keywords
+   - Entity relationships to emphasize
+   - Primary and secondary user intents
+   - Content types that would best serve each group
+
+3. Provide structural recommendations:
+   - Taxonomy and URL structure that reinforces semantic relationships
+   - Internal linking patterns between semantically related content
+   - Navigation elements that reflect semantic groupings
+   - Schema markup opportunities for entity relationships
+
+4. Map the user journey through these semantic groups:
+   - Entry points for different user types
+   - Logical progression paths through content
+   - Cross-group relationships and connections
+   - Conversion points within the semantic structure
+
+The semantic grouping should create a comprehensive content architecture that helps search engines understand the relationships between topics while providing ${targetAudience} with intuitive navigation between related concepts about ${primaryTopic}. Focus on creating true topical depth rather than just keyword variations.`;
+    }
+    
+    // Content gaps template
+    function getContentGapsTemplate(primaryTopic, existingContent) {
+      const existingContentSection = existingContent ? 
+        `\nBased on the existing content you've mentioned (${existingContent}), identify:` : 
+        `\nProvide a framework for analyzing existing content to identify:`;
+      
+      return `Conduct a comprehensive content gap analysis for a website focused on "${primaryTopic}".${existingContentSection}
+
+1. Topic gaps:
+   - Important subtopics not currently covered
+   - Questions users are asking that aren't addressed
+   - Trending topics in the industry not represented
+   - Competitor topics that are driving engagement
+
+2. Content depth gaps:
+   - Existing topics that need more comprehensive coverage
+   - Areas where content is outdated and needs refreshing
+   - Topics where the current perspective is limited
+   - Opportunities to add expert insights or original research
+
+3. Content format gaps:
+   - Topics that would benefit from visual content (infographics, videos)
+   - Opportunities for interactive content (calculators, quizzes)
+   - Potential for data-driven content (studies, surveys)
+   - Topics suited for downloadable resources
+
+4. Search intent gaps:
+   - Missing content for specific stages of the buyer's journey
+   - Unaddressed search intents (informational, commercial, etc.)
+   - Opportunities to better align content with user needs
+   - Keywords with significant volume but no targeted content
+
+For each identified gap, provide:
+- Specific content recommendations (topics, formats, angles)
+- Priority level based on potential impact
+- Estimated effort required to fill the gap
+- Metrics to track to measure success
+
+The goal is to develop a strategic plan for filling content gaps that will improve organic visibility, user engagement, and conversion rates for content about ${primaryTopic}.`;
+    }
+    
+    // Copy prompt to clipboard
+    copyButton.addEventListener('click', function() {
+      const textToCopy = promptResult.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard. Please try again or copy manually.');
+      });
+    });
+  });
+</script>

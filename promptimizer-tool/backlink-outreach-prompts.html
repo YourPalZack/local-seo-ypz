@@ -1,0 +1,600 @@
+<!-- Backlink Outreach & PR Prompts HTML -->
+<div class="seo-prompt-generator">
+  <h1>Backlink Outreach & PR Prompts</h1>
+  <p class="intro-text">Generate powerful AI prompts to craft personalized outreach emails, guest post pitches, and digital PR briefings that help you acquire high-quality backlinks and boost your domain authority.</p>
+  
+  <div class="prompt-controls">
+    <div class="input-group">
+      <label for="outreach-type">Outreach Type:</label>
+      <select id="outreach-type">
+        <option value="guest-post">Guest Post Pitch</option>
+        <option value="resource-link">Resource Link Request</option>
+        <option value="broken-link">Broken Link Building</option>
+        <option value="skyscraper">Skyscraper Outreach</option>
+        <option value="pr-pitch">Digital PR Pitch</option>
+        <option value="expert-roundup">Expert Roundup Participation</option>
+        <option value="podcast-interview">Podcast Interview Request</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="website-niche">Your Website Niche:</label>
+      <input type="text" id="website-niche" placeholder="e.g., sustainable fashion, digital marketing, fitness">
+    </div>
+    
+    <div class="input-group">
+      <label for="target-website">Target Website/Publication:</label>
+      <input type="text" id="target-website" placeholder="e.g., industry blog, news site, authority website">
+    </div>
+    
+    <div class="input-group">
+      <label for="value-proposition">Your Value Proposition:</label>
+      <input type="text" id="value-proposition" placeholder="e.g., unique expertise, original research, exclusive content">
+    </div>
+    
+    <div class="input-group">
+      <label for="personalization-level">Personalization Level:</label>
+      <select id="personalization-level">
+        <option value="highly-personalized">Highly Personalized</option>
+        <option value="semi-personalized">Semi-Personalized</option>
+        <option value="template">Customizable Template</option>
+      </select>
+    </div>
+    
+    <button id="generate-prompt" class="generate-button">Generate Outreach Prompt</button>
+  </div>
+  
+  <div class="result-container">
+    <h3>Your Outreach Prompt:</h3>
+    <div id="prompt-result" class="prompt-box"></div>
+    <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+  </div>
+  
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li>Select the type of outreach you want to create</li>
+      <li>Enter your website's niche to make the outreach relevant</li>
+      <li>Specify the target website or publication type</li>
+      <li>Define your unique value proposition</li>
+      <li>Choose your desired level of personalization</li>
+      <li>Click "Generate Outreach Prompt" to create your AI prompt</li>
+      <li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+      <li>Use the resulting outreach template for your link building campaigns</li>
+    </ol>
+  </div>
+  
+  <div class="examples-container">
+    <h3>Example Outreach Prompts</h3>
+    <div class="example-tabs">
+      <button class="example-tab active" data-example="guest-post">Guest Post</button>
+      <button class="example-tab" data-example="resource-link">Resource Link</button>
+      <button class="example-tab" data-example="broken-link">Broken Link</button>
+      <button class="example-tab" data-example="digital-pr">Digital PR</button>
+      <button class="example-tab" data-example="expert-roundup">Expert Roundup</button>
+    </div>
+    <div class="example-content" id="example-content">
+      <div class="example-item active" id="guest-post-example">
+        <h4>Guest Post Pitch Example</h4>
+        <div class="example-box">
+          <p>Create a highly personalized guest post pitch email to the editor of [Target Blog], a leading blog in the sustainable living niche. I run a website focused on zero-waste cooking and want to contribute a comprehensive guide on reducing food waste in home kitchens.</p>
+          <p>The pitch should include:</p>
+          <ul>
+            <li>A personalized introduction referencing specific content on their blog that I've read and appreciated</li>
+            <li>A clear value proposition explaining why their audience would benefit from my content</li>
+            <li>3-5 potential headline ideas for the guest post</li>
+            <li>A brief outline of what the article would cover</li>
+            <li>My relevant credentials and experience in sustainable cooking</li>
+            <li>Previous guest posts or publications I've contributed to (if applicable)</li>
+            <li>A clear, non-pushy call to action</li>
+          </ul>
+          <p>The tone should be professional yet conversational, and the email should be structured for easy scanning. Include subject line options that would maximize open rates for this type of pitch.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="resource-link-example">
+        <h4>Resource Link Request Example</h4>
+        <div class="example-box">
+          <p>Create a resource link request email to the website owner of [Target Website], which has a page listing resources for small business accounting. I've created a comprehensive, free calculator tool that helps small businesses estimate their quarterly tax payments.</p>
+          <p>The outreach email should include:</p>
+          <ul>
+            <li>A brief, friendly introduction that shows I'm familiar with their website</li>
+            <li>Specific mention of their resource page (URL: example.com/small-business-resources)</li>
+            <li>A concise description of my tax calculator tool and what makes it valuable</li>
+            <li>3-4 bullet points highlighting the key features and benefits of the tool</li>
+            <li>Why their audience would find this tool helpful</li>
+            <li>The exact URL they should link to</li>
+            <li>A suggestion for the anchor text they might use</li>
+            <li>A polite, no-pressure call to action</li>
+          </ul>
+          <p>The email should be brief (under 200 words), genuinely helpful in tone, and avoid any language that sounds transactional or spammy. Include 2-3 subject line options that would encourage opens without appearing like a link request.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="broken-link-example">
+        <h4>Broken Link Building Example</h4>
+        <div class="example-box">
+          <p>Create a broken link outreach email to the content manager of [Target Website], a leading resource in the digital marketing education space. I've identified a broken link on their "SEO Resources" page (URL: example.com/seo-resources) that previously pointed to a guide about keyword research tools.</p>
+          <p>I have a comprehensive, up-to-date guide on my website that would be a perfect replacement.</p>
+          <p>The email should include:</p>
+          <ul>
+            <li>A helpful, non-accusatory notification about the broken link</li>
+            <li>The exact location of the broken link (page URL and anchor text)</li>
+            <li>A brief introduction to my alternative resource</li>
+            <li>Why my content would be valuable to their readers</li>
+            <li>The specific URL they could use to replace the broken link</li>
+            <li>An offer to help find other broken links on their site</li>
+            <li>A polite, low-pressure call to action</li>
+          </ul>
+          <p>The email should position this as a win-win situation where I'm helping them improve their user experience while also offering valuable content to their readers. Include subject line options that emphasize the helpful nature of the email rather than the link request.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="digital-pr-example">
+        <h4>Digital PR Pitch Example</h4>
+        <div class="example-box">
+          <p>Create a digital PR pitch email to journalists covering technology trends. My company has just completed original research on remote work productivity trends, with surprising findings about the impact of different communication tools on team performance.</p>
+          <p>The pitch should include:</p>
+          <ul>
+            <li>A compelling, news-worthy subject line</li>
+            <li>A concise, attention-grabbing opening paragraph highlighting the most surprising finding</li>
+            <li>3-4 key statistics or findings from our research</li>
+            <li>Why this research is timely and relevant to current trends</li>
+            <li>How this data contradicts or confirms common assumptions</li>
+            <li>Available assets (full report, infographics, expert interviews)</li>
+            <li>A quote from our company's research director</li>
+            <li>Clear next steps if they're interested in covering the story</li>
+          </ul>
+          <p>The pitch should be under 300 words, formatted for easy scanning, and focused on the news value rather than promoting our company. Include exclusive angles that could be offered to high-priority publications.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="expert-roundup-example">
+        <h4>Expert Roundup Participation Example</h4>
+        <div class="example-box">
+          <p>Create an outreach email responding to a request to participate in an expert roundup article about "The Future of E-commerce in 2025." I am the founder of an e-commerce analytics platform with 10+ years of experience in the industry.</p>
+          <p>The email should include:</p>
+          <ul>
+            <li>A thank you for the invitation to contribute</li>
+            <li>My 250-300 word response to the roundup question, focusing on data-driven predictions about AI personalization in e-commerce</li>
+            <li>A brief bio highlighting my relevant expertise and company (50-60 words)</li>
+            <li>Links to 1-2 previous interviews or articles I've contributed to</li>
+            <li>A high-quality headshot (mention of attachment)</li>
+            <li>My website URL and social media handles</li>
+            <li>An offer to provide additional information if needed</li>
+          </ul>
+          <p>The contribution should demonstrate thought leadership with specific predictions and insights rather than generic statements. The tone should be professional but conversational, and include a unique perspective that would stand out among other experts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+  .seo-prompt-generator {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .seo-prompt-generator h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    color: #5a6a7a;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .prompt-controls {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #445566;
+    font-size: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #008348;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+  }
+  
+  .generate-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #008348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .generate-button:hover {
+    background-color: #006738;
+  }
+  
+  .result-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .prompt-box {
+    min-height: 150px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .copy-button {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .copy-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .examples-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .examples-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .example-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .example-tab {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .example-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-tab.active {
+    background-color: #008348;
+    color: white;
+    border-color: #008348;
+  }
+  
+  .example-item {
+    display: none;
+  }
+  
+  .example-item.active {
+    display: block;
+  }
+  
+  .example-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .example-box {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .example-box p {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .example-box ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .example-box li {
+    margin-bottom: 8px;
+  }
+  
+  .how-to-use {
+    background-color: #f0f7f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #008348;
+  }
+  
+  .how-to-use h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .how-to-use ol {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  
+  .how-to-use li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .seo-prompt-generator {
+      padding: 20px;
+    }
+    
+    .example-tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .example-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Ensure all child elements respect container width */
+  .seo-prompt-generator * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure content doesn't overflow its container */
+  .prompt-box, .example-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate-prompt');
+    const copyButton = document.getElementById('copy-prompt');
+    const promptResult = document.getElementById('prompt-result');
+    const exampleTabs = document.querySelectorAll('.example-tab');
+    const exampleItems = document.querySelectorAll('.example-item');
+    
+    // Tab switching functionality
+    exampleTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs and examples
+        exampleTabs.forEach(t => t.classList.remove('active'));
+        exampleItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current tab
+        this.classList.add('active');
+        
+        // Show corresponding example
+        const exampleId = this.getAttribute('data-example') + '-example';
+        document.getElementById(exampleId).classList.add('active');
+      });
+    });
+    
+    // Generate prompt when button is clicked
+    generateButton.addEventListener('click', function() {
+      const outreachType = document.getElementById('outreach-type').value;
+      const websiteNiche = document.getElementById('website-niche').value || '[WEBSITE NICHE]';
+      const targetWebsite = document.getElementById('target-website').value || '[TARGET WEBSITE]';
+      const valueProposition = document.getElementById('value-proposition').value || '[VALUE PROPOSITION]';
+      const personalizationLevel = document.getElementById('personalization-level').value;
+      
+      let promptText = '';
+      
+      // Generate different prompts based on the selected outreach type
+      switch(outreachType) {
+        case 'guest-post':
+          promptText = `Create a ${personalizationLevel} guest post pitch email to the editor of ${targetWebsite} in the ${websiteNiche} niche. I want to contribute content about ${valueProposition}.
+
+The pitch should include:
+1. A personalized introduction that shows I'm familiar with their content
+2. A clear value proposition explaining why their audience would benefit from my content
+3. 3-5 potential headline ideas for the guest post
+4. A brief outline of what the article would cover
+5. My relevant credentials and experience in ${websiteNiche}
+6. Previous guest posts or publications I've contributed to (if applicable)
+7. A clear, non-pushy call to action
+
+The tone should be professional yet conversational, and the email should be structured for easy scanning. Include 2-3 subject line options that would maximize open rates for this type of pitch.`;
+          break;
+          
+        case 'resource-link':
+          promptText = `Create a ${personalizationLevel} resource link request email to the website owner of ${targetWebsite} in the ${websiteNiche} niche. I've created ${valueProposition} that would be valuable to their audience.
+
+The outreach email should include:
+1. A brief, friendly introduction that shows I'm familiar with their website
+2. Specific mention of their resource page where my link would fit
+3. A concise description of my resource and what makes it valuable
+4. 3-4 bullet points highlighting the key features and benefits
+5. Why their audience would find this resource helpful
+6. The exact URL they should link to
+7. A suggestion for the anchor text they might use
+8. A polite, no-pressure call to action
+
+The email should be brief (under 200 words), genuinely helpful in tone, and avoid any language that sounds transactional or spammy. Include 2-3 subject line options that would encourage opens without appearing like a link request.`;
+          break;
+          
+        case 'broken-link':
+          promptText = `Create a ${personalizationLevel} broken link outreach email to the content manager of ${targetWebsite} in the ${websiteNiche} niche. I've identified a broken link on their website that previously pointed to content about [TOPIC], and I have ${valueProposition} that would be a perfect replacement.
+
+The email should include:
+1. A helpful, non-accusatory notification about the broken link
+2. The exact location of the broken link (page URL and anchor text)
+3. A brief introduction to my alternative resource
+4. Why my content would be valuable to their readers
+5. The specific URL they could use to replace the broken link
+6. An offer to help find other broken links on their site
+7. A polite, low-pressure call to action
+
+The email should position this as a win-win situation where I'm helping them improve their user experience while also offering valuable content to their readers. Include 2-3 subject line options that emphasize the helpful nature of the email rather than the link request.`;
+          break;
+          
+        case 'skyscraper':
+          promptText = `Create a ${personalizationLevel} skyscraper outreach email to ${targetWebsite} in the ${websiteNiche} niche. I've created an improved, updated version of a popular piece of content on [TOPIC] with ${valueProposition}.
+
+The email should include:
+1. A personalized introduction showing familiarity with their website
+2. Reference to the specific page on their site that links to similar but outdated content
+3. A brief explanation of how my content improves upon what they're currently linking to
+4. 3-4 specific ways my content is more valuable (more comprehensive, updated statistics, better visuals, etc.)
+5. The exact URL they should consider linking to
+6. A clear but non-pushy call to action
+
+The tone should be confident but not arrogant, focusing on the value to their readers rather than just asking for a link. Include 2-3 subject line options that would entice opens without appearing like a standard link request.`;
+          break;
+          
+        case 'pr-pitch':
+          promptText = `Create a ${personalizationLevel} digital PR pitch email to journalists or editors covering ${websiteNiche}. My company has ${valueProposition} that would be newsworthy to the audience of ${targetWebsite}.
+
+The pitch should include:
+1. A compelling, news-worthy subject line
+2. A concise, attention-grabbing opening paragraph highlighting the most interesting aspect
+3. 3-4 key points that make this story newsworthy
+4. Why this story is timely and relevant to current trends
+5. Available assets (data, images, interviews, etc.)
+6. A quote from a relevant spokesperson
+7. Clear next steps if they're interested in covering the story
+
+The pitch should be under 300 words, formatted for easy scanning, and focused on the news value rather than promoting our company. Include exclusive angles that could be offered to high-priority publications.`;
+          break;
+          
+        case 'expert-roundup':
+          promptText = `Create a ${personalizationLevel} response to an invitation to participate in an expert roundup article for ${targetWebsite} about a topic in the ${websiteNiche} niche. I can offer expertise on ${valueProposition}.
+
+The email should include:
+1. A thank you for the invitation to contribute
+2. My 250-300 word response to the roundup question
+3. A brief bio highlighting my relevant expertise (50-60 words)
+4. Links to 1-2 previous interviews or articles I've contributed to
+5. A mention of my headshot attachment
+6. My website URL and social media handles
+7. An offer to provide additional information if needed
+
+The contribution should demonstrate thought leadership with specific insights rather than generic statements. The tone should be professional but conversational, and include a unique perspective that would stand out among other experts.`;
+          break;
+          
+        case 'podcast-interview':
+          promptText = `Create a ${personalizationLevel} podcast interview pitch email to the host of a podcast in the ${websiteNiche} niche. I want to be interviewed as a guest on ${targetWebsite}'s podcast, offering insights about ${valueProposition}.
+
+The pitch should include:
+1. A personalized introduction showing familiarity with their podcast
+2. Reference to specific episodes I've listened to and enjoyed
+3. A brief introduction of who I am and my expertise
+4. 3-4 compelling topic ideas I could discuss on their show
+5. Why their audience would find these topics valuable
+6. My credentials and experience that qualify me as an expert
+7. Any previous podcast appearances or speaking engagements
+8. A clear call to action
+
+The email should be concise (under 250 words), focused on the value I can provide to their audience, and include 2-3 subject line options that would stand out in a busy inbox.`;
+          break;
+      }
+      
+      promptResult.textContent = promptText;
+    });
+    
+    // Copy prompt to clipboard
+    copyButton.addEventListener('click', function() {
+      const textToCopy = promptResult.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard. Please try again or copy manually.');
+      });
+    });
+  });
+</script>

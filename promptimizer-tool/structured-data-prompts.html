@@ -1,0 +1,710 @@
+<!-- SEO Structured Data Prompt Generator HTML -->
+<div class="seo-prompt-generator">
+    <h1>Structured Data Prompt Generator for SEO</h1>
+    <p class="intro-text">Generate highly effective prompts for creating structured data markup to enhance your website's SEO. This tool helps you create JSON-LD schemas that improve your search visibility and click-through rates.</p>
+    
+    <div class="prompt-controls">
+      <div class="input-group">
+        <label for="schema-type">Schema Type:</label>
+        <select id="schema-type">
+          <option value="local-business">LocalBusiness</option>
+          <option value="product">Product</option>
+          <option value="article">Article</option>
+          <option value="faq">FAQ</option>
+          <option value="how-to">HowTo</option>
+          <option value="event">Event</option>
+          <option value="review">Review</option>
+          <option value="breadcrumb">BreadcrumbList</option>
+          <option value="video">VideoObject</option>
+          <option value="job-posting">JobPosting</option>
+        </select>
+      </div>
+      
+      <div class="input-group">
+        <label for="website-type">Website Type:</label>
+        <select id="website-type">
+          <option value="business">Business Website</option>
+          <option value="ecommerce">E-commerce</option>
+          <option value="blog">Blog</option>
+          <option value="service">Service Provider</option>
+          <option value="portfolio">Portfolio</option>
+          <option value="news">News Site</option>
+          <option value="education">Educational</option>
+        </select>
+      </div>
+      
+      <div class="input-group">
+        <label for="business-name">Business/Website Name:</label>
+        <input type="text" id="business-name" placeholder="e.g., Acme Inc., My Blog, etc.">
+      </div>
+      
+      <div class="input-group">
+        <label for="primary-keyword">Primary Keyword:</label>
+        <input type="text" id="primary-keyword" placeholder="e.g., organic coffee, plumbing services, etc.">
+      </div>
+      
+      <div class="input-group">
+        <label for="additional-info">Additional Information (optional):</label>
+        <input type="text" id="additional-info" placeholder="e.g., location, specific features, etc.">
+      </div>
+      
+      <button id="generate-prompt" class="generate-button">Generate Structured Data Prompt</button>
+    </div>
+    
+    <div class="result-container">
+      <h3>Your Structured Data Prompt:</h3>
+      <div id="prompt-result" class="prompt-box"></div>
+      <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+    </div>
+    
+    <div class="examples-container">
+      <h3>Example Structured Data Prompts</h3>
+      <div class="example-tabs">
+        <button class="example-tab active" data-example="local-business">LocalBusiness</button>
+        <button class="example-tab" data-example="product">Product</button>
+        <button class="example-tab" data-example="article">Article</button>
+        <button class="example-tab" data-example="faq">FAQ</button>
+        <button class="example-tab" data-example="how-to">HowTo</button>
+      </div>
+      <div class="example-content" id="example-content">
+        <div class="example-item active" id="local-business-example">
+          <h4>LocalBusiness Schema Prompt Example</h4>
+          <div class="example-box">
+            <p>Create a comprehensive JSON-LD structured data markup for my local business "Mountain View Cafe" that specializes in organic coffee and pastries. The business is located at 123 Main Street, Mountain View, CA 94041.</p>
+            <p>The structured data should:</p>
+            <ul>
+              <li>Follow the LocalBusiness schema.org type with appropriate properties</li>
+              <li>Include complete NAP (Name, Address, Phone) information</li>
+              <li>Specify business hours for all days of the week</li>
+              <li>Include proper geo coordinates for map integration</li>
+              <li>List our primary services and products</li>
+              <li>Include price range information</li>
+              <li>Add appropriate sameAs properties for our social media profiles</li>
+              <li>Include at least 3 acceptable payment methods</li>
+              <li>Incorporate any additional properties that would benefit local SEO</li>
+            </ul>
+            <p>Please provide the complete JSON-LD code that I can directly implement on my website, along with instructions on where to place it in my HTML for maximum SEO benefit.</p>
+          </div>
+        </div>
+        
+        <div class="example-item" id="product-example">
+          <h4>Product Schema Prompt Example</h4>
+          <div class="example-box">
+            <p>Generate a complete Product schema JSON-LD structured data for our flagship product "Ultra Lightweight Hiking Boots" that costs $149.99. The product has an average rating of 4.8/5 based on 127 reviews and is currently in stock.</p>
+            <p>The structured data should include:</p>
+            <ul>
+              <li>Full Product schema with all required and recommended properties</li>
+              <li>Proper price and currency formatting</li>
+              <li>Availability status using the correct schema.org vocabulary</li>
+              <li>Aggregate rating information with reviewCount and ratingValue</li>
+              <li>Brand information for our company "TrailMaster Gear"</li>
+              <li>Product description that incorporates our primary keywords: lightweight hiking boots, waterproof hiking footwear</li>
+              <li>SKU and MPN information</li>
+              <li>Appropriate image property structure for our product images</li>
+              <li>Offer details including price validity period</li>
+            </ul>
+            <p>Please provide the complete JSON-LD code that follows Google's structured data guidelines and can be directly implemented on our product page.</p>
+          </div>
+        </div>
+        
+        <div class="example-item" id="article-example">
+          <h4>Article Schema Prompt Example</h4>
+          <div class="example-box">
+            <p>Create a comprehensive Article schema JSON-LD structured data for my blog post titled "10 Essential SEO Strategies for 2025" that was published on May 1, 2025. The article is written by Jane Smith, our head of SEO, and covers the latest search engine optimization techniques.</p>
+            <p>The structured data should include:</p>
+            <ul>
+              <li>Complete Article schema with all required and recommended properties</li>
+              <li>Author information with appropriate Person schema integration</li>
+              <li>Publisher information with appropriate Organization schema</li>
+              <li>Proper datePublished and dateModified formatting</li>
+              <li>Article headline that matches our H1 tag</li>
+              <li>Featured image information with appropriate ImageObject properties</li>
+              <li>Article section and keywords that enhance topical relevance</li>
+              <li>Word count and time to read information if possible</li>
+              <li>Any other properties that would help with article rich results in search</li>
+            </ul>
+            <p>Please provide the complete JSON-LD code that I can implement directly in the head section of my blog post HTML, following Google's structured data guidelines.</p>
+          </div>
+        </div>
+        
+        <div class="example-item" id="faq-example">
+          <h4>FAQ Schema Prompt Example</h4>
+          <div class="example-box">
+            <p>Generate a FAQPage schema JSON-LD structured data for our dental practice's frequently asked questions page. We have 15 common questions about dental procedures, insurance, and appointment scheduling.</p>
+            <p>The structured data should:</p>
+            <ul>
+              <li>Follow the FAQPage schema.org type with all required properties</li>
+              <li>Include at least 10 question and answer pairs that follow best practices</li>
+              <li>Structure each question and answer properly within the mainEntity property</li>
+              <li>Ensure that the questions are relevant to dental services and match our actual FAQ content</li>
+              <li>Format the answers with proper HTML markup if needed (while keeping valid JSON)</li>
+              <li>Include any additional properties that would help with FAQ rich results in search</li>
+              <li>Follow Google's structured data guidelines for FAQPage implementation</li>
+            </ul>
+            <p>Please provide the complete JSON-LD code that we can implement on our FAQ page, along with any recommendations for how to maintain and update this schema as we add new questions.</p>
+          </div>
+        </div>
+        
+        <div class="example-item" id="how-to-example">
+          <h4>HowTo Schema Prompt Example</h4>
+          <div class="example-box">
+            <p>Create a detailed HowTo schema JSON-LD structured data for our DIY guide titled "How to Install a Kitchen Backsplash" that includes 8 steps with images for each step. The guide requires tools like a tile cutter, adhesive, and grout.</p>
+            <p>The structured data should include:</p>
+            <ul>
+              <li>Complete HowTo schema with all required and recommended properties</li>
+              <li>Total time property broken down into prepTime and performTime if applicable</li>
+              <li>Properly formatted supply and tool properties with appropriate quantities</li>
+              <li>Step-by-step instructions that match our actual content</li>
+              <li>Each step should include name, text, image, and url properties where applicable</li>
+              <li>Estimated cost information if possible</li>
+              <li>Any warnings or special considerations as appropriate HowTo properties</li>
+              <li>Final image of the completed project</li>
+            </ul>
+            <p>Please provide the complete JSON-LD code that follows Google's structured data guidelines for HowTo content, along with instructions on how to coordinate this markup with our actual step-by-step content on the page.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- How to Use Section -->
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li><strong>Select Schema Type:</strong> Choose the type of structured data you need (LocalBusiness, Product, Article, etc.)</li>
+      <li><strong>Choose Website Type:</strong> Select your website category to get more relevant structured data suggestions</li>
+      <li><strong>Enter Business/Website Name:</strong> Provide your business or website name</li>
+      <li><strong>Add Primary Keyword:</strong> Enter the main keyword you want to optimize for</li>
+      <li><strong>Include Additional Information:</strong> Add any specific details that should be included in the structured data</li>
+      <li><strong>Generate Prompt:</strong> Click the button to create your customized structured data prompt</li>
+      <li><strong>Copy and Use:</strong> Copy the generated prompt and use it with your preferred AI tool to create the actual JSON-LD code</li>
+    </ol>
+  </div>
+  
+  <!-- CSS Styles -->
+  <style>
+    .seo-prompt-generator {
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      color: #333;
+      box-sizing: border-box;
+    }
+    
+    .seo-prompt-generator h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+    
+    .intro-text {
+      text-align: center;
+      color: #5a6a7a;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    
+    .prompt-controls {
+      margin-bottom: 30px;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .input-group {
+      margin-bottom: 18px;
+    }
+    
+    .input-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #445566;
+      font-size: 15px;
+    }
+    
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: border 0.3s;
+    }
+    
+    .input-group input:focus,
+    .input-group select:focus {
+      border-color: #008348;
+      outline: none;
+      box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+    }
+    
+    .generate-button {
+      width: 100%;
+      padding: 14px;
+      background-color: #008348;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+    }
+    
+    .generate-button:hover {
+      background-color: #006738;
+    }
+    
+    .result-container {
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 30px;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .result-container h3 {
+      margin-top: 0;
+      color: #2c3e50;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .prompt-box {
+      min-height: 150px;
+      padding: 20px;
+      background-color: #f8fafc;
+      border: 1px solid #e1e8ed;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      white-space: pre-wrap;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+    }
+    
+    .copy-button {
+      padding: 10px 18px;
+      background-color: #f0f0f0;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+    
+    .copy-button:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .examples-container {
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+    
+    .examples-container h3 {
+      margin-top: 0;
+      color: #2c3e50;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .example-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    
+    .example-tab {
+      padding: 10px 15px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    
+    .example-tab:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .example-tab.active {
+      background-color: #008348;
+      color: white;
+      border-color: #008348;
+    }
+    
+    .example-item {
+      display: none;
+    }
+    
+    .example-item.active {
+      display: block;
+    }
+    
+    .example-item h4 {
+      color: #2c3e50;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    
+    .example-box {
+      background-color: #f8fafc;
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid #e1e8ed;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    .example-box p {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    
+    .example-box ul {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .example-box li {
+      margin-bottom: 8px;
+    }
+    
+    .how-to-use {
+      background-color: #f0f7f4;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      border-left: 4px solid #008348;
+    }
+    
+    .how-to-use h3 {
+      color: #2c3e50;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    
+    .how-to-use ol {
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding-left: 20px;
+    }
+    
+    .how-to-use li {
+      margin-bottom: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .seo-prompt-generator {
+        padding: 20px;
+      }
+      
+      .example-tabs {
+        flex-direction: column;
+        gap: 5px;
+      }
+      
+      .example-tab {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    
+    /* Ensure all child elements respect container width */
+    .seo-prompt-generator * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    
+    /* Make sure content doesn't overflow its container */
+    .prompt-box, .example-box {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+  </style>
+  
+  <!-- JavaScript Code -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const generateButton = document.getElementById('generate-prompt');
+      const copyButton = document.getElementById('copy-prompt');
+      const promptResult = document.getElementById('prompt-result');
+      const exampleTabs = document.querySelectorAll('.example-tab');
+      const exampleItems = document.querySelectorAll('.example-item');
+      
+      // Tab switching functionality
+      exampleTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          // Remove active class from all tabs and examples
+          exampleTabs.forEach(t => t.classList.remove('active'));
+          exampleItems.forEach(item => item.classList.remove('active'));
+          
+          // Add active class to current tab
+          this.classList.add('active');
+          
+          // Show corresponding example
+          const exampleId = this.getAttribute('data-example') + '-example';
+          document.getElementById(exampleId).classList.add('active');
+        });
+      });
+      
+      // Generate prompt when button is clicked
+      generateButton.addEventListener('click', function() {
+        const schemaType = document.getElementById('schema-type').value;
+        const websiteType = document.getElementById('website-type').value;
+        const businessName = document.getElementById('business-name').value || '[YOUR BUSINESS/WEBSITE NAME]';
+        const primaryKeyword = document.getElementById('primary-keyword').value || '[PRIMARY KEYWORD]';
+        const additionalInfo = document.getElementById('additional-info').value || '';
+        
+        // Schema type templates
+        const templates = {
+          'local-business': getLocalBusinessTemplate(businessName, primaryKeyword, additionalInfo, websiteType),
+          'product': getProductTemplate(businessName, primaryKeyword, additionalInfo, websiteType),
+          'article': getArticleTemplate(businessName, primaryKeyword, additionalInfo, websiteType),
+          'faq': getFAQTemplate(businessName, primaryKeyword, additionalInfo, websiteType),
+          'how-to': getHowToTemplate(businessName, primaryKeyword, additionalInfo, websiteType),
+          'event': getEventTemplate(businessName, primaryKeyword, additionalInfo, websiteType),
+          'review': getReviewTemplate(businessName, primaryKeyword, additionalInfo, websiteType),
+          'breadcrumb': getBreadcrumbTemplate(businessName, primaryKeyword, additionalInfo, websiteType),
+          'video': getVideoTemplate(businessName, primaryKeyword, additionalInfo, websiteType),
+          'job-posting': getJobPostingTemplate(businessName, primaryKeyword, additionalInfo, websiteType)
+        };
+        
+        // Get the template for the selected schema type
+        promptResult.textContent = templates[schemaType];
+      });
+      
+      // LocalBusiness template
+      function getLocalBusinessTemplate(businessName, primaryKeyword, additionalInfo, websiteType) {
+        let additionalContext = additionalInfo ? `Additional context: ${additionalInfo}` : '';
+        
+        return `Create a comprehensive JSON-LD structured data markup for my local business "${businessName}" that specializes in ${primaryKeyword}. ${additionalContext}
+
+The structured data should:
+- Follow the LocalBusiness schema.org type with appropriate properties
+- Include complete NAP (Name, Address, Phone) information
+- Specify business hours for all days of the week
+- Include proper geo coordinates for map integration
+- List our primary services and products related to ${primaryKeyword}
+- Include price range information
+- Add appropriate sameAs properties for our social media profiles
+- Include acceptable payment methods
+- Incorporate any additional properties that would benefit local SEO
+
+Please provide the complete JSON-LD code that I can directly implement on my ${websiteType} website, along with instructions on where to place it in my HTML for maximum SEO benefit.`;
+      }
+      
+      // Product template
+      function getProductTemplate(businessName, primaryKeyword, additionalInfo, websiteType) {
+        let additionalContext = additionalInfo ? `Additional context: ${additionalInfo}` : '';
+        
+        return `Generate a complete Product schema JSON-LD structured data for our product "${primaryKeyword}" sold by ${businessName}. ${additionalContext}
+
+The structured data should include:
+- Full Product schema with all required and recommended properties
+- Proper price and currency formatting
+- Availability status using the correct schema.org vocabulary
+- Aggregate rating information if applicable
+- Brand information for our company "${businessName}"
+- Product description that incorporates our primary keywords
+- SKU and MPN information
+- Appropriate image property structure for our product images
+- Offer details including price validity period
+
+Please provide the complete JSON-LD code that follows Google's structured data guidelines and can be directly implemented on our ${websiteType} product page.`;
+      }
+      
+      // Article template
+      function getArticleTemplate(businessName, primaryKeyword, additionalInfo, websiteType) {
+        let additionalContext = additionalInfo ? `Additional context: ${additionalInfo}` : '';
+        
+        return `Create a comprehensive Article schema JSON-LD structured data for content about "${primaryKeyword}" published by ${businessName}. ${additionalContext}
+
+The structured data should include:
+- Complete Article schema with all required and recommended properties
+- Author information with appropriate Person schema integration
+- Publisher information with appropriate Organization schema for "${businessName}"
+- Proper datePublished and dateModified formatting
+- Article headline that incorporates "${primaryKeyword}"
+- Featured image information with appropriate ImageObject properties
+- Article section and keywords that enhance topical relevance for "${primaryKeyword}"
+- Word count and time to read information if possible
+- Any other properties that would help with article rich results in search
+
+Please provide the complete JSON-LD code that I can implement directly in the head section of my ${websiteType} content, following Google's structured data guidelines.`;
+      }
+      
+      // FAQ template
+      function getFAQTemplate(businessName, primaryKeyword, additionalInfo, websiteType) {
+        let additionalContext = additionalInfo ? `Additional context: ${additionalInfo}` : '';
+        
+        return `Generate a FAQPage schema JSON-LD structured data for ${businessName}'s frequently asked questions about "${primaryKeyword}". ${additionalContext}
+
+The structured data should:
+- Follow the FAQPage schema.org type with all required properties
+- Include at least 8-10 question and answer pairs that follow best practices
+- Structure each question and answer properly within the mainEntity property
+- Ensure that the questions are relevant to "${primaryKeyword}" and match our actual FAQ content
+- Format the answers with proper HTML markup if needed (while keeping valid JSON)
+- Include any additional properties that would help with FAQ rich results in search
+- Follow Google's structured data guidelines for FAQPage implementation
+
+Please provide the complete JSON-LD code that we can implement on our ${websiteType} FAQ page, along with any recommendations for how to maintain and update this schema as we add new questions.`;
+      }
+      
+      // HowTo template
+      function getHowToTemplate(businessName, primaryKeyword, additionalInfo, websiteType) {
+        let additionalContext = additionalInfo ? `Additional context: ${additionalInfo}` : '';
+        
+        return `Create a detailed HowTo schema JSON-LD structured data for our guide about "${primaryKeyword}" published by ${businessName}. ${additionalContext}
+
+The structured data should include:
+- Complete HowTo schema with all required and recommended properties
+- Total time property broken down into prepTime and performTime if applicable
+- Properly formatted supply and tool properties with appropriate quantities
+- Step-by-step instructions that match our actual content about "${primaryKeyword}"
+- Each step should include name, text, image, and url properties where applicable
+- Estimated cost information if possible
+- Any warnings or special considerations as appropriate HowTo properties
+- Final image of the completed project
+
+Please provide the complete JSON-LD code that follows Google's structured data guidelines for HowTo content, along with instructions on how to coordinate this markup with our actual step-by-step content on the ${websiteType} page.`;
+      }
+      
+      // Event template
+      function getEventTemplate(businessName, primaryKeyword, additionalInfo, websiteType) {
+        let additionalContext = additionalInfo ? `Additional context: ${additionalInfo}` : '';
+        
+        return `Create an Event schema JSON-LD structured data for our "${primaryKeyword}" event hosted by ${businessName}. ${additionalContext}
+
+The structured data should include:
+- Complete Event schema with all required and recommended properties
+- Accurate start and end date/time in ISO 8601 format
+- Location information with proper PostalAddress formatting
+- Organizer information for ${businessName}
+- Event description that incorporates "${primaryKeyword}" naturally
+- Ticket availability and pricing information
+- Performer information if applicable
+- Event status (scheduled, cancelled, etc.)
+- Event images with proper ImageObject formatting
+
+Please provide the complete JSON-LD code that follows Google's structured data guidelines for Event content, along with instructions on where to place it on our ${websiteType} event page for maximum SEO benefit.`;
+      }
+      
+      // Review template
+      function getReviewTemplate(businessName, primaryKeyword, additionalInfo, websiteType) {
+        let additionalContext = additionalInfo ? `Additional context: ${additionalInfo}` : '';
+        
+        return `Generate a Review schema JSON-LD structured data for our review of "${primaryKeyword}" published by ${businessName}. ${additionalContext}
+
+The structured data should include:
+- Complete Review schema with all required and recommended properties
+- Proper itemReviewed property with appropriate type (Product, Service, etc.)
+- Author information for the reviewer
+- Publisher information for ${businessName}
+- Rating information with proper ratingValue and bestRating properties
+- Review body that incorporates "${primaryKeyword}" naturally
+- Date published in ISO 8601 format
+- Any pros and cons of the reviewed item
+- Appropriate nested schemas as needed
+
+Please provide the complete JSON-LD code that follows Google's structured data guidelines for Review content, along with instructions on where to place it on our ${websiteType} review page for maximum SEO benefit.`;
+      }
+      
+      // BreadcrumbList template
+      function getBreadcrumbTemplate(businessName, primaryKeyword, additionalInfo, websiteType) {
+        let additionalContext = additionalInfo ? `Additional context: ${additionalInfo}` : '';
+        
+        return `Create a BreadcrumbList schema JSON-LD structured data for our ${websiteType} page about "${primaryKeyword}" on ${businessName}'s website. ${additionalContext}
+
+The structured data should include:
+- Complete BreadcrumbList schema with all required properties
+- Properly structured itemListElement array with position, name, and item properties
+- Hierarchical path from homepage to the current page about "${primaryKeyword}"
+- Proper URL formatting for each breadcrumb item
+- Ensure the breadcrumb structure matches our actual website navigation
+- Any additional properties that would enhance breadcrumb rich results in search
+
+Please provide the complete JSON-LD code that follows Google's structured data guidelines for BreadcrumbList, along with instructions on how to implement this across our ${websiteType} for consistent breadcrumb navigation.`;
+      }
+      
+      // VideoObject template
+      function getVideoTemplate(businessName, primaryKeyword, additionalInfo, websiteType) {
+        let additionalContext = additionalInfo ? `Additional context: ${additionalInfo}` : '';
+        
+        return `Generate a VideoObject schema JSON-LD structured data for our video about "${primaryKeyword}" published by ${businessName}. ${additionalContext}
+
+The structured data should include:
+- Complete VideoObject schema with all required and recommended properties
+- Video name that incorporates "${primaryKeyword}"
+- Description that naturally includes our target keywords
+- Thumbnail URL with proper ImageObject formatting
+- Upload date in ISO 8601 format
+- Duration in ISO 8601 format
+- Content URL and embedding URL properties
+- Publisher information for ${businessName}
+- Any interaction statistics if available (views, likes, etc.)
+
+Please provide the complete JSON-LD code that follows Google's structured data guidelines for VideoObject content, along with instructions on where to place it on our ${websiteType} video page for maximum SEO benefit.`;
+      }
+      
+      // JobPosting template
+      function getJobPostingTemplate(businessName, primaryKeyword, additionalInfo, websiteType) {
+        let additionalContext = additionalInfo ? `Additional context: ${additionalInfo}` : '';
+        
+        return `Create a JobPosting schema JSON-LD structured data for our "${primaryKeyword}" position at ${businessName}. ${additionalContext}
+
+The structured data should include:
+- Complete JobPosting schema with all required and recommended properties
+- Job title that accurately describes the "${primaryKeyword}" position
+- Detailed job description with responsibilities and requirements
+- Employment type (full-time, part-time, etc.)
+- Valid date posted in ISO 8601 format
+- Valid validity period with expiration date
+- Salary or salary range with proper currency formatting
+- Location information with proper PostalAddress formatting
+- Hiring organization information for ${businessName}
+- Educational and experience requirements if applicable
+
+Please provide the complete JSON-LD code that follows Google's structured data guidelines for JobPosting content, along with instructions on where to place it on our ${websiteType} careers page for maximum SEO benefit.`;
+      }
+      
+      // Copy prompt to clipboard
+      copyButton.addEventListener('click', function() {
+        const textToCopy = promptResult.textContent;
+        navigator.clipboard.writeText(textToCopy).then(function() {
+          const originalText = copyButton.textContent;
+          copyButton.textContent = 'Copied!';
+          setTimeout(function() {
+            copyButton.textContent = originalText;
+          }, 2000);
+        }).catch(function(err) {
+          console.error('Could not copy text: ', err);
+          alert('Failed to copy to clipboard. Please try again or copy manually.');
+        });
+      });
+    });
+  </script>

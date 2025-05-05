@@ -1,0 +1,287 @@
+/* 90s Fleer Basketball Card Styles */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Condensed:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #f0f0f0;
+  background-image: 
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%), 
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #e0e0e0 75%), 
+    linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #000;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.fleer-card {
+  width: 350px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+}
+
+/* Card header with Fleer logo */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background: linear-gradient(90deg, #008348 0%, #008348 100%);
+  color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+.fleer-logo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transform: skewX(-10deg);
+  text-shadow: 1px 1px 0 #000;
+}
+
+.card-number {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Player image */
+.card-image {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid #000;
+  background-color: #f0f0f0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.silhouette {
+  width: 80%;
+  height: 90%;
+  background-color: #888;
+  position: relative;
+  border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+}
+
+/* Create the silhouette shape */
+.silhouette::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #666;
+  mask-image: url('data:image/svg+xml;utf8,<svg width="300" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M150,80 C190,80 220,110 220,150 C220,190 190,220 150,220 C110,220 80,190 80,150 C80,110 110,80 150,80 Z M60,380 C60,280 100,240 150,240 C200,240 240,280 240,380 Z" fill="black"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="300" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M150,80 C190,80 220,110 220,150 C220,190 190,220 150,220 C110,220 80,190 80,150 C80,110 110,80 150,80 Z M60,380 C60,280 100,240 150,240 C200,240 240,280 240,380 Z" fill="black"/></svg>');
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+
+/* Team banner */
+.team-banner {
+  background: linear-gradient(90deg, #008348 0%, #008348 100%);
+  color: #fff;
+  padding: 5px 0;
+  text-align: center;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #000;
+  position: relative;
+}
+
+.team-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+    linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%), 
+    linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
+  background-size: 8px 8px;
+  opacity: 0.3;
+}
+
+/* Player name section */
+.player-name {
+  padding: 8px 10px;
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #000;
+  text-align: center;
+}
+
+.player-name h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 20px;
+  margin-bottom: 2px;
+  color: #000;
+}
+
+.position {
+  font-size: 14px;
+  font-weight: bold;
+  color: #008348;
+}
+
+/* Stats section */
+.stats-section {
+  padding: 8px 10px;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+.stats-header {
+  background-color: #008348;
+  color: #fff;
+  text-align: center;
+  padding: 3px 0;
+  margin-bottom: 5px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.stat-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 3px;
+  border: 1px solid #ccc;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #008348;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Career notes */
+.career-notes {
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #333;
+  flex-grow: 1;
+  border-bottom: 2px solid #000;
+  background-color: #f9f9f9;
+}
+
+/* Card footer */
+.card-footer {
+  padding: 5px 10px;
+  background-color: #008348;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+}
+
+.copyright {
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* 90s style card edge effect */
+.fleer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 8px solid transparent;
+  border-image: linear-gradient(45deg, #008348, #fff, #008348, #fff, #008348) 1;
+  pointer-events: none;
+  opacity: 0.1;
+  z-index: 10;
+}
+
+/* Hover effect */
+.card-container:hover .fleer-card {
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 5px rgba(228, 0, 41, 0.5);
+}
+
+@media (max-width: 400px) {
+  .fleer-card {
+    width: 280px;
+    height: 400px;
+  }
+  
+  .card-image {
+    height: 180px;
+  }
+  
+  .player-name h2 {
+    font-size: 16px;
+  }
+  
+  .stat-value {
+    font-size: 14px;
+  }
+  
+  .career-notes {
+    font-size: 10px;
+  }
+}

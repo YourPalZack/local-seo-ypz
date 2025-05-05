@@ -1,0 +1,604 @@
+<!-- On-Page SEO Optimization Prompts HTML -->
+<div class="seo-prompt-generator">
+  <h1>On-Page SEO Optimization Prompts</h1>
+  <p class="intro-text">Generate powerful AI prompts to craft perfectly optimized meta titles, descriptions, headings, image alt text, and internal linking strategies that boost your search visibility and click-through rates.</p>
+  
+  <div class="prompt-controls">
+    <div class="input-group">
+      <label for="page-type">Page Type:</label>
+      <select id="page-type">
+        <option value="homepage">Homepage</option>
+        <option value="product-page">Product Page</option>
+        <option value="category-page">Category Page</option>
+        <option value="blog-post">Blog Post</option>
+        <option value="landing-page">Landing Page</option>
+        <option value="about-page">About Page</option>
+        <option value="contact-page">Contact Page</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="primary-keyword">Primary Keyword:</label>
+      <input type="text" id="primary-keyword" placeholder="e.g., organic coffee beans, digital marketing services">
+    </div>
+    
+    <div class="input-group">
+      <label for="secondary-keywords">Secondary Keywords (comma-separated):</label>
+      <input type="text" id="secondary-keywords" placeholder="e.g., fair trade coffee, single origin, arabica">
+    </div>
+    
+    <div class="input-group">
+      <label for="optimization-element">Optimization Element:</label>
+      <select id="optimization-element">
+        <option value="meta-title">Meta Title</option>
+        <option value="meta-description">Meta Description</option>
+        <option value="heading-structure">Heading Structure</option>
+        <option value="image-alt-text">Image Alt Text</option>
+        <option value="internal-linking">Internal Linking Strategy</option>
+        <option value="content-optimization">Content Optimization</option>
+        <option value="full-page-optimization">Full Page Optimization</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="target-audience">Target Audience:</label>
+      <input type="text" id="target-audience" placeholder="e.g., beginners, professionals, parents">
+    </div>
+    
+    <button id="generate-prompt" class="generate-button">Generate On-Page SEO Prompt</button>
+  </div>
+  
+  <div class="result-container">
+    <h3>Your On-Page SEO Prompt:</h3>
+    <div id="prompt-result" class="prompt-box"></div>
+    <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+  </div>
+  
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li>Select the type of page you're optimizing from the dropdown menu</li>
+      <li>Enter your primary keyword that you want to rank for</li>
+      <li>Add any secondary keywords to include in your optimization</li>
+      <li>Choose which on-page element you want to optimize</li>
+      <li>Specify your target audience to tailor the optimization</li>
+      <li>Click "Generate On-Page SEO Prompt" to create your AI prompt</li>
+      <li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+      <li>Use the resulting optimization suggestions to improve your page's SEO</li>
+    </ol>
+  </div>
+  
+  <div class="examples-container">
+    <h3>Example On-Page SEO Prompts</h3>
+    <div class="example-tabs">
+      <button class="example-tab active" data-example="meta-title">Meta Title</button>
+      <button class="example-tab" data-example="meta-description">Meta Description</button>
+      <button class="example-tab" data-example="heading-structure">Heading Structure</button>
+      <button class="example-tab" data-example="image-alt">Image Alt Text</button>
+      <button class="example-tab" data-example="internal-linking">Internal Linking</button>
+    </div>
+    <div class="example-content" id="example-content">
+      <div class="example-item active" id="meta-title-example">
+        <h4>Meta Title Optimization Prompt Example</h4>
+        <div class="example-box">
+          <p>Create 10 SEO-optimized meta title options for a product page about "organic bamboo bed sheets" targeting eco-conscious consumers. For each title:</p>
+          <ul>
+            <li>Include the primary keyword "organic bamboo bed sheets" naturally</li>
+            <li>Incorporate at least one of these secondary keywords: "cooling sheets," "sustainable bedding," "hypoallergenic"</li>
+            <li>Keep the length between 50-60 characters to avoid truncation in search results</li>
+            <li>Include a compelling benefit or unique selling point</li>
+            <li>Use power words that encourage clicks</li>
+            <li>Maintain brand voice that appeals to environmentally conscious consumers</li>
+          </ul>
+          <p>For each title option, provide the exact character count and an explanation of why it would be effective for both SEO and click-through rate. Rank the titles in order of recommended effectiveness.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="meta-description-example">
+        <h4>Meta Description Optimization Prompt Example</h4>
+        <div class="example-box">
+          <p>Generate 5 SEO-optimized meta descriptions for a blog post titled "10 Essential Digital Marketing Strategies for Small Businesses in 2025." Each description should:</p>
+          <ul>
+            <li>Include the primary keyword "digital marketing strategies for small businesses" naturally</li>
+            <li>Incorporate at least one secondary keyword from: "affordable marketing," "local business marketing," "ROI-focused"</li>
+            <li>Be between 140-155 characters to avoid truncation in search results</li>
+            <li>Include a clear value proposition for the reader</li>
+            <li>Contain a compelling call-to-action</li>
+            <li>Be written in an authoritative yet approachable tone</li>
+          </ul>
+          <p>For each description, provide the exact character count and highlight which aspects would appeal to small business owners looking to improve their marketing efforts with limited resources.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="heading-structure-example">
+        <h4>Heading Structure Optimization Prompt Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive heading structure (H1-H4) for a long-form guide about "home workout routines for beginners" targeting people new to fitness. The heading structure should:</p>
+          <ul>
+            <li>Include an SEO-optimized H1 that incorporates the primary keyword</li>
+            <li>Provide 5-7 H2 headings that cover the main subtopics and incorporate secondary keywords</li>
+            <li>For each H2, suggest 2-4 H3 subheadings that break down the content further</li>
+            <li>Where appropriate, include H4 headings for detailed sections</li>
+            <li>Ensure a logical content flow that guides beginners from basic concepts to implementation</li>
+            <li>Incorporate question-based headings where appropriate for featured snippet opportunities</li>
+          </ul>
+          <p>For each heading, briefly explain its purpose in the overall content structure and how it supports both user experience and SEO goals. Indicate which headings have the highest potential to rank for specific search queries.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="image-alt-example">
+        <h4>Image Alt Text Optimization Prompt Example</h4>
+        <div class="example-box">
+          <p>Generate SEO-optimized alt text for 8 product images on an e-commerce page selling "handcrafted leather wallets." For each image, assume the following types:</p>
+          <ul>
+            <li>Main product image showing the full wallet</li>
+            <li>Close-up of the leather texture and stitching</li>
+            <li>Image showing the wallet open with card slots visible</li>
+            <li>Image showing the wallet in a pocket (size reference)</li>
+            <li>Color variants of the wallet displayed together</li>
+            <li>Image showing the packaging/gift box</li>
+            <li>Lifestyle image of someone using the wallet</li>
+            <li>Infographic showing wallet dimensions and features</li>
+          </ul>
+          <p>For each image, create alt text that naturally incorporates relevant keywords without keyword stuffing, accurately describes what's shown in the image, and follows accessibility best practices.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="internal-linking-example">
+        <h4>Internal Linking Strategy Prompt Example</h4>
+        <div class="example-box">
+          <p>Develop a comprehensive internal linking strategy for a blog post about "sustainable gardening practices" that will be published on a gardening website. The website already has the following content:</p>
+          <ul>
+            <li>Beginner's Guide to Organic Gardening</li>
+            <li>10 Best Composting Methods for Home Gardens</li>
+            <li>How to Choose Eco-Friendly Garden Tools</li>
+            <li>Water Conservation Techniques for Gardens</li>
+            <li>Natural Pest Control Without Chemicals</li>
+            <li>Seasonal Planting Guide for Vegetable Gardens</li>
+            <li>Soil Health: The Foundation of Sustainable Gardens</li>
+          </ul>
+          <p>For the new "sustainable gardening practices" article, provide specific anchor text suggestions for internal links to existing content, explain the contextual relevance and SEO benefit of each link, and recommend natural link placement within the content flow.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+  .seo-prompt-generator {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .seo-prompt-generator h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    color: #5a6a7a;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .prompt-controls {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #445566;
+    font-size: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #008348;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+  }
+  
+  .generate-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #008348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .generate-button:hover {
+    background-color: #006738;
+  }
+  
+  .result-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .prompt-box {
+    min-height: 150px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .copy-button {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .copy-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .examples-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .examples-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .example-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .example-tab {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .example-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-tab.active {
+    background-color: #008348;
+    color: white;
+    border-color: #008348;
+  }
+  
+  .example-item {
+    display: none;
+  }
+  
+  .example-item.active {
+    display: block;
+  }
+  
+  .example-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .example-box {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .example-box p {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .example-box ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .example-box li {
+    margin-bottom: 8px;
+  }
+  
+  .how-to-use {
+    background-color: #f0f7f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #008348;
+  }
+  
+  .how-to-use h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .how-to-use ol {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  
+  .how-to-use li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .seo-prompt-generator {
+      padding: 20px;
+    }
+    
+    .example-tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .example-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Ensure all child elements respect container width */
+  .seo-prompt-generator * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure content doesn't overflow its container */
+  .prompt-box, .example-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate-prompt');
+    const copyButton = document.getElementById('copy-prompt');
+    const promptResult = document.getElementById('prompt-result');
+    const exampleTabs = document.querySelectorAll('.example-tab');
+    const exampleItems = document.querySelectorAll('.example-item');
+    
+    // Tab switching functionality
+    exampleTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs and examples
+        exampleTabs.forEach(t => t.classList.remove('active'));
+        exampleItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current tab
+        this.classList.add('active');
+        
+        // Show corresponding example
+        const exampleId = this.getAttribute('data-example') + '-example';
+        document.getElementById(exampleId).classList.add('active');
+      });
+    });
+    
+    // Generate prompt when button is clicked
+    generateButton.addEventListener('click', function() {
+      const primaryKeyword = document.getElementById('primary-keyword').value || '[PRIMARY KEYWORD]';
+      const secondaryKeywords = document.getElementById('secondary-keywords').value || '[SECONDARY KEYWORDS]';
+      const pageType = document.getElementById('page-type').value;
+      const optimizationElement = document.getElementById('optimization-element').value;
+      const targetAudience = document.getElementById('target-audience').value || '[TARGET AUDIENCE]';
+      
+      let promptText = '';
+      
+      // Generate different prompts based on the selected optimization element
+      switch(optimizationElement) {
+        case 'meta-title':
+          promptText = `Create 10 SEO-optimized meta title options for a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. For each title:
+
+1. Include the primary keyword "${primaryKeyword}" naturally
+2. Incorporate secondary keywords where appropriate: ${secondaryKeywords}
+3. Keep the length between 50-60 characters to avoid truncation in search results
+4. Include a compelling benefit or unique selling point
+5. Use power words that encourage clicks
+6. Maintain a brand voice that appeals to ${targetAudience}
+
+For each title option, provide the exact character count and an explanation of why it would be effective for both SEO and click-through rate.`;
+          break;
+          
+        case 'meta-description':
+          promptText = `Generate 5 SEO-optimized meta descriptions for a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. Each description should:
+
+1. Include the primary keyword "${primaryKeyword}" naturally
+2. Incorporate secondary keywords where appropriate: ${secondaryKeywords}
+3. Be between 140-155 characters to avoid truncation in search results
+4. Include a clear value proposition for the reader
+5. Contain a compelling call-to-action
+6. Be written in a tone appropriate for ${targetAudience}
+
+For each description, provide the exact character count and highlight which aspects would appeal to your target audience.`;
+          break;
+          
+        case 'heading-structure':
+          promptText = `Create a comprehensive heading structure (H1-H4) for a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. The heading structure should:
+
+1. Include an SEO-optimized H1 that incorporates the primary keyword "${primaryKeyword}"
+2. Provide 5-7 H2 headings that cover the main subtopics and incorporate secondary keywords: ${secondaryKeywords}
+3. For each H2, suggest 2-4 H3 subheadings that break down the content further
+4. Where appropriate, include H4 headings for detailed sections
+5. Ensure a logical content flow that guides the reader through the information
+6. Incorporate question-based headings where appropriate for featured snippet opportunities
+
+For each heading, explain its purpose in the overall content structure and how it supports both user experience and SEO goals.`;
+          break;
+          
+        case 'image-alt-text':
+          promptText = `Generate SEO-optimized alt text for 8 images on a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. For each image, create alt text that:
+
+1. Naturally incorporates relevant keywords without keyword stuffing
+2. Accurately describes what's shown in the image
+3. Provides context relevant to the surrounding content
+4. Highlights key selling points when relevant
+5. Keeps length between 50-125 characters
+6. Follows accessibility best practices
+
+For each alt text suggestion, provide the exact character count and which keywords it incorporates.`;
+          break;
+          
+        case 'internal-linking':
+          promptText = `Develop a comprehensive internal linking strategy for a ${pageType} about "${primaryKeyword}". Provide:
+
+1. 10-12 specific anchor text suggestions for internal links to existing content
+2. For each link, explain the contextual relevance and SEO benefit
+3. Recommendations for natural link placement within the content flow
+4. Suggestions for reciprocal linking from existing content to this page
+5. Content silo and topic cluster strategy recommendations
+
+Include specific examples of anchor text phrasing that incorporates relevant keywords while maintaining natural language flow.`;
+          break;
+          
+        case 'content-optimization':
+          promptText = `Create a comprehensive content optimization guide for a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. This guide should include:
+
+1. Keyword optimization strategy:
+   - How to naturally incorporate the primary keyword "${primaryKeyword}"
+   - How to integrate these secondary keywords: ${secondaryKeywords}
+   - Semantic and LSI keyword suggestions to include
+
+2. Content structure recommendations:
+   - Ideal content length based on competitive analysis
+   - Paragraph length and structure for readability
+   - Subheading usage and keyword incorporation
+
+3. Engagement optimization:
+   - Hooks and opening paragraph techniques
+   - Transition phrases between sections
+   - Conclusion and call-to-action recommendations
+
+4. SEO enhancement elements:
+   - List/table/bullet point usage for featured snippets
+   - Question-and-answer sections for PAA opportunities
+   - Schema markup suggestions`;
+          break;
+          
+        case 'full-page-optimization':
+          promptText = `Create a comprehensive on-page SEO optimization plan for a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. This complete optimization plan should include:
+
+1. Technical SEO elements:
+   - URL structure recommendation
+   - Meta title and description recommendations
+   - Mobile optimization priorities
+   - Page speed improvement recommendations
+
+2. Content structure and optimization:
+   - Complete H1-H4 heading structure with keyword incorporation
+   - Content length recommendation with competitive analysis
+   - Keyword placement strategy for primary keyword "${primaryKeyword}"
+   - Secondary keyword integration plan for: ${secondaryKeywords}
+
+3. Visual and multimedia elements:
+   - Image optimization recommendations (including alt text examples)
+   - Video content suggestions if applicable
+
+4. User experience and engagement:
+   - Internal linking strategy (10+ specific link suggestions)
+   - Call-to-action placement and optimization
+
+5. Schema markup and rich results:
+   - Appropriate schema types for this content
+   - Rich snippet opportunities to target`;
+          break;
+      }
+      
+      promptResult.textContent = promptText;
+    });
+    
+    // Copy prompt to clipboard
+    copyButton.addEventListener('click', function() {
+      const textToCopy = promptResult.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard. Please try again or copy manually.');
+      });
+    });
+  });
+</script>

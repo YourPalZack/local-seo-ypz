@@ -1,0 +1,706 @@
+<!-- Local SEO & GMB Prompts HTML -->
+<div class="seo-prompt-generator">
+  <h1>Local SEO & Google Business Profile Prompts</h1>
+  <p class="intro-text">Generate powerful AI prompts to create Google Business posts, local landing page copy with geo modifiers, review request templates, and local citation content that boosts your local search visibility.</p>
+  
+  <div class="prompt-controls">
+    <div class="input-group">
+      <label for="business-type">Business Type:</label>
+      <select id="business-type">
+        <option value="restaurant">Restaurant/Cafe</option>
+        <option value="retail">Retail Store</option>
+        <option value="service-area">Service Area Business</option>
+        <option value="professional">Professional Services</option>
+        <option value="healthcare">Healthcare Provider</option>
+        <option value="hospitality">Hotel/Hospitality</option>
+        <option value="fitness">Fitness/Wellness</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="business-name">Business Name:</label>
+      <input type="text" id="business-name" placeholder="e.g., Smith's Plumbing, City Dental Care">
+    </div>
+    
+    <div class="input-group">
+      <label for="location">Location (City/Area):</label>
+      <input type="text" id="location" placeholder="e.g., Portland, OR; West Village, NYC">
+    </div>
+    
+    <div class="input-group">
+      <label for="content-type">Content Type:</label>
+      <select id="content-type">
+        <option value="gbp-post">Google Business Post</option>
+        <option value="local-landing-page">Local Landing Page</option>
+        <option value="review-request">Review Request Template</option>
+        <option value="local-citation">Local Citation Content</option>
+        <option value="local-schema">Local Business Schema</option>
+        <option value="service-area-pages">Service Area Pages</option>
+        <option value="local-seo-audit">Local SEO Audit</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="primary-service">Primary Service/Product:</label>
+      <input type="text" id="primary-service" placeholder="e.g., emergency plumbing, teeth whitening">
+    </div>
+    
+    <button id="generate-prompt" class="generate-button">Generate Local SEO Prompt</button>
+  </div>
+  
+  <div class="result-container">
+    <h3>Your Local SEO Prompt:</h3>
+    <div id="prompt-result" class="prompt-box"></div>
+    <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+  </div>
+  
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li>Select your business type from the dropdown menu</li>
+      <li>Enter your business name to personalize the content</li>
+      <li>Specify your location to include appropriate geo-modifiers</li>
+      <li>Choose the type of local SEO content you want to create</li>
+      <li>Enter your primary service or product to focus the content</li>
+      <li>Click "Generate Local SEO Prompt" to create your AI prompt</li>
+      <li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+      <li>Use the resulting content to enhance your local search visibility</li>
+    </ol>
+  </div>
+  
+  <div class="examples-container">
+    <h3>Example Local SEO Prompts</h3>
+    <div class="example-tabs">
+      <button class="example-tab active" data-example="gbp-post">GBP Post</button>
+      <button class="example-tab" data-example="local-landing">Local Landing</button>
+      <button class="example-tab" data-example="review-request">Review Request</button>
+      <button class="example-tab" data-example="local-citation">Local Citation</button>
+      <button class="example-tab" data-example="service-area">Service Area</button>
+    </div>
+    <div class="example-content" id="example-content">
+      <div class="example-item active" id="gbp-post-example">
+        <h4>Google Business Profile Post Example</h4>
+        <div class="example-box">
+          <p>Create 5 engaging Google Business Profile posts for "Greenleaf Dental Care" in Portland, OR, focusing on their teeth whitening services. For each post:</p>
+          <ul>
+            <li>Create a compelling headline (40-60 characters)</li>
+            <li>Write engaging body copy (150-200 characters) that includes location-specific references</li>
+            <li>Include a clear call-to-action</li>
+            <li>Suggest an image description that would complement the post</li>
+            <li>Incorporate seasonal relevance where appropriate</li>
+          </ul>
+          <p>Create a variety of post types:</p>
+          <ul>
+            <li>1 post announcing a special offer or promotion</li>
+            <li>1 post highlighting a patient success story (anonymized)</li>
+            <li>1 post sharing an educational tip related to teeth whitening</li>
+            <li>1 post about a community involvement or local event</li>
+            <li>1 post featuring a team member or behind-the-scenes look</li>
+          </ul>
+          <p>Each post should include relevant keywords for local SEO while maintaining a natural, engaging tone. Make sure the posts align with dental industry best practices and include appropriate hashtags where relevant.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="local-landing-example">
+        <h4>Local Landing Page Example</h4>
+        <div class="example-box">
+          <p>Create comprehensive content for a local landing page for "Elite Plumbing Services" targeting customers in Scottsdale, AZ, focusing on emergency plumbing services. The content should include:</p>
+          <ul>
+            <li>An SEO-optimized H1 heading incorporating the business name, service, and location</li>
+            <li>An engaging introduction (150-200 words) that establishes local relevance and addresses immediate customer pain points</li>
+            <li>5-7 H2 subheadings with supporting content sections covering:
+              <ul>
+                <li>Emergency plumbing services offered in Scottsdale</li>
+                <li>Service area neighborhoods and landmarks</li>
+                <li>Response time and availability</li>
+                <li>Pricing and guarantee information</li>
+                <li>Local credentials, licenses, and insurance</li>
+                <li>Customer testimonials from Scottsdale residents</li>
+                <li>Local contact information and service area map</li>
+              </ul>
+            </li>
+            <li>Natural incorporation of local keywords and geo-modifiers throughout</li>
+            <li>A locally-relevant FAQ section with 5-7 questions specific to emergency plumbing in Scottsdale</li>
+            <li>A compelling call-to-action focused on generating local leads</li>
+          </ul>
+          <p>The content should be approximately 800-1000 words total, written in a conversational yet professional tone, and optimized for both search engines and conversion. Include recommendations for local schema markup to enhance local search visibility.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="review-request-example">
+        <h4>Review Request Template Example</h4>
+        <div class="example-box">
+          <p>Create 3 different review request templates for "Sunrise Yoga Studio" in Boulder, CO, to encourage clients to leave Google reviews. For each template, provide:</p>
+          <ul>
+            <li>Email subject line options that encourage opens</li>
+            <li>Personalized greeting with merge tag placeholders</li>
+            <li>Brief, friendly body copy (100-150 words) that:
+              <ul>
+                <li>Thanks the customer for their business</li>
+                <li>Explains the importance of reviews to a local business</li>
+                <li>Makes leaving a review sound quick and easy</li>
+                <li>Includes a direct link placeholder to the Google review form</li>
+              </ul>
+            </li>
+            <li>Professional sign-off</li>
+            <li>P.S. section with an additional incentive or information where appropriate</li>
+          </ul>
+          <p>Create three distinct approaches:</p>
+          <ul>
+            <li>Template 1: For new clients after their first class</li>
+            <li>Template 2: For long-term members who attend regularly</li>
+            <li>Template 3: For clients who completed a special workshop or event</li>
+          </ul>
+          <p>Each template should feel authentic and not pushy, while still effectively encouraging reviews. Include guidance on the best timing to send each type of request and any follow-up recommendations.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="local-citation-example">
+        <h4>Local Citation Content Example</h4>
+        <div class="example-box">
+          <p>Create consistent NAP (Name, Address, Phone) and business description content for "Mountain View Auto Repair" in Denver, CO, to use across local business directories and citation sites. Include:</p>
+          <ul>
+            <li>Standardized NAP format that should be used consistently across all platforms</li>
+            <li>4 different business description versions:
+              <ul>
+                <li>Short description (50-60 words) for directories with limited space</li>
+                <li>Medium description (100-150 words) for most citation sites</li>
+                <li>Long description (200-250 words) for primary directories like Google Business Profile</li>
+                <li>Social media bio version (150-160 characters)</li>
+              </ul>
+            </li>
+            <li>Consistent business categories to use across directories (primary and secondary)</li>
+            <li>List of 10-15 relevant business attributes/amenities to include when available (e.g., "free estimates," "certified technicians")</li>
+            <li>Hours of operation in standard format</li>
+            <li>Service area definition (neighborhoods, zip codes, radius)</li>
+            <li>Payment methods accepted</li>
+          </ul>
+          <p>All content should naturally incorporate important keywords for auto repair in Denver while maintaining a consistent brand voice and avoiding keyword stuffing. Include recommendations for which citation sites should be prioritized for this type of local business.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="service-area-example">
+        <h4>Service Area Pages Example</h4>
+        <div class="example-box">
+          <p>Create a framework for developing 5 service area pages for "Sunshine Landscaping," a landscaping company based in Miami that serves surrounding communities. The business wants dedicated pages for: Coral Gables, Pinecrest, Kendall, Doral, and Miami Beach.</p>
+          <ul>
+            <li>For each service area page, provide:
+              <ul>
+                <li>SEO-optimized page title and H1 heading incorporating service + location</li>
+                <li>Introduction template (150-200 words) that establishes local relevance</li>
+                <li>5-7 section subheadings that should be included on each page</li>
+                <li>Guidance on area-specific content to research and include</li>
+                <li>Local landmarks, neighborhoods, or geographic features to mention</li>
+                <li>Area-specific customer testimonial framework</li>
+                <li>Locally relevant FAQ structure (5 questions)</li>
+                <li>Call-to-action tailored to each specific area</li>
+              </ul>
+            </li>
+            <li>Provide a strategy for:
+              <ul>
+                <li>Making each page unique while maintaining brand consistency</li>
+                <li>Naturally incorporating local keywords without duplication</li>
+                <li>Internal linking between service area pages</li>
+                <li>Local schema markup recommendations</li>
+                <li>Image optimization suggestions for local relevance</li>
+              </ul>
+            </li>
+          </ul>
+          <p>The framework should emphasize creating genuinely useful, unique content for each location rather than simply changing place names. Include recommendations for how to scale this approach if the company expands to more service areas in the future.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+  .seo-prompt-generator {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .seo-prompt-generator h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    color: #5a6a7a;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .prompt-controls {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #445566;
+    font-size: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #008348;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+  }
+  
+  .generate-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #008348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .generate-button:hover {
+    background-color: #006738;
+  }
+  
+  .result-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .prompt-box {
+    min-height: 150px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .copy-button {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .copy-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .examples-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .examples-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .example-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .example-tab {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .example-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-tab.active {
+    background-color: #008348;
+    color: white;
+    border-color: #008348;
+  }
+  
+  .example-item {
+    display: none;
+  }
+  
+  .example-item.active {
+    display: block;
+  }
+  
+  .example-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .example-box {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .example-box p {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .example-box ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .example-box li {
+    margin-bottom: 8px;
+  }
+  
+  .how-to-use {
+    background-color: #f0f7f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #008348;
+  }
+  
+  .how-to-use h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .how-to-use ol {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  
+  .how-to-use li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .seo-prompt-generator {
+      padding: 20px;
+    }
+    
+    .example-tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .example-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Ensure all child elements respect container width */
+  .seo-prompt-generator * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure content doesn't overflow its container */
+  .prompt-box, .example-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate-prompt');
+    const copyButton = document.getElementById('copy-prompt');
+    const promptResult = document.getElementById('prompt-result');
+    const exampleTabs = document.querySelectorAll('.example-tab');
+    const exampleItems = document.querySelectorAll('.example-item');
+    
+    // Tab switching functionality
+    exampleTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs and examples
+        exampleTabs.forEach(t => t.classList.remove('active'));
+        exampleItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current tab
+        this.classList.add('active');
+        
+        // Show corresponding example
+        const exampleId = this.getAttribute('data-example') + '-example';
+        document.getElementById(exampleId).classList.add('active');
+      });
+    });
+    
+    // Generate prompt when button is clicked
+    generateButton.addEventListener('click', function() {
+      const businessType = document.getElementById('business-type').value;
+      const businessName = document.getElementById('business-name').value || '[BUSINESS NAME]';
+      const location = document.getElementById('location').value || '[LOCATION]';
+      const contentType = document.getElementById('content-type').value;
+      const primaryService = document.getElementById('primary-service').value || '[PRIMARY SERVICE]';
+      
+      let promptText = '';
+      
+      // Generate different prompts based on the selected content type
+      switch(contentType) {
+        case 'gbp-post':
+          promptText = `Create 5 engaging Google Business Profile posts for "${businessName}", a ${businessType} in ${location}, focusing on their ${primaryService} services. For each post:
+
+1. Create a compelling headline (40-60 characters)
+2. Write engaging body copy (150-200 characters) that includes location-specific references
+3. Include a clear call-to-action
+4. Suggest an image description that would complement the post
+5. Incorporate seasonal relevance where appropriate
+
+Create a variety of post types:
+- 1 post announcing a special offer or promotion
+- 1 post highlighting a customer success story (anonymized)
+- 1 post sharing an educational tip related to ${primaryService}
+- 1 post about a community involvement or local event in ${location}
+- 1 post featuring a team member or behind-the-scenes look
+
+Each post should include relevant keywords for local SEO while maintaining a natural, engaging tone. Make sure the posts align with ${businessType} industry best practices and include appropriate hashtags where relevant.`;
+          break;
+          
+        case 'local-landing-page':
+          promptText = `Create comprehensive content for a local landing page for "${businessName}" targeting customers in ${location}, focusing on ${primaryService}. The content should include:
+
+1. An SEO-optimized H1 heading incorporating the business name, service, and location
+2. An engaging introduction (150-200 words) that establishes local relevance and addresses immediate customer pain points
+3. 5-7 H2 subheadings with supporting content sections covering:
+   - ${primaryService} services offered in ${location}
+   - Service area neighborhoods and landmarks
+   - Unique selling propositions for this service in this location
+   - Pricing and guarantee information
+   - Local credentials, licenses, and insurance
+   - Customer testimonials from ${location} residents
+   - Local contact information and service area map
+
+4. Natural incorporation of local keywords and geo-modifiers throughout
+5. A locally-relevant FAQ section with 5-7 questions specific to ${primaryService} in ${location}
+6. A compelling call-to-action focused on generating local leads
+
+The content should be approximately 800-1000 words total, written in a conversational yet professional tone, and optimized for both search engines and conversion. Include recommendations for local schema markup to enhance local search visibility.`;
+          break;
+          
+        case 'review-request':
+          promptText = `Create 3 different review request templates for "${businessName}", a ${businessType} in ${location}, to encourage customers to leave Google reviews after using their ${primaryService} services. For each template, provide:
+
+1. Email subject line options that encourage opens
+2. Personalized greeting with merge tag placeholders
+3. Brief, friendly body copy (100-150 words) that:
+   - Thanks the customer for their business
+   - Explains the importance of reviews to a local business
+   - Makes leaving a review sound quick and easy
+   - Includes a direct link placeholder to the Google review form
+4. Professional sign-off
+5. P.S. section with an additional incentive or information where appropriate
+
+Create three distinct approaches:
+- Template 1: For new customers after their first service
+- Template 2: For repeat customers who use your services regularly
+- Template 3: For customers who had a particularly positive experience
+
+Each template should feel authentic and not pushy, while still effectively encouraging reviews. Include guidance on the best timing to send each type of request and any follow-up recommendations.`;
+          break;
+          
+        case 'local-citation':
+          promptText = `Create consistent NAP (Name, Address, Phone) and business description content for "${businessName}", a ${businessType} in ${location}, to use across local business directories and citation sites. Include:
+
+1. Standardized NAP format that should be used consistently across all platforms
+2. 4 different business description versions:
+   - Short description (50-60 words) for directories with limited space
+   - Medium description (100-150 words) for most citation sites
+   - Long description (200-250 words) for primary directories like Google Business Profile
+   - Social media bio version (150-160 characters)
+3. Consistent business categories to use across directories (primary and secondary)
+4. List of 10-15 relevant business attributes/amenities to include when available
+5. Hours of operation in standard format
+6. Service area definition (neighborhoods, zip codes, radius)
+7. Payment methods accepted
+
+All content should naturally incorporate important keywords for ${primaryService} in ${location} while maintaining a consistent brand voice and avoiding keyword stuffing. Include recommendations for which citation sites should be prioritized for this type of local business.`;
+          break;
+          
+        case 'local-schema':
+          promptText = `Create comprehensive local business schema markup (JSON-LD) for "${businessName}", a ${businessType} in ${location} specializing in ${primaryService}. The schema should include:
+
+1. Complete LocalBusiness schema with all required and recommended properties
+2. Proper nested schema for:
+   - Address
+   - Geo coordinates
+   - Opening hours
+   - Price range
+   - Service area
+   - Contact information
+3. Appropriate @type specification for this specific ${businessType}
+4. Service-specific schema for ${primaryService}
+5. Review and aggregate rating schema implementation
+6. Special schema considerations for ${businessType} businesses
+
+Provide the complete JSON-LD code ready to be implemented in the website's header, along with explanations for each major section and recommendations for where to place dynamic elements that might change (like reviews or special offers).
+
+Also include guidance on:
+- How to validate the schema
+- How to test it in Google's Rich Results Test
+- How to monitor for schema errors in Google Search Console
+- How to update the schema as business information changes`;
+          break;
+          
+        case 'service-area-pages':
+          promptText = `Create a framework for developing 5 service area pages for "${businessName}", a ${businessType} based in ${location} that offers ${primaryService} to surrounding communities. The business wants dedicated pages for 5 nearby locations.
+
+For each service area page, provide:
+1. SEO-optimized page title and H1 heading incorporating service + location
+2. Introduction template (150-200 words) that establishes local relevance
+3. 5-7 section subheadings that should be included on each page
+4. Guidance on area-specific content to research and include
+5. Local landmarks, neighborhoods, or geographic features to mention
+6. Area-specific customer testimonial framework
+7. Locally relevant FAQ structure (5 questions)
+8. Call-to-action tailored to each specific area
+
+Provide a strategy for:
+- Making each page unique while maintaining brand consistency
+- Naturally incorporating local keywords without duplication
+- Internal linking between service area pages
+- Local schema markup recommendations
+- Image optimization suggestions for local relevance
+
+The framework should emphasize creating genuinely useful, unique content for each location rather than simply changing place names. Include recommendations for how to scale this approach if the company expands to more service areas in the future.`;
+          break;
+          
+        case 'local-seo-audit':
+          promptText = `Create a comprehensive local SEO audit framework for "${businessName}", a ${businessType} in ${location} focusing on ${primaryService}. The audit should include:
+
+1. Google Business Profile optimization checklist with:
+   - Profile completeness assessment
+   - Category and attribute selection review
+   - Photo and video content audit
+   - Q&A and review management evaluation
+   - Posts and offers analysis
+   - Local justifications assessment
+
+2. Website local SEO evaluation:
+   - Local keyword usage and optimization
+   - Location pages structure and content
+   - NAP consistency check
+   - Local schema implementation
+   - Mobile optimization for local search
+   - Page speed impact on local rankings
+
+3. Local citation audit:
+   - Major directory presence
+   - NAP consistency across platforms
+   - Duplicate listing identification
+   - Industry-specific directory opportunities
+   - Aggregator data accuracy
+
+4. Review strategy assessment:
+   - Review acquisition process
+   - Review response evaluation
+   - Review diversity across platforms
+   - Competitor review comparison
+   - Review sentiment analysis
+
+5. Local competitive analysis:
+   - Local pack ranking factors comparison
+   - Local content gap analysis
+   - Local link profile comparison
+   - Local engagement metrics
+
+For each section, include specific tools to use, metrics to measure, and prioritized recommendations based on impact level. The audit should be tailored specifically to ${businessType} businesses in ${location} with a focus on improving visibility for ${primaryService}.`;
+          break;
+      }
+      
+      promptResult.textContent = promptText;
+    });
+    
+    // Copy prompt to clipboard
+    copyButton.addEventListener('click', function() {
+      const textToCopy = promptResult.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard. Please try again or copy manually.');
+      });
+    });
+  });
+</script>

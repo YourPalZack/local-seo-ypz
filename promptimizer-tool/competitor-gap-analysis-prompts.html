@@ -1,0 +1,667 @@
+<!-- Competitor Gap Analysis Prompts HTML -->
+<div class="seo-prompt-generator">
+  <h1>Competitor Gap Analysis Prompts</h1>
+  <p class="intro-text">Generate powerful AI prompts to reverse-engineer your competitors' content strategies, extract valuable patterns, and identify content gaps you can exploit to gain a competitive edge in search rankings.</p>
+  
+  <div class="prompt-controls">
+    <div class="input-group">
+      <label for="industry-niche">Industry/Niche:</label>
+      <input type="text" id="industry-niche" placeholder="e.g., organic skincare, digital marketing, home fitness">
+    </div>
+    
+    <div class="input-group">
+      <label for="competitor-urls">Competitor URLs (optional, comma-separated):</label>
+      <input type="text" id="competitor-urls" placeholder="e.g., competitor1.com, competitor2.com">
+    </div>
+    
+    <div class="input-group">
+      <label for="analysis-type">Analysis Type:</label>
+      <select id="analysis-type">
+        <option value="content-gap">Content Gap Analysis</option>
+        <option value="keyword-gap">Keyword Gap Analysis</option>
+        <option value="backlink-analysis">Backlink Profile Analysis</option>
+        <option value="on-page-analysis">On-Page Strategy Analysis</option>
+        <option value="featured-snippet">Featured Snippet Opportunity Analysis</option>
+        <option value="comprehensive">Comprehensive Competitive Analysis</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="business-goals">Your Primary Business Goals:</label>
+      <select id="business-goals">
+        <option value="traffic-growth">Traffic Growth</option>
+        <option value="conversion-rate">Conversion Rate Improvement</option>
+        <option value="brand-awareness">Brand Awareness</option>
+        <option value="lead-generation">Lead Generation</option>
+        <option value="sales-increase">Sales Increase</option>
+        <option value="authority-building">Authority Building</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="target-audience">Target Audience:</label>
+      <input type="text" id="target-audience" placeholder="e.g., small business owners, fitness enthusiasts, parents">
+    </div>
+    
+    <button id="generate-prompt" class="generate-button">Generate Competitor Analysis Prompt</button>
+  </div>
+  
+  <div class="result-container">
+    <h3>Your Competitor Analysis Prompt:</h3>
+    <div id="prompt-result" class="prompt-box"></div>
+    <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+  </div>
+  
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li>Enter your industry or niche to focus the competitive analysis</li>
+      <li>Optionally add specific competitor URLs you want to analyze</li>
+      <li>Select the type of competitive analysis you want to perform</li>
+      <li>Choose your primary business goal to align the analysis with your objectives</li>
+      <li>Specify your target audience to ensure the analysis focuses on relevant opportunities</li>
+      <li>Click "Generate Competitor Analysis Prompt" to create your AI prompt</li>
+      <li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+      <li>Use the resulting analysis to identify opportunities and develop a strategy to outperform competitors</li>
+    </ol>
+  </div>
+  
+  <div class="examples-container">
+    <h3>Example Competitor Analysis Prompts</h3>
+    <div class="example-tabs">
+      <button class="example-tab active" data-example="content-gap">Content Gap</button>
+      <button class="example-tab" data-example="keyword-gap">Keyword Gap</button>
+      <button class="example-tab" data-example="backlink-analysis">Backlink Analysis</button>
+      <button class="example-tab" data-example="on-page-analysis">On-Page Analysis</button>
+      <button class="example-tab" data-example="comprehensive">Comprehensive</button>
+    </div>
+    <div class="example-content" id="example-content">
+      <div class="example-item active" id="content-gap-example">
+        <h4>Content Gap Analysis Prompt Example</h4>
+        <div class="example-box">
+          <p>Conduct a comprehensive content gap analysis for a website in the "sustainable home products" niche. My top three competitors are GreenHome.com, EcoLiving.org, and SustainableHousehold.com. I need to identify content opportunities that will help me attract and convert environmentally conscious consumers.</p>
+          <ul>
+            <li>Analyze the top-performing content topics and formats from each competitor (blog posts, guides, product comparisons, etc.)</li>
+            <li>Identify high-value topics that all three competitors cover but my site doesn't</li>
+            <li>Discover unique topics that only one competitor covers that are generating significant engagement</li>
+            <li>Analyze content depth, comprehensiveness, and update frequency patterns</li>
+            <li>Evaluate content structure, formatting, and multimedia usage strategies</li>
+            <li>Identify question-based content opportunities that competitors are ranking for</li>
+            <li>Analyze seasonal or trending topics that competitors have successfully leveraged</li>
+          </ul>
+          <p>For each content gap opportunity identified, provide:</p>
+          <ul>
+            <li>Suggested content title and format</li>
+            <li>Key points to cover that would make it more comprehensive than competitor content</li>
+            <li>Unique angle or perspective to differentiate from competitor content</li>
+            <li>Estimated search volume potential</li>
+            <li>Content production priority (high, medium, low) based on potential impact</li>
+          </ul>
+          <p>The goal is to develop a strategic content plan that addresses gaps in the market while aligning with my goal of establishing authority in the sustainable home products space.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="keyword-gap-example">
+        <h4>Keyword Gap Analysis Prompt Example</h4>
+        <div class="example-box">
+          <p>Perform a detailed keyword gap analysis for a digital marketing agency website compared to three main competitors: AgencyCompetitor1.com, AgencyCompetitor2.com, and AgencyCompetitor3.com. The goal is to identify high-value keyword opportunities that can drive qualified leads for our services.</p>
+          <ul>
+            <li>Identify high-volume keywords that competitors rank for in positions 1-3 that we don't rank for at all</li>
+            <li>Discover keywords where competitors have featured snippets or other SERP features</li>
+            <li>Find keywords with commercial intent that at least two competitors rank for but we don't</li>
+            <li>Analyze keyword difficulty and competition levels for identified opportunities</li>
+            <li>Identify long-tail keyword variations that competitors might be overlooking</li>
+            <li>Discover question-based keywords that show informational intent in our niche</li>
+            <li>Analyze keyword seasonality and trending patterns</li>
+          </ul>
+          <p>For each keyword opportunity, provide:</p>
+          <ul>
+            <li>The keyword and its estimated monthly search volume</li>
+            <li>Current ranking positions of competitors</li>
+            <li>Keyword difficulty assessment</li>
+            <li>Search intent analysis (informational, commercial, transactional)</li>
+            <li>Content type recommendation to target this keyword</li>
+            <li>Priority level based on potential traffic and conversion value</li>
+          </ul>
+          <p>Group the keyword opportunities into logical clusters that could be targeted with comprehensive content pieces, and provide a strategic implementation roadmap based on difficulty and potential impact.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="backlink-analysis-example">
+        <h4>Backlink Analysis Prompt Example</h4>
+        <div class="example-box">
+          <p>Conduct a comprehensive backlink gap analysis for an e-commerce website in the "premium kitchenware" niche compared to three main competitors: LuxuryKitchen.com, PremiumCookware.com, and ChefSupplies.net. The goal is to identify high-value link building opportunities to improve domain authority and organic rankings.</p>
+          <ul>
+            <li>Analyze the backlink profiles of all three competitors, including total backlinks, referring domains, and domain authority metrics</li>
+            <li>Identify high-authority websites that link to multiple competitors but not to our site</li>
+            <li>Discover industry publications, blogs, and resource pages that represent link opportunities</li>
+            <li>Analyze the content types that attract the most backlinks for competitors (guides, tools, research, etc.)</li>
+            <li>Identify competitors' most linked-to pages and analyze why they attract links</li>
+            <li>Evaluate anchor text distribution patterns and strategies</li>
+            <li>Discover potential guest posting opportunities based on competitor backlinks</li>
+          </ul>
+          <p>For each link building opportunity category, provide:</p>
+          <ul>
+            <li>A strategic approach to acquiring similar backlinks</li>
+            <li>Content creation recommendations that would attract natural links</li>
+            <li>Outreach templates and strategies tailored to each opportunity type</li>
+            <li>Priority ranking based on potential SEO impact and acquisition difficulty</li>
+            <li>Metrics to track for measuring link building success</li>
+          </ul>
+          <p>Develop a 3-month link building roadmap that prioritizes the highest-value opportunities while maintaining a natural, diverse backlink profile that will improve our competitive position in the premium kitchenware market.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="on-page-analysis-example">
+        <h4>On-Page Strategy Analysis Prompt Example</h4>
+        <div class="example-box">
+          <p>Perform a detailed on-page SEO strategy analysis for a health and wellness blog compared to three successful competitors in this niche: WellnessDaily.com, HealthJourney.org, and HolisticLiving.com. The goal is to identify on-page optimization opportunities that can improve our content's search visibility and user engagement.</p>
+          <ul>
+            <li>Analyze the title tag patterns and strategies of top-performing competitor pages</li>
+            <li>Evaluate meta description approaches that generate high click-through rates</li>
+            <li>Identify heading structure patterns and keyword usage in H1-H6 tags</li>
+            <li>Analyze content length, depth, and comprehensiveness compared to ranking competitors</li>
+            <li>Evaluate internal linking strategies and anchor text usage patterns</li>
+            <li>Identify multimedia usage patterns (images, videos, infographics) and optimization</li>
+            <li>Analyze schema markup implementation and rich snippet opportunities</li>
+            <li>Evaluate page speed optimization techniques and Core Web Vitals performance</li>
+          </ul>
+          <p>For each on-page element analyzed, provide:</p>
+          <ul>
+            <li>Best practices observed from competitors</li>
+            <li>Specific optimization recommendations for our content</li>
+            <li>Examples of how to implement these improvements</li>
+            <li>Priority level based on potential ranking impact</li>
+            <li>Before/after examples to illustrate recommended changes</li>
+          </ul>
+          <p>Develop a comprehensive on-page optimization framework that can be applied to both existing content and new content creation to consistently outperform competitors in search results for health and wellness topics.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="comprehensive-example">
+        <h4>Comprehensive Competitive Analysis Prompt Example</h4>
+        <div class="example-box">
+          <p>Conduct a comprehensive competitive analysis for a SaaS company offering project management software. Our main competitors are ProjectPro.com, TaskMaster.io, and TeamFlow.app. The goal is to develop a holistic SEO strategy that helps us gain market share and establish thought leadership in the project management space.</p>
+          <ul>
+            <li>Analyze overall organic search visibility and traffic trends for all competitors</li>
+            <li>Identify keyword gaps across different stages of the buyer's journey (awareness, consideration, decision)</li>
+            <li>Evaluate content strategies, including topics, formats, depth, and publishing frequency</li>
+            <li>Analyze backlink profiles and link building strategies</li>
+            <li>Assess technical SEO implementations and site architecture</li>
+            <li>Evaluate on-page optimization patterns for top-performing pages</li>
+            <li>Analyze user experience factors that may impact SEO performance</li>
+            <li>Identify SERP feature opportunities (featured snippets, PAA boxes, etc.)</li>
+          </ul>
+          <p>For each area of analysis, provide:</p>
+          <ul>
+            <li>Key competitive insights and patterns identified</li>
+            <li>Specific opportunities where we can outperform competitors</li>
+            <li>Strategic recommendations with implementation guidance</li>
+            <li>Prioritization framework based on potential impact and implementation difficulty</li>
+            <li>Key performance indicators to track for measuring success</li>
+          </ul>
+          <p>Develop a 6-month strategic roadmap that outlines the highest-priority initiatives across content, technical SEO, on-page optimization, and link building to systematically improve our competitive position in the project management software market.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+  .seo-prompt-generator {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .seo-prompt-generator h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    color: #5a6a7a;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .prompt-controls {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #445566;
+    font-size: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #008348;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+  }
+  
+  .generate-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #008348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .generate-button:hover {
+    background-color: #006738;
+  }
+  
+  .result-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .prompt-box {
+    min-height: 150px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .copy-button {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .copy-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .examples-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .examples-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .example-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .example-tab {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .example-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-tab.active {
+    background-color: #008348;
+    color: white;
+    border-color: #008348;
+  }
+  
+  .example-item {
+    display: none;
+  }
+  
+  .example-item.active {
+    display: block;
+  }
+  
+  .example-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .example-box {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .example-box p {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .example-box ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .example-box li {
+    margin-bottom: 8px;
+  }
+  
+  .how-to-use {
+    background-color: #f0f7f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #008348;
+  }
+  
+  .how-to-use h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .how-to-use ol {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  
+  .how-to-use li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .seo-prompt-generator {
+      padding: 20px;
+    }
+    
+    .example-tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .example-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Ensure all child elements respect container width */
+  .seo-prompt-generator * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure content doesn't overflow its container */
+  .prompt-box, .example-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate-prompt');
+    const copyButton = document.getElementById('copy-prompt');
+    const promptResult = document.getElementById('prompt-result');
+    const exampleTabs = document.querySelectorAll('.example-tab');
+    const exampleItems = document.querySelectorAll('.example-item');
+    
+    // Tab switching functionality
+    exampleTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs and examples
+        exampleTabs.forEach(t => t.classList.remove('active'));
+        exampleItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current tab
+        this.classList.add('active');
+        
+        // Show corresponding example
+        const exampleId = this.getAttribute('data-example') + '-example';
+        document.getElementById(exampleId).classList.add('active');
+      });
+    });
+    
+    // Generate prompt when button is clicked
+    generateButton.addEventListener('click', function() {
+      const industryNiche = document.getElementById('industry-niche').value || '[INDUSTRY/NICHE]';
+      const competitorUrls = document.getElementById('competitor-urls').value || 'main competitors in this space';
+      const analysisType = document.getElementById('analysis-type').value;
+      const businessGoals = document.getElementById('business-goals').value;
+      const targetAudience = document.getElementById('target-audience').value || '[TARGET AUDIENCE]';
+      
+      let promptText = '';
+      
+      // Generate different prompts based on the selected analysis type
+      switch(analysisType) {
+        case 'content-gap':
+          promptText = `Conduct a comprehensive content gap analysis for a website in the "${industryNiche}" niche. My competitors include ${competitorUrls}. I need to identify content opportunities that will help me achieve my goal of ${businessGoals} with ${targetAudience}.
+
+Please analyze:
+1. The top-performing content topics and formats from each competitor (blog posts, guides, product comparisons, etc.)
+2. High-value topics that competitors cover but my site doesn't
+3. Unique topics that only one competitor covers that are generating significant engagement
+4. Content depth, comprehensiveness, and update frequency patterns
+5. Content structure, formatting, and multimedia usage strategies
+6. Question-based content opportunities that competitors are ranking for
+7. Seasonal or trending topics that competitors have successfully leveraged
+
+For each content gap opportunity identified, provide:
+- Suggested content title and format
+- Key points to cover that would make it more comprehensive than competitor content
+- Unique angle or perspective to differentiate from competitor content
+- Estimated search volume potential
+- Content production priority (high, medium, low) based on potential impact
+
+The goal is to develop a strategic content plan that addresses gaps in the market while aligning with my goal of ${businessGoals} in the ${industryNiche} space.`;
+          break;
+          
+        case 'keyword-gap':
+          promptText = `Perform a detailed keyword gap analysis for a website in the "${industryNiche}" niche compared to these competitors: ${competitorUrls}. The goal is to identify high-value keyword opportunities that can help achieve ${businessGoals} with ${targetAudience}.
+
+Please analyze:
+1. High-volume keywords that competitors rank for in positions 1-3 that we don't rank for at all
+2. Keywords where competitors have featured snippets or other SERP features
+3. Keywords with commercial intent that at least two competitors rank for but we don't
+4. Keyword difficulty and competition levels for identified opportunities
+5. Long-tail keyword variations that competitors might be overlooking
+6. Question-based keywords that show informational intent in our niche
+7. Keyword seasonality and trending patterns
+
+For each keyword opportunity, provide:
+- The keyword and its estimated monthly search volume
+- Current ranking positions of competitors
+- Keyword difficulty assessment
+- Search intent analysis (informational, commercial, transactional)
+- Content type recommendation to target this keyword
+- Priority level based on potential traffic and conversion value
+
+Group the keyword opportunities into logical clusters that could be targeted with comprehensive content pieces, and provide a strategic implementation roadmap based on difficulty and potential impact.`;
+          break;
+          
+        case 'backlink-analysis':
+          promptText = `Conduct a comprehensive backlink gap analysis for a website in the "${industryNiche}" niche compared to these competitors: ${competitorUrls}. The goal is to identify high-value link building opportunities to improve domain authority and organic rankings to achieve ${businessGoals} with ${targetAudience}.
+
+Please analyze:
+1. The backlink profiles of all competitors, including total backlinks, referring domains, and domain authority metrics
+2. High-authority websites that link to multiple competitors but not to our site
+3. Industry publications, blogs, and resource pages that represent link opportunities
+4. The content types that attract the most backlinks for competitors (guides, tools, research, etc.)
+5. Competitors' most linked-to pages and analyze why they attract links
+6. Anchor text distribution patterns and strategies
+7. Potential guest posting opportunities based on competitor backlinks
+
+For each link building opportunity category, provide:
+- A strategic approach to acquiring similar backlinks
+- Content creation recommendations that would attract natural links
+- Outreach templates and strategies tailored to each opportunity type
+- Priority ranking based on potential SEO impact and acquisition difficulty
+- Metrics to track for measuring link building success
+
+Develop a 3-month link building roadmap that prioritizes the highest-value opportunities while maintaining a natural, diverse backlink profile that will improve our competitive position in the ${industryNiche} market.`;
+          break;
+          
+        case 'on-page-analysis':
+          promptText = `Perform a detailed on-page SEO strategy analysis for a website in the "${industryNiche}" niche compared to these competitors: ${competitorUrls}. The goal is to identify on-page optimization opportunities that can improve our content's search visibility and user engagement to achieve ${businessGoals} with ${targetAudience}.
+
+Please analyze:
+1. The title tag patterns and strategies of top-performing competitor pages
+2. Meta description approaches that generate high click-through rates
+3. Heading structure patterns and keyword usage in H1-H6 tags
+4. Content length, depth, and comprehensiveness compared to ranking competitors
+5. Internal linking strategies and anchor text usage patterns
+6. Multimedia usage patterns (images, videos, infographics) and optimization
+7. Schema markup implementation and rich snippet opportunities
+8. Page speed optimization techniques and Core Web Vitals performance
+
+For each on-page element analyzed, provide:
+- Best practices observed from competitors
+- Specific optimization recommendations for our content
+- Examples of how to implement these improvements
+- Priority level based on potential ranking impact
+- Before/after examples to illustrate recommended changes
+
+Develop a comprehensive on-page optimization framework that can be applied to both existing content and new content creation to consistently outperform competitors in search results for ${industryNiche} topics.`;
+          break;
+          
+        case 'featured-snippet':
+          promptText = `Conduct a featured snippet opportunity analysis for a website in the "${industryNiche}" niche compared to these competitors: ${competitorUrls}. The goal is to identify and capitalize on featured snippet opportunities to increase visibility and authority to achieve ${businessGoals} with ${targetAudience}.
+
+Please analyze:
+1. Keywords where competitors currently own featured snippets
+2. The types of featured snippets most common in our niche (paragraph, list, table, etc.)
+3. Content structure patterns that win featured snippets
+4. Question-based queries that trigger featured snippets in our industry
+5. Word count and formatting patterns of successful featured snippet content
+6. How competitors optimize their content specifically for featured snippets
+7. Featured snippet volatility and competition levels for different queries
+
+For each featured snippet opportunity, provide:
+- The target keyword or question
+- Current featured snippet owner and content format
+- Specific content structure recommendation to win the featured snippet
+- Formatting and markup suggestions
+- Additional content elements to include for comprehensiveness
+- Priority level based on search volume and competition
+
+Develop a strategic plan for systematically targeting and winning featured snippets in the ${industryNiche} space, including content creation and optimization guidelines specific to different featured snippet types.`;
+          break;
+          
+        case 'comprehensive':
+          promptText = `Conduct a comprehensive competitive analysis for a website in the "${industryNiche}" niche. Our main competitors include ${competitorUrls}. The goal is to develop a holistic SEO strategy that helps us achieve ${businessGoals} with ${targetAudience}.
+
+Please analyze:
+1. Overall organic search visibility and traffic trends for all competitors
+2. Keyword gaps across different stages of the buyer's journey (awareness, consideration, decision)
+3. Content strategies, including topics, formats, depth, and publishing frequency
+4. Backlink profiles and link building strategies
+5. Technical SEO implementations and site architecture
+6. On-page optimization patterns for top-performing pages
+7. User experience factors that may impact SEO performance
+8. SERP feature opportunities (featured snippets, PAA boxes, etc.)
+
+For each area of analysis, provide:
+- Key competitive insights and patterns identified
+- Specific opportunities where we can outperform competitors
+- Strategic recommendations with implementation guidance
+- Prioritization framework based on potential impact and implementation difficulty
+- Key performance indicators to track for measuring success
+
+Develop a 6-month strategic roadmap that outlines the highest-priority initiatives across content, technical SEO, on-page optimization, and link building to systematically improve our competitive position in the ${industryNiche} market.`;
+          break;
+      }
+      
+      promptResult.textContent = promptText;
+    });
+    
+    // Copy prompt to clipboard
+    copyButton.addEventListener('click', function() {
+      const textToCopy = promptResult.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard. Please try again or copy manually.');
+      });
+    });
+  });
+</script>

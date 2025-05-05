@@ -1,0 +1,678 @@
+<!-- Keyword Research Prompts HTML -->
+<div class="seo-prompt-generator">
+  <h1>Keyword Research Prompts for SEO</h1>
+  <p class="intro-text">Generate powerful AI prompts to discover high-value keywords, uncover search intent, and build strategic topic clusters that drive your SEO strategy. Create comprehensive keyword lists tailored to your specific niche and audience.</p>
+  
+  <div class="prompt-controls">
+    <div class="input-group">
+      <label for="primary-niche">Primary Niche/Industry:</label>
+      <input type="text" id="primary-niche" placeholder="e.g., organic gardening, digital marketing, fitness equipment">
+    </div>
+    
+    <div class="input-group">
+      <label for="target-audience">Target Audience:</label>
+      <input type="text" id="target-audience" placeholder="e.g., beginners, small business owners, parents">
+    </div>
+    
+    <div class="input-group">
+      <label for="keyword-type">Keyword Type:</label>
+      <select id="keyword-type">
+        <option value="seed-keywords">Seed Keywords</option>
+        <option value="long-tail">Long-Tail Keywords</option>
+        <option value="question-based">Question-Based Keywords</option>
+        <option value="topic-clusters">Topic Clusters</option>
+        <option value="competitor-keywords">Competitor Keywords</option>
+        <option value="local-keywords">Local Keywords</option>
+        <option value="seasonal-keywords">Seasonal Keywords</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="search-intent">Primary Search Intent:</label>
+      <select id="search-intent">
+        <option value="informational">Informational</option>
+        <option value="commercial">Commercial</option>
+        <option value="navigational">Navigational</option>
+        <option value="transactional">Transactional</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="competitor-url">Competitor URL (optional):</label>
+      <input type="text" id="competitor-url" placeholder="e.g., https://competitor.com">
+    </div>
+    
+    <button id="generate-prompt" class="generate-button">Generate Keyword Research Prompt</button>
+  </div>
+  
+  <div class="result-container">
+    <h3>Your Keyword Research Prompt:</h3>
+    <div id="prompt-result" class="prompt-box"></div>
+    <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+  </div>
+  
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li>Enter your primary niche or industry to focus your keyword research</li>
+      <li>Specify your target audience to discover keywords that resonate with them</li>
+      <li>Select the type of keywords you want to generate</li>
+      <li>Choose the primary search intent to align with your content goals</li>
+      <li>Optionally enter a competitor URL to find keyword gaps</li>
+      <li>Click "Generate Keyword Research Prompt" to create your AI prompt</li>
+      <li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+      <li>Use the resulting keyword lists to inform your content strategy and SEO efforts</li>
+    </ol>
+  </div>
+  
+  <div class="examples-container">
+    <h3>Example Keyword Research Prompts</h3>
+    <div class="example-tabs">
+      <button class="example-tab active" data-example="seed-keywords">Seed Keywords</button>
+      <button class="example-tab" data-example="long-tail">Long-Tail Keywords</button>
+      <button class="example-tab" data-example="topic-clusters">Topic Clusters</button>
+      <button class="example-tab" data-example="competitor-analysis">Competitor Analysis</button>
+      <button class="example-tab" data-example="local-seo">Local SEO Keywords</button>
+    </div>
+    <div class="example-content" id="example-content">
+      <div class="example-item active" id="seed-keywords-example">
+        <h4>Seed Keywords Prompt Example</h4>
+        <div class="example-box">
+          <p>Generate a comprehensive list of 50 seed keywords for a website in the "sustainable home gardening" niche targeting beginner gardeners. For each keyword:</p>
+          <ul>
+            <li>Categorize by search intent (informational, commercial, transactional, navigational)</li>
+            <li>Indicate estimated search volume (high, medium, low)</li>
+            <li>Suggest potential content formats that would work well</li>
+            <li>Group into logical categories (e.g., tools, techniques, plants, seasons)</li>
+          </ul>
+          <p>Focus on keywords that would be valuable for someone creating a new gardening blog aimed at urban apartment dwellers with limited space. Include a mix of broad terms and more specific phrases that would be less competitive.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="long-tail-example">
+        <h4>Long-Tail Keywords Prompt Example</h4>
+        <div class="example-box">
+          <p>Create a list of 30 high-value long-tail keywords for a "digital marketing agency" targeting small business owners. For each long-tail keyword:</p>
+          <ul>
+            <li>Provide the estimated search difficulty (easy, moderate, difficult)</li>
+            <li>Suggest a compelling title that would rank well for this term</li>
+            <li>Indicate the search intent behind the query</li>
+            <li>Recommend word count and content structure</li>
+          </ul>
+          <p>Focus on long-tail keywords that demonstrate commercial intent where the searcher is evaluating services or considering hiring a digital marketing agency. Prioritize terms that would have lower competition but still meaningful traffic for a local or regional agency.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="topic-clusters-example">
+        <h4>Topic Clusters Prompt Example</h4>
+        <div class="example-box">
+          <p>Develop a comprehensive topic cluster strategy for a "fitness equipment" e-commerce website targeting home gym enthusiasts. Create:</p>
+          <ul>
+            <li>5-7 main pillar topics with their primary keywords</li>
+            <li>10-15 cluster subtopics for each pillar with relevant keywords</li>
+            <li>Suggested content types for each subtopic (buying guide, comparison, how-to, etc.)</li>
+            <li>Internal linking strategy between pillar and cluster content</li>
+            <li>Recommendations for featured snippet opportunities</li>
+          </ul>
+          <p>Structure this as a complete content silo strategy that would help establish topical authority in the home fitness equipment space. Include both informational and commercial intent keywords to support the full buyer's journey.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="competitor-analysis-example">
+        <h4>Competitor Keyword Analysis Prompt Example</h4>
+        <div class="example-box">
+          <p>Analyze the keyword strategy of "competitor.com" in the "cybersecurity software" industry. Provide:</p>
+          <ul>
+            <li>A breakdown of their apparent keyword targeting strategy</li>
+            <li>20-25 high-value keywords they're likely targeting</li>
+            <li>Content gaps and keyword opportunities they're missing</li>
+            <li>Analysis of their content structure and how it supports their keyword strategy</li>
+            <li>Recommendations for how we could create superior content targeting the same or related keywords</li>
+          </ul>
+          <p>Focus on identifying patterns in their content that reveal their SEO strategy, and provide actionable insights on how we can develop a differentiated approach that targets valuable keywords they may be overlooking or not optimizing effectively for.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="local-seo-example">
+        <h4>Local SEO Keywords Prompt Example</h4>
+        <div class="example-box">
+          <p>Generate a comprehensive local SEO keyword strategy for a "dental practice" in [City, State]. Include:</p>
+          <ul>
+            <li>50+ local keyword variations incorporating neighborhood names, nearby landmarks, and surrounding communities</li>
+            <li>Service-based keyword modifiers (emergency dentist, cosmetic dentistry, etc.)</li>
+            <li>Question-based local keywords showing informational intent</li>
+            <li>Competitor-focused comparison keywords</li>
+            <li>Insurance and payment-related local keywords</li>
+            <li>Seasonal or special offer local keywords</li>
+          </ul>
+          <p>For each keyword category, provide recommendations on which pages of the website should target these terms and how to naturally incorporate location modifiers without keyword stuffing. Include suggestions for Google Business Profile optimization based on these keywords.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+  .seo-prompt-generator {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .seo-prompt-generator h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    color: #5a6a7a;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .prompt-controls {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #445566;
+    font-size: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #008348;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+  }
+  
+  .generate-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #008348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .generate-button:hover {
+    background-color: #006738;
+  }
+  
+  .result-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .prompt-box {
+    min-height: 150px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .copy-button {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .copy-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .examples-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .examples-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .example-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .example-tab {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .example-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-tab.active {
+    background-color: #008348;
+    color: white;
+    border-color: #008348;
+  }
+  
+  .example-item {
+    display: none;
+  }
+  
+  .example-item.active {
+    display: block;
+  }
+  
+  .example-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .example-box {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .example-box p {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .example-box ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .example-box li {
+    margin-bottom: 8px;
+  }
+  
+  .how-to-use {
+    background-color: #f0f7f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #008348;
+  }
+  
+  .how-to-use h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .how-to-use ol {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  
+  .how-to-use li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .seo-prompt-generator {
+      padding: 20px;
+    }
+    
+    .example-tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .example-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Ensure all child elements respect container width */
+  .seo-prompt-generator * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure content doesn't overflow its container */
+  .prompt-box, .example-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate-prompt');
+    const copyButton = document.getElementById('copy-prompt');
+    const promptResult = document.getElementById('prompt-result');
+    const exampleTabs = document.querySelectorAll('.example-tab');
+    const exampleItems = document.querySelectorAll('.example-item');
+    
+    // Tab switching functionality
+    exampleTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs and examples
+        exampleTabs.forEach(t => t.classList.remove('active'));
+        exampleItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current tab
+        this.classList.add('active');
+        
+        // Show corresponding example
+        const exampleId = this.getAttribute('data-example') + '-example';
+        document.getElementById(exampleId).classList.add('active');
+      });
+    });
+    
+    // Generate prompt when button is clicked
+    generateButton.addEventListener('click', function() {
+      const primaryNiche = document.getElementById('primary-niche').value || '[PRIMARY NICHE]';
+      const targetAudience = document.getElementById('target-audience').value || '[TARGET AUDIENCE]';
+      const keywordType = document.getElementById('keyword-type').value;
+      const searchIntent = document.getElementById('search-intent').value;
+      const competitorUrl = document.getElementById('competitor-url').value || '';
+      
+      // Content type templates
+      const templates = {
+        'seed-keywords': getSeedKeywordsTemplate(primaryNiche, targetAudience, searchIntent),
+        'long-tail': getLongTailTemplate(primaryNiche, targetAudience, searchIntent),
+        'question-based': getQuestionBasedTemplate(primaryNiche, targetAudience),
+        'topic-clusters': getTopicClustersTemplate(primaryNiche, targetAudience),
+        'competitor-keywords': getCompetitorKeywordsTemplate(primaryNiche, competitorUrl),
+        'local-keywords': getLocalKeywordsTemplate(primaryNiche),
+        'seasonal-keywords': getSeasonalKeywordsTemplate(primaryNiche)
+      };
+      
+      // Get the template for the selected keyword type
+      promptResult.textContent = templates[keywordType];
+    });
+    
+    // Seed keywords template
+    function getSeedKeywordsTemplate(primaryNiche, targetAudience, searchIntent) {
+      return `Generate a comprehensive list of 50 seed keywords for a website in the "${primaryNiche}" niche targeting ${targetAudience}. For each keyword:
+
+1. Categorize by search intent (${searchIntent} and other relevant intents)
+2. Indicate estimated search volume (high, medium, low)
+3. Suggest potential content formats that would work well
+4. Group into logical categories based on themes and topics
+5. Rate the competition level (high, medium, low)
+
+Additionally, provide:
+- 5-7 main keyword themes or categories that emerge from this research
+- Recommendations for which keywords to prioritize first
+- Suggestions for keyword variations that include modifiers like "best," "top," "how to," etc.
+- Insights on any industry-specific terminology that should be included
+
+Focus on keywords that would be valuable for someone creating content in the ${primaryNiche} space targeting ${targetAudience}. Include a mix of broad terms and more specific phrases that would be less competitive but still have meaningful search volume.`;
+    }
+    
+    // Long-tail keywords template
+    function getLongTailTemplate(primaryNiche, targetAudience, searchIntent) {
+      return `Create a list of 30 high-value long-tail keywords for a "${primaryNiche}" website targeting ${targetAudience}. For each long-tail keyword:
+
+1. Provide the estimated search difficulty (easy, moderate, difficult)
+2. Suggest a compelling title that would rank well for this term
+3. Indicate the specific search intent behind the query
+4. Recommend word count and content structure
+5. Suggest related keywords that could be incorporated in the same piece
+
+Focus on long-tail keywords that demonstrate ${searchIntent} intent where the searcher is looking for specific information or solutions related to ${primaryNiche}. Prioritize terms that would have lower competition but still meaningful traffic.
+
+Additionally, provide:
+- Recommendations for how to naturally incorporate these long-tail keywords into content
+- Suggestions for featured snippet opportunities among these keywords
+- Ideas for internal linking between content targeting these long-tail terms
+- Guidance on which keywords might benefit from custom images or videos
+
+The goal is to identify underserved search queries that we can create highly targeted content for to attract qualified traffic in the ${primaryNiche} niche.`;
+    }
+    
+    // Question-based keywords template
+    function getQuestionBasedTemplate(primaryNiche, targetAudience) {
+      return `Generate a comprehensive list of 40 question-based keywords related to "${primaryNiche}" that ${targetAudience} would likely search for. For each question:
+
+1. Categorize by question type (what, how, why, when, where, who)
+2. Indicate the search intent (informational, navigational, commercial, transactional)
+3. Suggest the best content format to answer this question (FAQ, guide, video, infographic, etc.)
+4. Provide estimated search volume and competition level
+5. Note any featured snippet opportunities
+
+Group these questions into logical categories based on:
+- Stage in the buyer's journey (awareness, consideration, decision)
+- Topic similarity
+- Level of expertise required to answer (beginner, intermediate, advanced)
+
+Additionally, provide:
+- Recommendations for creating FAQ schema markup with these questions
+- Suggestions for expanding single questions into comprehensive guides
+- Ideas for creating "ultimate guide" content that answers multiple related questions
+- Strategies for internal linking between question-based content pieces
+
+Focus on questions that demonstrate genuine information needs from ${targetAudience} related to ${primaryNiche}, with particular emphasis on questions that currently lack comprehensive answers in search results.`;
+    }
+    
+    // Topic clusters template
+    function getTopicClustersTemplate(primaryNiche, targetAudience) {
+      return `Develop a comprehensive topic cluster strategy for a "${primaryNiche}" website targeting ${targetAudience}. Create:
+
+1. 5-7 main pillar topics with their primary keywords
+   - Include search volume and competition estimates for each
+   - Suggest ideal content length and format for pillar pages
+   - Recommend title structures that would perform well in search
+
+2. For each pillar topic, provide 10-15 cluster subtopics with:
+   - Primary and secondary keywords for each subtopic
+   - Search intent classification
+   - Suggested content types (buying guide, comparison, how-to, etc.)
+   - Word count recommendations
+   - Featured snippet opportunities
+
+3. Provide a strategic internal linking framework:
+   - How pillar content should link to cluster content
+   - How cluster content should link to other related clusters
+   - Anchor text recommendations for maximum SEO benefit
+
+4. Include content development prioritization:
+   - Which pillar and cluster topics to develop first
+   - Content publishing cadence recommendations
+   - Update frequency suggestions for evergreen vs. time-sensitive topics
+
+Structure this as a complete content silo strategy that would help establish topical authority in the ${primaryNiche} space. Include both informational and commercial intent keywords to support the full buyer's journey for ${targetAudience}.`;
+    }
+    
+    // Competitor keywords template
+    function getCompetitorKeywordsTemplate(primaryNiche, competitorUrl) {
+      const competitorSection = competitorUrl ? 
+        `\nSpecifically analyze ${competitorUrl} to identify:\n- Their top-performing keywords\n- Content gaps you can identify\n- Their apparent keyword strategy` : 
+        `\nProvide a framework for identifying the top 3-5 competitors in the ${primaryNiche} space whose keyword strategies should be analyzed`;
+      
+      return `Conduct a comprehensive competitor keyword analysis for a website in the "${primaryNiche}" niche. ${competitorSection}
+
+For this analysis:
+
+1. Identify 30-40 high-value keywords that competitors are ranking for, including:
+   - Estimated search volume and difficulty
+   - Current SERP features present (featured snippets, PAA boxes, etc.)
+   - Content types that are currently ranking well
+
+2. Categorize these competitor keywords by:
+   - Search intent
+   - Content format
+   - Funnel stage
+   - Topic area
+
+3. Identify keyword gaps and opportunities:
+   - Keywords competitors are missing or underoptimizing
+   - Emerging trends or topics not yet fully covered
+   - Low-competition terms with reasonable search volume
+
+4. Provide strategic recommendations:
+   - Which competitor keywords to prioritize targeting
+   - How to create superior content for these terms
+   - Unique angles or approaches to differentiate our content
+   - Potential link building opportunities based on competitor backlinks
+
+The goal is to develop a strategic approach to keyword targeting that leverages competitor insights while identifying unique opportunities to establish authority in the ${primaryNiche} space.`;
+    }
+    
+    // Local keywords template
+    function getLocalKeywordsTemplate(primaryNiche) {
+      return `Generate a comprehensive local SEO keyword strategy for a "${primaryNiche}" business. Include:
+
+1. 50+ local keyword variations incorporating:
+   - City, neighborhood, and surrounding area modifiers
+   - "Near me" and proximity-based variations
+   - Landmark-based modifiers (near [landmark])
+   - ZIP code and region-specific variations
+
+2. Service/product-based local keyword combinations:
+   - Core services with location modifiers
+   - Specialty offerings with location modifiers
+   - Branded terms with location modifiers
+   - Competitor comparison terms with location intent
+
+3. Question-based local keywords showing:
+   - Informational intent specific to the location
+   - Service availability questions
+   - Location-specific pricing questions
+   - Local regulation or requirement questions
+
+4. Local keyword modifiers based on:
+   - Urgency ("emergency," "same-day," "24/7")
+   - Quality indicators ("best," "top-rated," "award-winning")
+   - Price sensitivity ("affordable," "cheap," "luxury")
+   - Specific customer needs ("family-friendly," "wheelchair accessible")
+
+For each keyword category, provide:
+- Recommendations on which pages should target these terms
+- How to naturally incorporate location modifiers without keyword stuffing
+- Suggestions for Google Business Profile optimization
+- Local content ideas that could rank for these terms
+
+Additionally, include seasonal or event-based local keywords that might drive periodic traffic spikes throughout the year for this ${primaryNiche} business.`;
+    }
+    
+    // Seasonal keywords template
+    function getSeasonalKeywordsTemplate(primaryNiche) {
+      return `Create a comprehensive seasonal keyword strategy for a "${primaryNiche}" website. For each season and major holiday/event throughout the year, provide:
+
+1. 10-15 seasonal keyword opportunities with:
+   - Estimated search volume
+   - Peak search periods (specific months/weeks)
+   - Competition level
+   - Search intent classification
+
+2. For each major holiday or seasonal event relevant to ${primaryNiche}, include:
+   - Pre-event keywords (planning, preparation)
+   - During-event keywords (real-time interest)
+   - Post-event keywords (follow-up, review, etc.)
+
+3. Provide a 12-month content calendar framework with:
+   - When to publish seasonal content (lead time before peak search)
+   - When to update existing seasonal content
+   - How to maintain SEO value in off-season periods
+   - Strategies for repurposing seasonal content
+
+4. Include recommendations for:
+   - Evergreen content that can be seasonally updated
+   - Seasonal internal linking strategies
+   - How to optimize for seasonal featured snippets
+   - Social media and promotional strategies to support seasonal SEO
+
+The goal is to develop a proactive approach to seasonal keyword targeting that allows for content development well ahead of peak search periods while maximizing year-round SEO value in the ${primaryNiche} space.`;
+    }
+    
+    // Copy prompt to clipboard
+    copyButton.addEventListener('click', function() {
+      const textToCopy = promptResult.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard. Please try again or copy manually.');
+      });
+    });
+  });
+</script>

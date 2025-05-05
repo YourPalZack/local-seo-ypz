@@ -1,0 +1,766 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI SEO Resource Finder | YourPalZack.com</title><meta name="description" content="Find the best AI models, APIs (MCPs), paid tools, workflows, or prompts for your specific SEO tasks. Submit your favorite AI SEO resources or contact us for help!"><style>:root{--ypz-accent:#008348;--ypz-accent-light:#e3f7ef;--ypz-accent-dark:#006738;--ypz-text-primary:#222;--ypz-text-secondary:#444;--ypz-text-heading:#2c3e50;--ypz-bg-light:#f9f9f9;--ypz-bg-surface:#fff;--ypz-border-light:#e1e8ed;--ypz-border-medium:#ddd;--ypz-shadow-light:rgba(0,0,0,.05);--ypz-shadow-medium:rgba(0,0,0,.1)}.ai-resource-finder-widget{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;color:var(--ypz-text-primary);background-color:var(--ypz-bg-light);padding:25px;border-radius:10px;box-shadow:0 2px 15px var(--ypz-shadow-medium);box-sizing:border-box;max-width:100%}.ai-resource-finder-widget *{box-sizing:border-box;max-width:100%}.finder-controls{background-color:var(--ypz-bg-surface);padding:20px;border-radius:8px;box-shadow:0 1px 8px var(--ypz-shadow-light);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+
+.input-group{margin-bottom:0}.input-group label{display:block;margin-bottom:6px;font-weight:600;color:#445566;font-size:14px}.input-group input,.input-group select,.submission-form .input-group textarea{width:100%;padding:11px 14px;border:1px solid var(--ypz-border-medium);border-radius:6px;font-size:14px;transition:border .3s;background-color:#fff}.submission-form .input-group textarea{min-height:80px;resize:vertical}.input-group input:focus,.input-group select:focus,.submission-form .input-group textarea:focus{border-color:var(--ypz-accent);outline:none;box-shadow:0 0 0 2px var(--ypz-accent-light)}
+
+#resultsGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:20px;min-height:150px}.resource-card{background:var(--ypz-bg-surface);border-radius:10px;box-shadow:0 2px 12px var(--ypz-shadow-light);padding:20px;display:flex;flex-direction:column;transition:box-shadow .15s ease-in-out;border:1px solid var(--ypz-border-light);overflow-wrap:break-word;word-wrap:break-word}
+
+.resource-card:hover{box-shadow:0 5px 18px var(--ypz-shadow-medium)}.resource-card-header{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}.resource-icon{width:36px;height:36px;border-radius:50%;background:var(--ypz-accent-light);color:var(--ypz-accent);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}.resource-header-text{flex-grow:1}
+
+.resource-title{font-weight:700;font-size:1.1rem;color:var(--ypz-accent);margin:0 0 4px 0;line-height:1.3;word-break:break-word}.resource-type{font-size:.8rem;font-weight:500;color:var(--ypz-text-secondary);background-color:#f0f0f0;padding:2px 8px;border-radius:4px;white-space:nowrap;height:fit-content;margin-top:4px;display:inline-block}
+
+.resource-desc{font-size:.95rem;color:var(--ypz-text-secondary);line-height:1.5;margin-bottom:12px;flex-grow:1;word-break:break-word}.resource-desc a{color:var(--ypz-accent);text-decoration:none;word-break:break-all}.resource-desc a:hover{text-decoration:underline}
+
+.resource-footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid var(--ypz-border-light);flex-wrap:wrap;gap:8px}
+
+        .resource-cost {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--ypz-text-secondary);
+            background-color: #eee;
+            padding: 3px 9px;
+            border-radius: 5px;
+            white-space: nowrap;
+        }
+         .resource-cost.paid { background-color: #ffebeb; color: #c53030; }
+         .resource-cost.free { background-color: #e3f7ef; color: #008348; }
+         .resource-cost.varies { background-color: #fefcbf; color: #b7791f; }
+
+
+        .resource-link a {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: var(--ypz-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            white-space: nowrap;
+        }
+
+        .resource-link a:hover {
+            background-color: var(--ypz-accent-dark);
+        }
+
+        #noResults {
+            text-align: center;
+            color: var(--ypz-text-secondary);
+            padding: 20px;
+            font-size: 1rem;
+            grid-column: 1 / -1;
+        }
+
+         /* --- CTA Section --- */
+         .cta-section {
+            margin: 30px 0;
+            padding: 25px;
+            background-color: var(--ypz-bg-surface);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px var(--ypz-shadow-light);
+            border: 1px solid var(--ypz-border-light);
+            text-align: center;
+         }
+         .cta-section p {
+             color: var(--ypz-text-heading);
+             font-size: 1.1rem;
+             margin-bottom: 15px;
+             line-height: 1.5;
+             font-weight: 500;
+         }
+         .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--ypz-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+         }
+          .cta-button:hover {
+             background-color: var(--ypz-accent-dark);
+             transform: translateY(-1px);
+          }
+           .cta-button:active {
+              transform: translateY(0);
+           }
+
+
+        /* FAQ Section Styles */
+        .faq-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--ypz-border-medium);
+        }
+
+        .faq-section h3 {
+            color: var(--ypz-text-heading);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--ypz-bg-surface);
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 1px 8px var(--ypz-shadow-light);
+            border: 1px solid var(--ypz-border-light);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--ypz-text-heading);
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+         .faq-question:hover {
+            background-color: var(--ypz-accent-light);
+         }
+
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5em;
+            color: var(--ypz-accent);
+            transition: transform 0.3s ease;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+
+        .faq-question[aria-expanded="true"]::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--ypz-text-secondary);
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            background-color: var(--ypz-bg-surface);
+            border-radius: 0 0 8px 8px;
+
+        }
+        .faq-answer p {
+             margin-bottom: 1em;
+        }
+         .faq-answer p:last-child {
+             margin-bottom: 0;
+         }
+         .faq-answer a {
+             color: var(--ypz-accent);
+             text-decoration: none;
+             font-weight: 500;
+             word-break: break-all;
+         }
+         .faq-answer a:hover {
+             text-decoration: underline;
+         }
+
+        /* Style when expanded */
+        .faq-question[aria-expanded="true"] + .faq-answer {
+            max-height: 500px;
+            padding: 15px 20px 20px 20px;
+            border-top: 1px solid var(--ypz-border-light);
+        }
+
+        /* --- Modal Styles --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background-color: var(--ypz-bg-light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 550px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .modal-content h3 {
+             color: var(--ypz-text-heading);
+             text-align: center;
+             margin-top: 0;
+             margin-bottom: 20px;
+             font-size: 20px;
+             font-weight: 600;
+        }
+        .close-modal-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--ypz-text-secondary);
+            cursor: pointer;
+            line-height: 1;
+        }
+         .close-modal-btn:hover {
+             color: var(--ypz-accent-dark);
+         }
+
+         .submission-form .input-group {
+             margin-bottom: 15px;
+         }
+         .submission-form .form-actions {
+             display: flex;
+             justify-content: flex-end;
+             gap: 10px;
+             margin-top: 25px;
+         }
+          .submission-form .form-actions button {
+             padding: 10px 20px;
+             border-radius: 6px;
+             font-size: 14px;
+             font-weight: 600;
+             cursor: pointer;
+             transition: background-color 0.2s;
+          }
+           .submission-form .form-actions .submit-via-email-btn {
+                background-color: var(--ypz-accent);
+                color: white;
+                border: none;
+           }
+            .submission-form .form-actions .submit-via-email-btn:hover {
+                 background-color: var(--ypz-accent-dark);
+            }
+             .submission-form .form-actions .cancel-btn {
+                 background-color: #f0f0f0;
+                 color: var(--ypz-text-secondary);
+                 border: 1px solid var(--ypz-border-medium);
+             }
+              .submission-form .form-actions .cancel-btn:hover {
+                  background-color: #e0e0e0;
+              }
+
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+             .intro-container {
+                grid-template-columns: 1fr; /* Stack intro columns */
+                gap: 20px; /* Adjust gap */
+            }
+            .submission-column {
+                min-height: auto; /* Remove min-height on mobile */
+            }
+            .ai-resource-finder-widget {
+                padding: 15px;
+            }
+            .ai-resource-finder-widget h2 {
+                font-size: clamp(20px, 5vw, 24px); /* Adjust heading clamp */
+            }
+             .finder-controls {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 15px;
+             }
+            #resultsGrid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .resource-card-header {
+                flex-wrap: wrap;
+            }
+            .resource-title {
+                 width: 100%;
+                 margin-bottom: 6px;
+            }
+            .resource-type {
+                 margin-left: 0;
+            }
+            .cta-section p {
+                 font-size: 1rem;
+            }
+            .cta-button {
+                 padding: 10px 20px;
+                 font-size: 0.95rem;
+            }
+
+            .faq-question {
+                padding: 12px 15px;
+                font-size: 0.95rem;
+            }
+            .faq-answer {
+                padding: 0 15px;
+                font-size: 0.9rem;
+            }
+            .faq-question[aria-expanded="true"] + .faq-answer {
+                 padding: 12px 15px 15px 15px;
+            }
+             .modal-content {
+                 width: 95%;
+                 padding: 20px;
+             }
+        }
+    </style>
+</head>
+<body>
+    <div class="ai-resource-finder-widget">
+        <h2>AI SEO Resource Finder</h2>
+
+        <div class="intro-container">
+            <div class="intro-text-column">
+                 <p>The landscape of Search Engine Optimization is rapidly evolving with the integration of Artificial Intelligence. From automating keyword research to generating content briefs and optimizing technical elements, AI offers powerful capabilities. However, choosing the <strong>right tool, model, or workflow</strong> for a specific task can be overwhelming.</p>
+                 <p>This finder helps you navigate the options. Whether you need a sophisticated <a href="https://yourpalzack.com/seo-services/ai-seo/" target="_blank" rel="noopener">AI SEO Service</a>, a specific <a href="https://yourpalzack.com/ai-seo/prompting/" target="_blank" rel="noopener">AI prompt structure</a>, a paid software tool, a repeatable workflow, or access to AI models via an API/platform (MCP), use the filters below to discover resources tailored to your needs. Explore our curated list based on common <a href="https://yourpalzack.com/ai-seo/strategy/integrating-ai-workflows/" target="_blank" rel="noopener">AI SEO workflows</a> and best practices.</p>
+                 <p>Select an SEO task and optionally filter by resource type or search by keyword to get started. Need a broader overview? Check out the main <a href="https://yourpalzack.com/ai-seo/" target="_blank" rel="noopener">AI SEO</a> section or browse all <a href="https://yourpalzack.com/browse-seo-tools/" target="_blank" rel="noopener">SEO tools</a>.</p>
+            </div>
+            <div class="submission-column">
+                <h3>Contribute a Resource</h3>
+                <button id="showSubmitFormBtn">Submit a Resource</button>
+                <div class="submission-guidelines">
+                    <p>Help keep this finder up-to-date! If you know of a great AI-powered tool, workflow, prompt, or MCP for SEO, please submit it for review.</p>
+                    <ul>
+                        <li>Ensure it's relevant to SEO tasks.</li>
+                        <li>Provide a clear name and description.</li>
+                        <li>Include a valid URL.</li>
+                        <li>Specify the resource type.</li>
+                    </ul>
+                     <p style="margin-top:10px;">All submissions are reviewed before being added.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="finder-controls">
+            <div class="input-group">
+                <label for="seoTaskFilter">Select SEO Task:</label>
+                <select id="seoTaskFilter" name="seoTaskFilter">
+                    <option value="All">All Tasks</option>
+                    </select>
+            </div>
+            <div class="input-group">
+                <label for="resourceTypeFilter">Select Resource Type:</label>
+                <select id="resourceTypeFilter" name="resourceTypeFilter">
+                    <option value="All">All Types</option>
+                    <option value="AI Model">AI Model</option>
+                    <option value="Paid Tool">Paid Tool</option>
+                    <option value="Workflow">Workflow</option>
+                    <option value="Prompt">Prompt</option>
+                    <option value="MCP">MCP (AI Platform/API)</option>
+                    </select>
+            </div>
+             <div class="input-group">
+                <label for="searchTerm">Search Resources:</label>
+                <input type="text" id="searchTerm" name="searchTerm" placeholder="Enter keywords (e.g., 'content brief')">
+            </div>
+        </div>
+
+        <div id="resultsGrid">
+            </div>
+         <div id="noResults" style="display: none;">No resources found matching your criteria. Try broadening your filters.</div>
+
+         <section class="cta-section">
+             <p>Struggling to implement AI in your SEO strategy or need expert guidance?<br>Let YourPalZack help you harness the power of AI for measurable results.</p>
+             <a href="https://yourpalzack.com/contact/" target="_blank" rel="noopener noreferrer" class="cta-button">Get AI SEO Help</a>
+         </section>
+
+         <section class="faq-section" aria-labelledby="faq-heading">
+            <h3 id="faq-heading">Frequently Asked Questions</h3>
+            <div class="faq-accordion" id="faqAccordion">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1-label">What is this AI SEO Resource Finder?</button>
+                    <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1-label">
+                        <p>This tool is a curated directory designed to help you identify the most suitable Artificial Intelligence resources for specific Search Engine Optimization tasks. You can filter by the SEO task you need to accomplish (like Keyword Research or Technical Audit) and the type of resource you're looking for (such as an AI Model like GPT-4, a specific Paid Tool, a proven Workflow, a ready-to-use Prompt, or an AI Platform/API via MCP).</p>
+                        <p>Explore more about leveraging AI in our <a href="https://yourpalzack.com/ai-seo/strategy/" target="_blank" rel="noopener">AI SEO Strategy Guide</a>.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2-label">How can AI tools actually improve my SEO?</button>
+                    <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2-label">
+                        <p>AI can significantly enhance SEO by:</p>
+                        <ul>
+                            <li><strong>Automating repetitive tasks:</strong> Such as generating meta descriptions or finding keyword variations.</li>
+                            <li><strong>Analyzing vast amounts of data:</strong> Identifying patterns in SERPs, competitor strategies, or technical issues faster than humans. See <a href="https://yourpalzack.com/ai-seo/analytics/" target="_blank" rel="noopener">AI SEO Analytics</a>.</li>
+                            <li><strong>Improving content quality:</strong> Assisting with topic ideation, content brief creation, and optimizing text for relevance and readability. Check out <a href="https://yourpalzack.com/ai-seo/content/" target="_blank" rel="noopener">AI Content Optimization</a>.</li>
+                            <li><strong>Personalizing user experiences:</strong> Which can indirectly boost engagement signals important for SEO.</li>
+                            <li><strong>Predicting trends:</strong> Helping anticipate keyword shifts or algorithm changes. Explore <a href="https://yourpalzack.com/ai-seo/keyword-research/predictive-analysis/" target="_blank" rel="noopener">Predictive Keyword Analysis</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3-label">Will AI replace the need for human SEO experts?</button>
+                    <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq3-label">
+                         <p>No, AI is best viewed as a powerful assistant or co-pilot for SEO professionals. While AI can automate tasks and provide insights, human expertise is crucial for:</p>
+                         <ul>
+                             <li><strong>Strategic Planning:</strong> Defining goals, understanding nuanced business contexts, and making high-level decisions.</li>
+                             <li><strong>Creativity & Critical Thinking:</strong> Developing unique content angles, interpreting complex data, and adapting to unforeseen changes.</li>
+                             <li><strong>Ethical Considerations:</strong> Ensuring AI-generated content is accurate, helpful, and adheres to guidelines. See <a href="https://yourpalzack.com/ai-seo/strategy/ethical-considerations/" target="_blank" rel="noopener">Ethical AI in SEO</a>.</li>
+                             <li><strong>Quality Control:</strong> Reviewing AI outputs and ensuring they meet quality standards.</li>
+                         </ul>
+                         <p>The most effective approach combines human strategy with AI efficiency. Learn about combining these in our <a href="https://yourpalzack.com/seo-services/ai-seo/" target="_blank" rel="noopener">AI SEO Services</a>.</p>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq4" id="faq4-label">How do I choose the right resource from this list?</button>
+                    <div class="faq-answer" id="faq4" role="region" aria-labelledby="faq4-label">
+                        <p>Consider these factors:</p>
+                        <ul>
+                            <li><strong>Your Specific Goal:</strong> What exact outcome are you trying to achieve within the broader SEO task?</li>
+                            <li><strong>Resource Type Fit:</strong> Do you need a specific AI model's capability (via MCP), a full-featured paid tool, a process to follow (workflow), or a starting point for generation (prompt)?</li>
+                            <li><strong>Budget:</strong> Resources range from free prompts to usage-based APIs (MCPs) to expensive enterprise tools.</li>
+                            <li><strong>Technical Skill:</strong> Some resources (like using APIs/MCPs or complex workflows) require more technical knowledge than others (like using a dedicated tool with a UI).</li>
+                            <li><strong>Integration:</strong> Does the resource fit into your existing tech stack or workflow?</li>
+                        </ul>
+                        <p>Read the descriptions, click the "Learn More" links, and potentially try free trials or API tiers if available. For guidance, check out <a href="https://yourpalzack.com/ai-seo/tools/" target="_blank" rel="noopener">AI SEO Tools</a>.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq5" id="faq5-label">What does "MCP" (Model Context Protocol) mean?</button>
+                    <div class="faq-answer" id="faq5" role="region" aria-labelledby="faq5-label">
+                        <p>MCP stands for <strong>Model Context Protocol</strong>. In this finder, it refers to the underlying AI platforms, APIs, or model-serving infrastructure that provide access to various Artificial Intelligence models (like GPT-4, Claude 3, Gemini, etc.).</p>
+                         <p>Think of MCPs as the "engine rooms" or "servers" that allow you to use specific AI capabilities for SEO tasks. Choosing an MCP involves considering factors like the available models, API costs, performance (speed/latency), context window size, ease of integration, and specific features they offer for managing interactions with the AI. Examples include the OpenAI API, Anthropic API, Google Vertex AI, and Hugging Face Inference Endpoints.</p>
+                         <p>You can learn more about specific models and platforms in our <a href="https://yourpalzack.com/ai-seo/ai-agents/" target="_blank" rel="noopener">AI Agents Database</a>.</p>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+         <div id="submissionModal" class="modal-overlay">
+             <div class="modal-content">
+                 <button id="closeModalBtn" class="close-modal-btn" aria-label="Close submission form">&times;</button>
+                 <h3>Submit an AI SEO Resource</h3>
+                 <form id="submitResourceForm" class="submission-form">
+                     <div class="input-group">
+                         <label for="submitName">Resource Name:</label>
+                         <input type="text" id="submitName" name="submitName" required>
+                     </div>
+                     <div class="input-group">
+                         <label for="submitUrl">Resource URL:</label>
+                         <input type="url" id="submitUrl" name="submitUrl" required>
+                     </div>
+                     <div class="input-group">
+                         <label for="submitDescription">Description:</label>
+                         <textarea id="submitDescription" name="submitDescription" rows="3" required></textarea>
+                     </div>
+                     <div class="input-group">
+                         <label for="submitTaskCategory">Relevant SEO Task:</label>
+                         <select id="submitTaskCategory" name="submitTaskCategory" required>
+                             <option value="">-- Select Task --</option>
+                             </select>
+                     </div>
+                     <div class="input-group">
+                         <label for="submitResourceType">Resource Type:</label>
+                         <select id="submitResourceType" name="submitResourceType" required>
+                            <option value="">-- Select Type --</option>
+                            <option value="AI Model">AI Model</option>
+                            <option value="Paid Tool">Paid Tool</option>
+                            <option value="Workflow">Workflow</option>
+                            <option value="Prompt">Prompt</option>
+                            <option value="MCP">MCP (AI Platform/API)</option>
+                            <option value="Other">Other</option>
+                         </select>
+                     </div>
+                     <div class="input-group">
+                         <label for="submitCost">Cost:</label>
+                         <select id="submitCost" name="submitCost" required>
+                             <option value="">-- Select Cost --</option>
+                             <option value="Free">Free</option>
+                             <option value="Paid">Paid</option>
+                             <option value="Varies">Varies / Freemium</option>
+                         </select>
+                     </div>
+                      <div class="input-group">
+                         <label for="submitNotes">Additional Notes (Optional):</label>
+                         <textarea id="submitNotes" name="submitNotes" rows="2"></textarea>
+                     </div>
+                     <div class="form-actions">
+                         <button type="button" id="cancelSubmitBtn" class="cancel-btn">Cancel</button>
+                         <button type="submit" class="submit-via-email-btn">Submit via Email</button>
+                     </div>
+                 </form>
+             </div>
+         </div>
+
+
+    </div> <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Data ---
+             const seoAiResources = [
+                 // Keyword Research
+                 { id: 1, taskCategory: "Keyword Research", resourceType: "AI Model", name: "GPT-4 / Claude 3", icon: "🧠", description: "Generate seed keywords, long-tail variations, LSI terms, perform intent analysis, and cluster topics.", link: "https://yourpalzack.com/ai-seo/keyword-research/", cost: "Varies" },
+                 { id: 2, taskCategory: "Keyword Research", resourceType: "Paid Tool", name: "Semrush", icon: "🛠️", description: "Extensive keyword database, difficulty analysis, gap analysis, and topic research features.", link: "https://semrush.com", cost: "Paid" },
+                 { id: 18, taskCategory: "Keyword Research", resourceType: "Paid Tool", name: "Ahrefs", icon: "🛠️", description: "Robust keyword explorer, content gap analysis, and SERP analysis for identifying opportunities.", link: "https://ahrefs.com", cost: "Paid" },
+                 { id: 3, taskCategory: "Keyword Research", resourceType: "Workflow", name: "AI Competitor Keyword Analysis", icon: "🔄", description: "Use tools (Semrush/Ahrefs) to export competitor keywords, feed into AI (GPT/Claude) for clustering, intent analysis, and gap identification.", link: "https://yourpalzack.com/ai-seo/keyword-research/clustering/", cost: "Varies" },
+                 // On-Page Optimization
+                 { id: 4, taskCategory: "On-Page Optimization", resourceType: "Prompt", name: "AI Meta Tag Generation", icon: "💡", description: "Use specific prompts with models like GPT-4 to create optimized meta titles and descriptions focused on CTR.", link: "https://yourpalzack.com/seo-guides/meta-tags-best-practices/", cost: "Free" },
+                 { id: 5, taskCategory: "On-Page Optimization", resourceType: "Paid Tool", name: "Surfer SEO", icon: "🏄", description: "Analyzes top-ranking pages and provides data-driven recommendations for content optimization based on NLP.", link: "https://surferseo.com/", cost: "Paid" },
+                 { id: 19, taskCategory: "On-Page Optimization", resourceType: "Paid Tool", name: "Clearscope", icon: "🎯", description: "Content optimization tool focused on topical relevance and incorporating important terms based on top SERP results.", link: "https://clearscope.io", cost: "Paid" },
+                 { id: 26, taskCategory: "On-Page Optimization", resourceType: "Workflow", name: "AI-Powered Internal Linking", icon: "🔗", description: "Use AI to analyze content and suggest contextually relevant internal linking opportunities to improve site architecture.", link: "https://yourpalzack.com/seo-guides/on-page-seo-optimization/", cost: "Varies" },
+                 // Content Creation
+                 { id: 6, taskCategory: "Content Creation", resourceType: "AI Model", name: "GPT-4 / Claude 3 / Gemini", icon: "✍️", description: "Draft blog posts, articles, product descriptions, and other content based on detailed prompts and outlines.", link: "https://yourpalzack.com/ai-seo/content/writing-assistants/", cost: "Varies" },
+                 { id: 7, taskCategory: "Content Creation", resourceType: "Workflow", name: "AI-Assisted Content Brief", icon: "📋", description: "Use AI to analyze SERPs, identify key topics/entities, outline structure, and generate a comprehensive content brief for writers.", link: "https://yourpalzack.com/ai-seo/content/topic-ideation/", cost: "Varies" },
+                 { id: 20, taskCategory: "Content Creation", resourceType: "Paid Tool", name: "Jasper (formerly Jarvis)", icon: "🤖", description: "AI writing assistant with various templates for different content types like blog posts, ads, and social media.", link: "https://jasper.ai", cost: "Paid" },
+                 { id: 24, taskCategory: "Content Creation", resourceType: "Paid Tool", name: "Frase.io", icon: "📄", description: "AI tool for content research, brief generation, and content optimization based on SERP analysis.", link: "https://www.frase.io/", cost: "Paid" },
+                 // Technical SEO
+                 { id: 8, taskCategory: "Technical SEO", resourceType: "AI Model", name: "Custom AI Log Analyzer", icon: "🖥️", description: "Train an AI model (or use prompts with capable models) to parse server logs, identify crawl anomalies, bot behavior, and potential technical issues.", link: "https://yourpalzack.com/ai-seo/technical-optimizations/log-file-analysis/", cost: "Varies" },
+                 { id: 9, taskCategory: "Technical SEO", resourceType: "Paid Tool", name: "Screaming Frog SEO Spider", icon: "🐸", description: "Desktop crawler for comprehensive technical audits. Can integrate with APIs (like PageSpeed Insights) for enhanced analysis.", link: "https://www.screamingfrog.co.uk/seo-spider/", cost: "Paid" },
+                 { id: 23, taskCategory: "Technical SEO", resourceType: "Paid Tool", name: "Sitebulb", icon: "💡", description: "Desktop crawler providing in-depth technical SEO audits with prioritisation, hints and visualisations.", link: "https://sitebulb.com/", cost: "Paid" },
+                 { id: 10, taskCategory: "Technical SEO", resourceType: "Workflow", name: "AI Schema Generation", icon: "📄", description: "Use AI prompts with models like GPT-4 or Claude, or dedicated schema tools, to automatically generate JSON-LD schema markup.", link: "https://yourpalzack.com/seo-guides/structured-data-markup/", cost: "Varies" },
+                 { id: 25, taskCategory: "Technical SEO", resourceType: "Workflow", name: "AI-Powered Core Web Vitals Analysis", icon: "⚡", description: "Feed PageSpeed Insights/Lighthouse data into an AI to get prioritized recommendations for improving CWV scores.", link: "https://yourpalzack.com/seo-guides/core-web-vitals-improvement/", cost: "Varies" },
+                 // Link Building
+                 { id: 11, taskCategory: "Link Building", resourceType: "AI Model", name: "AI Outreach Personalization", icon: "✉️", description: "Use AI (GPT/Claude) to analyze prospect websites/articles and generate highly personalized opening lines or talking points for outreach emails.", link: "https://yourpalzack.com/ai-seo/strategy/integrating-ai-workflows/", cost: "Varies" },
+                 { id: 12, taskCategory: "Link Building", resourceType: "Paid Tool", name: "Hunter.io / Snov.io", icon: "📧", description: "Tools for finding verified email addresses for outreach prospects (often used before AI personalization step).", link: "https://hunter.io/", cost: "Paid" },
+                 { id: 27, taskCategory: "Link Building", resourceType: "Workflow", name: "AI Competitor Link Analysis", icon: "🔗", description: "Export competitor backlink data (Ahrefs/Semrush), use AI to classify link types, identify patterns, and find replicable opportunities.", link: "https://yourpalzack.com/ai-seo/analytics/", cost: "Varies" },
+                 // Local SEO
+                 { id: 13, taskCategory: "Local SEO", resourceType: "AI Model", name: "AI GMB Post Generator", icon: "📍", description: "Use prompts with AI models (GPT/Claude/Gemini) to generate engaging Google Business Profile posts, offers, and event updates.", link: "https://yourpalzack.com/local-seo/chatgpt-google-business-optimization/", cost: "Varies" },
+                 { id: 21, taskCategory: "Local SEO", resourceType: "Paid Tool", name: "BrightLocal", icon: "💡", description: "Suite of tools for local rank tracking, citation management/building, review monitoring, and local SEO audits.", link: "https://brightlocal.com", cost: "Paid" },
+                 { id: 28, taskCategory: "Local SEO", resourceType: "Paid Tool", name: "Surfer Local", icon: "🗺️", description: "Tool focused specifically on optimizing Google Business Profile listings based on local SERP analysis.", link: "https://surferseo.com/local-seo/", cost: "Paid" },
+                 { id: 14, taskCategory: "Local SEO", resourceType: "Prompt", name: "Local Service Page Copy Prompt", icon: "✍️", description: "Structure prompts to generate location-specific service page copy including geo-modifiers, local landmarks, and relevant local context.", link: "https://yourpalzack.com/services/local-service-area-seo/", cost: "Free" },
+                 // Analytics & Reporting
+                 { id: 15, taskCategory: "Analytics & Reporting", resourceType: "AI Model", name: "AI Data Interpretation", icon: "📈", description: "Feed analytics data (GSC, GA4) into AI models (GPT/Claude) to identify trends, anomalies, and generate plain-language performance summaries.", link: "https://yourpalzack.com/ai-seo/analytics/data-interpretation/", cost: "Varies" },
+                 { id: 16, taskCategory: "Analytics & Reporting", resourceType: "Paid Tool", name: "Looker Studio (Google Data Studio)", icon: "📊", description: "Connect various data sources (GA4, GSC, Ads, Sheets) to build custom dashboards. Can integrate AI-generated insights.", link: "https://lookerstudio.google.com/", cost: "Free" },
+                 { id: 29, taskCategory: "Analytics & Reporting", resourceType: "Workflow", name: "Automated SEO Reporting", icon: "🤖", description: "Combine data connectors (e.g., Supermetrics), visualization tools (Looker Studio), and AI (GPT API) to generate automated weekly/monthly reports.", link: "https://yourpalzack.com/ai-seo/analytics/automated-reporting/", cost: "Varies" },
+                 // E-commerce SEO
+                 { id: 17, taskCategory: "E-commerce SEO", resourceType: "AI Model", name: "AI Product Description Writer", icon: "🛒", description: "Generate unique, SEO-optimized product descriptions at scale based on product attributes, features, and target audience.", link: "https://yourpalzack.com/services/e-commerce-seo/", cost: "Varies" },
+                 { id: 22, taskCategory: "E-commerce SEO", resourceType: "Paid Tool", name: "Shopify SEO Apps (various)", icon: "🛍️", description: "Marketplace apps leveraging AI for image optimization, schema markup, meta tag generation specific to Shopify.", link: "https://apps.shopify.com/browse/store-design-search-engine-optimization", cost: "Varies" },
+                 { id: 30, taskCategory: "E-commerce SEO", resourceType: "Workflow", name: "AI Category Page Optimization", icon: "📑", description: "Use AI to analyze top category pages, identify key subcategories/filters, and generate optimized introductory copy and FAQ content.", link: "https://yourpalzack.com/services/e-commerce-seo/", cost: "Varies" },
+                  // AI Platform Access (MCP)
+                 { id: 33, taskCategory: "AI Platform Access", resourceType: "MCP", name: "OpenAI API (GPT Models)", icon: "🤖", description: "Access GPT-4, GPT-3.5 etc. for various SEO tasks like content generation, keyword analysis, data interpretation, and automation via API.", link: "https://platform.openai.com/", cost: "Paid" },
+                 { id: 34, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Anthropic API (Claude Models)", icon: "📚", description: "Utilize Claude 3 models (Opus, Sonnet, Haiku) known for strong reasoning and context handling for complex SEO analysis and content tasks.", link: "https://www.anthropic.com/api", cost: "Paid" },
+                 { id: 35, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Google AI / Vertex AI (Gemini)", icon: "✨", description: "Leverage Google's Gemini models for tasks benefiting from Google's data understanding, like SERP analysis, intent classification, and content generation.", link: "https://ai.google.dev/", cost: "Varies" },
+                 { id: 36, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Hugging Face Inference API/Endpoints", icon: "🤗", description: "Access thousands of open-source models for specialized SEO tasks like sentiment analysis, entity recognition, or text classification.", link: "https://huggingface.co/inference-api", cost: "Varies" },
+                 { id: 37, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Cohere API", icon: "💬", description: "Access models focused on enterprise use cases, good for text generation, classification, and embeddings useful in semantic clustering.", link: "https://cohere.com/", cost: "Paid" },
+                 { id: 38, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Replicate API", icon: "⚙️", description: "Run various open-source models via API without managing infrastructure, useful for experimenting with different models for SEO tasks.", link: "https://replicate.com/", cost: "Paid" },
+                 { id: 39, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Together AI API", icon: "🤝", description: "Platform offering fast inference for many leading open-source models, suitable for high-throughput SEO automation tasks.", link: "https://www.together.ai/", cost: "Paid" },
+                 { id: 40, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Groq API", icon: "⚡", description: "Known for extremely fast inference speeds using LPUs, potentially useful for real-time SEO analysis or generation tasks.", link: "https://groq.com/", cost: "Varies" },
+                 { id: 41, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Perplexity API", icon: "❓", description: "Access search-augmented AI models useful for factual content generation, research, and answering user queries for FAQ content.", link: "https://www.perplexity.ai/", cost: "Varies" },
+                 { id: 42, taskCategory: "AI Platform Access", resourceType: "MCP", name: "AWS Bedrock", icon: "☁️", description: "Amazon's platform providing API access to foundation models from Anthropic, AI21 Labs, Stability AI, Amazon Titan, and more.", link: "https://aws.amazon.com/bedrock/", cost: "Paid" },
+                 { id: 43, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Azure OpenAI Service", icon: "☁️", description: "Microsoft's platform offering enterprise-grade access to OpenAI models (GPT-4, etc.) within the Azure ecosystem.", link: "https://azure.microsoft.com/en-us/products/ai-services/openai-service", cost: "Paid" },
+                 { id: 44, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Mistral AI API", icon: "🌬️", description: "Access Mistral's high-performance open and commercial models via their platform API.", link: "https://mistral.ai/", cost: "Varies" },
+                 { id: 45, taskCategory: "AI Platform Access", resourceType: "MCP", name: "AI21 Labs API", icon: "🔬", description: "Platform offering Jurassic models focused on natural language understanding and generation tasks.", link: "https://www.ai21.com/", cost: "Paid" },
+                 { id: 46, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Writer API", icon: "🖋️", description: "Enterprise-focused AI platform specializing in content generation aligned with brand guidelines, useful for consistent SEO content.", link: "https://writer.com/", cost: "Paid" },
+                 { id: 47, taskCategory: "AI Platform Access", resourceType: "MCP", name: "AnyScale Endpoints", icon: "⚖️", description: "Platform for serving open-source models efficiently, suitable for custom SEO solutions requiring specific models.", link: "https://www.anyscale.com/endpoints", cost: "Paid" },
+                 { id: 48, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Modal Labs", icon: "📦", description: "Serverless platform for running containerized AI models, GPUs, and batch jobs, good for scalable SEO processing tasks.", link: "https://modal.com/", cost: "Paid" },
+                 { id: 49, taskCategory: "AI Platform Access", resourceType: "MCP", name: "OctoAI (Compute Service)", icon: "🐙", description: "Platform focused on efficient model serving and optimization for various AI models, including LLMs.", link: "https://octo.ai/", cost: "Paid" },
+                 { id: 50, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Fireworks AI", icon: "🎆", description: "Platform offering fast inference speeds for various open-source and custom models via API.", link: "https://fireworks.ai/", cost: "Paid" },
+                 { id: 51, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Lamini AI", icon: "💾", description: "Enterprise LLM platform for building and deploying models, potentially for specialized internal SEO tools.", link: "https://lamini.ai/", cost: "Paid" },
+                 { id: 52, taskCategory: "AI Platform Access", resourceType: "MCP", name: "Anyscale (Ray Serve)", icon: "⚙️", description: "Open-source framework (from Anyscale) for building scalable model serving applications, for advanced custom SEO solutions.", link: "https://www.anyscale.com/ray-serve", cost: "Varies" },
+                 { id: 53, taskCategory: "AI Platform Access", resourceType: "MCP", name: "OpenRouter AI", icon: "↔️", description: "API aggregator allowing access to multiple models (OpenAI, Anthropic, Google, etc.) through a single interface.", link: "https://openrouter.ai/", cost: "Paid" }
+            ];
+
+
+            // --- Elements ---
+            const taskFilter = document.getElementById('seoTaskFilter');
+            const typeFilter = document.getElementById('resourceTypeFilter');
+            const searchInput = document.getElementById('searchTerm');
+            const resultsGrid = document.getElementById('resultsGrid');
+            const noResultsDiv = document.getElementById('noResults');
+            const faqAccordion = document.getElementById('faqAccordion');
+            const showSubmitFormBtn = document.getElementById('showSubmitFormBtn');
+            const submissionModal = document.getElementById('submissionModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const cancelSubmitBtn = document.getElementById('cancelSubmitBtn');
+            const submitResourceForm = document.getElementById('submitResourceForm');
+            const submitTaskCategorySelect = document.getElementById('submitTaskCategory');
+
+            // --- Populate Task Filters ---
+            const uniqueTasks = [...new Set(seoAiResources.map(item => item.taskCategory))].sort();
+            taskFilter.innerHTML = '<option value="All">All Tasks</option>';
+            submitTaskCategorySelect.innerHTML = '<option value="">-- Select Task --</option>';
+            uniqueTasks.forEach(task => {
+                const mainOption = document.createElement('option');
+                mainOption.value = task;
+                mainOption.textContent = task;
+                taskFilter.appendChild(mainOption);
+                const formOption = document.createElement('option');
+                formOption.value = task;
+                formOption.textContent = task;
+                submitTaskCategorySelect.appendChild(formOption);
+            });
+            const otherTaskOption = document.createElement('option');
+            otherTaskOption.value = "Other";
+            otherTaskOption.textContent = "Other (Please Specify)";
+            submitTaskCategorySelect.appendChild(otherTaskOption);
+
+
+            // --- Render Function ---
+            function renderResults() {
+                const selectedTask = taskFilter.value;
+                const selectedType = typeFilter.value;
+                const searchTerm = searchInput.value.trim().toLowerCase();
+
+                const filteredResources = seoAiResources.filter(resource => {
+                    const taskMatch = selectedTask === 'All' || resource.taskCategory === selectedTask;
+                    const typeMatch = selectedType === 'All' || resource.resourceType === selectedType;
+                    const searchMatch = searchTerm === '' ||
+                                        resource.name.toLowerCase().includes(searchTerm) ||
+                                        resource.description.toLowerCase().includes(searchTerm) ||
+                                        resource.taskCategory.toLowerCase().includes(searchTerm) ||
+                                        resource.resourceType.toLowerCase().includes(searchTerm);
+                    return taskMatch && typeMatch && searchMatch;
+                });
+
+                resultsGrid.innerHTML = '';
+
+                if (filteredResources.length === 0) {
+                    noResultsDiv.style.display = 'block';
+                } else {
+                     noResultsDiv.style.display = 'none';
+                     filteredResources.forEach(resource => {
+                        const card = document.createElement('article');
+                        card.className = 'resource-card';
+                         let costClass = 'varies';
+                         const costLower = resource.cost.toLowerCase();
+                         if (costLower === 'paid') costClass = 'paid';
+                         else if (costLower === 'free') costClass = 'free';
+
+                        card.innerHTML = `
+                            <div class="resource-card-header">
+                                <div class="resource-icon" aria-hidden="true">${resource.icon || '💡'}</div>
+                                <div class="resource-header-text">
+                                     <h3 class="resource-title">${resource.name}</h3>
+                                     <span class="resource-type">${resource.resourceType}</span>
+                                </div>
+                            </div>
+                            <p class="resource-desc">${resource.description.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')}</p>
+                            <div class="resource-footer">
+                                <span class="resource-cost ${costClass}">${resource.cost}</span>
+                                <div class="resource-link">
+                                    <a href="${resource.link}" target="_blank" rel="noopener noreferrer" title="Visit ${resource.name}">Learn More</a>
+                                </div>
+                            </div>
+                        `;
+                        resultsGrid.appendChild(card);
+                    });
+                }
+            }
+
+
+            // --- FAQ Accordion Logic ---
+            faqAccordion.addEventListener('click', function(event) {
+                 const button = event.target.closest('.faq-question');
+                 if (!button) return;
+
+                 const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                 // Close all others first if you want only one open at a time
+                 faqAccordion.querySelectorAll('.faq-question').forEach(otherButton => {
+                      if(otherButton !== button) {
+                         otherButton.setAttribute('aria-expanded', 'false');
+                         const otherAnswer = otherButton.nextElementSibling;
+                         otherAnswer.style.maxHeight = null;
+                         otherAnswer.style.paddingTop = '0';
+                         otherAnswer.style.paddingBottom = '0';
+                     }
+                 });
+
+                 // Toggle the clicked one
+                 const answer = button.nextElementSibling;
+                 if (isExpanded) {
+                     button.setAttribute('aria-expanded', 'false');
+                     answer.style.maxHeight = null;
+                      setTimeout(() => {
+                         if (button.getAttribute('aria-expanded') === 'false') {
+                             answer.style.paddingTop = '0';
+                             answer.style.paddingBottom = '0';
+                         }
+                     }, 400);
+                 } else {
+                     button.setAttribute('aria-expanded', 'true');
+                     answer.style.paddingTop = '15px';
+                     answer.style.paddingBottom = '20px';
+                     answer.style.maxHeight = answer.scrollHeight + "px";
+                 }
+             });
+
+             // --- Modal Logic ---
+             function openModal() {
+                 submissionModal.classList.add('visible');
+             }
+             function closeModal() {
+                 submissionModal.classList.remove('visible');
+                 submitResourceForm.reset(); // Clear form on close
+             }
+
+             showSubmitFormBtn.addEventListener('click', openModal);
+             closeModalBtn.addEventListener('click', closeModal);
+             cancelSubmitBtn.addEventListener('click', closeModal);
+             submissionModal.addEventListener('click', function(event) {
+                 if (event.target === submissionModal) {
+                     closeModal();
+                 }
+             });
+
+             // --- Form Submission (mailto:) ---
+             submitResourceForm.addEventListener('submit', function(event) {
+                 event.preventDefault();
+
+                 const name = document.getElementById('submitName').value;
+                 const url = document.getElementById('submitUrl').value;
+                 const description = document.getElementById('submitDescription').value;
+                 const category = document.getElementById('submitTaskCategory').value;
+                 const type = document.getElementById('submitResourceType').value;
+                 const cost = document.getElementById('submitCost').value;
+                 const notes = document.getElementById('submitNotes').value;
+
+                 const subject = "New AI SEO Resource Submission";
+                 let body = `New AI SEO Resource Suggestion:\n\n`;
+                 body += `Name: ${name}\n`;
+                 body += `URL: ${url}\n`;
+                 body += `Description: ${description}\n`;
+                 body += `Task Category: ${category}\n`;
+                 body += `Resource Type: ${type}\n`;
+                 body += `Cost: ${cost}\n`;
+                 if (notes) {
+                     body += `Additional Notes: ${notes}\n`;
+                 }
+
+                 const mailtoLink = `mailto:yourpalzack@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                 window.location.href = mailtoLink;
+                 alert("Your email client should now open with the submission details. Please review and send the email. Thank you!");
+                 closeModal();
+             });
+
+
+            // --- Event Listeners (Filters/Search) ---
+            taskFilter.addEventListener('change', renderResults);
+            typeFilter.addEventListener('change', renderResults);
+            searchInput.addEventListener('input', renderResults);
+
+            // --- Initial Render ---
+            renderResults();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* Baseball Card Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.baseball-card {
+  position: relative;
+  width: 350px;
+  height: 490px;
+  background-color: #f8f8e8;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Wood grain background */
+.baseball-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="%23e8d8b8"/><path d="M0,0 L100,100 M20,0 L100,80 M40,0 L100,60 M60,0 L100,40 M80,0 L100,20 M0,20 L80,100 M0,40 L60,100 M0,60 L40,100 M0,80 L20,100" stroke="%23d8c8a8" stroke-width="0.5" stroke-opacity="0.5"/></svg>');
+  z-index: -1;
+}
+
+.logo-circle {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 3;
+  border: 3px solid white;
+}
+
+.photo-container {
+  position: relative;
+  width: 85%;
+  height: 75%;
+  margin: 15px auto 0;
+  background-color: #ccc;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px #000;
+}
+
+.photo-area {
+  width: 100%;
+  height: 100%;
+  background-color: #aaa;
+  overflow: hidden;
+  position: relative;
+}
+
+.silhouette {
+  width: 100%;
+  height: 100%;
+  background-color: #888;
+  position: relative;
+}
+
+/* Create the silhouette shape */
+.silhouette::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #666;
+  mask-image: url('data:image/svg+xml;utf8,<svg width="300" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M150,80 C190,80 220,110 220,150 C220,190 190,220 150,220 C110,220 80,190 80,150 C80,110 110,80 150,80 Z M60,380 C60,280 100,240 150,240 C200,240 240,280 240,380 Z" fill="black"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="300" height="400" xmlns="http://www.w3.org/2000/svg"><path d="M150,80 C190,80 220,110 220,150 C220,190 190,220 150,220 C110,220 80,190 80,150 C80,110 110,80 150,80 Z M60,380 C60,280 100,240 150,240 C200,240 240,280 240,380 Z" fill="black"/></svg>');
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+
+/* Card corner fold */
+.card-corner {
+  position: absolute;
+  right: 15%;
+  bottom: 15%;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, transparent 50%, #fff 50%);
+  z-index: 2;
+  box-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+}
+
+.name-bar {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 40px;
+  background-color: #e30613;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #000;
+}
+
+.topps-logo {
+  position: absolute;
+  bottom: 35px;
+  left: 15px;
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.registered {
+  font-size: 10px;
+  vertical-align: super;
+}

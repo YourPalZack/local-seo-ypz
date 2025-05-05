@@ -1,0 +1,497 @@
+TITLE: On-Page SEO Optimization Prompts
+
+INTRO_TEXT: Generate powerful AI prompts to craft perfectly optimized meta titles, descriptions, headings, image alt text, and internal linking strategies that boost your search visibility and click-through rates.
+
+BUTTON_TEXT: On-Page SEO Prompt
+
+RESULT_TITLE: On-Page SEO Prompt
+
+COPY_BUTTON_TEXT: Prompt
+
+FORM_CONTROLS:
+<div class="input-group">
+  <label for="page-type">Page Type:</label>
+  <select id="page-type">
+    <option value="homepage">Homepage</option>
+    <option value="product-page">Product Page</option>
+    <option value="category-page">Category Page</option>
+    <option value="blog-post">Blog Post</option>
+    <option value="landing-page">Landing Page</option>
+    <option value="about-page">About Page</option>
+    <option value="contact-page">Contact Page</option>
+  </select>
+</div>
+
+<div class="input-group">
+  <label for="primary-keyword">Primary Keyword:</label>
+  <input type="text" id="primary-keyword" placeholder="e.g., organic coffee beans, digital marketing services">
+</div>
+
+<div class="input-group">
+  <label for="secondary-keywords">Secondary Keywords (comma-separated):</label>
+  <input type="text" id="secondary-keywords" placeholder="e.g., fair trade coffee, single origin, arabica">
+</div>
+
+<div class="input-group">
+  <label for="optimization-element">Optimization Element:</label>
+  <select id="optimization-element">
+    <option value="meta-title">Meta Title</option>
+    <option value="meta-description">Meta Description</option>
+    <option value="heading-structure">Heading Structure</option>
+    <option value="image-alt-text">Image Alt Text</option>
+    <option value="internal-linking">Internal Linking Strategy</option>
+    <option value="content-optimization">Content Optimization</option>
+    <option value="full-page-optimization">Full Page Optimization</option>
+  </select>
+</div>
+
+<div class="input-group">
+  <label for="target-audience">Target Audience:</label>
+  <input type="text" id="target-audience" placeholder="e.g., beginners, professionals, parents">
+</div>
+
+HOW_TO_USE:
+<li>Select the type of page you're optimizing from the dropdown menu</li>
+<li>Enter your primary keyword that you want to rank for</li>
+<li>Add any secondary keywords to include in your optimization</li>
+<li>Choose which on-page element you want to optimize</li>
+<li>Specify your target audience to tailor the optimization</li>
+<li>Click "Generate On-Page SEO Prompt" to create your AI prompt</li>
+<li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+<li>Use the resulting optimization suggestions to improve your page's SEO</li>
+
+EXAMPLES_TITLE: On-Page SEO Prompts
+
+EXAMPLE_TABS:
+<button class="example-tab active" data-example="meta-title">Meta Title</button>
+<button class="example-tab" data-example="meta-description">Meta Description</button>
+<button class="example-tab" data-example="heading-structure">Heading Structure</button>
+<button class="example-tab" data-example="image-alt">Image Alt Text</button>
+<button class="example-tab" data-example="internal-linking">Internal Linking</button>
+
+EXAMPLE_CONTENT:
+<div class="example-item active" id="meta-title-example">
+  <h4>Meta Title Optimization Prompt Example</h4>
+  <div class="example-box">
+    <p>Create 10 SEO-optimized meta title options for a product page about "organic bamboo bed sheets" targeting eco-conscious consumers. For each title:</p>
+    <ul>
+      <li>Include the primary keyword "organic bamboo bed sheets" naturally</li>
+      <li>Incorporate at least one of these secondary keywords: "cooling sheets," "sustainable bedding," "hypoallergenic"</li>
+      <li>Keep the length between 50-60 characters to avoid truncation in search results</li>
+      <li>Include a compelling benefit or unique selling point</li>
+      <li>Use power words that encourage clicks</li>
+      <li>Maintain brand voice that appeals to environmentally conscious consumers</li>
+    </ul>
+    <p>For each title option, provide the exact character count and an explanation of why it would be effective for both SEO and click-through rate. Rank the titles in order of recommended effectiveness.</p>
+  </div>
+</div>
+
+<div class="example-item" id="meta-description-example">
+  <h4>Meta Description Optimization Prompt Example</h4>
+  <div class="example-box">
+    <p>Generate 5 SEO-optimized meta descriptions for a blog post titled "10 Essential Digital Marketing Strategies for Small Businesses in 2025." Each description should:</p>
+    <ul>
+      <li>Include the primary keyword "digital marketing strategies for small businesses" naturally</li>
+      <li>Incorporate at least one secondary keyword from: "affordable marketing," "local business marketing," "ROI-focused"</li>
+      <li>Be between 140-155 characters to avoid truncation in search results</li>
+      <li>Include a clear value proposition for the reader</li>
+      <li>Contain a compelling call-to-action</li>
+      <li>Be written in an authoritative yet approachable tone</li>
+    </ul>
+    <p>For each description, provide the exact character count and highlight which aspects would appeal to small business owners looking to improve their marketing efforts with limited resources.</p>
+  </div>
+</div>
+
+<div class="example-item" id="heading-structure-example">
+  <h4>Heading Structure Optimization Prompt Example</h4>
+  <div class="example-box">
+    <p>Create a comprehensive heading structure (H1-H4) for a long-form guide about "home workout routines for beginners" targeting people new to fitness. The heading structure should:</p>
+    <ul>
+      <li>Include an SEO-optimized H1 that incorporates the primary keyword</li>
+      <li>Provide 5-7 H2 headings that cover the main subtopics and incorporate secondary keywords</li>
+      <li>For each H2, suggest 2-4 H3 subheadings that break down the content further</li>
+      <li>Where appropriate, include H4 headings for detailed sections</li>
+      <li>Ensure a logical content flow that guides beginners from basic concepts to implementation</li>
+      <li>Incorporate question-based headings where appropriate for featured snippet opportunities</li>
+    </ul>
+    <p>For each heading, briefly explain its purpose in the overall content structure and how it supports both user experience and SEO goals. Indicate which headings have the highest potential to rank for specific search queries.</p>
+  </div>
+</div>
+
+<div class="example-item" id="image-alt-example">
+  <h4>Image Alt Text Optimization Prompt Example</h4>
+  <div class="example-box">
+    <p>Generate SEO-optimized alt text for 8 product images on an e-commerce page selling "handcrafted leather wallets." For each image, assume the following types:</p>
+    <ul>
+      <li>Main product image showing the full wallet</li>
+      <li>Close-up of the leather texture and stitching</li>
+      <li>Image showing the wallet open with card slots visible</li>
+      <li>Image showing the wallet in a pocket (size reference)</li>
+      <li>Color variants of the wallet displayed together</li>
+      <li>Image showing the packaging/gift box</li>
+      <li>Lifestyle image of someone using the wallet</li>
+      <li>Infographic showing wallet dimensions and features</li>
+    </ul>
+    <p>For each image, create alt text that:</p>
+    <ul>
+      <li>Naturally incorporates relevant keywords without keyword stuffing</li>
+      <li>Accurately describes what's shown in the image</li>
+      <li>Highlights key selling points when relevant</li>
+      <li>Keeps length between 50-125 characters</li>
+      <li>Follows accessibility best practices</li>
+    </ul>
+  </div>
+</div>
+
+<div class="example-item" id="internal-linking-example">
+  <h4>Internal Linking Strategy Prompt Example</h4>
+  <div class="example-box">
+    <p>Develop a comprehensive internal linking strategy for a blog post about "sustainable gardening practices" that will be published on a gardening website. The website already has the following content:</p>
+    <ul>
+      <li>Beginner's Guide to Organic Gardening</li>
+      <li>10 Best Composting Methods for Home Gardens</li>
+      <li>How to Choose Eco-Friendly Garden Tools</li>
+      <li>Water Conservation Techniques for Gardens</li>
+      <li>Natural Pest Control Without Chemicals</li>
+      <li>Seasonal Planting Guide for Vegetable Gardens</li>
+      <li>Soil Health: The Foundation of Sustainable Gardens</li>
+    </ul>
+    <p>For the new "sustainable gardening practices" article, provide:</p>
+    <ul>
+      <li>10-12 specific anchor text suggestions for internal links to existing content</li>
+      <li>For each link, explain the contextual relevance and SEO benefit</li>
+      <li>Recommendations for natural link placement within the content flow</li>
+      <li>Suggestions for reciprocal linking from existing content to the new article</li>
+      <li>A site-wide internal linking strategy that establishes topic clusters around sustainable gardening</li>
+    </ul>
+  </div>
+</div>
+
+GENERATE_FUNCTION:
+const primaryKeyword = document.getElementById('primary-keyword').value || '[PRIMARY KEYWORD]';
+const secondaryKeywords = document.getElementById('secondary-keywords').value || '[SECONDARY KEYWORDS]';
+const pageType = document.getElementById('page-type').value;
+const optimizationElement = document.getElementById('optimization-element').value;
+const targetAudience = document.getElementById('target-audience').value || '[TARGET AUDIENCE]';
+
+// Content type templates
+const templates = {
+  'meta-title': getMetaTitleTemplate(primaryKeyword, secondaryKeywords, pageType, targetAudience),
+  'meta-description': getMetaDescriptionTemplate(primaryKeyword, secondaryKeywords, pageType, targetAudience),
+  'heading-structure': getHeadingStructureTemplate(primaryKeyword, secondaryKeywords, pageType, targetAudience),
+  'image-alt-text': getImageAltTextTemplate(primaryKeyword, pageType, targetAudience),
+  'internal-linking': getInternalLinkingTemplate(primaryKeyword, pageType),
+  'content-optimization': getContentOptimizationTemplate(primaryKeyword, secondaryKeywords, pageType, targetAudience),
+  'full-page-optimization': getFullPageOptimizationTemplate(primaryKeyword, secondaryKeywords, pageType, targetAudience)
+};
+
+// Get the template for the selected optimization element
+promptResult.textContent = templates[optimizationElement];
+
+TEMPLATE_FUNCTIONS:
+// Meta title template
+function getMetaTitleTemplate(primaryKeyword, secondaryKeywords, pageType, targetAudience) {
+  let pageTypeSpecific = '';
+  
+  switch(pageType) {
+    case 'homepage':
+      pageTypeSpecific = `\n- Include the brand/company name\n- Focus on the overall value proposition rather than specific products/services\n- Consider a more evergreen approach as the homepage title rarely changes`;
+      break;
+    case 'product-page':
+      pageTypeSpecific = `\n- Include product-specific details like model, size, or key feature\n- Consider including price point indicators (luxury, affordable, etc.)\n- Incorporate purchase intent language`;
+      break;
+    case 'category-page':
+      pageTypeSpecific = `\n- Indicate the breadth of selection (e.g., "Wide Range", "Complete Collection")\n- Consider including category-specific qualifiers\n- Use language that helps users browse and compare`;
+      break;
+    case 'blog-post':
+      pageTypeSpecific = `\n- Consider using numbers (e.g., "7 Ways to...")\n- Include year if content is time-sensitive\n- Use question formats if appropriate for the content`;
+      break;
+    case 'landing-page':
+      pageTypeSpecific = `\n- Include strong call-to-action language\n- Emphasize unique selling proposition\n- Consider conversion-focused language`;
+      break;
+    default:
+      pageTypeSpecific = '';
+  }
+  
+  return `Create 10 SEO-optimized meta title options for a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. For each title:
+
+1. Include the primary keyword "${primaryKeyword}" naturally
+2. Incorporate at least one of these secondary keywords where appropriate: ${secondaryKeywords}
+3. Keep the length between 50-60 characters to avoid truncation in search results
+4. Include a compelling benefit or unique selling point
+5. Use power words that encourage clicks
+6. Maintain a brand voice that appeals to ${targetAudience}${pageTypeSpecific}
+
+For each title option, provide:
+- The exact character count
+- An explanation of why it would be effective for both SEO and click-through rate
+- Any potential SERP features it might help trigger
+
+Rank the titles in order of recommended effectiveness, and explain your reasoning for the top choice.`;
+}
+
+// Meta description template
+function getMetaDescriptionTemplate(primaryKeyword, secondaryKeywords, pageType, targetAudience) {
+  let pageTypeSpecific = '';
+  
+  switch(pageType) {
+    case 'homepage':
+      pageTypeSpecific = `\n- Summarize the overall value proposition of the brand/company\n- Include mention of key product/service categories\n- Use language that establishes authority in the industry`;
+      break;
+    case 'product-page':
+      pageTypeSpecific = `\n- Highlight key product features and benefits\n- Include pricing information or special offers if applicable\n- Use language that addresses purchase intent`;
+      break;
+    case 'category-page':
+      pageTypeSpecific = `\n- Mention the range of products/items available in this category\n- Include category-specific qualifiers or filters\n- Use language that helps users understand the selection available`;
+      break;
+    case 'blog-post':
+      pageTypeSpecific = `\n- Tease the key insights or takeaways from the post\n- Consider mentioning the format (guide, list, case study)\n- Use language that establishes expertise on the topic`;
+      break;
+    case 'landing-page':
+      pageTypeSpecific = `\n- Include a clear, compelling call-to-action\n- Emphasize the unique value proposition\n- Address a specific pain point the landing page solves`;
+      break;
+    default:
+      pageTypeSpecific = '';
+  }
+  
+  return `Generate 5 SEO-optimized meta descriptions for a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. Each description should:
+
+1. Include the primary keyword "${primaryKeyword}" naturally
+2. Incorporate at least one secondary keyword from: ${secondaryKeywords}
+3. Be between 140-155 characters to avoid truncation in search results
+4. Include a clear value proposition for the reader
+5. Contain a compelling call-to-action
+6. Be written in a tone appropriate for ${targetAudience}${pageTypeSpecific}
+
+For each description, provide:
+- The exact character count
+- Which secondary keywords were incorporated
+- How it addresses user intent for this search
+- Why it would encourage clicks from search results
+
+Also provide guidance on which description would work best for different search intents (informational, commercial, transactional) related to this topic.`;
+}
+
+// Heading structure template
+function getHeadingStructureTemplate(primaryKeyword, secondaryKeywords, pageType, targetAudience) {
+  let pageTypeSpecific = '';
+  
+  switch(pageType) {
+    case 'homepage':
+      pageTypeSpecific = `\n- Focus on broad category headings that help with navigation\n- Include headings for key value propositions and USPs\n- Consider testimonial or social proof section headings`;
+      break;
+    case 'product-page':
+      pageTypeSpecific = `\n- Include headings for product features, specifications, benefits\n- Consider headings for reviews, FAQs, and related products\n- Use headings to break up technical information into digestible sections`;
+      break;
+    case 'category-page':
+      pageTypeSpecific = `\n- Include headings for different product subcategories or filters\n- Consider headings for featured or bestselling items\n- Use headings to highlight category-specific buying guides`;
+      break;
+    case 'blog-post':
+      pageTypeSpecific = `\n- Structure headings to create a logical narrative flow\n- Include question-based headings for featured snippet opportunities\n- Consider using numbered headings for list-based content`;
+      break;
+    case 'landing-page':
+      pageTypeSpecific = `\n- Include benefit-focused headings that emphasize value\n- Use headings to address potential objections\n- Consider headings for testimonials, guarantees, and calls-to-action`;
+      break;
+    default:
+      pageTypeSpecific = '';
+  }
+  
+  return `Create a comprehensive heading structure (H1-H4) for a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. The heading structure should:
+
+1. Include an SEO-optimized H1 that incorporates the primary keyword "${primaryKeyword}"
+2. Provide 5-7 H2 headings that cover the main subtopics and incorporate secondary keywords: ${secondaryKeywords}
+3. For each H2, suggest 2-4 H3 subheadings that break down the content further
+4. Where appropriate, include H4 headings for detailed sections
+5. Ensure a logical content flow that guides the reader through the information
+6. Incorporate question-based headings where appropriate for featured snippet opportunities${pageTypeSpecific}
+
+For each heading:
+- Explain its purpose in the overall content structure
+- Identify which keywords it targets
+- Note any featured snippet or SERP feature opportunities
+- Provide a brief description of what content should go under this heading
+
+Also include recommendations for the ideal word count for each major section to ensure comprehensive coverage of the topic.`;
+}
+
+// Image alt text template
+function getImageAltTextTemplate(primaryKeyword, pageType, targetAudience) {
+  let imageTypes = '';
+  
+  switch(pageType) {
+    case 'homepage':
+      imageTypes = `\n- Hero/banner image\n- Product/service category thumbnails\n- Team or company photos\n- Testimonial author images\n- Award or certification logos\n- Partner/client logos`;
+      break;
+    case 'product-page':
+      imageTypes = `\n- Main product image\n- Product detail/feature close-ups\n- Product in use/context\n- Size/scale reference images\n- Color/style variants\n- Packaging images`;
+      break;
+    case 'category-page':
+      imageTypes = `\n- Category banner image\n- Featured product thumbnails\n- Comparison charts/graphics\n- Category icon/symbol\n- Lifestyle images showing category products in use`;
+      break;
+    case 'blog-post':
+      imageTypes = `\n- Featured/hero image\n- Step-by-step tutorial images\n- Infographics or data visualizations\n- Screenshots or examples\n- Author photo\n- Related concept illustrations`;
+      break;
+    case 'landing-page':
+      imageTypes = `\n- Hero/banner image\n- Product/service showcase images\n- Benefit illustration graphics\n- Trust indicators (certifications, awards)\n- Customer testimonial photos\n- Call-to-action button/graphic`;
+      break;
+    default:
+      imageTypes = '';
+  }
+  
+  return `Generate SEO-optimized alt text for 8 images on a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. For this page, assume the following image types:${imageTypes}
+
+For each image, create alt text that:
+1. Naturally incorporates relevant keywords without keyword stuffing
+2. Accurately describes what's shown in the image
+3. Provides context relevant to the surrounding content
+4. Highlights key selling points when relevant
+5. Keeps length between 50-125 characters
+6. Follows accessibility best practices
+
+For each alt text suggestion, provide:
+- The exact character count
+- Which keywords it incorporates
+- How it supports both SEO and accessibility goals
+- Any specific scenarios where this image and alt text would be particularly effective
+
+Also include general best practices for image optimization beyond alt text (file naming, compression, lazy loading, etc.) for this type of page.`;
+}
+
+// Internal linking template
+function getInternalLinkingTemplate(primaryKeyword, pageType) {
+  let pageTypeSpecific = '';
+  
+  switch(pageType) {
+    case 'homepage':
+      pageTypeSpecific = `\n\nSpecific to homepage internal linking:\n- Recommend primary navigation structure and categories\n- Suggest featured content sections that should link to key pages\n- Provide guidance on footer link structure`;
+      break;
+    case 'product-page':
+      pageTypeSpecific = `\n\nSpecific to product page internal linking:\n- Suggest related/complementary product links\n- Recommend category and subcategory linking structure\n- Provide guidance on linking to buying guides or educational content`;
+      break;
+    case 'category-page':
+      pageTypeSpecific = `\n\nSpecific to category page internal linking:\n- Recommend subcategory linking structure\n- Suggest featured product linking strategy\n- Provide guidance on breadcrumb implementation`;
+      break;
+    case 'blog-post':
+      pageTypeSpecific = `\n\nSpecific to blog post internal linking:\n- Suggest related article links based on topic clusters\n- Recommend product/service page links where relevant\n- Provide guidance on sidebar and author bio linking`;
+      break;
+    case 'landing-page':
+      pageTypeSpecific = `\n\nSpecific to landing page internal linking:\n- Recommend minimal but strategic internal links to avoid distracting from conversion\n- Suggest trust-building links (about, testimonials, case studies)\n- Provide guidance on post-conversion page linking`;
+      break;
+    default:
+      pageTypeSpecific = '';
+  }
+  
+  return `Develop a comprehensive internal linking strategy for a ${pageType} about "${primaryKeyword}". Assume the website already has the following content types:
+- Product/service pages
+- Category pages
+- Blog posts/articles
+- About/company pages
+- FAQ/resource pages
+
+For this ${pageType}, provide:
+
+1. Strategic internal linking recommendations:
+   - 10-12 specific anchor text suggestions for internal links to existing content
+   - For each link, explain the contextual relevance and SEO benefit
+   - Recommendations for natural link placement within the content flow
+   - Suggestions for reciprocal linking from existing content to this page
+
+2. Technical implementation guidance:
+   - Optimal number of internal links for this page type
+   - Anchor text variation recommendations (exact match, partial match, branded, etc.)
+   - Link priority hierarchy (which links should receive more prominent placement)
+   - How to avoid over-optimization penalties${pageTypeSpecific}
+
+3. Content silo and topic cluster strategy:
+   - How this page should fit within the overall site architecture
+   - Topic clusters this page should belong to
+   - Pillar content this page should link to
+   - Supporting content that should link to this page
+
+Include specific examples of anchor text phrasing that incorporates relevant keywords while maintaining natural language flow.`;
+}
+
+// Content optimization template
+function getContentOptimizationTemplate(primaryKeyword, secondaryKeywords, pageType, targetAudience) {
+  return `Create a comprehensive content optimization guide for a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. This guide should include:
+
+1. Keyword optimization strategy:
+   - How to naturally incorporate the primary keyword "${primaryKeyword}" (recommended density and placement)
+   - How to integrate these secondary keywords: ${secondaryKeywords}
+   - Semantic and LSI keyword suggestions to include
+   - Terms and phrases to avoid (negative keywords)
+
+2. Content structure recommendations:
+   - Ideal content length based on competitive analysis
+   - Paragraph length and structure for readability
+   - Sentence structure variety and readability score targets
+   - Subheading usage and keyword incorporation
+
+3. Engagement optimization:
+   - Hooks and opening paragraph techniques
+   - Storytelling elements to incorporate
+   - Transition phrases between sections
+   - Conclusion and call-to-action recommendations
+
+4. SEO enhancement elements:
+   - List/table/bullet point usage for featured snippets
+   - Question-and-answer sections for PAA opportunities
+   - Multimedia integration recommendations
+   - Schema markup suggestions
+
+5. Content differentiation strategy:
+   - Unique angles to explore on this topic
+   - Data points and statistics to incorporate
+   - Expert quote or insight opportunities
+   - Originality factors to set this content apart
+
+For each recommendation, explain both the SEO benefit and the user experience improvement it provides. Include specific examples of phrasing, formatting, and structure that would work well for this specific topic and audience.`;
+}
+
+// Full page optimization template
+function getFullPageOptimizationTemplate(primaryKeyword, secondaryKeywords, pageType, targetAudience) {
+  return `Create a comprehensive on-page SEO optimization plan for a ${pageType} about "${primaryKeyword}" targeting ${targetAudience}. This complete optimization plan should include:
+
+1. Technical SEO elements:
+   - URL structure recommendation
+   - Meta title (3-5 options with character counts)
+   - Meta description (3-5 options with character counts)
+   - Canonical tag implementation
+   - Mobile optimization priorities
+   - Page speed improvement recommendations
+
+2. Content structure and optimization:
+   - Complete H1-H4 heading structure with keyword incorporation
+   - Content length recommendation with competitive analysis
+   - Keyword placement strategy for primary keyword "${primaryKeyword}"
+   - Secondary keyword integration plan for: ${secondaryKeywords}
+   - Semantic keyword suggestions and implementation
+   - Content readability and engagement improvements
+
+3. Visual and multimedia elements:
+   - Image optimization recommendations (including alt text examples)
+   - Video content suggestions if applicable
+   - Infographic or data visualization opportunities
+   - Image placement and sizing best practices
+
+4. User experience and engagement:
+   - Above-the-fold content optimization
+   - Mobile-specific content adjustments
+   - Internal linking strategy (10+ specific link suggestions)
+   - External linking recommendations
+   - Call-to-action placement and optimization
+
+5. Schema markup and rich results:
+   - Appropriate schema types for this content
+   - Implementation guidance and examples
+   - Rich snippet opportunities to target
+   - Structured data testing recommendations
+
+6. Competitive differentiation:
+   - Content gaps to address based on competitor analysis
+   - Unique value propositions to emphasize
+   - User intent fulfillment strategies
+   - E-A-T signals to incorporate
+
+For each element, provide specific examples and implementation guidance tailored to this specific topic, page type, and audience. Include a prioritized checklist of optimization tasks ranked by potential impact.`;
+}

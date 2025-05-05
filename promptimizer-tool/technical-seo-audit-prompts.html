@@ -1,0 +1,692 @@
+<!-- Technical SEO Audit Prompts HTML -->
+<div class="seo-prompt-generator">
+  <h1>Technical SEO Audit Prompts</h1>
+  <p class="intro-text">Generate powerful AI prompts to create comprehensive technical SEO audits, identify critical issues, and develop remediation plans for site speed, crawlability, mobile-friendliness, and index coverage.</p>
+  
+  <div class="prompt-controls">
+    <div class="input-group">
+      <label for="website-type">Website Type:</label>
+      <select id="website-type">
+        <option value="ecommerce">E-commerce</option>
+        <option value="blog">Blog/Content</option>
+        <option value="business">Business/Service</option>
+        <option value="portfolio">Portfolio</option>
+        <option value="news">News/Media</option>
+        <option value="saas">SaaS/Web App</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="website-url">Website URL (optional):</label>
+      <input type="text" id="website-url" placeholder="e.g., https://example.com">
+    </div>
+    
+    <div class="input-group">
+      <label for="audit-focus">Audit Focus Area:</label>
+      <select id="audit-focus">
+        <option value="comprehensive">Comprehensive Technical Audit</option>
+        <option value="site-speed">Site Speed Optimization</option>
+        <option value="crawlability">Crawlability & Indexation</option>
+        <option value="mobile">Mobile-Friendliness</option>
+        <option value="security">Security & HTTPS</option>
+        <option value="structured-data">Structured Data Implementation</option>
+        <option value="international">International SEO Setup</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="platform">Website Platform (if known):</label>
+      <select id="platform">
+        <option value="unknown">Unknown/Other</option>
+        <option value="wordpress">WordPress</option>
+        <option value="shopify">Shopify</option>
+        <option value="woocommerce">WooCommerce</option>
+        <option value="magento">Magento</option>
+        <option value="wix">Wix</option>
+        <option value="squarespace">Squarespace</option>
+        <option value="custom">Custom Build</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="known-issues">Known Issues (optional):</label>
+      <input type="text" id="known-issues" placeholder="e.g., slow loading, mobile issues, indexing problems">
+    </div>
+    
+    <button id="generate-prompt" class="generate-button">Generate Technical SEO Audit Prompt</button>
+  </div>
+  
+  <div class="result-container">
+    <h3>Your Technical SEO Audit Prompt:</h3>
+    <div id="prompt-result" class="prompt-box"></div>
+    <button id="copy-prompt" class="copy-button">Copy Prompt</button>
+  </div>
+  
+  <div class="how-to-use">
+    <h3>How to Use This Tool</h3>
+    <ol>
+      <li>Select your website type from the dropdown menu</li>
+      <li>Optionally enter your website URL for more specific recommendations</li>
+      <li>Choose the specific technical SEO area you want to focus on</li>
+      <li>Select your website platform if known</li>
+      <li>Note any known issues you're already aware of</li>
+      <li>Click "Generate Technical SEO Audit Prompt" to create your AI prompt</li>
+      <li>Copy the prompt and paste it into ChatGPT, Claude, or your preferred AI assistant</li>
+      <li>Use the resulting audit plan to identify and fix technical SEO issues</li>
+    </ol>
+  </div>
+  
+  <div class="examples-container">
+    <h3>Example Technical SEO Audit Prompts</h3>
+    <div class="example-tabs">
+      <button class="example-tab active" data-example="comprehensive">Comprehensive Audit</button>
+      <button class="example-tab" data-example="site-speed">Site Speed</button>
+      <button class="example-tab" data-example="crawlability">Crawlability</button>
+      <button class="example-tab" data-example="mobile">Mobile SEO</button>
+      <button class="example-tab" data-example="structured-data">Structured Data</button>
+    </div>
+    <div class="example-content" id="example-content">
+      <div class="example-item active" id="comprehensive-example">
+        <h4>Comprehensive Technical SEO Audit Prompt Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive technical SEO audit framework for an e-commerce website built on Shopify. The audit should include:</p>
+          <ul>
+            <li>A complete technical SEO checklist organized by priority (critical, high, medium, low)</li>
+            <li>Specific tools to use for each audit area with step-by-step instructions</li>
+            <li>Common Shopify-specific technical SEO issues to look for</li>
+            <li>Interpretation guidance for key metrics and findings</li>
+            <li>Remediation recommendations for common issues</li>
+            <li>Implementation prioritization framework based on impact vs. effort</li>
+          </ul>
+          <p>The audit should cover these key areas:</p>
+          <ul>
+            <li>Crawlability and indexation (robots.txt, sitemap, crawl stats)</li>
+            <li>Site architecture and internal linking</li>
+            <li>URL structure and canonicalization</li>
+            <li>Page speed and Core Web Vitals</li>
+            <li>Mobile optimization</li>
+            <li>Structured data implementation</li>
+            <li>HTTPS and security configuration</li>
+            <li>JavaScript rendering issues</li>
+            <li>International SEO considerations</li>
+            <li>E-commerce specific factors (faceted navigation, product variants, etc.)</li>
+          </ul>
+          <p>For each area, provide specific examples of what "good" looks like versus common problems, and include both quick wins and long-term strategic recommendations.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="site-speed-example">
+        <h4>Site Speed Optimization Prompt Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive site speed audit and optimization plan for a WordPress blog that's experiencing slow loading times. The audit should include:</p>
+          <ul>
+            <li>Step-by-step process for measuring current performance using PageSpeed Insights, GTmetrix, and WebPageTest</li>
+            <li>Guidance on interpreting Core Web Vitals metrics (LCP, FID, CLS) and their impact on SEO</li>
+            <li>Common WordPress-specific speed issues to look for (plugin bloat, theme optimization, etc.)</li>
+            <li>Server-side optimization recommendations (hosting, TTFB, caching)</li>
+            <li>Front-end optimization checklist (image optimization, code minification, etc.)</li>
+            <li>Specific WordPress plugin recommendations for different speed optimizations</li>
+            <li>Mobile vs. desktop speed considerations</li>
+            <li>Implementation plan organized by impact level and implementation difficulty</li>
+          </ul>
+          <p>For each recommendation, include:</p>
+          <ul>
+            <li>Expected impact on key speed metrics</li>
+            <li>Implementation complexity (easy, moderate, advanced)</li>
+            <li>Whether it requires developer assistance</li>
+            <li>Potential risks or considerations</li>
+            <li>Before/after benchmarking methodology</li>
+          </ul>
+          <p>The goal is to create a practical, actionable plan that can improve site speed metrics to meet Google's Core Web Vitals requirements and enhance user experience.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="crawlability-example">
+        <h4>Crawlability & Indexation Prompt Example</h4>
+        <div class="example-box">
+          <p>Develop a comprehensive crawlability and indexation audit framework for a large e-commerce site (5,000+ pages) that's experiencing indexing issues. The audit should include:</p>
+          <ul>
+            <li>Step-by-step process for analyzing current indexation status using Google Search Console</li>
+            <li>Methodology for identifying crawl budget waste and optimization opportunities</li>
+            <li>Robots.txt analysis and optimization recommendations</li>
+            <li>XML sitemap strategy and implementation best practices</li>
+            <li>Canonical tag audit process and common issues</li>
+            <li>Internal linking architecture assessment</li>
+            <li>Pagination and faceted navigation handling</li>
+            <li>JavaScript rendering and indexation considerations</li>
+            <li>Log file analysis methodology and key metrics to track</li>
+          </ul>
+          <p>The audit should also include:</p>
+          <ul>
+            <li>Common indexation issues specific to e-commerce sites</li>
+            <li>Guidance on identifying and fixing "orphaned" pages</li>
+            <li>Recommendations for handling out-of-stock or discontinued products</li>
+            <li>Category page optimization for crawlability</li>
+            <li>Strategies for prioritizing the most important pages for crawling</li>
+            <li>Implementation plan with priority levels and expected outcomes</li>
+          </ul>
+          <p>For each recommendation, provide specific examples of proper implementation and common mistakes to avoid.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="mobile-example">
+        <h4>Mobile SEO Audit Prompt Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive mobile SEO audit framework for a business website that needs to improve its mobile user experience and rankings. The audit should include:</p>
+          <ul>
+            <li>Mobile-first indexing compliance checklist</li>
+            <li>Mobile usability testing methodology using Google Search Console and other tools</li>
+            <li>Mobile page speed analysis framework with Core Web Vitals focus</li>
+            <li>Touch element sizing and spacing assessment</li>
+            <li>Mobile navigation and menu structure evaluation</li>
+            <li>Mobile-specific content display issues (hidden content, tabs, accordions)</li>
+            <li>Mobile viewport configuration check</li>
+            <li>Mobile-friendly testing across different devices and screen sizes</li>
+          </ul>
+          <p>The audit should also address:</p>
+          <ul>
+            <li>Mobile vs. desktop content parity issues</li>
+            <li>Mobile-specific structured data considerations</li>
+            <li>Local SEO factors for mobile users</li>
+            <li>Mobile form optimization</li>
+            <li>Mobile-specific user intent considerations</li>
+            <li>AMP implementation evaluation (if applicable)</li>
+            <li>Mobile-specific analytics setup and KPIs to track</li>
+          </ul>
+          <p>For each area, provide specific testing methodologies, tools to use, and actionable recommendations with implementation guidance tailored to business websites.</p>
+        </div>
+      </div>
+      
+      <div class="example-item" id="structured-data-example">
+        <h4>Structured Data Audit Prompt Example</h4>
+        <div class="example-box">
+          <p>Create a comprehensive structured data audit and implementation plan for a recipe blog. The audit should include:</p>
+          <ul>
+            <li>Current structured data assessment methodology</li>
+            <li>Recipe schema.org markup best practices</li>
+            <li>Additional relevant schema types for food blogs (Article, Person, WebSite, etc.)</li>
+            <li>Schema validation testing process</li>
+            <li>Rich result eligibility requirements for recipes</li>
+            <li>Common structured data errors and how to fix them</li>
+            <li>Implementation methods comparison (manual JSON-LD vs. plugins)</li>
+          </ul>
+          <p>The implementation plan should include:</p>
+          <ul>
+            <li>Prioritized list of schema types to implement based on SEO impact</li>
+            <li>Required properties for each schema type with examples</li>
+            <li>Optional properties that can enhance rich results</li>
+            <li>Nested schema relationship recommendations</li>
+            <li>Testing and monitoring framework for schema performance</li>
+            <li>Schema update process for content changes</li>
+            <li>Future structured data opportunities and emerging schema types</li>
+          </ul>
+          <p>Include specific examples of properly formatted JSON-LD for recipe content, and guidance on how to track the impact of structured data implementation on search visibility and click-through rates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+  .seo-prompt-generator {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .seo-prompt-generator h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    color: #5a6a7a;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .prompt-controls {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #445566;
+    font-size: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #008348;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 131, 72, 0.3);
+  }
+  
+  .generate-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #008348;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .generate-button:hover {
+    background-color: #006738;
+  }
+  
+  .result-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .result-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .prompt-box {
+    min-height: 150px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .copy-button {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  
+  .copy-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .examples-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  .examples-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .example-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .example-tab {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .example-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-tab.active {
+    background-color: #008348;
+    color: white;
+    border-color: #008348;
+  }
+  
+  .example-item {
+    display: none;
+  }
+  
+  .example-item.active {
+    display: block;
+  }
+  
+  .example-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .example-box {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .example-box p {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .example-box ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  
+  .example-box li {
+    margin-bottom: 8px;
+  }
+  
+  .how-to-use {
+    background-color: #f0f7f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #008348;
+  }
+  
+  .how-to-use h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .how-to-use ol {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  
+  .how-to-use li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .seo-prompt-generator {
+      padding: 20px;
+    }
+    
+    .example-tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .example-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Ensure all child elements respect container width */
+  .seo-prompt-generator * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure content doesn't overflow its container */
+  .prompt-box, .example-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript Code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate-prompt');
+    const copyButton = document.getElementById('copy-prompt');
+    const promptResult = document.getElementById('prompt-result');
+    const exampleTabs = document.querySelectorAll('.example-tab');
+    const exampleItems = document.querySelectorAll('.example-item');
+    
+    // Tab switching functionality
+    exampleTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs and examples
+        exampleTabs.forEach(t => t.classList.remove('active'));
+        exampleItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current tab
+        this.classList.add('active');
+        
+        // Show corresponding example
+        const exampleId = this.getAttribute('data-example') + '-example';
+        document.getElementById(exampleId).classList.add('active');
+      });
+    });
+    
+    // Generate prompt when button is clicked
+    generateButton.addEventListener('click', function() {
+      const websiteType = document.getElementById('website-type').value;
+      const websiteUrl = document.getElementById('website-url').value || '[WEBSITE URL]';
+      const auditFocus = document.getElementById('audit-focus').value;
+      const platform = document.getElementById('platform').value;
+      const knownIssues = document.getElementById('known-issues').value || 'unknown issues';
+      
+      let promptText = '';
+      
+      // Generate different prompts based on the selected audit focus
+      switch(auditFocus) {
+        case 'comprehensive':
+          promptText = `Create a comprehensive technical SEO audit framework for a ${websiteType} website${websiteUrl !== '[WEBSITE URL]' ? ' (' + websiteUrl + ')' : ''} built on ${platform}. The site is currently experiencing issues with ${knownIssues}.
+
+The audit should include:
+
+1. A complete technical SEO checklist organized by priority (critical, high, medium, low)
+2. Specific tools to use for each audit area with step-by-step instructions
+3. Common ${platform}-specific technical SEO issues to look for
+4. Interpretation guidance for key metrics and findings
+5. Remediation recommendations for common issues
+6. Implementation prioritization framework based on impact vs. effort
+
+The audit should cover these key areas:
+- Crawlability and indexation (robots.txt, sitemap, crawl stats)
+- Site architecture and internal linking
+- URL structure and canonicalization
+- Page speed and Core Web Vitals
+- Mobile optimization
+- Structured data implementation
+- HTTPS and security configuration
+- JavaScript rendering issues
+- International SEO considerations (if applicable)
+- ${websiteType}-specific factors
+
+For each area, provide specific examples of what "good" looks like versus common problems, and include both quick wins and long-term strategic recommendations.`;
+          break;
+          
+        case 'site-speed':
+          promptText = `Create a comprehensive site speed audit and optimization plan for a ${websiteType} website${websiteUrl !== '[WEBSITE URL]' ? ' (' + websiteUrl + ')' : ''} built on ${platform}. The site is currently experiencing issues with ${knownIssues}.
+
+The audit should include:
+
+1. Step-by-step process for measuring current performance using PageSpeed Insights, GTmetrix, and WebPageTest
+2. Guidance on interpreting Core Web Vitals metrics (LCP, FID, CLS) and their impact on SEO
+3. Common ${platform}-specific speed issues to look for
+4. Server-side optimization recommendations (hosting, TTFB, caching)
+5. Front-end optimization checklist (image optimization, code minification, etc.)
+6. ${platform}-specific optimization recommendations and plugins/tools
+7. Mobile vs. desktop speed considerations
+8. Implementation plan organized by impact level and implementation difficulty
+
+For each recommendation, include:
+- Expected impact on key speed metrics
+- Implementation complexity (easy, moderate, advanced)
+- Whether it requires developer assistance
+- Potential risks or considerations
+- Before/after benchmarking methodology
+
+The goal is to create a practical, actionable plan that can improve site speed metrics to meet Google's Core Web Vitals requirements and enhance user experience.`;
+          break;
+          
+        case 'crawlability':
+          promptText = `Develop a comprehensive crawlability and indexation audit framework for a ${websiteType} website${websiteUrl !== '[WEBSITE URL]' ? ' (' + websiteUrl + ')' : ''} built on ${platform}. The site is currently experiencing issues with ${knownIssues}.
+
+The audit should include:
+
+1. Step-by-step process for analyzing current indexation status using Google Search Console
+2. Methodology for identifying crawl budget waste and optimization opportunities
+3. Robots.txt analysis and optimization recommendations
+4. XML sitemap strategy and implementation best practices
+5. Canonical tag audit process and common issues
+6. Internal linking architecture assessment
+7. Pagination and faceted navigation handling
+8. JavaScript rendering and indexation considerations
+9. Log file analysis methodology and key metrics to track
+
+The audit should also include:
+- Common indexation issues specific to ${websiteType} sites on ${platform}
+- Guidance on identifying and fixing "orphaned" pages
+- Recommendations for handling outdated or low-value content
+- Category/taxonomy page optimization for crawlability
+- Strategies for prioritizing the most important pages for crawling
+- Implementation plan with priority levels and expected outcomes
+
+For each recommendation, provide specific examples of proper implementation and common mistakes to avoid.`;
+          break;
+          
+        case 'mobile':
+          promptText = `Create a comprehensive mobile SEO audit framework for a ${websiteType} website${websiteUrl !== '[WEBSITE URL]' ? ' (' + websiteUrl + ')' : ''} built on ${platform}. The site is currently experiencing issues with ${knownIssues}.
+
+The audit should include:
+
+1. Mobile-first indexing compliance checklist
+2. Mobile usability testing methodology using Google Search Console and other tools
+3. Mobile page speed analysis framework with Core Web Vitals focus
+4. Touch element sizing and spacing assessment
+5. Mobile navigation and menu structure evaluation
+6. Mobile-specific content display issues (hidden content, tabs, accordions)
+7. Mobile viewport configuration check
+8. Mobile-friendly testing across different devices and screen sizes
+
+The audit should also address:
+- Mobile vs. desktop content parity issues
+- Mobile-specific structured data considerations
+- Local SEO factors for mobile users
+- Mobile form optimization
+- Mobile-specific user intent considerations
+- AMP implementation evaluation (if applicable)
+- Mobile-specific analytics setup and KPIs to track
+
+For each area, provide specific testing methodologies, tools to use, and actionable recommendations with implementation guidance tailored to ${websiteType} websites on ${platform}.`;
+          break;
+          
+        case 'structured-data':
+          promptText = `Create a comprehensive structured data audit and implementation plan for a ${websiteType} website${websiteUrl !== '[WEBSITE URL]' ? ' (' + websiteUrl + ')' : ''} built on ${platform}. The site is currently experiencing issues with ${knownIssues}.
+
+The audit should include:
+
+1. Current structured data assessment methodology
+2. Relevant schema.org markup types for ${websiteType} websites
+3. Schema validation testing process
+4. Rich result eligibility requirements for applicable schema types
+5. Common structured data errors and how to fix them
+6. Implementation methods comparison for ${platform} (manual JSON-LD vs. plugins/tools)
+7. Schema hierarchy and relationship recommendations
+
+The implementation plan should include:
+- Prioritized list of schema types to implement based on SEO impact
+- Required properties for each schema type with examples
+- Optional properties that can enhance rich results
+- Nested schema relationship recommendations
+- Testing and monitoring framework for schema performance
+- Schema update process for content changes
+- Future structured data opportunities and emerging schema types
+
+Include specific examples of properly formatted JSON-LD for ${websiteType} content, and guidance on how to track the impact of structured data implementation on search visibility and click-through rates.`;
+          break;
+          
+        default:
+          promptText = `Create a comprehensive technical SEO audit for a ${websiteType} website${websiteUrl !== '[WEBSITE URL]' ? ' (' + websiteUrl + ')' : ''} built on ${platform}, focusing on ${auditFocus}. The site is currently experiencing issues with ${knownIssues}.
+
+Please provide:
+1. A detailed audit methodology
+2. Key metrics and benchmarks to measure
+3. Common issues to look for
+4. Remediation recommendations
+5. Implementation prioritization framework
+6. Tools and resources needed
+7. Ongoing monitoring plan`;
+          break;
+      }
+      
+      promptResult.textContent = promptText;
+    });
+    
+    // Copy prompt to clipboard
+    copyButton.addEventListener('click', function() {
+      const textToCopy = promptResult.textContent;
+      navigator.clipboard.writeText(textToCopy).then(function() {
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard. Please try again or copy manually.');
+      });
+    });
+  });
+</script>
